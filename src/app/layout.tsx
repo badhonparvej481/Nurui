@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Nunito, Creepster } from "next/font/google";
+import "../styles/main.scss";
+import Navbar from "@/components/layout/navbar/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
+  variable: "--font-nunito",
+  weight: ["400", "600", "900", "1000"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const creepster = Creepster({
+  variable: "--font-creepster",
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -25,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${nunito.variable} ${creepster.variable} antialiased bg-[var(--background-color)]`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

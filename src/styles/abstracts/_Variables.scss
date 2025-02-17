@@ -1,0 +1,18 @@
+$primary-color: #3CA2FA;
+$secondary-color: #80EEB4;
+$background-color: #010313;
+
+$white: #fff;
+$black: #000;
+$gray: #303030;
+$lite-gray: #1B1D2B99;
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --background-color: #{$background-color};
+    --white-color: #{$white};
+    --black-color: #{$black};
+    --gray-color: #{$gray};
+    --lite-gray-color: #{$lite-gray};
+}
