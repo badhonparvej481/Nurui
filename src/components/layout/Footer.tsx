@@ -1,3 +1,4 @@
+"use client";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMail, MdOutlinePhone } from "react-icons/md";
 import Bytenexia from "../common/Bytenexia";
@@ -8,8 +9,12 @@ import NewsLetter from "../common/NewsLetter";
 import MobileApplicationDownloadCard from "../common/MobileApplicationDownloadCard";
 import Link from "next/link";
 import PlayStore from "../icons/PlayStore";
+import { NavigationActive } from "@/utils/NavigationActive";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
   return (
     <div className="border-t w-full text-[var(--white-color)] mt-auto rounded-tl-[110px]">
       <div className="container">
@@ -85,13 +90,17 @@ const Footer = () => {
                 href={data?.url}
                 className={`${
                   navigation?.length === i + 1 ? "" : "border-r"
-                } pr-4`}
+                } pr-4 font-semibold ${
+                  NavigationActive(data?.url, pathname)
+                    ? "text-[var(--primary-color)] font-bold"
+                    : "text-[--copy-right-color]"
+                }`}
               >
                 {data?.name}
               </Link>
             ))}
           </div>
-          <p className="text-base text-[var(--black2)]">
+          <p className="text-[--copy-right-color]">
             &#169;2024 Uniengage all right reserved
           </p>
         </div>

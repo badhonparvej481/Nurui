@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navigation-active {
+    @apply bg-[var(--glass-color-3)] py-1.5 px-6 text-[var(--white-color)] capitalize rounded-full
+}
+
+.navigation-active:hover {
+    @apply bg-[var(--glass-color-4)]
+}
+
+.navigation-unactive {
+    @apply text-[var(--white-color)] py-1.5 px-6 capitalize
+}
