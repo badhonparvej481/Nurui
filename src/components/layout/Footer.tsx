@@ -9,7 +9,7 @@ import NewsLetter from "../common/NewsLetter";
 import MobileApplicationDownloadCard from "../common/MobileApplicationDownloadCard";
 import Link from "next/link";
 import PlayStore from "../icons/PlayStore";
-import { NavigationActive } from "@/utils/NavigationActive";
+import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
@@ -91,7 +91,7 @@ const Footer = () => {
                 className={`${
                   navigation?.length === i + 1 ? "" : "border-r"
                 } pr-4 font-semibold ${
-                  NavigationActive(data?.url, pathname)
+                  navigationActive(data?.url, pathname)
                     ? "text-[var(--primary-color)] font-bold"
                     : "text-[--copy-right-color]"
                 }`}
