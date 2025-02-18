@@ -4,8 +4,10 @@ $background-color: #010313;
 
 $white: #fff;
 $black: #000;
-$gray: #303030;
-$lite-gray: #1B1D2B99;
+$glass-color: #0D0E1E;
+$glass-color-2: #1B1D2B;
+$border-color: #393A3D;
+$placeholder-color: #8f99b1;
 
 :root {
     --primary-color: #{$primary-color};
@@ -13,6 +15,8 @@ $lite-gray: #1B1D2B99;
     --background-color: #{$background-color};
     --white-color: #{$white};
     --black-color: #{$black};
-    --gray-color: #{$gray};
-    --lite-gray-color: #{$lite-gray};
+    --glass-color: #{$glass-color};
+    --glass-color-2: #{$glass-color-2};
+    --border-color: #{$border-color};
+    --placeholder-color: #{$placeholder-color};
 }

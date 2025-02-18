@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        rotate: "rotate 5s linear infinite",
+      },
+      keyframes: {
+        rotate: {
+          "0%": { transform: "rotate(0deg) scale(10)" },
+          "100%": { transform: "rotate(-360deg) scale(10)" },
+        },
+      },
     },
     container: {
       center: true,
@@ -28,7 +37,7 @@ export default {
         md: '768px',
         lg: '1000px',
         xl: '1280px',
-        '2xl': '1280px',
+        '2xl': '1520px',
       },
     },
   },

@@ -1,18 +1,15 @@
 import BorderAnimationButton from "@/components/common/BorderAnimationButton";
+import CenterIcon from "@/components/common/CenterIcon";
 import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
+import Bytenexia from "../common/Bytenexia";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-wrap items-center justify-between py-6 mx-24 h-12">
-      <Link
-        href="/"
-        className="text-[var(--primary-color)] font-[family-name:var(--font-creepster)] text-3xl "
-      >
-        Bytenexia
-      </Link>
+    <nav className="container flex flex-wrap items-center justify-between h-24">
+      <Bytenexia fontSize="text-3xl" />
 
-      <div className="flex items-center gap-16 py-4 px-8  border border-[var(--gray-color)] rounded-full">
+      <div className="flex items-center gap-16 py-4 px-8  border border-[var(--border-color)] rounded-full">
         {navigation.map((nav) => (
           <Link
             className="text-[var(--white-color)] capitalize"
@@ -25,9 +22,10 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-5">
-        <button className="bg-[var(--lite-gray-color)] size-11 p-2 rounded-full flex items-center justify-center">
-          <FiSearch className="text-[var(--white-color)] text-2xl" />
-        </button>
+        <CenterIcon
+          backgroundColor="bg-[var(--glass-color-2)]"
+          icon={<FiSearch className="text-[var(--white-color)] text-2xl" />}
+        />
         <BorderAnimationButton title="sing in" />
       </div>
     </nav>
