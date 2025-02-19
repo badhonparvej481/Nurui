@@ -1,9 +1,15 @@
 $primary-color: #3CA2FA;
+$primary-color-2: #3CA2FA4D;
+$primary-color-3: #3CA2FA33;
 $secondary-color: #80EEB4;
 $background-color: #010313;
 
+$background-color-2: #181024;
+
 $white: #fff;
 $black: #000;
+$black-2: #736F7F;
+$black-3: #8D94A1;
 $glass-color: #0D0E1E;
 $glass-color-2: #1B1D2B;
 $glass-color-3: #313240;
@@ -14,10 +20,17 @@ $copy-right-color: #6A5F77;
 
 :root {
     --primary-color: #{$primary-color};
+    --primary-color-2: #{$primary-color-2};
+    --primary-color-3: #{$primary-color-3};
     --secondary-color: #{$secondary-color};
     --background-color: #{$background-color};
+
+    --background-color-2: #{$background-color-2};
+
     --white-color: #{$white};
     --black-color: #{$black};
+    --black-color-2: #{$black-2};
+    --black-color-3: #{$black-3};
     --glass-color: #{$glass-color};
     --glass-color-2: #{$glass-color-2};
     --glass-color-3: #{$glass-color-3};

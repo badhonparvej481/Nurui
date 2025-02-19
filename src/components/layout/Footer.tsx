@@ -115,7 +115,7 @@ const navigation = [
   {
     id: 1,
     name: "home",
-    url: "/home",
+    url: "/",
   },
   {
     id: 2,

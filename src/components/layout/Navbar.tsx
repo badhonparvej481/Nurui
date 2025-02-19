@@ -39,20 +39,22 @@ const Navbar = () => {
 
       <div className="hidden lg:flex items-center gap-5">
         <CenterIcon
-          backgroundColor="bg-[var(--glass-color-2)] hover:bg-[var(--glass-color-3)]"
-          icon={<ImSearch className="text-[var(--white-color)] text-2xl" />}
+          backgroundColor="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)]"
+          icon={<ImSearch className="text-[var(--primary-color)] text-2xl" />}
         />
         <BorderAnimationButton title="sing in" />
       </div>
-      {/* <NavigationDrawer /> */}
-      <button
-        type="button"
-        onClick={handleOpen}
-        className="bg-[#3CA2FA33] hover:bg-[#3CA2FA66] rounded p-0.5 block lg:hidden"
-      >
-        <CgMenuRight className="text-[var(--primary-color)] text-3xl" />
-      </button>
-      <NavigationDrawer anchor="right" open={open} onClose={handleClose} />
+      {/* drawer */}
+      <>
+        <button
+          type="button"
+          onClick={handleOpen}
+          className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden"
+        >
+          <CgMenuRight className="text-[var(--primary-color)] text-3xl" />
+        </button>
+        <NavigationDrawer anchor="right" open={open} onClose={handleClose} />
+      </>
     </nav>
   );
 };
