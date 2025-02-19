@@ -5,23 +5,23 @@ import Bytenexia from "../common/Bytenexia";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaApple, FaXTwitter } from "react-icons/fa6";
-import NewsLetter from "../common/NewsLetter";
 import MobileApplicationDownloadCard from "../common/MobileApplicationDownloadCard";
 import Link from "next/link";
 import PlayStore from "../icons/PlayStore";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
+import NewsLetter from "../common/NewsLetter";
 
 const Footer = () => {
   const pathname = usePathname();
 
   return (
-    <div className="border-t w-full text-[var(--white-color)] mt-auto rounded-tl-[110px]">
+    <div className="border-t w-full text-[var(--white-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px]">
       <div className="container">
         <NewsLetter />
-        <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-24 py-7 xl:py-16 pl-5 xl:pl-0">
-          <div className="space-y-6 max-w-80 col-span-full">
-            <Bytenexia fontSize="text-3xl" />
+        <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-14 2xl:gap-24 py-7 xl:py-16 pl-1 xl:pl-0">
+          <div className="space-y-3 lg:space-y-4 xl:space-y-6 max-w-80 col-span-full">
+            <Bytenexia fontSize="text-2xl lg:text-3xl" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Consequatur culpa dolore iure nemo beatae in?
@@ -82,14 +82,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-[var(--white1)] border-opacity-20 p-5 flex items-center justify-between">
-          <div className="flex items-center justify-between gap-4">
+        <div className="border-t border-[var(--border-color)] border-opacity-20 p-5 flex items-center justify-center lg:justify-between">
+          <div className="hidden lg:flex flex-wrap items-center justify-between gap-4">
             {navigation.map((data, i) => (
               <Link
                 key={data?.id + i}
                 href={data?.url}
                 className={`${
-                  navigation?.length === i + 1 ? "" : "border-r"
+                  navigation?.length === i + 1
+                    ? ""
+                    : "border-r border-[var(--black-color-2)]"
                 } pr-4 font-semibold ${
                   navigationActive(data?.url, pathname)
                     ? "text-[var(--primary-color)] font-bold"

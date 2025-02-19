@@ -41,7 +41,7 @@ const DrawerMenuItem: React.FC<IProps> = ({ icon, title, submenu }) => {
             <Link
               key={sub.name + index}
               href={sub.href}
-              className="text-[var(--black-color-3)] hover:text-[var(--primary-color)] text-lg"
+              className="text-[var(--black-color-3)] hover:text-[var(--primary-color)] text-lg capitalize"
             >
               {sub.name}
             </Link>
