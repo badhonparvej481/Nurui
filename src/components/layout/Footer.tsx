@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <div className="border-t w-full text-[var(--white-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px]">
       <div className="container">
-        <NewsLetter />
+        {/* <NewsLetter /> */}
         <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-14 2xl:gap-24 py-7 xl:py-16 pl-1 xl:pl-0">
           <div className="space-y-3 lg:space-y-4 xl:space-y-6 max-w-80 col-span-full">
             <Bytenexia fontSize="text-2xl lg:text-3xl" />
