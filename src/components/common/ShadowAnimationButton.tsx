@@ -4,7 +4,7 @@ const ShadowAnimationButton = () => {
   return (
     <div
       className="relative px-12 py-3 bg-[var(--primary-color)] text-[var(--black-color)] font-bold rounded-[2rem] rounded-bl-lg border-2 border-[var(--primary-color-2)] hover:border-[var(--primary-color)] transition-all duration-300 
-    hover:shadow-[0_0_20px_10px_var(--primary-color-3)] active:scale-95 active:shadow-[0_0_10px_5px_var(--primary-color-2)] group"
+    hover:shadow-[0_0_20px_10px_var(--primary-color-3)] active:scale-95 active:shadow-[0_0_10px_5px_var(--primary-color-2)] cursor-pointer group"
     >
       <div className="flex items-center justify-center space-x-2 text-lg">
         <span>

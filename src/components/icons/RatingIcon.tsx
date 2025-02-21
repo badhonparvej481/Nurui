@@ -15,3 +15,4 @@ const RatingIcon = ({ rate }: { rate?: boolean }) => {
 };
 
 export default RatingIcon;
+

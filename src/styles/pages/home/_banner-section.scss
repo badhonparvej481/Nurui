@@ -1,0 +1,57 @@
+.icon-animation {
+
+    .icon-animation1 {
+        animation: float 2s ease-in infinite;
+    }
+
+    .icon-animation2 {
+        animation: float 2.5s ease-in infinite;
+    }
+
+    .icon-animation3 {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .icon-animation4 {
+        animation: float 3.5s ease-in-out infinite;
+    }
+
+    .icon-animation5 {
+        animation: float 2s ease-in-out infinite;
+    }
+
+    .icon-animation6 {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .icon-animation7 {
+        animation: float 2.5s ease-in-out infinite;
+    }
+
+    .icon-animation8 {
+        animation: float 2s ease-in infinite;
+    }
+
+    .icon-animation9 {
+        animation: float 2.5s ease-in infinite;
+    }
+
+    .icon-animation10 {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px) rotate(0deg)
+        }
+
+        50% {
+            transform: translateY(10px) rotate(5deg)
+        }
+
+        100% {
+            transform: translateY(0px) rotate(0deg)
+        }
+    }
+
+}
