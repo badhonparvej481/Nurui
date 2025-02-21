@@ -2,14 +2,13 @@
 import BorderAnimationButton from "@/components/common/BorderAnimationButton";
 import CenterIcon from "@/components/common/CenterIcon";
 import Link from "next/link";
-import Bytenexia from "../common/Bytenexia";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
 import { ImSearch } from "react-icons/im";
-import { NavigationDrawer } from "../common/drawer/NavigationDrawer";
 import { useCallback, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
-// import NavigationDrawer from "../common/drawer/NavigationDrawer";
+import Bytenexia from "@/components/common/Bytenexia";
+import { NavigationDrawer } from "@/components/common/drawer/NavigationDrawer";
 
 const Navbar = () => {
   const pathName = usePathname();

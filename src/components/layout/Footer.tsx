@@ -1,16 +1,15 @@
 "use client";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMail, MdOutlinePhone } from "react-icons/md";
-import Bytenexia from "../common/Bytenexia";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaApple, FaXTwitter } from "react-icons/fa6";
-import MobileApplicationDownloadCard from "../common/MobileApplicationDownloadCard";
 import Link from "next/link";
-import PlayStore from "../icons/PlayStore";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
-import NewsLetter from "../common/NewsLetter";
+import Bytenexia from "@/components/common/Bytenexia";
+import MobileApplicationDownloadCard from "@/components/common/MobileApplicationDownloadCard";
+import PlayStore from "@/components/icons/PlayStore";
 
 const Footer = () => {
   const pathname = usePathname();
