@@ -2,42 +2,72 @@
 
     .icon-animation1 {
         animation: float 2s ease-in infinite;
+        box-shadow: 0px 0px 10px 0px #E64E96, 0px 0px 10px 0px #5A61FF;
     }
 
     .icon-animation2 {
         animation: float 2.5s ease-in infinite;
+        box-shadow: 0px 0px 10px 0px #5865F2, 0px 0px 10px 0px #5865F2;
     }
 
     .icon-animation3 {
         animation: float 3s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #60CD6E, 0px 0px 10px 0px #60CD6E;
     }
 
     .icon-animation4 {
         animation: float 3.5s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #CC3AA2, 0px 0px 10px 0px #FFA94D;
     }
 
     .icon-animation5 {
         animation: float 2s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #29B6F6, 0px 0px 10px 0px #29B6F6;
     }
 
     .icon-animation6 {
         animation: float 3s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #00C300, 0px 0px 10px 0px #00C300;
     }
 
     .icon-animation7 {
         animation: float 2.5s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #E53935, 0px 0px 10px 0px #4CAF50;
     }
 
     .icon-animation8 {
         animation: float 2s ease-in infinite;
+        box-shadow: 0px 0px 10px 0px #228DD7, 0px 0px 10px 0px #228DD7;
     }
 
     .icon-animation9 {
         animation: float 2.5s ease-in infinite;
+        box-shadow: 0px 0px 10px 0px #5F01D1, 0px 0px 10px 0px #5F01D1;
     }
 
     .icon-animation10 {
         animation: float 3s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #FFFC00, 0px 0px 10px 0px #FFFC00;
+    }
+
+    .icon-animation11 {
+        animation: float 3.5s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #7F4DA0, 0px 0px 10px 0px #7F4DA0;
+    }
+
+    .icon-animation12 {
+        animation: float 2s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #E8AB06, 0px 0px 10px 0px #E81E63;
+    }
+
+    .icon-animation13 {
+        animation: float 3s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #0977C8, 0px 0px 10px 0px #0977C8;
+    }
+
+    .icon-animation14 {
+        animation: float 2.5s ease-in-out infinite;
+        box-shadow: 0px 0px 10px 0px #03A9F4, 0px 0px 10px 0px #03A9F4;
     }
 
     @keyframes float {

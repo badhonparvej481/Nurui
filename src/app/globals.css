@@ -15,5 +15,5 @@
 }
 
 .social-icon-animation {
-    @apply bg-[var(--glass-color-5)] border border-[var(--border-color)] p-3 rounded-full
+    @apply bg-[var(--glass-color-5)] border-[var(--border-color)] p-3 rounded-full
 }

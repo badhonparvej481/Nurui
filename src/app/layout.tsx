@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} ${creepster.variable} antialiased bg-[var(--background-color)] flex flex-col min-h-screen font-[family-name:var(--font-nunito)]`}
+        className={`${nunito.variable} ${creepster.variable} selection:bg-[var(--primary-color)] selection:text-[var(--white-color)] antialiased bg-[var(--background-color)] flex flex-col min-h-screen font-[family-name:var(--font-nunito)]`}
       >
         <Navbar />
         {children}
