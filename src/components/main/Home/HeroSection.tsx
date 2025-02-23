@@ -1,35 +1,37 @@
-import ShadowAnimationButton from "../common/ShadowAnimationButton";
+import ShadowAnimationButton from "../../common/ShadowAnimationButton";
 import {
   MdMessage,
   MdOutlineHistoryToggleOff,
   MdOutlineMessage,
 } from "react-icons/md";
-import LabelWithIcon from "../common/LabelWithIcon";
+import LabelWithIcon from "../../common/LabelWithIcon";
 import { FiPhoneCall } from "react-icons/fi";
-import RatingIcon from "../icons/RatingIcon";
-import BackgroundGridBeam from "../common/background-grid-beam/BackgroundGridBeam";
-import AnimatedGradientText from "../common/animated-gradient-button/AnimatedGradientText";
-import MessengerIcon from "../icons/MessangerIcon";
-import { WhatsappIcon } from "../icons/WhatsappIcon";
-import InstagramIcon from "../icons/InstagramIcon";
-import DiscordIcon from "../icons/DiscordIcon";
-import FacebookIcon from "../icons/FacebookIcon";
-import SnapChatIcon from "../icons/SnapChatIcon";
-import ViberIcon from "../icons/ViberIcon";
-import SlackIcon from "../icons/SlackIcon";
-import SkypeIcon from "../icons/SkypeIcon";
-import TelegramIcon from "../icons/TelegramIcon";
-import LineIcon from "../icons/LineIcon";
-import EmailIcon from "../icons/EmailIcon";
-import YahooIcon from "../icons/YahooIcon";
-import OutlookIcon from "../icons/OutlookIcon";
-import UberIcon from "../icons/UberIcon";
-import SpotifyIcon from "../icons/SpotifyIcon";
-import MetaIcon from "../icons/MetaIcon";
-import NotionIcon from "../icons/NotionIcon";
-import MailChimpIcon from "../icons/MailChimpIcon";
-import LinearIcon from "../icons/LinearIcon";
-import { AnimatedTooltip } from "../common/AnimatedTooltip";
+import RatingIcon from "../../icons/RatingIcon";
+import BackgroundGridBeam from "../../common/background-grid-beam/BackgroundGridBeam";
+import AnimatedGradientText from "../../common/animated-gradient-button/AnimatedGradientText";
+import MessengerIcon from "../../icons/MessangerIcon";
+import { WhatsappIcon } from "../../icons/WhatsappIcon";
+import InstagramIcon from "../../icons/InstagramIcon";
+import DiscordIcon from "../../icons/DiscordIcon";
+import FacebookIcon from "../../icons/FacebookIcon";
+import SnapChatIcon from "../../icons/SnapChatIcon";
+import ViberIcon from "../../icons/ViberIcon";
+import SlackIcon from "../../icons/SlackIcon";
+import SkypeIcon from "../../icons/SkypeIcon";
+import TelegramIcon from "../../icons/TelegramIcon";
+import LineIcon from "../../icons/LineIcon";
+import EmailIcon from "../../icons/EmailIcon";
+import YahooIcon from "../../icons/YahooIcon";
+import OutlookIcon from "../../icons/OutlookIcon";
+import UberIcon from "../../icons/UberIcon";
+import SpotifyIcon from "../../icons/SpotifyIcon";
+import MetaIcon from "../../icons/MetaIcon";
+import NotionIcon from "../../icons/NotionIcon";
+import MailChimpIcon from "../../icons/MailChimpIcon";
+import LinearIcon from "../../icons/LinearIcon";
+import { AnimatedTooltip } from "../../common/AnimatedTooltip";
+import CollMode from "../../common/cool-mode/CollMode";
+import { GrSend } from "react-icons/gr";
 
 const HeroSection = () => {
   const RatingStars = ({ count = 5 }) => (
@@ -91,7 +93,20 @@ const HeroSection = () => {
 
           {/* action & offer & avatar & rating */}
           <div className="flex flex-col items-center gap-3">
-            <ShadowAnimationButton />
+            <CollMode
+              options={{
+                particle: [
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740288776/instagram_wtta6a.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740288886/facebook_qaxwo5.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740288990/whatsapp_epyaq3.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740289075/snapchat_pseu9j.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740289165/discord_wixqob.png",
+                ],
+                // speedUp: 20,
+              }}
+            >
+              <ShadowAnimationButton title="Get Started" icon={<GrSend />} />
+            </CollMode>
 
             <p className="flex items-center gap-1 font-bold text-[var(--primary-color)]">
               Hurry!! $39 OFF{" "}
