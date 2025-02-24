@@ -12,7 +12,7 @@ const MobileApplicationDownloadCard: FC<IProps> = ({
   storeName,
 }) => {
   return (
-    <div className="flex items-center gap-2 bg-[var(--glass-color)] hover:bg-[var(--glass-color-2)] rounded-lg py-3 px-5 w-44 xl:w-auto">
+    <div className="flex items-center gap-2 border dark:border-0 border-[var(--border-color)] shadow-xl dark:shadow-none bg-[var(--glass-color)] hover:dark:bg-[var(--glass-color-2)] rounded-lg py-3 px-5 w-44 xl:w-auto cursor-pointer">
       {icon}
       <div>
         <p className="uppercase text-xs">{title}</p>

@@ -15,7 +15,7 @@ const Footer = () => {
   const pathname = usePathname();
 
   return (
-    <div className="border-t w-full text-[var(--white-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px]">
+    <div className="bg-[var(--white-color)] dark:bg-[var(--background-color)] border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px]">
       <div className="container">
         {/* <NewsLetter /> */}
         <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-14 2xl:gap-24 py-7 xl:py-16 pl-1 xl:pl-0">
@@ -25,11 +25,11 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Consequatur culpa dolore iure nemo beatae in?
             </p>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 *:cursor-pointer">
               <FaFacebook className="text-2xl text-[#1877F2]" />
               <BsInstagram className="text-2xl text-[#FE0173]" />
               <BsYoutube className="text-2xl text-[#FF0033]" />
-              <FaXTwitter className="text-2xl text-white" />
+              <FaXTwitter className="text-2xl text-[var(--black-color)] dark:text-[var(--white-color)]" />
               <FaLinkedin className="text-2xl text-[#0073B2]" />
             </div>
           </div>
