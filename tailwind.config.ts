@@ -4,6 +4,7 @@ import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColo
 import svgToDataUri from 'mini-svg-data-uri'
 
 export default {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",

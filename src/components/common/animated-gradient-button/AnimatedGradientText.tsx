@@ -15,10 +15,11 @@ const AnimatedGradientText: React.FC<IProps> = ({
 }) => {
   return (
     <AnimatedGradientButton borderGradient={borderGradient}>
-      🎉 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-[var(--white-color)]" />{" "}
+      🎉{" "}
+      <hr className="mx-2 h-4 w-[1px] shrink-0 bg-[var(--black-color)] dark:bg-[var(--white-color)]" />{" "}
       <span
         className={cn(
-          `inline animate-gradient ${textGradient} bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+          `inline animate-gradient ${textGradient} bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent font-semibold`
         )}
       >
         {title}

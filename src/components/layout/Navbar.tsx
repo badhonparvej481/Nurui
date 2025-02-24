@@ -1,14 +1,13 @@
 "use client";
 import BorderAnimationButton from "@/components/common/BorderAnimationButton";
-import CenterIcon from "@/components/common/CenterIcon";
 import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
-import { ImSearch } from "react-icons/im";
 import { useCallback, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import Bytenexia from "@/components/common/Bytenexia";
 import { NavigationDrawer } from "@/components/common/drawer/NavigationDrawer";
+import ThemeSwitcher from "../common/ThemeSwitcher";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -37,10 +36,7 @@ const Navbar = () => {
       </div>
 
       <div className="hidden lg:flex items-center gap-5">
-        <CenterIcon
-          backgroundColor="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)]"
-          icon={<ImSearch className="text-[var(--primary-color)] text-2xl" />}
-        />
+        <ThemeSwitcher />
         <BorderAnimationButton title="sing in" />
       </div>
       {/* drawer */}

@@ -62,11 +62,11 @@ const HeroSection = () => {
           </div>
         </div>
         {/* content */}
-        <div className="flex flex-col items-center gap-y-4 md:gap-y-6 lg::gap-y-7 text-center text-[var(--white-color)]">
+        <div className="flex flex-col items-center gap-y-4 md:gap-y-6 lg::gap-y-7 text-center text-[var(--text-primary-color)]">
           <AnimatedGradientText
             title={"Introducing Magic UI"}
-            textGradient="bg-gradient-to-r from-[var(--secondary-color)] via-[var(--primary-color)] to-[var(--secondary-color)]"
-            borderGradient="bg-gradient-to-r from-[#80EEB4]/60 via-[#3CA2FA]/60 to-[#80EEB4]/60"
+            textGradient="bg-[var(--black-color)] dark:bg-gradient-to-r from-[var(--secondary-color)] via-[var(--primary-color)] to-[var(--secondary-color)]"
+            borderGradient="bg-gradient-to-r from-[#80EEB4] dark:from-[#80EEB4]/60 via-[#3CA2FA] dark:via-[#3CA2FA]/100 to-[#80EEB4] dark:to-[#80EEB4]/60"
           />
           {/* title */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-5xl 2xl:text-7xl max-w-[62rem] font-bold uppercase leading-[1.1] text-balance">
@@ -80,7 +80,7 @@ const HeroSection = () => {
           </p>
 
           {/* features */}
-          <div className="bg-[var(--glass-color)] px-6 py-3 rounded-2xl hidden md:flex items-center gap-7">
+          <div className="bg-[var(--glass-color)] shadow-lg dark:shadow-none px-6 py-3 rounded-2xl hidden md:flex items-center gap-7">
             {[
               { icon: <MdOutlineMessage />, label: "All message" },
               { icon: <FiPhoneCall />, label: "All call" },
@@ -102,15 +102,16 @@ const HeroSection = () => {
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740289075/snapchat_pseu9j.png",
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740289165/discord_wixqob.png",
                 ],
-                // speedUp: 20,
               }}
             >
               <ShadowAnimationButton title="Get Started" icon={<GrSend />} />
             </CollMode>
 
-            <p className="flex items-center gap-1 font-bold text-[var(--primary-color)]">
-              Hurry!! $39 OFF{" "}
-              <span className="text-[var(--white-color)]">for 10 users</span>
+            <p className="flex items-center gap-1 font-bold">
+              <span className="text-[var(--primary-color)]">
+                Hurry!! $39 OFF
+              </span>{" "}
+              for 10 users
             </p>
 
             <div className="flex flex-col md:flex-row items-center pt-4 md:pt-6">
@@ -118,7 +119,10 @@ const HeroSection = () => {
               <div className="flex flex-col items-center md:items-start gap-1 mt-5 md:mt-0 md:ml-5">
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
-                  Join <span className="text-[var(--white-color)]">2,183</span>{" "}
+                  Join{" "}
+                  <span className="text-[var(--text-primary-color)]">
+                    2,183
+                  </span>{" "}
                   Users worldwide
                 </p>
               </div>
