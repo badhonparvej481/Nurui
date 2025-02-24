@@ -19,12 +19,12 @@ const Navbar = () => {
     <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
       <Bytenexia fontSize="text-2xl lg:text-3xl" />
 
-      <div className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] rounded-full">
+      <div className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] border dark:border-0 border-[var(--border-color)] rounded-full font-semibold">
         {navigation.map((nav) => (
           <Link
             className={
               navigationActive(nav.url, pathName)
-                ? `navigation-active`
+                ? `navigation-active bg-[var(--primary-color)] dark:bg-[var(--glass-color-3)] hover:dark:bg-[var(--glass-color-4)]`
                 : `navigation-unactive`
             }
             key={nav.id}

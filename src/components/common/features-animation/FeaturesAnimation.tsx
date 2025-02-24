@@ -37,7 +37,7 @@ const FeaturesAnimation: React.FC<FeaturesProps> = ({
 
   return (
     <section id="features">
-      <div className="container mx-auto max-w-6xl px-16 text-[var(--white-color)]">
+      <div className="container mx-auto max-w-6xl px-16 text-[var(--text-primary-color)]">
         <div className="mx-auto mb-12 grid h-full gap-10">
           <div className={`order-1 flex justify-center`}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">

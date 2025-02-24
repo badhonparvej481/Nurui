@@ -18,13 +18,13 @@ const SectionIntro: React.FC<IProps> = ({
       <p className="text-[var(--secondary-color)] uppercase font-semibold text-[16px]">
         {sectionName}
       </p>
-      <h3 className="text-5xl font-bold text-[var(--white-color)] pt-2 pb-4">
+      <h3 className="text-5xl font-bold text-[var(--text-primary-color)] pt-2 pb-4">
         {title.normalWords}
         <span className="text-[var(--secondary-color)]">
           {title?.highLiteWords}
         </span>
       </h3>
-      <p className="text-lg text-[var(--white-color)] max-w-4xl mx-auto">
+      <p className="text-lg text-[var(--opacity-text-color)] max-w-4xl mx-auto">
         {description}
       </p>
     </div>
