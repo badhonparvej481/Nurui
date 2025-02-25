@@ -1,6 +1,7 @@
 @import "abstracts/Variables";
 @import "abstracts/mixin";
 @import "./pages/home/banner-section";
+@import "./pages/home/feature-section";
 
 .rounded-button {
     @include rounded-button;

@@ -38,13 +38,18 @@ const FeaturesAnimation: React.FC<FeaturesProps> = ({
   return (
     <section id="features">
       <div className="container mx-auto max-w-6xl px-16 text-[var(--text-primary-color)]">
-        <div className="mx-auto mb-12 grid h-full gap-10">
+        <div className="mx-auto grid h-full gap-10">
           <div className={`order-1 flex justify-center`}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-6 md:gap-y-8 lg:gap-y-10">
               {data.map((item, index) => (
                 <div
                   key={item.id}
-                  className="relative flex flex-col items-center text-center gap-y-6"
+                  className={`relative flex flex-col items-center text-center gap-y-6 
+                    ${
+                      data.length % 2 !== 0 && index + 1 === data.length
+                        ? "lg:col-span-2 lg:mx-auto xl:mx-0 xl:col-span-1"
+                        : ""
+                    }`}
                 >
                   {/* Progress Bar */}
                   <div className="w-full flex items-center gap-2">
@@ -73,7 +78,7 @@ const FeaturesAnimation: React.FC<FeaturesProps> = ({
                       <h3 className="text-lg lg:text-2xl font-bold">
                         {index + 1}. {item.title}
                       </h3>
-                      <p className="text-[16px] w-80 text-muted-foreground text-[var(--opacity-text-color)]">
+                      <p className="text-[16px] w-80 text-muted-foreground text-[var(--opacity-text-color)] text-balance lg:text-pretty">
                         {item.content}
                       </p>
                     </div>
