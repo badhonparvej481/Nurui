@@ -2,6 +2,9 @@
 @import "abstracts/mixin";
 @import "./pages/home/banner-section";
 @import "./pages/home/feature-section";
+@import "./components/layout/footer/rocket-scrool-svg";
+
+
 
 .rounded-button {
     @include rounded-button;

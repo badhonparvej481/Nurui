@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <HeroSection />
-      <div className="space-y-20 pb-20">
+      <div className="space-y--20 pb-20">
         <DashboardAnimationSection />
         <FeaturesSection />
       </div>

@@ -10,12 +10,14 @@ import { usePathname } from "next/navigation";
 import Bytenexia from "@/components/common/Bytenexia";
 import MobileApplicationDownloadCard from "@/components/common/MobileApplicationDownloadCard";
 import PlayStore from "@/components/icons/PlayStore";
+import RocketScrollToTop from "../common/RocketScrollToTop";
 
 const Footer = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-[var(--white-color)] dark:bg-[var(--background-color)] border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px]">
+    <div className="bg-[var(--white-color)] dark:bg-[var(--background-color)] border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px] rocket-animation">
+      <RocketScrollToTop className=" bg-[var(--background-color)] max-w-24 mx-auto  rounded-full -mt-16 hidden md:block" />
       <div className="container">
         {/* <NewsLetter /> */}
         <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-14 2xl:gap-24 py-7 xl:py-16 pl-1 xl:pl-0">
