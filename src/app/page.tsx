@@ -1,15 +1,17 @@
 import DashboardAnimationSection from "@/components/main/Home/DashboardAnimationSection";
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 import HeroSection from "@/components/main/Home/HeroSection";
+import PricingSection from "@/components/main/Home/PricingSection";
 import React from "react";
 
 const Home = () => {
   return (
     <React.Fragment>
       <HeroSection />
-      <div className="space-y--20 pb-20">
-        <DashboardAnimationSection />
+      <DashboardAnimationSection />
+      <div className="space-y-20 pb-20">
         <FeaturesSection />
+        <PricingSection />
       </div>
     </React.Fragment>
   );
