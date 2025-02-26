@@ -48,7 +48,7 @@ const PricingSection = () => {
     },
   ];
   return (
-    <section className="bg-[var(--glass-color)] backdrop-blur-lg w-full py-24 flex flex-col justify-center">
+    <section className="bg-[var(--glass-color)] backdrop-blur-lg w-full py-20 flex flex-col justify-center">
       <SectionIntro
         title={{
           highLiteWords: "Choose a Plan ",

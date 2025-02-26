@@ -18,7 +18,7 @@ export default function AnimatedTabs({ tabs }: IProps) {
             onClick={() => setActiveTab(tab.id)}
             className={`${
               activeTab === tab.id ? "" : "hover:text-white/60"
-            } relative rounded-full px-6 py-3 font-medium text-white transition focus-visible:outline-2`}
+            } relative rounded-full px-6 py-3 font-semibold text-[var(--white-color)] transition focus-visible:outline-2`}
             style={{
               WebkitTapHighlightColor: "transparent",
             }}
