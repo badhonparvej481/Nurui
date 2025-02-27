@@ -1,5 +1,6 @@
 import Gravity, { MatterBody } from "@/components/common/Gravity";
 import SectionIntro from "@/components/common/SectionIntro";
+import ShinyInput from "@/components/common/ShinyInput";
 import AmazonSesIcon from "@/components/icons/AmazonSesIcon";
 import DiscordIcon from "@/components/icons/DiscordIcon";
 import EmailIcon from "@/components/icons/EmailIcon";
@@ -188,15 +189,19 @@ export default function Preview() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto h-96 rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)]  relative">
-      <SectionIntro
-        title={{
-          highLiteWords: "in one place",
-          normalWords: "80+ Social Media",
-          firstHighLightColor: "text-[var(--secondary-color)]",
-        }}
-        description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
+    <div className="max-w-5xl mx-auto h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-10 relative">
+      <div>
+        <SectionIntro
+          title={{
+            highLiteWords: "in one place",
+            normalWords: "80+ Social Media",
+            firstHighLightColor: "text-[var(--secondary-color)]",
+          }}
+          description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          sectionGap="pb-7"
+        />
+        <ShinyInput className="max-w-96 mx-auto" />
+      </div>
       <Gravity gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {
           const Icon = IconData.icon;

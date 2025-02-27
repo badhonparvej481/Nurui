@@ -28,12 +28,12 @@ const ProtonMailIcon = ({
         y2="42.377"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#6d75d6"></stop>
-        <stop offset=".123" stop-color="#8189de"></stop>
-        <stop offset=".384" stop-color="#a7adec"></stop>
-        <stop offset=".625" stop-color="#c3c7f6"></stop>
-        <stop offset=".838" stop-color="#d3d6fd"></stop>
-        <stop offset="1" stop-color="#d9dcff"></stop>
+        <stop offset="0" stopColor="#6d75d6"></stop>
+        <stop offset=".123" stopColor="#8189de"></stop>
+        <stop offset=".384" stopColor="#a7adec"></stop>
+        <stop offset=".625" stopColor="#c3c7f6"></stop>
+        <stop offset=".838" stopColor="#d3d6fd"></stop>
+        <stop offset="1" stopColor="#d9dcff"></stop>
       </linearGradient>
       <path
         fill="url(#ZNqYm4G6EytizOfIqnhpwa_82aYkgJax8kO_gr1)"
@@ -47,8 +47,8 @@ const ProtonMailIcon = ({
         y2="39.139"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#7b83eb"></stop>
-        <stop offset="1" stop-color="#5961c3"></stop>
+        <stop offset="0" stopColor="#7b83eb"></stop>
+        <stop offset="1" stopColor="#5961c3"></stop>
       </linearGradient>
       <path
         fill="url(#ZNqYm4G6EytizOfIqnhpwb_82aYkgJax8kO_gr2)"

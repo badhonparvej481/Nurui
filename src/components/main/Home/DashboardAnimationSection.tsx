@@ -38,14 +38,14 @@ const DashboardAnimation = () => {
             title={{
               normalWords: " Manage everything, ",
               highLiteWords: "all in one place",
-              highlightColor: "text-[var(--secondary-color)]",
+              highlightColor: "text-[var(--primary-color)]",
             }}
             description=" Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, fugiat. Lorem ipsum dolor, sit amet consectetur
               adipisicing elit. Deleniti, voluptas. Lorem ipsum dolor sit amet."
             sectionName="Why Bytenexia"
             sectionGap="pb-8"
-            sectionNameColor="text-[var(--secondary-color)]"
+            sectionNameColor="text-[var(--primary-color)]"
           />
         }
       >

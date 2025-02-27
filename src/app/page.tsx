@@ -2,8 +2,8 @@ import DashboardAnimationSection from "@/components/main/Home/DashboardAnimation
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 import HeroSection from "@/components/main/Home/HeroSection";
 import PricingSection from "@/components/main/Home/PricingSection";
-import React from "react";
 import Preview from "../components/main/Home/AllSocialMediaSection";
+import React from "react";
 
 const Home = () => {
   return (
