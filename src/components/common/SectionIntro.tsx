@@ -1,11 +1,12 @@
 import React from "react";
 
 interface IProps {
-  sectionName: string;
+  sectionName?: string;
   title: {
     highLiteWords: string;
     normalWords: string;
     highlightColor?: string;
+    firstHighLightColor?: string;
   };
   description?: string;
   sectionGap?: string;
@@ -25,8 +26,8 @@ const SectionIntro: React.FC<IProps> = ({
       <p className={`${sectionNameColor} uppercase font-semibold text-[16px]`}>
         {sectionName}
       </p>
-      <h3 className="text-2xl md:text-5xl font-bold text-[var(--text-primary-color)] pt-2 pb-4 text-balance">
-        {title.normalWords}
+      <h3 className="text-2xl md:text-5xl font-bold text-[var(--text-primary-color)] pt-2 pb-4 text-balance space-x-2.5">
+        <span className={title.firstHighLightColor}>{title.normalWords}</span>
         <span className={title?.highlightColor}>{title?.highLiteWords}</span>
       </h3>
       <p className="text-lg text-[var(--opacity-text-color)] max-w-4xl mx-auto">

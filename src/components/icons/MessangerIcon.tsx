@@ -1,20 +1,24 @@
 import { cn } from "@/utils/cn";
 import React from "react";
 
-interface IProps {
+const MessengerIcon = ({
+  className,
+  isAnimation = true,
+  reSize,
+}: {
   className?: string;
-}
-
-const MessengerIcon: React.FC<IProps> = ({ className }) => {
+  isAnimation?: boolean;
+  reSize?: boolean;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="75px"
-      height="75px"
+      width={reSize ? "80px" : "75px"}
+      height={reSize ? "80px" : "75px"}
       viewBox="0 0 48 48"
-      className={cn("social-icon-animation", className)}
+      className={cn(isAnimation && "social-icon-animation", className)}
     >
       <radialGradient
         id="8O3wK6b5ASW2Wn6hRCB5xa_YFbzdUk7Q3F8_gr1"

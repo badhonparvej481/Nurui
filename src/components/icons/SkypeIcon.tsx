@@ -1,16 +1,24 @@
 import { cn } from "@/utils/cn";
 import React from "react";
 
-const SkypeIcon = ({ className }: { className: string }) => {
+const SkypeIcon = ({
+  className,
+  isAnimation = true,
+  reSize,
+}: {
+  className?: string;
+  isAnimation?: boolean;
+  reSize?: boolean;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="75px"
-      height="75px"
+      width={reSize ? "80px" : "75px"}
+      height={reSize ? "80px" : "75px"}
       viewBox="0 0 48 48"
-      className={cn("social-icon-animation", className)}
+      className={cn(isAnimation && "social-icon-animation", className)}
     >
       <path fill="#03a9f4" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z" />
       <path

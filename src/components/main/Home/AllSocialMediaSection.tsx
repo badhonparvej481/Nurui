@@ -1,33 +1,216 @@
 import Gravity, { MatterBody } from "@/components/common/Gravity";
-import { FaFacebookMessenger } from "react-icons/fa";
+import SectionIntro from "@/components/common/SectionIntro";
+import AmazonSesIcon from "@/components/icons/AmazonSesIcon";
+import DiscordIcon from "@/components/icons/DiscordIcon";
+import EmailIcon from "@/components/icons/EmailIcon";
+import FacebookIcon from "@/components/icons/FacebookIcon";
+import InstagramIcon from "@/components/icons/InstagramIcon";
+import KikIcon from "@/components/icons/KikIcon";
+import LineIcon from "@/components/icons/LineIcon";
+import MastodonIcon from "@/components/icons/MastodonIcon";
+import MessengerIcon from "@/components/icons/MessangerIcon";
+import OutlookIcon from "@/components/icons/OutlookIcon";
+import ProtonMailIcon from "@/components/icons/ProtonMail";
+import SignalIcon from "@/components/icons/SignalIcon";
+import SkypeIcon from "@/components/icons/SkypeIcon";
+import SlackIcon from "@/components/icons/SlackIcon";
+import SnapChatIcon from "@/components/icons/SnapChatIcon";
+import TelegramIcon from "@/components/icons/TelegramIcon";
+import ViberIcon from "@/components/icons/ViberIcon";
+import WeChatIcon from "@/components/icons/WeChatIcon";
+import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
+import YahooIcon from "@/components/icons/YahooIcon";
+import ZohoMailIcon from "@/components/icons/ZohoMailIcon";
 
 export default function Preview() {
-  const icons = [{ icon: <FaFacebookMessenger />, size: 24 }];
+  const icons = [
+    {
+      icon: (
+        <TelegramIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <LineIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+    {
+      icon: (
+        <EmailIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+    {
+      icon: (
+        <WhatsappIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <InstagramIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <MessengerIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <DiscordIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <FacebookIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <YahooIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+    {
+      icon: (
+        <SnapChatIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <ViberIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+    {
+      icon: (
+        <SlackIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+    {
+      icon: (
+        <OutlookIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <SkypeIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+    {
+      icon: (
+        <SignalIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <WeChatIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <MastodonIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <ProtonMailIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <ZohoMailIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <AmazonSesIcon
+          isAnimation={false}
+          className="rounded-full"
+          reSize={true}
+        />
+      ),
+    },
+    {
+      icon: (
+        <KikIcon isAnimation={false} className="rounded-full" reSize={true} />
+      ),
+    },
+  ];
 
   return (
-    <div className="w-dvw h-dvh flex flex-col items-center relative">
-      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
+    <div className="max-w-5xl mx-auto h-96 rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)]  relative">
+      <SectionIntro
+        title={{
+          highLiteWords: "in one place",
+          normalWords: "80+ Social Media",
+          firstHighLightColor: "text-[var(--secondary-color)]",
+        }}
+        description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      />
+      <Gravity gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {
           const Icon = IconData.icon;
-          const randomX = Math.random() * 60 + 20; // Random x between 20-80%
-          const randomY = Math.random() * 20 + 5; // Random y between 5-25%
-          const bodyType = Math.random() > 0.7 ? "rectangle" : "circle";
+          const randomX = Math.random() * 60 + 20;
+          const randomY = Math.random() * 20 + 5;
 
           return (
             <MatterBody
               key={index}
               matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
-              bodyType={bodyType}
               x={`${randomX}%`}
               y={`${randomY}%`}
             >
-              <div
-                className={`p-4 ${
-                  bodyType === "circle" ? "rounded-full" : "rounded-md"
-                } border border-border shadow-md text-foreground dark:text-muted`}
-              >
-                {Icon}
-              </div>
+              <div>{Icon}</div>
             </MatterBody>
           );
         })}
