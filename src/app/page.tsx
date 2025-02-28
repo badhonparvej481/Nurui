@@ -3,6 +3,7 @@ import DashboardAnimationSection from "@/components/main/Home/DashboardAnimation
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 import HeroSection from "@/components/main/Home/HeroSection";
 import PricingSection from "@/components/main/Home/PricingSection";
+import { WorldMapAnimation } from "@/components/main/Home/WorldMapAnimation";
 import React from "react";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <FeaturesSection />
         <PricingSection />
         <GravityAnimation />
+        <WorldMapAnimation />
       </div>
     </React.Fragment>
   );
