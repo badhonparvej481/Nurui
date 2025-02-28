@@ -23,32 +23,40 @@ import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import YahooIcon from "@/components/icons/YahooIcon";
 import ZohoMailIcon from "@/components/icons/ZohoMailIcon";
 
-export default function Preview() {
+export default function GravityAnimation() {
   const icons = [
     {
       icon: (
         <TelegramIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
     },
     {
       icon: (
-        <LineIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <LineIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
     {
       icon: (
-        <EmailIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <EmailIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
     {
       icon: (
         <WhatsappIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -57,7 +65,7 @@ export default function Preview() {
       icon: (
         <InstagramIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -66,7 +74,7 @@ export default function Preview() {
       icon: (
         <MessengerIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -75,7 +83,7 @@ export default function Preview() {
       icon: (
         <DiscordIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -84,54 +92,70 @@ export default function Preview() {
       icon: (
         <FacebookIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
     },
     {
       icon: (
-        <YahooIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <YahooIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
     {
       icon: (
         <SnapChatIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
     },
     {
       icon: (
-        <ViberIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <ViberIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
     {
       icon: (
-        <SlackIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <SlackIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
     {
       icon: (
         <OutlookIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
     },
     {
       icon: (
-        <SkypeIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <SkypeIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
     {
       icon: (
         <SignalIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -140,7 +164,7 @@ export default function Preview() {
       icon: (
         <WeChatIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -149,7 +173,7 @@ export default function Preview() {
       icon: (
         <MastodonIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -158,7 +182,7 @@ export default function Preview() {
       icon: (
         <ProtonMailIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -167,7 +191,7 @@ export default function Preview() {
       icon: (
         <ZohoMailIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
@@ -176,20 +200,24 @@ export default function Preview() {
       icon: (
         <AmazonSesIcon
           isAnimation={false}
-          className="rounded-full"
+          className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
         />
       ),
     },
     {
       icon: (
-        <KikIcon isAnimation={false} className="rounded-full" reSize={true} />
+        <KikIcon
+          isAnimation={false}
+          className="rounded-full size-12 md:size-16 lg:size-auto"
+          reSize={true}
+        />
       ),
     },
   ];
 
   return (
-    <div className="max-w-5xl mx-auto h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-10 relative">
+    <div className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-6 relative ">
       <div>
         <SectionIntro
           title={{
@@ -198,9 +226,9 @@ export default function Preview() {
             firstHighLightColor: "text-[var(--secondary-color)]",
           }}
           description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit."
-          sectionGap="pb-7"
+          sectionGap="pb-3 md:pb-7"
         />
-        <ShinyInput className="max-w-96 mx-auto" />
+        <ShinyInput className="max-w-72 md:max-w-96 mx-auto" />
       </div>
       <Gravity gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {

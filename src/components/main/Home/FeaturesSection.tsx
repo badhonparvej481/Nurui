@@ -11,13 +11,13 @@ export default function FeaturesSection() {
         sectionName="Features"
         sectionNameColor="text-[var(--primary-color)]"
         title={{
-          highLiteWords: "Explore Our ",
-          normalWords: "Key Features ",
+          highLiteWords: "Explore Our",
+          normalWords: "Key Features",
           highlightColor: "text-[var(--primary-color)]",
         }}
         description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
       />
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 xl:gap-5 2xl:gap-10">
         {data.map((feature, index) => (
           <FeatureCard
             key={index}

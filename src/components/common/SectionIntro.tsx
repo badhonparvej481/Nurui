@@ -19,18 +19,22 @@ const SectionIntro: React.FC<IProps> = ({
   title,
   description,
   sectionNameColor,
-  sectionGap = "pb-14",
+  sectionGap = "pb-10 md:pb-12 lg:pb-14",
 }) => {
   return (
     <div className={`max-w-5xl mx-auto text-center px-4 ${sectionGap}`}>
       <p className={`${sectionNameColor} uppercase font-semibold text-[16px]`}>
         {sectionName}
       </p>
-      <h3 className="text-2xl md:text-5xl font-bold text-[var(--text-primary-color)] pt-2 pb-4 text-balance space-x-2.5">
+      <h3 className="text-2xl md:text-5xl font-bold text-[var(--text-primary-color)] pt-1 md:pt-2 pb-2 md:pb-4 text-balance space-x-2.5">
         <span className={title.firstHighLightColor}>{title.normalWords}</span>
         <span className={title?.highlightColor}>{title?.highLiteWords}</span>
       </h3>
-      <p className="text-lg text-[var(--opacity-text-color)] max-w-4xl mx-auto">
+      <p
+        className={`${
+          sectionName || "hidden md:block"
+        } text-lg text-[var(--opacity-text-color)] max-w-4xl mx-auto text-balance xl:text-pretty`}
+      >
         {description}
       </p>
     </div>

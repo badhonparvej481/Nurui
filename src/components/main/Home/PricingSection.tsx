@@ -13,7 +13,7 @@ interface PricingData {
 
 const PricingSection = () => {
   const renderPricingCards = (data: PricingData[]) => (
-    <div className="container grid grid-cols-4 gap-10 pt-10">
+    <div className="container grid md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-10 pt-2.5 md:pt-10">
       {data?.map((d) => (
         <SpotliteMagicCard
           isRecommended={d?.isRecommended}
@@ -35,6 +35,7 @@ const PricingSection = () => {
       ))}
     </div>
   );
+
   const tabs = [
     {
       id: "monthly",
@@ -48,16 +49,16 @@ const PricingSection = () => {
     },
   ];
   return (
-    <section className="bg-[var(--glass-color)] backdrop-blur-lg w-full py-20 flex flex-col justify-center">
+    <section className="bg-[var(--glass-color)] backdrop-blur-lg w-full py-10 xl:py-16 flex flex-col justify-center">
       <SectionIntro
         title={{
-          highLiteWords: "Choose a Plan ",
-          normalWords: "That Works Best For You ",
+          highLiteWords: "Choose a Plan",
+          normalWords: "That Works Best For You",
           highlightColor: "text-[var(--secondary-color)]",
         }}
         sectionName="Pricing"
         sectionNameColor="text-[var(--secondary-color)]"
-        sectionGap="pb-6"
+        sectionGap="pb-3 md:pb-4 xl:pb-6"
       />
       <AnimatedTabs tabs={tabs} />
     </section>

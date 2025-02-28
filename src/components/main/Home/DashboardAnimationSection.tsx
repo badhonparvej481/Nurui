@@ -36,7 +36,7 @@ const DashboardAnimation = () => {
         titleComponent={
           <SectionIntro
             title={{
-              normalWords: " Manage everything, ",
+              normalWords: " Manage everything",
               highLiteWords: "all in one place",
               highlightColor: "text-[var(--primary-color)]",
             }}
