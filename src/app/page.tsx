@@ -3,6 +3,7 @@ import DashboardAnimationSection from "@/components/main/Home/DashboardAnimation
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 import HeroSection from "@/components/main/Home/HeroSection";
 import PricingSection from "@/components/main/Home/PricingSection";
+import Testimonial from "@/components/main/Home/Testimonial";
 import { WorldMapAnimation } from "@/components/main/Home/WorldMapAnimation";
 import React from "react";
 
@@ -11,11 +12,12 @@ const Home = () => {
     <React.Fragment>
       <HeroSection />
       <DashboardAnimationSection />
-      <div className="space-y-20 pb-20">
+      <div className="space-y-24 pb-20">
         <FeaturesSection />
         <PricingSection />
         <GravityAnimation />
         <WorldMapAnimation />
+        <Testimonial />
       </div>
     </React.Fragment>
   );

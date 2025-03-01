@@ -8,12 +8,13 @@ export function WorldMapAnimation() {
       <SectionIntro
         sectionName="Global Connectivity"
         sectionNameColor="text-[var(--secondary-color)]"
+        sectionNameStyle="bg-[var(--secondary-color-3)] inline-block px-2 py-1"
+        sectionGap="pb-7"
         title={{
           normalWords: "Experience the",
           highLiteWords: "Future of Networking",
           highlightColor: "text-[var(--secondary-color)]",
         }}
-        description="This dynamic animation illustrates the flow of data across continents, showcasing the power of global connectivity."
       />
       <WorldMap
         dots={[
@@ -21,31 +22,47 @@ export function WorldMapAnimation() {
             start: {
               lat: 64.2008,
               lng: -149.4937,
-            }, // Alaska (Fairbanks)
+            },
             end: {
               lat: 34.0522,
               lng: -118.2437,
-            }, // Los Angeles
+            },
           },
           {
-            start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
-            end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+            start: { lat: 64.2008, lng: -149.4937 },
+            end: { lat: -15.7975, lng: -47.8919 },
           },
           {
-            start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-            end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+            start: { lat: -15.7975, lng: -47.8919 },
+            end: { lat: 38.7223, lng: -9.1393 },
           },
           {
-            start: { lat: 51.5074, lng: -0.1278 }, // London
-            end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+            start: { lat: 51.5074, lng: -0.1278 },
+            end: { lat: 28.6139, lng: 77.209 },
           },
           {
-            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-            end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+            start: { lat: 28.6139, lng: 77.209 },
+            end: { lat: 43.1332, lng: 131.9113 },
           },
           {
-            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-            end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+            start: { lat: 28.6139, lng: 77.209 },
+            end: { lat: -1.2921, lng: 36.8219 },
+          },
+          {
+            start: { lat: 23.685, lng: 90.3563 },
+            end: { lat: 51.5074, lng: -0.1278 },
+          },
+          {
+            start: { lat: 23.685, lng: 90.3563 },
+            end: { lat: 34.5439, lng: 69.1607 },
+          },
+          {
+            start: { lat: 51.5074, lng: -0.1278 },
+            end: { lat: 34.5439, lng: 69.1607 },
+          },
+          {
+            start: { lat: 34.5439, lng: 69.1607 },
+            end: { lat: 35.6895, lng: 139.6917 },
           },
         ]}
       />

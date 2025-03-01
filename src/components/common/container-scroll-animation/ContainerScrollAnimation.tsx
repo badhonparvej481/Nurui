@@ -36,7 +36,7 @@ export const ContainerScrollAnimation = ({
 
   return (
     <div
-      className="flex items-center justify-center relative px-11 md:px-20 lg:pb-20 pt-14 md:pt-16 lg:pt-20"
+      className="flex items-center justify-center relative px-11 md:px-20 lg:pb-24 pt-14 md:pt-16 lg:pt-24"
       ref={containerRef}
     >
       <div

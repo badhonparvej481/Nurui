@@ -6,7 +6,6 @@ import {
 } from "react-icons/md";
 import LabelWithIcon from "../../common/LabelWithIcon";
 import { FiPhoneCall } from "react-icons/fi";
-import RatingIcon from "../../icons/RatingIcon";
 import BackgroundGridBeam from "../../common/background-grid-beam/BackgroundGridBeam";
 import AnimatedGradientText from "../../common/animated-gradient-button/AnimatedGradientText";
 import MessengerIcon from "../../icons/MessangerIcon";
@@ -32,16 +31,9 @@ import LinearIcon from "../../icons/LinearIcon";
 import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../common/cool-mode/CollMode";
 import { GrSend } from "react-icons/gr";
+import RatingStars from "@/components/common/RatingStars";
 
 const HeroSection = () => {
-  const RatingStars = ({ count = 5 }) => (
-    <div className="flex items-center">
-      {Array.from({ length: count }).map((_, i) => (
-        <RatingIcon key={i} rate={i < 4} />
-      ))}
-    </div>
-  );
-
   return (
     <BackgroundGridBeam>
       <section className="flex justify-evenly px-4 md:px-20 pt-7 md:pt-12 lg:pt-20 pb-7 md:pb-4 lg:pb-10 ">

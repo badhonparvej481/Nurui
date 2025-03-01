@@ -1,9 +1,15 @@
 import React from "react";
 
-const RatingIcon = ({ rate }: { rate?: boolean }) => {
+const RatingIcon = ({
+  rate,
+  size = "size-6",
+}: {
+  rate?: boolean;
+  size?: string;
+}) => {
   return (
     <svg
-      className={`w-6 h-6 ms-2 ${rate ? "text-yellow-300" : "text-gray-300 "}`}
+      className={`${size} ms-2 ${rate ? "text-yellow-300" : "text-gray-300 "}`}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -15,4 +21,3 @@ const RatingIcon = ({ rate }: { rate?: boolean }) => {
 };
 
 export default RatingIcon;
-
