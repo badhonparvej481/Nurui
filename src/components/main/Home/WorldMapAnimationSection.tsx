@@ -2,9 +2,9 @@
 import SectionIntro from "@/components/common/SectionIntro";
 import { WorldMap } from "@/components/common/world-map/WorldMap";
 
-export function WorldMapAnimation() {
+export function WorldMapAnimationSection() {
   return (
-    <div>
+    <section>
       <SectionIntro
         sectionName="Global Connectivity"
         sectionNameColor="text-[var(--secondary-color)]"
@@ -66,6 +66,6 @@ export function WorldMapAnimation() {
           },
         ]}
       />
-    </div>
+    </section>
   );
 }

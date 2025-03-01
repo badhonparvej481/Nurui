@@ -1,10 +1,11 @@
-import GravityAnimation from "@/components/main/Home/AllSocialMediaSection";
+import AllSocialMediaSection from "@/components/main/Home/AllSocialMediaSection";
 import DashboardAnimationSection from "@/components/main/Home/DashboardAnimationSection";
+import FaqSection from "@/components/main/Home/FaqSection";
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 import HeroSection from "@/components/main/Home/HeroSection";
 import PricingSection from "@/components/main/Home/PricingSection";
-import Testimonial from "@/components/main/Home/Testimonial";
-import { WorldMapAnimation } from "@/components/main/Home/WorldMapAnimation";
+import TestimonialSection from "@/components/main/Home/TestimonialSection";
+import { WorldMapAnimationSection } from "@/components/main/Home/WorldMapAnimationSection";
 import React from "react";
 
 const Home = () => {
@@ -15,9 +16,10 @@ const Home = () => {
       <div className="space-y-24 pb-20">
         <FeaturesSection />
         <PricingSection />
-        <GravityAnimation />
-        <WorldMapAnimation />
-        <Testimonial />
+        <AllSocialMediaSection />
+        <WorldMapAnimationSection />
+        <TestimonialSection />
+        <FaqSection />
       </div>
     </React.Fragment>
   );

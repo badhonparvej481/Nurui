@@ -1,14 +1,14 @@
 import TestimonialCard from "../../common/testimonial/TestimonialCard";
 
-export default function Testimonial() {
+export default function TestimonialSection() {
   return (
-    <div className="flex gap-6 border border-[var(--primary-color)] overflow-hidden mx-6 rounded-2xl px-10 testimonial">
+    <section className="flex gap-6 border border-[var(--primary-color)] overflow-hidden mx-6 rounded-2xl px-10 testimonial">
       {/* title */}
       <div className="w-[40%] space-y-3.5 flex flex-col justify-center items-start">
         <p className="py-1 uppercase px-2 bg-[var(--primary-color-4)] inline-block text-[var(--primary-color)] font-semibold rounded-lg">
           Community
         </p>
-        <h1 className="text-7xl font-black pt-0.5 pb-2">
+        <h1 className="text-7xl font-black pb-2">
           Hear From Our Happy{" "}
           <span className="text-[var(--primary-color)]">Clients</span>
         </h1>
@@ -55,7 +55,7 @@ export default function Testimonial() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

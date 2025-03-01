@@ -23,7 +23,7 @@ import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import YahooIcon from "@/components/icons/YahooIcon";
 import ZohoMailIcon from "@/components/icons/ZohoMailIcon";
 
-export default function GravityAnimation() {
+export default function AllSocialMediaSection() {
   const icons = [
     {
       icon: (
