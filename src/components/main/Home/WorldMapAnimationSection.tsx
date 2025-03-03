@@ -9,7 +9,7 @@ export function WorldMapAnimationSection() {
         sectionName="Global Connectivity"
         sectionNameColor="text-[var(--secondary-color)]"
         sectionNameStyle="bg-[var(--secondary-color-3)] inline-block px-2 py-1"
-        sectionGap="pb-7"
+        sectionGap="pb-4 lg:pb-7"
         title={{
           normalWords: "Experience the",
           highLiteWords: "Future of Networking",

@@ -27,4 +27,34 @@
             transform: translateY(0);
         }
     }
+
+    @media (max-width: 768px) {
+        .testimonial-list-bottom-to-top {
+            animation: marquee-left-to-right 25s linear infinite;
+        }
+
+        .testimonial-list-top-to-bottom {
+            animation: marquee-right-to-left 25s linear infinite;
+        }
+
+        @keyframes marquee-left-to-right {
+            from {
+                transform: translateX(-50%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes marquee-right-to-left {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    }
 }

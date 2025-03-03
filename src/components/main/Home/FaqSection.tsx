@@ -13,7 +13,7 @@ const FaqSection = () => {
         activeCategoryKey === id
           ? "bg-[var(--glass-color-3)] text-[var(--white-color)] border border-[var(--glass-color-3)]"
           : "border border-[var(--border-color)]"
-      } font-semibold cursor-pointer rounded-full px-3.5 py-2.5 capitalize`}
+      } font-semibold cursor-pointer rounded-full px-3.5 py-2.5 capitalize text-lg`}
       onClick={() => setActiveCategoryKey(id)}
     >
       {category}

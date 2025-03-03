@@ -45,7 +45,10 @@ export function WorldMap({
   };
 
   return (
-    <div className="container aspect-[2/1 bg-[var(--glass-color)] border-2 border-[var(--border-color)] rounded-2xl  relative">
+    <div
+      className="xl:container bg-[var(--glass-color)] border-2 border-[var(--border-color)] rounded-2xl  relative 
+    mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto"
+    >
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
