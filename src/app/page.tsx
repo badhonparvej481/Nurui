@@ -19,7 +19,7 @@ const Home = () => {
         <AllSocialMediaSection />
         <WorldMapAnimationSection />
         <TestimonialSection />
-        {/* <FaqSection /> */}
+        <FaqSection />
       </div>
     </React.Fragment>
   );
