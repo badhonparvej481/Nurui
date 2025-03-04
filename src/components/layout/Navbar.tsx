@@ -64,22 +64,22 @@ const navigation = [
   // },
   {
     id: 2,
-    name: "services",
-    url: "/services",
+    name: "pricing",
+    url: "/pricing",
   },
   {
     id: 3,
-    name: "works",
-    url: "/works",
+    name: "Features",
+    url: "/features",
   },
   {
     id: 4,
-    name: "pages",
-    url: "/pages",
+    name: "About",
+    url: "/about-us",
   },
   {
     id: 5,
-    name: "blog",
-    url: "/blog",
+    name: "contact",
+    url: "/contact-us",
   },
 ];

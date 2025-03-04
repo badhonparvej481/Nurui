@@ -18,7 +18,7 @@ const PricingSection = () => {
         <SpotliteMagicCard
           isRecommended={d?.isRecommended}
           key={d?.name}
-          className="cursor-pointer group hover:border-[var(--white-color)] transition-all duration-300"
+          className="cursor-pointer group hover:border-[var(--glass-color-4)] dark:hover:border-[var(--white-color)] transition-all duration-300"
           gradientColor="var(--glass-color-4)"
           gradientSize={300}
         >

@@ -10,7 +10,7 @@ interface IProps {
 
 export default function TestimonialCard({ position, name, review }: IProps) {
   return (
-    <div className="w-52 lg:w-full p-4 shadow-2xl rounded-lg bg-[var(--glass-color-2)] border border-[var(--border-color)] relative">
+    <div className="w-52 lg:w-full p-4 shadow-2xl rounded-lg bg-[var(--glass-color)] dark:bg-[var(--glass-color-2)] border border-[var(--border-color)] relative">
       <FaQuoteLeft className=" absolute -top-2 left-[5%] text-[1.3rem] text-[#727272]" />
       <p className="text-text text-[0.9rem] text-center lg:text-left">
         {review}

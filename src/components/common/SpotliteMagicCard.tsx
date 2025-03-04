@@ -51,7 +51,7 @@ export default function SpotliteMagicCard({
       {isRecommended ? (
         <div
           className={
-            "bg-[var(--white-color)] h-14 w-full rounded-t-2xl absolute -top-9 capitalize text-center py-2  text-[var(--black-color)] font-medium"
+            "bg-[var(--glass-color-4)] dark:bg-[var(--white-color)] h-14 w-full rounded-t-2xl absolute -top-9 capitalize text-center py-2 text-[var(--white-color)] dark:text-[var(--black-color)] font-medium"
           }
         >
           Most Popular

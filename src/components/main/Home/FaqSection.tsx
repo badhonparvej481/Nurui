@@ -13,7 +13,7 @@ const FaqSection = () => {
         activeCategoryKey === id
           ? "bg-[var(--glass-color-3)] text-[var(--white-color)] border border-[var(--glass-color-3)]"
           : "border border-[var(--border-color)]"
-      } font-semibold cursor-pointer rounded-full px-3.5 py-2.5 capitalize text-lg`}
+      } font-semibold cursor-pointer rounded-full px-3.5 py-2.5 capitalize text-xl`}
       onClick={() => setActiveCategoryKey(id)}
     >
       {category}
@@ -21,20 +21,20 @@ const FaqSection = () => {
   );
 
   return (
-    <section className="container flex items-center gap-20">
+    <section className="container flex flex-col xl:flex-row gap-10 xl:gap-20">
       {/* title and action's button */}
-      <div className="w-1/3 min-h-96 space-y-5">
-        <h3 className="text-5xl font-bold">FAQs</h3>
-        <p className="text-lg">
+      <div className="xl:w-1/3 space-y-5 text-center xl:text-start">
+        <h3 className="text-4xl xl:text-5xl font-bold">FAQs</h3>
+        <p className="text-xl">
           Everything you need to know about features, membership, and
           troubleshooting.
         </p>
-        <div className="flex flex-wrap gap-x-4 gap-y-5 pt-1">
+        <div className="flex flex-wrap justify-center xl:justify-start gap-x-4 gap-y-5 pt-1">
           {faqsData.map((data) => roundedButton(data?.id, data?.category))}
         </div>
       </div>
       {/* question and answer */}
-      <div className="w-2/3 space-y-5">
+      <div className="xl:w-2/3 space-y-5">
         {faqsData?.[activeCategoryKey - 1]?.questions?.map((faqData, i) => (
           <QuestionAnswer
             key={i}

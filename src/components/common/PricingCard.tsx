@@ -20,7 +20,8 @@ const PriceCard: React.FC<priceCardProps> = ({
   return (
     <div
       className={`h-full rounded-2xl p-4 flex flex-col transform transition-all ${
-        isRecommended && "bg-[var(--glass-color-2)]"
+        isRecommended &&
+        "bg-[var(--glass-color-4)] dark:bg-[var(--glass-color-2)] text-[var(--white-color)]"
       }`}
     >
       <div className="space-y-1.5 min-h-28">
@@ -46,10 +47,10 @@ const PriceCard: React.FC<priceCardProps> = ({
         })}
       </ul>
       <button
-        className={`rounded-lg border border-[var(--white-color)] w-full py-2.5 px-2 mt-auto group-hover:bg-[var(--white-color)] group-hover:text-[var(--black-color)] group-hover:duration-200 cursor-pointer ${
+        className={`rounded-lg border border-[var(--black-color)]  dark:border-[var(--white-color)] w-full py-2.5 px-2 mt-auto group-hover:bg-[var(--white-color)] group-hover:text-[var(--black-color)] group-hover:duration-200 cursor-pointer ${
           isRecommended
             ? "bg-[var(--white-color)] text-[var(--black-color)]"
-            : "text-[var(--white-color)]"
+            : "text-[var(--black-color)] dark:text-[var(--white-color)]"
         } `}
       >
         {cta}
