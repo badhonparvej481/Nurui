@@ -1,12 +1,12 @@
-@import "abstracts/Variables";
-@import "abstracts/mixin";
-@import "./pages/home/banner-section";
-@import "./pages/home/feature-section";
-@import "./components/layout/footer/rocket-scrool-svg";
-@import "./pages/home/testimonial.scss";
+@use "abstracts/Variables";
+@use "abstracts/mixin";
+@use "./pages/home/banner-section";
+@use "./pages/home/feature-section";
+@use "./components/layout/footer/rocket-scrool-svg";
+@use "./pages/home/testimonial.scss";
 
 
 
 .rounded-button {
-    @include rounded-button;
+    @include mixin.rounded-button;
 }

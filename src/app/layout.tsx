@@ -10,12 +10,14 @@ const nunito = Nunito({
   variable: "--font-nunito",
   weight: ["400", "600", "900", "1000"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 const creepster = Creepster({
   variable: "--font-creepster",
   weight: ["400"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} ${creepster.variable} antialiased bg-[var(--background-color)] flex flex-col min-h-screen font-[family-name:var(--font-nunito)]`}
+        className={`${nunito.variable} ${creepster.variable} antialiased bg-[var(--background-color)] flex flex-col min-h-screen font-nunito`}
       >
         <Provider>
           <Navbar />
