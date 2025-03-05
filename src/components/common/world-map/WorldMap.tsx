@@ -21,11 +21,11 @@ export function WorldMap({
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const svgMap = map.getSVG({
     radius: 0.22,
-    color: theme === "dark" ? "#80EEB4" : "#FA4398",
+    color: resolvedTheme === "dark" ? "#80EEB4" : "#FA4398",
     shape: "circle",
   });
 

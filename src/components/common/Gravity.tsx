@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import {
   createContext,
@@ -15,7 +16,6 @@ import { parsePathToVertices } from "@/utils/parsePathToVertices";
 import { debounce } from "lodash";
 import Matter, {
   Bodies,
-  Common,
   Engine,
   Events,
   Mouse,
@@ -25,7 +25,6 @@ import Matter, {
   Runner,
   World,
 } from "matter-js";
-import decomp, * as polyDecomp from "poly-decomp";
 import { cn } from "@/utils/cn";
 
 type GravityProps = {
@@ -95,7 +94,8 @@ export const MatterBody = ({
 
   useEffect(() => {
     if (!elementRef.current || !context) return;
-    context.registerElement(idRef.current, elementRef.current, {
+    const id = idRef.current;
+    context.registerElement(id, elementRef.current, {
       children,
       matterBodyOptions,
       bodyType,
@@ -107,8 +107,19 @@ export const MatterBody = ({
       ...props,
     });
 
-    return () => context.unregisterElement(idRef.current);
-  }, [props, children, matterBodyOptions, isDraggable]);
+    return () => context.unregisterElement(id);
+  }, [
+    props,
+    children,
+    matterBodyOptions,
+    isDraggable,
+    angle,
+    bodyType,
+    context,
+    sampleLength,
+    x,
+    y,
+  ]);
 
   return (
     <div
@@ -243,9 +254,9 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
 
       const height = canvas.current.offsetHeight;
       const width = canvas.current.offsetWidth;
-      Common.setDecomp(polyDecomp);
-      Common.setDecomp(polyDecomp);
-      Common.setDecomp(polyDecomp);
+      // Common.setDecomp(polyDecomp);
+      // Common.setDecomp(polyDecomp);
+      // Common.setDecomp(polyDecomp);
       engine.current.gravity.x = gravity.x;
       engine.current.gravity.y = gravity.y;
 

@@ -10,6 +10,7 @@ const nunito = Nunito({
   variable: "--font-nunito",
   weight: ["400", "600", "900", "1000"],
   subsets: ["latin"],
+  style: ["normal"],
   display: "swap",
 });
 
@@ -17,6 +18,7 @@ const creepster = Creepster({
   variable: "--font-creepster",
   weight: ["400"],
   subsets: ["latin"],
+  style: ["normal"],
   display: "swap",
 });
 

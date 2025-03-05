@@ -13,8 +13,8 @@ const WeChatIcon = ({
   return (
     <svg
       viewBox="0 0 300 300"
-      width="75px"
-      height="75px"
+      width={reSize ? "80px" : "75px"}
+      height={reSize ? "80px" : "75px"}
       className={cn(isAnimation && "social-icon-animation", className)}
     >
       <path
