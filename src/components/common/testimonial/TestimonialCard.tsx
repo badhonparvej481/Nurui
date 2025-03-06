@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { FaQuoteLeft } from "react-icons/fa6";
 import RatingStars from "../RatingStars";
 import ImageComponent from "../Image";

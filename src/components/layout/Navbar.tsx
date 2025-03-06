@@ -24,8 +24,8 @@ const Navbar = () => {
           <Link
             className={
               navigationActive(nav.url, pathName)
-                ? `navigation-active bg-[var(--primary-color)] dark:bg-[var(--glass-color-3)] hover:dark:bg-[var(--glass-color-4)]`
-                : `navigation-unactive`
+                ? `navigation-active text-[var(--white-color)] dark:text-[var(--primary-color)] bg-[var(--primary-color)] dark:bg-white/10 hover:dark:bg-[var(--glass-color-4)]`
+                : `navigation-unactive dark:hover:text-[var(--primary-color)]`
             }
             key={nav.id}
             href={nav.url}

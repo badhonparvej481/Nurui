@@ -4,7 +4,7 @@ interface IProps {
   sectionName?: string;
   title: {
     highLiteWords: string;
-    normalWords: string;
+    normalWords?: string;
     highlightColor?: string;
     firstHighLightColor?: string;
   };
