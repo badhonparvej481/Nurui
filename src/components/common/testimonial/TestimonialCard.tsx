@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { FaQuoteLeft } from "react-icons/fa6";
 import RatingStars from "../RatingStars";
+import ImageComponent from "../Image";
 
 interface IProps {
   position: string;
@@ -18,7 +19,7 @@ export default function TestimonialCard({ position, name, review }: IProps) {
 
       <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 justify-between gap-3 lg:gap-0">
         <div className="flex flex-col lg:flex-row items-center gap-2.5">
-          <img
+          <ImageComponent
             src="https://static.vecteezy.com/system/resources/thumbnails/002/387/693/small_2x/user-profile-icon-free-vector.jpg"
             alt=""
             className="size-8 rounded-full"

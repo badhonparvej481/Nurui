@@ -38,7 +38,7 @@ const HeroSection = () => {
     <BackgroundGridBeam>
       <section className="flex justify-evenly px-4 md:px-20 pt-7 md:pt-12 lg:pt-20 pb-7 md:pb-4 lg:pb-10 ">
         {/* left side icons */}
-        <div className="hidden xl:flex gap-x-4 h-96 w-60 icon-animation">
+        <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation">
           <div className="flex flex-col justify-around relative right-4">
             <TelegramIcon className="relative left-6 icon-animation5" />
             <LineIcon className="icon-animation6" />
@@ -135,7 +135,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* right side icons */}
-        <div className="hidden xl:flex gap-x-4 h-96 w-60 icon-animation mr-8">
+        <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation mr-8">
           <div className="flex flex-col justify-between">
             <FacebookIcon className="icon-animation8" />
             <YahooIcon className="icon-animation9" />
