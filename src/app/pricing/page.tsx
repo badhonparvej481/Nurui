@@ -1,3 +1,4 @@
+import NewsLetterSection from "@/components/common/NewsLetterSection";
 import PricingSection from "@/components/main/Home/PricingSection";
 import FeatureComparison from "@/components/main/pricing/FeatureComparison";
 
@@ -6,6 +7,7 @@ const Pricing = () => {
     <div className="space-y-24 pb-24">
       <PricingSection />
       <FeatureComparison />
+      <NewsLetterSection />
     </div>
   );
 };

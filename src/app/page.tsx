@@ -1,3 +1,4 @@
+import NewsLetterSection from "@/components/common/NewsLetterSection";
 import AllSocialMediaSection from "@/components/main/Home/AllSocialMediaSection";
 import FaqSection from "@/components/main/Home/FaqSection";
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
@@ -18,6 +19,7 @@ const Home = () => {
       <WorldMapAnimationSection />
       <TestimonialSection />
       <FaqSection />
+      <NewsLetterSection />
     </div>
   );
 };

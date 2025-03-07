@@ -1,26 +1,26 @@
 import AnimateInput from "./AnimateInput";
 
-const NewsLetter = () => {
+const NewsLetterSection = () => {
   return (
-    <div className="max-w-3xl mx-auto -mt-36  bg-[var(--glass-color)] py-8 rounded-xl hidden xl:flex flex-col items-center justify-center text-center gap-3.5">
-      <h6 className="text-3xl font-semibold">{newsLetter?.title}</h6>
-      <p className="max-w-lg">{newsLetter?.description}</p>
+    <section className="container bg-gradient-to-r from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] py-20 px-20 rounded-xl hidden xl:flex flex-col items-start justify-center text-left gap-3.5">
+      <h6 className="text-4xl font-bold">{newsLetter?.title}</h6>
+      <p className="max-w-2xl">{newsLetter?.description}</p>
       <AnimateInput
-        className="mx-auto w-full max-w-lg mt-2"
+        className="w-full max-w-2xl mt-2"
         onBlurTitle="subscribe to our newsletter"
         onFocusTitle="We won't spam you!"
         buttonTitle={newsLetter?.subscribe_button.label}
       />
-    </div>
+    </section>
   );
 };
 
-export default NewsLetter;
+export default NewsLetterSection;
 
 const newsLetter = {
   title: "Subscribe to our newsletter",
   description:
-    "Get the latest news and updates from us by subscribing to our newsletter today. We promise not to spam you.",
+    "Get the latest news and updates from us by subscribing to our newsletter today. We promise.",
   subscribe_button: {
     label: "Subscribe",
     action: "subscribe",
