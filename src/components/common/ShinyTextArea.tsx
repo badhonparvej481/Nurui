@@ -3,12 +3,12 @@ import { useState, useRef, ReactNode } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { cn } from "@/utils/cn";
 
-const ShinyInput = ({
+const ShinyTextArea = ({
   className,
   icon,
   placeholder,
-  type,
   name,
+  rows = 4,
   required,
   borderHoverAnimation = "1px solid var(--primary-color)",
   focus = "focus:border-[var(--primary-color)]",
@@ -16,19 +16,19 @@ const ShinyInput = ({
   className?: string;
   icon?: ReactNode;
   placeholder: string;
-  type: string;
   name: string;
+  rows?: number;
   required?: boolean;
   borderHoverAnimation?: string;
   focus?: string;
 }) => {
-  const divRef = useRef<HTMLInputElement | null>(null);
+  const divRef = useRef<HTMLTextAreaElement | null>(null);
   const [, setIsFocused] = useState(false);
   const positionX = useMotionValue(0);
   const positionY = useMotionValue(0);
   const [opacity, setOpacity] = useState(0);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLInputElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLTextAreaElement>) => {
     if (divRef.current) {
       const rect = divRef.current.getBoundingClientRect();
       positionX.set(e.clientX - rect.left);
@@ -57,7 +57,7 @@ const ShinyInput = ({
 
   return (
     <div className={cn("relative z-40", className)}>
-      <input
+      <textarea
         onMouseMove={handleMouseMove}
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -65,15 +65,14 @@ const ShinyInput = ({
         onMouseLeave={handleMouseLeave}
         autoComplete="off"
         placeholder={placeholder}
-        type={type}
         name={name}
+        rows={rows}
         required={required}
-        className={`h-12 w-full cursor-default rounded-md border border-[var(--glass-color)] bg-[var(--glass-color)] p-3.5 
-        text-[var(--black-color)] dark:text-[var(--white-color)] transition-colors duration-500 placeholder:select-none placeholder:text-[var(--placeholder-color)] ${focus} focus:outline-none`}
+        className={`w-full h-36 cursor-default rounded-md border border-[var(--glass-color)] bg-[var(--glass-color)] p-3.5 
+        text-[var(--black-color)] dark:text-[var(--white-color)] transition-colors duration-500 placeholder:select-none placeholder:text-[var(--placeholder-color)] ${focus} focus:outline-none resize-none`}
       />
 
-      <motion.input
-        type="text"
+      <motion.textarea
         ref={divRef}
         disabled
         style={{
@@ -83,12 +82,11 @@ const ShinyInput = ({
           maskImage: shineBorder,
         }}
         aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-0 z-10 h-12 w-full cursor-default rounded-md border 
-        border-[var(--secondary-color)] bg-transparent p-3.5 opacity-0 transition-opacity duration-500 placeholder:select-none"
+        className="pointer-events-none absolute h-36 left-0 top-0 z-10 w-full cursor-default rounded-md border border-[var(--secondary-color)] bg-transparent p-3.5 opacity-0 transition-opacity duration-500 placeholder:select-none"
       />
       {icon}
     </div>
   );
 };
 
-export default ShinyInput;
+export default ShinyTextArea;

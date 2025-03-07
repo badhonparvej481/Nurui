@@ -19,8 +19,13 @@ export default {
       animation: {
         rotate: "rotate 5s linear infinite",
         gradient: "gradient 5s linear infinite",
+        shine: "shine 4s linear infinite",
       },
       keyframes: {
+        shine: {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
         rotate: {
           "0%": { transform: "rotate(0deg) scale(10)" },
           "100%": { transform: "rotate(-360deg) scale(10)" },

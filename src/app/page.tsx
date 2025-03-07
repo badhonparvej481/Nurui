@@ -10,7 +10,7 @@ import { WorldMapAnimationSection } from "@/components/main/Home/WorldMapAnimati
 
 const Home = () => {
   return (
-    <div className="space-y-24 pb-20">
+    <div className="space-y-24">
       <HeroSection />
       <HeroVideoDialogSection />
       <FeaturesSection />

@@ -22,6 +22,7 @@ import WeChatIcon from "@/components/icons/WeChatIcon";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import YahooIcon from "@/components/icons/YahooIcon";
 import ZohoMailIcon from "@/components/icons/ZohoMailIcon";
+import { IoIosSearch } from "react-icons/io";
 
 export default function AllSocialMediaSection() {
   const icons = [
@@ -228,7 +229,17 @@ export default function AllSocialMediaSection() {
           description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit."
           sectionGap="pb-3 md:pb-7"
         />
-        <ShinyInput className="max-w-72 md:max-w-96 mx-auto" />
+        <ShinyInput
+          className="max-w-72 md:max-w-96 mx-auto"
+          icon={
+            <IoIosSearch className="absolute right-3.5 top-1/2 -translate-y-1/2 text-2xl text-[var(--placeholder-color)]" />
+          }
+          placeholder="Search by social media platform"
+          name="social-media"
+          type="text"
+          borderHoverAnimation="1px solid var(--secondary-color)"
+          focus="focus:border-[var(--secondary-color)]"
+        />
       </div>
       <Gravity gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {

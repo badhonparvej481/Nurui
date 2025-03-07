@@ -1,5 +1,7 @@
+import ContactUsSection from "@/components/main/contact-us/ContactUsSection";
+
 const page = () => {
-  return <div>page</div>;
+  return <ContactUsSection />;
 };
 
 export default page;
