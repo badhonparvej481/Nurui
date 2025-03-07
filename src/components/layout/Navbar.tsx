@@ -16,41 +16,43 @@ const Navbar = () => {
   const handleClose = useCallback(() => setOpen(false), []);
 
   return (
-    <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
-      <Bytenexia fontSize="text-2xl lg:text-3xl" />
+    <div className="sticky top-0 z-50 bg-[#F7F7F7]/5 dark:bg-[#010313]/5 backdrop-blur-lg overflow-hidden w-full">
+      <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
+        <Bytenexia fontSize="text-2xl lg:text-3xl" />
 
-      <div className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] border dark:border border-[var(--border-color)] rounded-full font-semibold">
-        {navigation.map((nav) => (
-          <Link
-            className={
-              navigationActive(nav.url, pathName)
-                ? `navigation-active text-[var(--white-color)] dark:text-[var(--primary-color)] bg-[var(--primary-color)] dark:bg-white/10 hover:dark:bg-[var(--glass-color-4)]`
-                : `navigation-unactive dark:hover:text-[var(--primary-color)]`
-            }
-            key={nav.id}
-            href={nav.url}
+        <div className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] border dark:border border-[var(--border-color)] rounded-full font-semibold">
+          {navigation.map((nav) => (
+            <Link
+              className={
+                navigationActive(nav.url, pathName)
+                  ? `navigation-active text-[var(--white-color)] dark:text-[var(--primary-color)] bg-[var(--primary-color)] dark:bg-white/10 hover:dark:bg-[var(--glass-color-4)]`
+                  : `navigation-unactive dark:hover:text-[var(--primary-color)]`
+              }
+              key={nav.id}
+              href={nav.url}
+            >
+              {nav.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="hidden lg:flex items-center gap-5">
+          <ThemeSwitcher />
+          <BorderAnimationButton title="sing in" />
+        </div>
+        {/* drawer */}
+        <>
+          <button
+            type="button"
+            onClick={handleOpen}
+            className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden"
           >
-            {nav.name}
-          </Link>
-        ))}
-      </div>
-
-      <div className="hidden lg:flex items-center gap-5">
-        <ThemeSwitcher />
-        <BorderAnimationButton title="sing in" />
-      </div>
-      {/* drawer */}
-      <>
-        <button
-          type="button"
-          onClick={handleOpen}
-          className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden"
-        >
-          <CgMenuRight className="text-[var(--primary-color)] text-3xl" />
-        </button>
-        <NavigationDrawer anchor="right" open={open} onClose={handleClose} />
-      </>
-    </nav>
+            <CgMenuRight className="text-[var(--primary-color)] text-3xl" />
+          </button>
+          <NavigationDrawer anchor="right" open={open} onClose={handleClose} />
+        </>
+      </nav>
+    </div>
   );
 };
 

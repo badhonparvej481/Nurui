@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { ReactNode, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 interface IProps {
   tabs: { id: string; label: string; content: ReactNode }[];
@@ -8,6 +9,7 @@ interface IProps {
 
 export default function AnimatedTabs({ tabs }: IProps) {
   const [activeTab, setActiveTab] = useState<string>(tabs[0].id);
+  const uniqueId = uuidv4();
 
   return (
     <div className="space-y-8">
@@ -25,7 +27,7 @@ export default function AnimatedTabs({ tabs }: IProps) {
           >
             {activeTab === tab.id && (
               <motion.span
-                layoutId="bubble"
+                layoutId={`bubble-${uniqueId}`}
                 className="absolute inset-0 z-10 bg-[var(--white-color)] mix-blend-difference"
                 style={{ borderRadius: 9999 }}
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}

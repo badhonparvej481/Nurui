@@ -70,7 +70,7 @@ const SettingsNav: FC = () => {
   };
 
   return (
-    <nav className="max-w-[200px] w-full mx-auto space-y-2 z-50">
+    <nav className="max-w-[200px] w-full mx-auto space-y-2 z-40">
       <motion.div whileTap={{ scale: 0.97 }}>
         <button
           onClick={() => setIsOpen(!isOpen)}

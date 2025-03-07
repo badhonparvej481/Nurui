@@ -1,20 +1,55 @@
 import { RxCross2 } from "react-icons/rx";
 import { MdDone } from "react-icons/md";
+import { FC } from "react";
 
-const PlanTable = () => {
+interface IProps {
+  planData: {
+    name: string;
+    price: string;
+    billed: string;
+    admin: number;
+    users: number;
+    unlimitedWorkspace: boolean;
+    unlimitedMessage: boolean;
+    unlimitedContact: boolean;
+    unlimitedBroadcasts: boolean;
+    channels: {
+      whatsappWeb: boolean;
+      whatsappAPI: boolean;
+      telegram: boolean;
+      facebookMessenger: boolean;
+      instagram: boolean;
+      email: boolean;
+    };
+    features: {
+      dashboard: boolean;
+      teamInbox: boolean;
+      crmManagement: boolean;
+      quickReplies: boolean;
+      workflowChatbotAutomation: boolean;
+      sharedStorageSpace: boolean;
+    };
+  }[];
+}
+
+const PlanTable: FC<IProps> = ({ planData }) => {
   return (
     <div className="container relative overflow-x-auto">
       <table className="w-full rtl:text-right">
-        <thead className="bg-[var(--primary-500)] text-[var(--white1)] text-lg">
+        <thead className="bg-[var(--secondary-color-4)] text-[var(--secondary-color)] md:rounded-xl overflow-hidden text-lg">
           <tr>
             <th
               scope="col"
-              className="px-6 py-3 text-left  hidden md:table-cell"
+              className="px-6 py-3 text-left  hidden md:table-cell first:md:rounded-l-xl "
             >
               Plan
             </th>
             {planData?.map((data, idx) => (
-              <th key={idx} scope="col" className="md:px-6 py-3 text-center">
+              <th
+                key={idx}
+                scope="col"
+                className="md:px-6 py-3 text-center last:md:rounded-r-xl"
+              >
                 {data?.name}
               </th>
             ))}
@@ -25,7 +60,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Price
             </th>
@@ -38,7 +73,10 @@ const PlanTable = () => {
               Price
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.price}
               </td>
             ))}
@@ -48,7 +86,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Billed
             </th>
@@ -61,7 +99,10 @@ const PlanTable = () => {
               Billed
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.billed}
               </td>
             ))}
@@ -71,7 +112,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Number of Admin
             </th>
@@ -84,7 +125,10 @@ const PlanTable = () => {
               Number of Admin
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.admin}
               </td>
             ))}
@@ -94,7 +138,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Number of Users
             </th>
@@ -107,7 +151,10 @@ const PlanTable = () => {
               Number of Users
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.users}
               </td>
             ))}
@@ -117,7 +164,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Unlimited Workspace and Brands
             </th>
@@ -125,19 +172,22 @@ const PlanTable = () => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Unlimited Workspace and Brands
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.unlimitedWorkspace ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -148,7 +198,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Unlimited Message
             </th>
@@ -161,14 +211,17 @@ const PlanTable = () => {
               Unlimited Message
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.unlimitedMessage ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -179,7 +232,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Unlimited Contact
             </th>
@@ -192,14 +245,17 @@ const PlanTable = () => {
               Unlimited Contact
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.unlimitedContact ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -210,7 +266,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Unlimited Broadcasts
             </th>
@@ -223,14 +279,17 @@ const PlanTable = () => {
               Unlimited Broadcasts
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.unlimitedBroadcasts ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -241,7 +300,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Unlimited Workspace and Brands
             </th>
@@ -254,14 +313,17 @@ const PlanTable = () => {
               Unlimited Workspace and Brands
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.unlimitedWorkspace ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -272,7 +334,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Unlimited Massage
             </th>
@@ -285,14 +347,17 @@ const PlanTable = () => {
               Unlimited Massage
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.unlimitedMessage ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -302,7 +367,7 @@ const PlanTable = () => {
           <tr>
             <td
               colSpan={5}
-              className="text-center bg-[var(--primary-50)] text-lg py-3 font-medium"
+              className="text-center  md:bg-[var(--secondary-color-4)] text-lg py-3 font-bold text-[var(--secondary-color)]  md:rounded-xl"
             >
               Channel
             </td>
@@ -312,7 +377,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Whatsapp Web
             </th>
@@ -325,14 +390,17 @@ const PlanTable = () => {
               Whatsapp Web
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.channels?.whatsappWeb ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -343,7 +411,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Whatsapp API
             </th>
@@ -356,14 +424,17 @@ const PlanTable = () => {
               Whatsapp API
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.channels?.whatsappAPI ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -374,7 +445,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Telegram
             </th>
@@ -387,14 +458,17 @@ const PlanTable = () => {
               Telegram
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.channels?.telegram ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -405,7 +479,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Facebook Messenger
             </th>
@@ -418,14 +492,17 @@ const PlanTable = () => {
               Facebook Messenger
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.channels?.facebookMessenger ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -436,7 +513,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Instragram
             </th>
@@ -449,14 +526,17 @@ const PlanTable = () => {
               Instragram
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.channels?.instagram ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -467,7 +547,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Email
             </th>
@@ -480,14 +560,17 @@ const PlanTable = () => {
               Email
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.channels?.email ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -497,7 +580,7 @@ const PlanTable = () => {
           <tr>
             <td
               colSpan={5}
-              className="text-center bg-[var(--primary-50)] text-lg py-3 font-medium"
+              className="text-center md:bg-[var(--secondary-color-4)] text-lg py-3 font-bold text-[var(--secondary-color)]  md:rounded-xl"
             >
               Features
             </td>
@@ -507,7 +590,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Dashboard
             </th>
@@ -520,14 +603,17 @@ const PlanTable = () => {
               Dashboard
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.features?.dashboard ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -538,7 +624,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Team Inbox
             </th>
@@ -551,14 +637,17 @@ const PlanTable = () => {
               Team Inbox
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.features?.teamInbox ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -569,7 +658,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               CRM Management
             </th>
@@ -582,14 +671,17 @@ const PlanTable = () => {
               CRM Management
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.features?.crmManagement ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -600,7 +692,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Quick Replies
             </th>
@@ -613,14 +705,17 @@ const PlanTable = () => {
               Quick Replies
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data?.features?.quickReplies ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -631,7 +726,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Workflow Chatbot Automation
             </th>
@@ -644,14 +739,17 @@ const PlanTable = () => {
               Workflow Chatbot Automation
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data.features.workflowChatbotAutomation ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -662,7 +760,7 @@ const PlanTable = () => {
             <th
               scope="row"
               colSpan={4}
-              className="px-6 py-4 font-medium  text-[var(--primary-800)] text-center  table-cell md:hidden"
+              className="px-6 py-4 font-medium  text-[var(--secondary-color)] text-center  table-cell md:hidden"
             >
               Shared Storage Space
             </th>
@@ -675,14 +773,17 @@ const PlanTable = () => {
               Shared Storage Space
             </th>
             {planData.map((data, idx) => (
-              <td key={idx} className="px-6 py-4 border-l text-center">
+              <td
+                key={idx}
+                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+              >
                 {data.features.sharedStorageSpace ? (
                   <span className="flex justify-center">
-                    <MdDone />
+                    <MdDone className="text-[var(--secondary-color)] p-0.5 text-2xl border-[var(--secondary-color)] border rounded-full" />
                   </span>
                 ) : (
                   <span className="flex justify-center">
-                    <RxCross2 />
+                    <RxCross2 className="text-[#E38386] p-0.5 text-2xl border-[#E38386] border rounded-full" />
                   </span>
                 )}
               </td>
@@ -695,114 +796,3 @@ const PlanTable = () => {
 };
 
 export default PlanTable;
-
-const planData = [
-  {
-    name: "Basic",
-    price: "$0/Mo",
-    billed: "Monthly",
-    admin: 1,
-    users: 2,
-    unlimitedWorkspace: false,
-    unlimitedMessage: true,
-    unlimitedContact: false,
-    unlimitedBroadcasts: false,
-    channels: {
-      whatsappWeb: true,
-      whatsappAPI: false,
-      telegram: true,
-      facebookMessenger: true,
-      instagram: true,
-      email: true,
-    },
-    features: {
-      dashboard: true,
-      teamInbox: false,
-      crmManagement: false,
-      quickReplies: false,
-      workflowChatbotAutomation: false,
-      sharedStorageSpace: false,
-    },
-  },
-  {
-    name: "Standard",
-    price: "$10/Mo",
-    billed: "Monthly",
-    admin: 1,
-    users: 5,
-    unlimitedWorkspace: true,
-    unlimitedMessage: true,
-    unlimitedContact: true,
-    unlimitedBroadcasts: true,
-    channels: {
-      whatsappWeb: true,
-      whatsappAPI: true,
-      telegram: true,
-      facebookMessenger: true,
-      instagram: true,
-      email: true,
-    },
-    features: {
-      dashboard: true,
-      teamInbox: true,
-      crmManagement: true,
-      quickReplies: true,
-      workflowChatbotAutomation: false,
-      sharedStorageSpace: false,
-    },
-  },
-  {
-    name: "Pro",
-    price: "$200/Mo",
-    billed: "Monthly",
-    admin: 1,
-    users: 10,
-    unlimitedWorkspace: true,
-    unlimitedMessage: true,
-    unlimitedContact: true,
-    unlimitedBroadcasts: true,
-    channels: {
-      whatsappWeb: true,
-      whatsappAPI: true,
-      telegram: true,
-      facebookMessenger: true,
-      instagram: true,
-      email: true,
-    },
-    features: {
-      dashboard: true,
-      teamInbox: true,
-      crmManagement: true,
-      quickReplies: true,
-      workflowChatbotAutomation: true,
-      sharedStorageSpace: true,
-    },
-  },
-  {
-    name: "Premium",
-    price: "$500/Mo",
-    billed: "Monthly",
-    admin: 1,
-    users: 20,
-    unlimitedWorkspace: true,
-    unlimitedMessage: true,
-    unlimitedContact: true,
-    unlimitedBroadcasts: true,
-    channels: {
-      whatsappWeb: true,
-      whatsappAPI: true,
-      telegram: true,
-      facebookMessenger: true,
-      instagram: true,
-      email: true,
-    },
-    features: {
-      dashboard: true,
-      teamInbox: true,
-      crmManagement: true,
-      quickReplies: true,
-      workflowChatbotAutomation: true,
-      sharedStorageSpace: true,
-    },
-  },
-];

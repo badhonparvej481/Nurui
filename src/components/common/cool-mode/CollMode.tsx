@@ -192,7 +192,7 @@ const CollMode: React.FC<CoolParticleEffectProps> = ({
   }, [options]);
 
   return (
-    <div ref={containerRef} className={`z-50 ${className}`}>
+    <div ref={containerRef} className={`z-40 ${className}`}>
       {children}
     </div>
   );

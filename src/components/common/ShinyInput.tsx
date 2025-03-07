@@ -39,7 +39,7 @@ const ShinyInput = ({ className }: { className?: string }) => {
   );
 
   return (
-    <div className={cn("relative z-50", className)}>
+    <div className={cn("relative z-40", className)}>
       <input
         onMouseMove={handleMouseMove}
         onFocus={handleFocus}

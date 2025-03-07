@@ -3,7 +3,7 @@ import FeatureComparison from "@/components/main/pricing/FeatureComparison";
 
 const Pricing = () => {
   return (
-    <div className="space-y-24 pb-20">
+    <div className="space-y-24 pb-24">
       <PricingSection />
       <FeatureComparison />
     </div>

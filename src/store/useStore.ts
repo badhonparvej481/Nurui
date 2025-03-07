@@ -5,9 +5,9 @@ interface IProps {
     setActiveTab: (newText: string) => void;
 }
 
-const useStore = create<IProps>((set) => ({
+const useTabActive = create<IProps>((set) => ({
     activeTab: 'monthly',
     setActiveTab: (active) => set({ activeTab: active }),
 }));
   
-export default useStore;
+export default useTabActive;

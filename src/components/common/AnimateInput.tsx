@@ -27,7 +27,7 @@ const AnimateInput: FC<IProps> = ({
             className="mr-2 pl-3 inline-block h-full flex-1 rounded-lg bg-transparent px-2 py-3 placeholder:text-[var(--placeholder-color)] focus:outline-none focus:ring-1 focus:ring-[var(--primary-color)]"
             placeholder={placeholder}
           />
-          <span className="relative z-50 block rounded-lg border border-[var(--border-color)] bg-[var(--glass-color)] px-8 py-3 text-center text-sm transition duration-200 hover:bg-[var(--glass-color-2)]">
+          <span className="relative z-40 block rounded-lg border border-[var(--border-color)] bg-[var(--glass-color)] px-8 py-3 text-center text-sm transition duration-200 hover:bg-[var(--glass-color-2)]">
             {buttonTitle}
           </span>
         </div>
