@@ -26,3 +26,8 @@
 .font-creepster {
     font-family: var(--font-creepster);
 }
+
+#nprogress .bar {
+    background: var(--primary-color) !important;
+    height: 4px;
+}

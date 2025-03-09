@@ -7,7 +7,7 @@ import ButtonBackgroundShineButton from "@/components/common/ButtonBackgroundShi
 const ContactUsSection = () => {
   return (
     <div className="container pt-6 lg:pt-10 flex flex-col lg:flex-row gap-8 xl:gap-14 2xl:gap-24">
-      <div className="lg:w-1/3 bg-gradient-to-t from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] rounded-2xl p-6 2xl:p-14 space-y-8">
+      <div className="lg:w-1/3 bg-gradient-to-t from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] rounded-2xl p-6 2xl:p-14 space-y-8 lg:space-y-10">
         <h3 className="text-2xl font-black text-[var(--primary-color)]">
           Get in touch
         </h3>

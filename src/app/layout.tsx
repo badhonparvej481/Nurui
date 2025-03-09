@@ -5,6 +5,7 @@ import "../styles/main.scss";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Provider from "./Provider";
+import NProgressProvider from "@/components/common/NProgressProvider";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${nunito.variable} ${creepster.variable} antialiased bg-[var(--background-color)] flex flex-col min-h-screen font-nunito`}
       >
         <Provider>
+          <NProgressProvider />
           <Navbar />
           <div className="pb-24">{children}</div>
           <Footer />

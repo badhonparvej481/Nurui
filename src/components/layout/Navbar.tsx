@@ -8,6 +8,7 @@ import { CgMenuRight } from "react-icons/cg";
 import Bytenexia from "@/components/common/Bytenexia";
 import { NavigationDrawer } from "@/components/common/drawer/NavigationDrawer";
 import ThemeSwitcher from "../common/ThemeSwitcher";
+import nProgress from "nprogress";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -30,6 +31,7 @@ const Navbar = () => {
               }
               key={nav.id}
               href={nav.url}
+              onClick={() => nProgress.start()}
             >
               {nav.name}
             </Link>
@@ -59,28 +61,23 @@ const Navbar = () => {
 export default Navbar;
 
 const navigation = [
-  // {
-  //   id: 1,
-  //   name: "home",
-  //   url: "/",
-  // },
   {
-    id: 2,
+    id: 1,
     name: "pricing",
     url: "/pricing",
   },
   {
-    id: 3,
+    id: 2,
     name: "Features",
     url: "/features",
   },
   {
-    id: 4,
+    id: 3,
     name: "About",
     url: "/about-us",
   },
   {
-    id: 5,
+    id: 4,
     name: "contact",
     url: "/contact-us",
   },

@@ -11,6 +11,7 @@ import Bytenexia from "@/components/common/Bytenexia";
 import MobileApplicationDownloadCard from "@/components/common/MobileApplicationDownloadCard";
 import PlayStore from "@/components/icons/PlayStore";
 import RocketScrollToTop from "../common/RocketScrollToTop";
+import nProgress from "nprogress";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -19,7 +20,6 @@ const Footer = () => {
     <div className="bg-[var(--white-color)] dark:bg-[var(--background-color)] border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px] rocket-animation">
       <RocketScrollToTop className=" bg-[var(--background-color)] max-w-24 mx-auto  rounded-full -mt-16 hidden md:block" />
       <div className="container">
-        {/* <NewsLetter /> */}
         <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-14 2xl:gap-24 py-7 xl:py-16 pl-1 xl:pl-0">
           <div className="space-y-3 lg:space-y-4 xl:space-y-6 max-w-80 col-span-full">
             <Bytenexia fontSize="text-2xl lg:text-3xl" />
@@ -89,6 +89,7 @@ const Footer = () => {
               <Link
                 key={data?.id + i}
                 href={data?.url}
+                onClick={() => nProgress.start()}
                 className={`${
                   navigation?.length === i + 1
                     ? ""
@@ -122,22 +123,22 @@ const navigation = [
   },
   {
     id: 2,
-    name: "services",
-    url: "/services",
+    name: "pricing",
+    url: "/pricing",
   },
   {
     id: 3,
-    name: "works",
-    url: "/works",
+    name: "Features",
+    url: "/features",
   },
   {
     id: 4,
-    name: "pages",
-    url: "/pages",
+    name: "About",
+    url: "/about-us",
   },
   {
     id: 5,
-    name: "blog",
-    url: "/blog",
+    name: "contact",
+    url: "/contact-us",
   },
 ];
