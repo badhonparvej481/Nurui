@@ -17,7 +17,7 @@ const Navbar = () => {
   const handleClose = useCallback(() => setOpen(false), []);
 
   return (
-    <div className="sticky top-0 z-[1000] bg-transparent backdrop-blur-lg overflow-hidden w-full">
+    <div className="sticky top-0 z-[1000] bg-transparent backdrop-blur-lg overflow-hidden w-full border-dashed border-b border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
         <Bytenexia fontSize="text-2xl lg:text-3xl" />
 

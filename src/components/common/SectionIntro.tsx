@@ -37,7 +37,7 @@ const SectionIntro: React.FC<IProps> = ({
       <p
         className={`${
           sectionName || "hidden md:block"
-        } text-lg text-[var(--opacity-text-color)] max-w-4xl mx-auto text-balance xl:text-pretty`}
+        } text-lg text-[var(--opacity-text-color)] max-w-3xl mx-auto text-balance xl:text-pretty`}
       >
         {description}
       </p>

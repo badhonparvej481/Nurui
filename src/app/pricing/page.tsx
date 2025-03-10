@@ -4,7 +4,7 @@ import FeatureComparison from "@/components/main/pricing/FeatureComparison";
 
 const Pricing = () => {
   return (
-    <div className="space-y-24">
+    <div className="section-gap">
       <PricingSection />
       <FeatureComparison />
       <NewsLetterSection />
