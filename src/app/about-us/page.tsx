@@ -1,5 +1,11 @@
+import AboutUsHeroSection from "@/components/main/about-us/AboutUsHeroSection";
+
 const page = () => {
-  return <div></div>;
+  return (
+    <div>
+      <AboutUsHeroSection />
+    </div>
+  );
 };
 
 export default page;
