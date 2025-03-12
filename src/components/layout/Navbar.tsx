@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
         <Bytenexia fontSize="text-2xl lg:text-3xl" />
 
-        <div className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] border dark:border border-[var(--border-color)] rounded-full font-semibold">
+        <div className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] dark:bg-[white]/5 border dark:border border-[var(--border-color)] rounded-full font-semibold">
           {navigation.map((nav) => (
             <Link
               className={

@@ -84,10 +84,10 @@ export function TabHeader({
   const { activeTab } = useTabs();
   return (
     <h3
-      className={`p-4 cursor-pointer transition-all capitalize text-lg font-bold  ${
+      className={`p-4 cursor-pointer transition-all capitalize text-lg font-bold  border border-[var(--primary-color)]  ${
         activeTab === value
-          ? "active bg-[var(--primary-color-2)] text-[var(--primary-color)]"
-          : "bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] hover:text-[var(--primary-color)]"
+          ? "active bg-[var(--primary-color-4)] text-[var(--primary-color)] rounded-t-xl"
+          : "bg-[var(--primary-color-4)] hover:text-[var(--primary-color)] rounded-xl"
       }`}
     >
       {children}
@@ -116,7 +116,7 @@ export function TabDes({
             delay: 0.14,
           }}
         >
-          <p className={`bg-[var(--glass-color-2)] p-3`}>{children}</p>
+          <div className={`bg-[var(--primary-color-4)] p-3`}>{children}</div>
         </motion.div>
       )}
     </AnimatePresence>

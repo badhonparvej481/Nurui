@@ -22,7 +22,8 @@ const ImageTabsSection = () => {
         }}
         sectionNameColor="text-[var(--primary-color)]"
         description="lorem Ips incorrectly spelled incorrectly  because of incorrect formatting rules in the description section of the document document type definition  definition definition definition"
-      ></SectionIntro>
+      />
+
       <TabsProvider
         defaultValue="improve"
         className="md:grid md:grid-cols-12 gap-16 items-start"
@@ -33,12 +34,11 @@ const ImageTabsSection = () => {
               <TabHeader value={tab.id}>{tab.title}</TabHeader>
               <TabDes value={tab.id}>
                 <p>{tab.description}</p>
-                <div className="md:hidden block rounded-xl" />
               </TabDes>
             </TabItem>
           ))}
         </TabList>
-        <TabContentContainer className="md:col-span-7 bg-white/10 rounded-xl">
+        <TabContentContainer className="md:col-span-7 bg-white/5 rounded-xl">
           {tabs.map((tab, index) => (
             <TabContent key={index} value={tab.id} index={index}>
               <div></div>

@@ -1,9 +1,9 @@
-import LinearIcon from "@/components/logo/LinearIcon";
-import MailChimpIcon from "@/components/logo/MailChimpIcon";
-import MetaIcon from "@/components/logo/MetaIcon";
-import NotionIcon from "@/components/logo/NotionIcon";
-import SpotifyIcon from "@/components/logo/SpotifyIcon";
-import UberIcon from "@/components/logo/UberIcon";
+import LinearIcon from "@/components/logos/LinearIcon";
+import MailChimpIcon from "@/components/logos/MailChimpIcon";
+import MetaIcon from "@/components/logos/MetaIcon";
+import NotionIcon from "@/components/logos/NotionIcon";
+import SpotifyIcon from "@/components/logos/SpotifyIcon";
+import UberIcon from "@/components/logos/UberIcon";
 import Marquee from "react-fast-marquee";
 
 const AboutUsHeroSection = () => {
