@@ -38,7 +38,7 @@ export function TabsProvider({
   );
 }
 
-export function TabList({
+export function TabLists({
   children,
   className,
 }: {
@@ -150,7 +150,7 @@ export function TabContent({
   if (activeTab !== value || !isDesktop) return null;
 
   return (
-    <motion.div className="p-4 h-[400px] overflow-hidden">
+    <motion.div className=" overflow-hidden">
       <motion.div
         initial={{ opacity: 0, overflow: "hidden" }}
         animate={{ opacity: 1, overflow: "hidden" }}

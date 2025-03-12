@@ -6,10 +6,11 @@ import {
   TabContent,
   TabContentContainer,
   TabItem,
-  TabList,
+  TabLists,
   TabsProvider,
 } from "../../common/ImageTabs";
 import SectionIntro from "@/components/common/SectionIntro";
+import RadioTabs from "@/components/common/RadioTabs";
 
 const ImageTabsSection = () => {
   return (
@@ -26,9 +27,9 @@ const ImageTabsSection = () => {
 
       <TabsProvider
         defaultValue="improve"
-        className="md:grid md:grid-cols-12 gap-16 items-start"
+        className="md:grid md:grid-cols-12 gap-24 items-start "
       >
-        <TabList className="md:col-span-5 ">
+        <TabLists className="md:col-span-5">
           {tabs.map((tab, index) => (
             <TabItem key={index} value={tab.id} index={index}>
               <TabHeader value={tab.id}>{tab.title}</TabHeader>
@@ -37,11 +38,32 @@ const ImageTabsSection = () => {
               </TabDes>
             </TabItem>
           ))}
-        </TabList>
-        <TabContentContainer className="md:col-span-7 bg-white/5 rounded-xl">
+        </TabLists>
+        <TabContentContainer className="md:col-span-7">
           {tabs.map((tab, index) => (
             <TabContent key={index} value={tab.id} index={index}>
-              <div></div>
+              <div className="space-y-4">
+                <h2 className="text-lg capitalize">
+                  <span className="border-b-2 border-white/35 pb-0.5">
+                    What We o
+                  </span>
+                  fers
+                </h2>
+                <h1 className="text-5xl font-semibold max-w-xl">
+                  Your critical business challenges{" "}
+                  <span className="text-[var(--primary-color)]">
+                    handled with care.
+                  </span>
+                </h1>
+                <p className="text-lg max-w-2xl text-[var(--opacity-text-color)]">
+                  Our approach is segmented into four defined phases, each
+                  tailored to your project’s unique requirements, budget, and
+                  schedule. The timeline for each phase is guided by past
+                  similar projects’ average durations, yet we ensure every
+                  project receives the necessary time and focus it requires.
+                </p>
+                <RadioTabs />
+              </div>
             </TabContent>
           ))}
         </TabContentContainer>

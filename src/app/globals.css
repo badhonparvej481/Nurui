@@ -31,6 +31,8 @@
     font-family: var(--font-creepster);
 }
 
+
+/* over write css */
 #nprogress .bar {
     background: var(--primary-color) !important;
     height: 4px;
