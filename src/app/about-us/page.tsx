@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className="section-gap">
       <AboutUsHeroSection />
-      <ImageTabsSection />
+      {/* <ImageTabsSection /> */}
       <StatesCountupSection />
       <StackingCardsSection />
     </div>
