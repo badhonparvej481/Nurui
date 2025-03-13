@@ -45,14 +45,10 @@ export function TabLists({
   children: ReactNode;
   className?: string;
 }) {
-  return (
-    <div className={cn("rounded-xl h-fit space-y-3", className)}>
-      {children}
-    </div>
-  );
+  return <div className={cn("h-fit space-y-5", className)}>{children}</div>;
 }
 
-export function TabItem({
+export function TabList({
   children,
   value,
 }: {
@@ -64,9 +60,12 @@ export function TabItem({
 
   return (
     <motion.div
-      className={`rounded-xl overflow-hidden ${
-        activeTab === value ? "active " : ""
-      }`}
+      className={`rounded-xl overflow-hidden p-4 cursor-pointer transition-all border 
+         ${
+           activeTab === value
+             ? "bg-[var(--primary-color-4)] border-[var(--primary-color)]"
+             : "hover:bg-[var(--primary-color-4)] hover:border-[var(--primary-color)] border-[var(--border-color)]"
+         }`}
       onClick={() => setActiveTab(value)}
     >
       {children}
@@ -74,56 +73,7 @@ export function TabItem({
   );
 }
 
-export function TabHeader({
-  children,
-  value,
-}: {
-  children: ReactNode;
-  value: string;
-}) {
-  const { activeTab } = useTabs();
-  return (
-    <h3
-      className={`p-4 cursor-pointer transition-all capitalize text-lg font-bold  border border-[var(--primary-color)]  ${
-        activeTab === value
-          ? "active bg-[var(--primary-color-4)] text-[var(--primary-color)] rounded-t-xl"
-          : "bg-[var(--primary-color-4)] hover:text-[var(--primary-color)] rounded-xl"
-      }`}
-    >
-      {children}
-    </h3>
-  );
-}
-
-export function TabDes({
-  children,
-  value,
-}: {
-  children: ReactNode;
-  value: string;
-}) {
-  const { activeTab } = useTabs();
-  return (
-    <AnimatePresence mode="sync">
-      {activeTab === value && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          transition={{
-            duration: 0.3,
-            ease: "easeInOut",
-            delay: 0.14,
-          }}
-        >
-          <div className={`bg-[var(--primary-color-4)] p-3`}>{children}</div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-}
-
-export function TabContentContainer({
+export function TabContents({
   children,
   className,
 }: {
@@ -131,7 +81,7 @@ export function TabContentContainer({
   className?: string;
 }) {
   return (
-    <div className={cn("", className)}>
+    <div className={cn(className)}>
       <AnimatePresence mode="popLayout">{children}</AnimatePresence>
     </div>
   );
@@ -150,7 +100,7 @@ export function TabContent({
   if (activeTab !== value || !isDesktop) return null;
 
   return (
-    <motion.div className=" overflow-hidden">
+    <motion.div className="overflow-hidden">
       <motion.div
         initial={{ opacity: 0, overflow: "hidden" }}
         animate={{ opacity: 1, overflow: "hidden" }}

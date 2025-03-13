@@ -9,7 +9,7 @@ const StatesCount = () => {
     <section ref={ref} className="container ">
       <div className="space-y-16 bg-white/5 p-10 rounded-xl border border-[var(--glass-color-3)]">
         <h1 className="text-2xl px-4 md:text-6xl font-semibold text-center">
-          BabelForge.com By The Numbers
+          bytenexia.com By The Numbers
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center divide-x divide-[var(--border-color)]">
           {metricsData?.map((data) => (

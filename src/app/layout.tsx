@@ -6,7 +6,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Provider from "./Provider";
 import NProgressProvider from "@/components/common/NProgressProvider";
-import "react-tabs/style/react-tabs.css";
 
 const nunito = Nunito({
   variable: "--font-nunito",
