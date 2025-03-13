@@ -3,16 +3,16 @@ import React from "react";
 
 interface IPros {
   src: string;
-  alt: string;
   className?: string;
+  alt?: string;
 }
 
-const ImageComponent: React.FC<IPros> = ({ src, alt, className }) => {
+const ImageComponent: React.FC<IPros> = ({ src, className, alt }) => {
   return (
     <Image
       className={className}
       src={src}
-      alt={alt}
+      alt={alt || ""}
       height={0}
       width={0}
       unoptimized

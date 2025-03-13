@@ -1,46 +1,53 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useState } from "react";
 import StackingCards, {
   StackingCardItem,
 } from "@/components/common/StackingCards";
 import SectionIntro from "@/components/common/SectionIntro";
+import missionAnimationData from "../../../../public/json/mission-animation-lottie.json";
+import Lottie from "lottie-react";
+import ImageComponent from "@/components/common/Image";
 
 const cards = [
   {
     title: "The Guiding Light",
     description:
       "Lighthouses have stood as beacons of hope for centuries, guiding sailors safely through treacherous waters. Their glowing light and towering presence serve as a reminder of humanity’s connection to the sea.",
+    icon: missionAnimationData,
     image:
-      "https://plus.unsplash.com/premium_vector-1739262161806-d954eb02427c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxxdGU5Smx2R3d0b3x8ZW58MHx8fHx8",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
   },
   {
     title: "Life Beneath the Waves",
     description:
       "From shimmering schools of fish to solitary hunters, the ocean is home to an incredible variety of marine life. Each species plays a vital role in maintaining the balance of underwater ecosystems.",
+    icon: missionAnimationData,
     image:
-      "https://plus.unsplash.com/premium_vector-1739200616200-69a138d91627?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnxxdGU5Smx2R3d0b3x8ZW58MHx8fHx8",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
   },
   {
     title: "Alone on the Open Sea",
     description:
       "Drifting across the endless horizon, traveling alone on the sea is a test of courage and resilience. With nothing but the waves and the sky, solitude becomes both a challenge and a source of deep reflection.",
+    icon: missionAnimationData,
     image:
-      "https://plus.unsplash.com/premium_vector-1738597190290-a3b571590b9e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHxxdGU5Smx2R3d0b3x8ZW58MHx8fHx8",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
   },
   {
     title: "The Art of Sailing",
     description:
       "Harnessing the power of the wind, sailing is both a skill and an adventure. Whether racing across the waves or leisurely cruising, it’s a timeless way to explore the vast blue expanse.",
+    icon: missionAnimationData,
     image:
-      "https://plus.unsplash.com/premium_vector-1738935247245-97940c74cced?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTZ8cXRlOUpsdkd3dG98fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
   },
   {
     title: "The Era of Whaling",
     description:
       "Once a thriving industry, whale hunting shaped economies and cultures across the world. Today, efforts to protect these majestic creatures highlight the shift toward conservation and respect for marine life.",
+    icon: missionAnimationData,
     image:
-      "https://plus.unsplash.com/premium_vector-1738935247692-1c2f2c924fd8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjJ8cXRlOUpsdkd3dG98fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
   },
 ];
 
@@ -52,24 +59,35 @@ export default function StackingCardsSection() {
       <SectionIntro
         title={{
           highLiteWords: "Why Choose Us",
-          normalWords: "At Kompose",
+          normalWords: "At Kompose lorem dolor sit amet inter",
           highlightColor: "text-[var(--secondary-color)]",
         }}
+        sectionGap="pb-4"
       />
       <StackingCards
         totalCards={cards.length}
         scrollOptons={{ container: { current: container } }}
       >
-        {cards.map(({ description, image, title }, index) => {
+        {cards.map(({ description, icon, title, image }, index) => {
           return (
-            <StackingCardItem key={index} index={index} className="h-[700px]">
+            <StackingCardItem key={index} index={index} className="h-[700px] ">
               <div
-                className="h-[80%] sm:h-[85%] flex-col sm:flex-row aspect-video px-8 py-10 flex w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-[white]/5 via-[white]/5 to-[var(--primary-color-4)] border 
-              border-[white]/15 backdrop-blur-xl "
+                className="h-[80%] sm:h-[85%] aspect-video py-10 w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-white/5 via-white/5 to-[var(--secondary-color-4)] border 
+              border-[white]/20 backdrop-blur-2xl flex items-center justify-between px-16"
               >
-                <div className="flex-1 flex flex-col justify-center"></div>
-
-                <div className="w-full sm:w-1/2 rounded-xl aspect-video relative overflow-hidden"></div>
+                <div className="w-1/2 space-y-5">
+                  <Lottie
+                    animationData={icon}
+                    loop={true}
+                    className="size-24"
+                  />
+                  <h2 className="text-5xl font-semibold">{title}</h2>
+                  <p className="text-lg">{description}</p>
+                  <button className="bg-[var(--secondary-color)] text-[var(--black-color)] font-semibold px-4 py-2 text-lg rounded-full">
+                    Get started
+                  </button>
+                </div>
+                <ImageComponent src={image} className="size-[520px]" />
               </div>
             </StackingCardItem>
           );
