@@ -58,7 +58,7 @@ const PricingSection = () => {
         }}
         sectionName="Pricing"
         sectionNameColor="text-[var(--secondary-color)]"
-        sectionGap="pb-3 md:pb-4 xl:pb-6"
+        sectionGap="pb-5 md:pb-8 xl:pb-10"
       />
       <AnimatedTabs tabs={tabs} />
     </section>

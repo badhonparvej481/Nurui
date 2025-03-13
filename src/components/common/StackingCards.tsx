@@ -68,7 +68,7 @@ const StackingCardItem = ({
     progress,
     scaleMultiplier,
     totalCards = 0,
-  } = useStackingCardsContext(); // Get from Context
+  } = useStackingCardsContext();
   const scaleTo = 1 - (totalCards - index) * (scaleMultiplier ?? 0.03);
   const rangeScale = [index * (1 / totalCards), 1];
   const scale = useTransform(progress, rangeScale, [1, scaleTo]);

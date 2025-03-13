@@ -23,7 +23,7 @@ const FeatureComparison = () => {
           highLiteWords: "Feature Comparison",
           highlightColor: "text-[var(--secondary-color)]",
         }}
-        sectionGap="pb-3 md:pb-4"
+        sectionGap="pb-5 md:pb-8"
       />
       <AnimatedTabs tabs={tabs} />
     </div>

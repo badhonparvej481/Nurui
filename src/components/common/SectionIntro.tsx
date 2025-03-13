@@ -30,7 +30,12 @@ const SectionIntro: React.FC<IProps> = ({
       >
         {sectionName}
       </p>
-      <h3 className="text-2xl md:text-5xl font-bold text-[var(--text-primary-color)] pt-1 md:pt-2 pb-2 md:pb-4 text-balance space-x-2.5">
+      <h3
+        className={`text-2xl md:text-5xl font-bold text-[var(--text-primary-color)] 
+          pt-1 md:pt-2 ${
+            description && "pb-2 md:pb-4"
+          } text-balance space-x-2.5`}
+      >
         <span className={title.firstHighLightColor}>{title.normalWords}</span>
         <span className={title?.highlightColor}>{title?.highLiteWords}</span>
       </h3>
