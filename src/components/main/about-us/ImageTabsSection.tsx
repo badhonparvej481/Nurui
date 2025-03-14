@@ -25,17 +25,20 @@ const ImageTabsSection = () => {
         description="lorem Ips incorrectly spelled incorrectly  because of incorrect formatting rules in the description section of the document document type definition  definition definition definition"
       />
 
-      <TabsProvider defaultValue="1" className="md:grid md:grid-cols-12 gap-24">
+      <TabsProvider
+        defaultValue="1"
+        className="md:grid md:grid-cols-12 gap-24 space-y-7"
+      >
         <TabLists className="md:col-span-5">
           {tabs.map((tab, index) => (
             <TabList key={index} value={tab.id} index={index}>
-              <div className="flex items-center gap-x-5">
+              <div className="flex flex-col md:flex-row items-center gap-x-5">
                 <Lottie
                   animationData={tab?.tabList?.icon}
                   loop={true}
-                  className="size-24"
+                  className="size-24 hidden md:block"
                 />
-                <div className="space-y-1.5">
+                <div className="space-y-1.5 text-center md:text-left">
                   <p className="text-2xl capitalize font-semibold">
                     {tab?.tabList?.title}
                   </p>
@@ -51,14 +54,14 @@ const ImageTabsSection = () => {
         <TabContents className="md:col-span-7">
           {tabs.map((tab, index) => (
             <TabContent key={index} value={tab.id} index={index}>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <h2 className="text-lg capitalize">
                   <span className="border-b-2 border-white/35 pb-0.5">
                     What We o
                   </span>
                   fers
                 </h2>
-                <h1 className="text-5xl font-semibold max-w-xl">
+                <h1 className="text-3xl md:text-5xl font-semibold max-w-xl">
                   {tab?.Content?.heading
                     .split(" ")
                     .slice(0, tab?.Content?.heading?.split(" ")?.length - 3)
@@ -70,7 +73,7 @@ const ImageTabsSection = () => {
                       .join(" ")}
                   </span>
                 </h1>
-                <p className="text-lg max-w-3xl text-[var(--opacity-text-color)]">
+                <p className="md:text-lg max-w-3xl text-[var(--opacity-text-color)]">
                   {tab?.Content?.description}
                 </p>
                 <RadioTabs data={tab?.Content?.tabs} />

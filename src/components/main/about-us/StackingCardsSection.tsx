@@ -72,22 +72,27 @@ export default function StackingCardsSection() {
           return (
             <StackingCardItem key={index} index={index} className="h-[700px] ">
               <div
-                className="h-[80%] sm:h-[85%] aspect-video py-10 w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-white/5 via-white/5 to-[var(--secondary-color-4)] border 
-              border-[white]/20 backdrop-blur-2xl flex items-center justify-between px-16"
+                className="h-[50%] md:h-[85%] aspect-video py-10 w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-white/5 via-white/5 to-[var(--secondary-color-4)] border 
+              border-[white]/20 backdrop-blur-2xl flex items-center justify-between px-6 md:px-16 text-center md:text-left"
               >
-                <div className="w-1/2 space-y-5">
+                <div className="md:w-1/2 space-y-4 md:space-y-5">
                   <Lottie
                     animationData={icon}
                     loop={true}
-                    className="size-24"
+                    className="size-24 hidden md:block"
                   />
-                  <h2 className="text-5xl font-semibold">{title}</h2>
+                  <h2 className="text-3xl md:text-5xl font-semibold">
+                    {title}
+                  </h2>
                   <p className="text-lg">{description}</p>
                   <button className="bg-[var(--secondary-color)] text-[var(--black-color)] font-semibold px-4 py-2 text-lg rounded-full">
                     Get started
                   </button>
                 </div>
-                <ImageComponent src={image} className="size-[520px]" />
+                <ImageComponent
+                  src={image}
+                  className="size-[520px] hidden md:block"
+                />
               </div>
             </StackingCardItem>
           );

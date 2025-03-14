@@ -95,9 +95,9 @@ export function TabContent({
   value: string;
   index: number;
 }) {
-  const { activeTab, isDesktop } = useTabs();
+  const { activeTab } = useTabs();
 
-  if (activeTab !== value || !isDesktop) return null;
+  if (activeTab !== value) return null;
 
   return (
     <motion.div className="overflow-hidden">

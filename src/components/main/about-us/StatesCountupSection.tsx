@@ -7,11 +7,11 @@ const StatesCount = () => {
 
   return (
     <section ref={ref} className="container ">
-      <div className="space-y-16 bg-white/5 p-10 rounded-xl border border-[var(--glass-color-3)]">
+      <div className="space-y-10  md:space-y-16 bg-white/5 p-6 md:p-10 rounded-xl border border-[var(--glass-color-3)]">
         <h1 className="text-2xl px-4 md:text-6xl font-semibold text-center">
           bytenexia.com By The Numbers
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center divide-x divide-[var(--border-color)]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center md:divide-x md:divide-[var(--border-color)]">
           {metricsData?.map((data) => (
             <StatesCountup
               key={data?.description}

@@ -8,10 +8,10 @@ import Marquee from "react-fast-marquee";
 
 const AboutUsHeroSection = () => {
   return (
-    <section className="bg-white/5 backdrop-blur-lg py-20">
+    <section className="bg-white/5 backdrop-blur-lg py-6 md:py-20">
       <div className="container">
-        <div className="flex items-center justify-between">
-          <h2 className="uppercase text-5xl font-bold max-w-sm leading-tight">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-y-3 md:gap-y-0 text-center md:text-left">
+          <h2 className="uppercase text-3xl md:text-5xl font-bold max-w-sm leading-tight">
             So how did{" "}
             <span className="text-[var(--primary-color)]">About</span> come to
             be?
@@ -23,8 +23,8 @@ const AboutUsHeroSection = () => {
             quo temporibus corrupti magni.
           </p>
         </div>
-        <div className="pt-20">
-          <p className="uppercase text-lg pb-6">
+        <div className="pt-8 md:pt-20">
+          <p className="uppercase text-lg pb-6 text-center md:text-left">
             Trusted by 30000 Leading gym team:
           </p>
           <Marquee>

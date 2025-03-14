@@ -34,11 +34,11 @@ const RadioTabs: React.FC<IProps> = ({ data }) => {
         ))}
       </div>
 
-      <div className="space-y-8">
-        <p className="text-lg text-[var(--opacity-text-color)] max-w-3xl">
+      <div className="space-y-5 md:space-y-8 max-w-3xl">
+        <p className="md:text-lg text-[var(--opacity-text-color)] ">
           {data?.find((tab) => tab.id === activeTab)?.content}
         </p>
-        <div className="grid grid-cols-2 gap-8 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {[1, 2, 3, 4].map((d) => (
             <div key={d} className="flex items-center gap-5">
               <div className="flex items-center justify-center [clipPath:polygon(50%_0%,_83%_12%,_100%_43%,_94%_78%,_68%_100%,_32%_100%,_6%_78%,_0%_43%,_17%_12%)] bg-white w-16 h-12">
