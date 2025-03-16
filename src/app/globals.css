@@ -20,7 +20,7 @@
 }
 
 .section-gap {
-    @apply space-y-24
+    @apply space-y-12 lg:space-y-16 xl:space-y-20  2xl:space-y-24
 }
 
 .font-nunito {
@@ -30,7 +30,6 @@
 .font-creepster {
     font-family: var(--font-creepster);
 }
-
 
 /* over write css */
 #nprogress .bar {

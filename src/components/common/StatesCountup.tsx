@@ -9,11 +9,11 @@ interface stateProps {
 const StatesCountup: FC<stateProps> = ({ count, title, isView }) => {
   return (
     <div className="text-center space-y-2">
-      <h2 className="text-2xl md:text-4xl font-semibold">
+      <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold">
         {isView && <CountUp start={0} end={count} duration={5} separator="," />}
         +
       </h2>
-      <p className="md:text-lg">{title}</p>
+      <p className="xl:text-lg">{title}</p>
     </div>
   );
 };

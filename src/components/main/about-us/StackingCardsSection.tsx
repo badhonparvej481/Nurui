@@ -55,14 +55,14 @@ export default function StackingCardsSection() {
   const [container, setContainer] = useState<HTMLElement | null>(null);
 
   return (
-    <div className="container" ref={(node) => setContainer(node)}>
+    <div className="container pb-14 xl:pb-0" ref={(node) => setContainer(node)}>
       <SectionIntro
         title={{
           highLiteWords: "Why Choose Us",
           normalWords: "At Kompose lorem dolor sit amet inter",
           highlightColor: "text-[var(--secondary-color)]",
         }}
-        sectionGap="pb-4"
+        sectionGap="pb-2.5 xl:pb-3"
       />
       <StackingCards
         totalCards={cards.length}
@@ -70,28 +70,34 @@ export default function StackingCardsSection() {
       >
         {cards.map(({ description, icon, title, image }, index) => {
           return (
-            <StackingCardItem key={index} index={index} className="h-[700px] ">
+            <StackingCardItem
+              key={index}
+              index={index}
+              className="h-96 xl:h-[700px]"
+            >
               <div
-                className="h-[50%] md:h-[85%] aspect-video py-10 w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-white/5 via-white/5 to-[var(--secondary-color-4)] border 
-              border-[white]/20 backdrop-blur-2xl flex items-center justify-between px-6 md:px-16 text-center md:text-left"
+                className="h-96 xl:h-[600px] aspect-video py-10 w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-white/5 via-white/5 to-[var(--secondary-color-4)] border 
+              border-[white]/20 backdrop-blur-2xl flex items-center justify-between px-6 xl:px-16 text-center xl:text-left"
               >
-                <div className="md:w-1/2 space-y-4 md:space-y-5">
+                <div className="xl:w-1/2 space-y-4 lg:space-y-5">
                   <Lottie
                     animationData={icon}
                     loop={true}
-                    className="size-24 hidden md:block"
+                    className="size-24 hidden xl:block"
                   />
-                  <h2 className="text-3xl md:text-5xl font-semibold">
+                  <h2 className="text-3xl xl:text-5xl font-semibold">
                     {title}
                   </h2>
-                  <p className="text-lg">{description}</p>
-                  <button className="bg-[var(--secondary-color)] text-[var(--black-color)] font-semibold px-4 py-2 text-lg rounded-full">
+                  <p className="text-xl text-balance xl:text-pretty">
+                    {description}
+                  </p>
+                  <button className="bg-[var(--secondary-color)] text-[var(--black-color)] font-semibold px-4 py-2 text-xl rounded-full">
                     Get started
                   </button>
                 </div>
                 <ImageComponent
                   src={image}
-                  className="size-[520px] hidden md:block"
+                  className="size-[520px] hidden xl:block"
                 />
               </div>
             </StackingCardItem>
