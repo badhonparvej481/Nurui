@@ -41,7 +41,7 @@ export default function RootLayout({
         <Provider>
           <NProgressProvider />
           <Navbar />
-          <div className="pb-12 lg:pb-16 xl:pb-20 2xl:pb-24">{children}</div>
+          <main className="pb-12 lg:pb-16 xl:pb-20 2xl:pb-24">{children}</main>
           <Footer />
         </Provider>
       </body>

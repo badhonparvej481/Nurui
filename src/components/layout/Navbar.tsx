@@ -9,6 +9,7 @@ import Bytenexia from "@/components/common/Bytenexia";
 import { NavigationDrawer } from "@/components/common/drawer/NavigationDrawer";
 import ThemeSwitcher from "../common/ThemeSwitcher";
 import nProgress from "nprogress";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -17,9 +18,19 @@ const Navbar = () => {
   const handleClose = useCallback(() => setOpen(false), []);
 
   return (
-    <div className="sticky top-0 z-[1000] bg-transparent backdrop-blur-lg overflow-hidden w-full border-dashed border-b border-white/20 ">
+    <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
-        <Bytenexia fontSize="text-2xl lg:text-3xl" />
+        {open ? (
+          <button
+            type="button"
+            onClick={handleOpen}
+            className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden"
+          >
+            <RxCross2 className="text-[var(--primary-color)] text-3xl" />
+          </button>
+        ) : (
+          <Bytenexia fontSize="text-2xl lg:text-3xl" />
+        )}
 
         <div
           className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] dark:bg-[white]/5 border 
