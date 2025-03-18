@@ -218,7 +218,7 @@ export default function AllSocialMediaSection() {
   ];
 
   return (
-    <div className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-6 relative ">
+    <section className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-6 relative ">
       <div>
         <SectionIntro
           title={{
@@ -259,6 +259,6 @@ export default function AllSocialMediaSection() {
           );
         })}
       </Gravity>
-    </div>
+    </section>
   );
 }

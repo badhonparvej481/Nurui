@@ -55,7 +55,10 @@ export default function StackingCardsSection() {
   const [container, setContainer] = useState<HTMLElement | null>(null);
 
   return (
-    <div className="container pb-14 xl:pb-0" ref={(node) => setContainer(node)}>
+    <section
+      className="container pb-14 xl:pb-0"
+      ref={(node) => setContainer(node)}
+    >
       <SectionIntro
         title={{
           highLiteWords: "Why Choose Us",
@@ -104,6 +107,6 @@ export default function StackingCardsSection() {
           );
         })}
       </StackingCards>
-    </div>
+    </section>
   );
 }

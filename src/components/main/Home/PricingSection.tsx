@@ -13,7 +13,7 @@ interface PricingData {
 
 const PricingSection = () => {
   const renderPricingCards = (data: PricingData[]) => (
-    <div className="container grid md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-10 pt-2.5 md:pt-10">
+    <section className="container grid md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-10 pt-2.5 md:pt-10">
       {data?.map((d) => (
         <SpotliteMagicCard
           isRecommended={d?.isRecommended}
@@ -33,7 +33,7 @@ const PricingSection = () => {
           />
         </SpotliteMagicCard>
       ))}
-    </div>
+    </section>
   );
 
   const tabs = [

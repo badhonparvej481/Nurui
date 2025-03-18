@@ -6,13 +6,13 @@ import StatesCountupSection from "@/components/main/about-us/StatesCountupSectio
 
 const page = () => {
   return (
-    <div className="section-gap">
+    <main className="section-gap">
       <AboutUsHeroSection />
       <ImageTabsSection />
       <StatesCountupSection />
       <StackingCardsSection />
       <NewsLetterSection />
-    </div>
+    </main>
   );
 };
 

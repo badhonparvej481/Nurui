@@ -1,14 +1,14 @@
 import NewsLetterSection from "@/components/common/NewsLetterSection";
 import PricingSection from "@/components/main/Home/PricingSection";
-import FeatureComparison from "@/components/main/pricing/FeatureComparison";
+import FeatureComparisonSection from "@/components/main/pricing/FeatureComparisonSection";
 
 const Pricing = () => {
   return (
-    <div className="section-gap">
+    <main className="section-gap">
       <PricingSection />
-      <FeatureComparison />
+      <FeatureComparisonSection />
       <NewsLetterSection />
-    </div>
+    </main>
   );
 };
 

@@ -3,7 +3,7 @@ import React from "react";
 import PlanTable from "./PlanTable";
 import SectionIntro from "@/components/common/SectionIntro";
 
-const FeatureComparison = () => {
+const FeatureComparisonSection = () => {
   const tabs = [
     {
       id: "monthly",
@@ -17,7 +17,7 @@ const FeatureComparison = () => {
     },
   ];
   return (
-    <div>
+    <section>
       <SectionIntro
         title={{
           highLiteWords: "Feature Comparison",
@@ -26,11 +26,11 @@ const FeatureComparison = () => {
         sectionGap="pb-5 md:pb-8"
       />
       <AnimatedTabs tabs={tabs} />
-    </div>
+    </section>
   );
 };
 
-export default FeatureComparison;
+export default FeatureComparisonSection;
 
 const planDataMonthly = [
   {

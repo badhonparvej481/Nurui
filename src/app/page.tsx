@@ -10,7 +10,7 @@ import { WorldMapAnimationSection } from "@/components/main/Home/WorldMapAnimati
 
 const Home = () => {
   return (
-    <div className="section-gap">
+    <main className="section-gap">
       <HeroSection />
       <HeroVideoDialogSection />
       <FeaturesSection />
@@ -20,7 +20,7 @@ const Home = () => {
       <TestimonialSection />
       <FaqSection />
       <NewsLetterSection />
-    </div>
+    </main>
   );
 };
 
