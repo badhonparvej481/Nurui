@@ -68,14 +68,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium text-left  hidden md:table-cell"
             >
               Price
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.price}
               </td>
@@ -94,14 +96,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Billed
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.billed}
               </td>
@@ -120,14 +124,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Number of Admin
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.admin}
               </td>
@@ -146,14 +152,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Number of Users
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.users}
               </td>
@@ -179,7 +187,9 @@ const PlanTable: FC<IProps> = ({ planData }) => {
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.unlimitedWorkspace ? (
                   <span className="flex justify-center">
@@ -206,14 +216,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Unlimited Message
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.unlimitedMessage ? (
                   <span className="flex justify-center">
@@ -240,14 +252,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Unlimited Contact
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.unlimitedContact ? (
                   <span className="flex justify-center">
@@ -274,14 +288,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Unlimited Broadcasts
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.unlimitedBroadcasts ? (
                   <span className="flex justify-center">
@@ -308,14 +324,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Unlimited Workspace and Brands
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.unlimitedWorkspace ? (
                   <span className="flex justify-center">
@@ -342,14 +360,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Unlimited Massage
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.unlimitedMessage ? (
                   <span className="flex justify-center">
@@ -385,14 +405,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Whatsapp Web
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.channels?.whatsappWeb ? (
                   <span className="flex justify-center">
@@ -419,14 +441,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Whatsapp API
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.channels?.whatsappAPI ? (
                   <span className="flex justify-center">
@@ -453,14 +477,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Telegram
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.channels?.telegram ? (
                   <span className="flex justify-center">
@@ -487,14 +513,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Facebook Messenger
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.channels?.facebookMessenger ? (
                   <span className="flex justify-center">
@@ -521,14 +549,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Instragram
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.channels?.instagram ? (
                   <span className="flex justify-center">
@@ -555,14 +585,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Email
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.channels?.email ? (
                   <span className="flex justify-center">
@@ -598,14 +630,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Dashboard
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.features?.dashboard ? (
                   <span className="flex justify-center">
@@ -632,14 +666,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Team Inbox
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.features?.teamInbox ? (
                   <span className="flex justify-center">
@@ -666,14 +702,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               CRM Management
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.features?.crmManagement ? (
                   <span className="flex justify-center">
@@ -700,14 +738,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Quick Replies
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data?.features?.quickReplies ? (
                   <span className="flex justify-center">
@@ -734,14 +774,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Workflow Chatbot Automation
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data.features.workflowChatbotAutomation ? (
                   <span className="flex justify-center">
@@ -768,14 +810,16 @@ const PlanTable: FC<IProps> = ({ planData }) => {
           <tr>
             <th
               scope="row"
-              className="px-6 py-4 font-medium  [var(--white1)]space-nowrap text-left  hidden md:table-cell"
+              className="px-6 py-4 font-medium   text-left  hidden md:table-cell"
             >
               Shared Storage Space
             </th>
             {planData.map((data, idx) => (
               <td
                 key={idx}
-                className="px-6 py-4 border-l border-[var(--secondary-color)] text-center"
+                className={`px-6 py-4 ${
+                  idx + 1 === 1 ? "md:border-l" : "border-l"
+                } border-[var(--secondary-color)] text-center`}
               >
                 {data.features.sharedStorageSpace ? (
                   <span className="flex justify-center">

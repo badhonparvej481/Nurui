@@ -2,12 +2,12 @@ import AnimateInput from "./AnimateInput";
 
 const NewsLetterSection = () => {
   return (
-    <section className="container">
-      <div className=" bg-gradient-to-r from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] py-6 md:py-10 lg:py-20 px-2 md:px-20 rounded-xl flex flex-col items-center xl:items-start justify-center text-left gap-3.5">
+    <section className="sm:container">
+      <div className=" bg-gradient-to-r from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] py-6 md:py-10 lg:py-20 px-2.5 md:px-20 sm:rounded-xl flex flex-col items-center xl:items-start justify-center text-left gap-3.5">
         <h6 className="text-2xl md:text-4xl font-bold text-center xl:text-start">
           {newsLetter?.title}
         </h6>
-        <p className="max-w-2xl text-center xl:text-start">
+        <p className="max-w-2xl text-center xl:text-start text-balance sm:text-pretty">
           {newsLetter?.description}
         </p>
         <AnimateInput

@@ -55,13 +55,13 @@ const ImageTabsSection = () => {
           {tabs.map((tab, index) => (
             <TabContent key={index} value={tab.id} index={index}>
               <div className="space-y-3 xl:space-y-4">
-                <h2 className="text-xl capitalize">
+                <h2 className="text-xl capitalize text-center lg:text-start">
                   <span className="border-b-2 border-white/35 pb-0.5">
                     What We o
                   </span>
                   fers
                 </h2>
-                <h1 className="text-3xl xl:text-5xl font-semibold max-w-xl">
+                <h1 className="text-3xl xl:text-5xl font-semibold max-w-xl mx-auto lg:mx-0 text-center lg:text-start">
                   {tab?.Content?.heading
                     .split(" ")
                     .slice(0, tab?.Content?.heading?.split(" ")?.length - 3)
@@ -73,7 +73,7 @@ const ImageTabsSection = () => {
                       .join(" ")}
                   </span>
                 </h1>
-                <p className="xl:text-xl max-w-3xl text-[var(--opacity-text-color)]">
+                <p className="xl:text-xl max-w-3xl mx-auto lg:mx-0 text-[var(--opacity-text-color)] text-center lg:text-start">
                   {tab?.Content?.description}
                 </p>
                 <RadioTabs data={tab?.Content?.tabs} />

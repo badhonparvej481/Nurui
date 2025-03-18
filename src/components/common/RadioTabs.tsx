@@ -13,7 +13,7 @@ const RadioTabs: React.FC<IProps> = ({ data }) => {
 
   return (
     <div className="space-y-3.5 pt-3">
-      <div className="flex gap-2 w-fit border-b border-[var(--primary-color)]">
+      <div className="flex gap-2 w-fit mx-auto lg:mx-0 border-b border-[var(--primary-color)]">
         {data?.map((tab) => (
           <label
             key={tab?.id}
@@ -35,7 +35,7 @@ const RadioTabs: React.FC<IProps> = ({ data }) => {
       </div>
 
       <div className="space-y-5 md:space-y-8 max-w-3xl">
-        <p className="md:text-lg text-[var(--opacity-text-color)] ">
+        <p className="lg:text-lg text-[var(--opacity-text-color)] text-center lg:text-start">
           {data?.find((tab) => tab.id === activeTab)?.content}
         </p>
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
