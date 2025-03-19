@@ -36,3 +36,14 @@
     background: var(--primary-color) !important;
     height: 4px;
 }
+
+.scroll-container {
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; 
+  }
+  
