@@ -61,7 +61,7 @@ const content = [
 
 const StickyScrollSection = () => {
   return (
-    <div className="w-full">
+    <div className="hidden lg:block">
       <StickyScroll content={content} />
     </div>
   );

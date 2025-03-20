@@ -4,21 +4,21 @@ import React from "react";
 
 const DashboardBannerSection = () => {
   return (
-    <section className="bg-[var(--glass-color)] border border-[var(--border-color)]  pt-14 mx-20 mt-10 rounded-2xl">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h3 className="text-[var(--primary-color)] text-lg font-medium">
+    <section className="bg-[var(--glass-color)] lg:border border-[var(--border-color)] px-5 xl:px-0 pt-7 xl:pt-14 lg:mx-10 xl:mx-20 lg:mt-6 xl:mt-10 lg:rounded-2xl">
+      <div className="max-w-4xl mx-auto text-center xl:mb-16 pb-7 xl:pb-0">
+        <h3 className="text-[var(--primary-color)] text-xl font-medium">
           Dashboards
         </h3>
 
         <h1
-          className="text-4xl md:text-5xl font-semibold mb-6"
+          className="text-3xl xl:text-5xl font-semibold mb-6"
           style={{ lineHeight: 1.2 }}
         >
           Track your team work progress with{" "}
           <span className="text-[var(--primary-color)]">dashboards</span>
         </h1>
 
-        <p className="text-lg text-white/70 max-w-2xl mx-auto mb-6">
+        <p className="xl:text-xl text-white/70 max-w-2xl mx-auto mb-6">
           Make smarter project decisions using data-driven insights. Let facts
           and trends guide your actions for better outcomes. Ready to take
           control?
@@ -58,7 +58,7 @@ const DashboardBannerSection = () => {
             ],
           }}
         >
-          <button className="px-6 py-3 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] rounded-md  flex items-center mx-auto text-black font-semibold">
+          <button className="px-6 py-3 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] rounded-xl  flex items-center mx-auto text-black font-semibold">
             Get Started
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ const DashboardBannerSection = () => {
         </CollMode>
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto hidden 2xl:block">
         <ImageComponent
           src="/images/Dashboard-Image-Final.webp"
           className="w-full h-[600px]"
