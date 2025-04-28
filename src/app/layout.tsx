@@ -7,6 +7,7 @@ import Provider from "./Provider";
 import NProgressProvider from "@/components/common/NProgressProvider";
 import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
+import MainContent from "./MainContent";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -42,7 +43,7 @@ export default function RootLayout({
         <Provider>
           <NProgressProvider />
           <Navbar />
-          <main className="pb-12 lg:pb-16 xl:pb-20 2xl:pb-24">{children}</main>
+          <MainContent>{children}</MainContent>
           <Footer />
         </Provider>
       </body>

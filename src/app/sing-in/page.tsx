@@ -1,9 +1,7 @@
-import React from 'react'
+import SingInSingUpComponent from "@/components/common/SingInSingupComponent";
 
 const page = () => {
-  return (
-    <div className='min-h-screen max-w-6xl mx-auto border-2'></div>
-  )
-}
+  return <SingInSingUpComponent />;
+};
 
-export default page
+export default page;
