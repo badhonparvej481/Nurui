@@ -26,12 +26,12 @@ import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../common/cool-mode/CollMode";
 import { GrSend } from "react-icons/gr";
 import RatingStars from "@/components/common/RatingStars";
-import UberIcon from "@/components/logos/UberIcon";
-import SpotifyIcon from "@/components/logos/SpotifyIcon";
-import MetaIcon from "@/components/logos/MetaIcon";
-import NotionIcon from "@/components/logos/NotionIcon";
-import MailChimpIcon from "@/components/logos/MailChimpIcon";
-import LinearIcon from "@/components/logos/LinearIcon";
+import UberIcon from "@/components/icons/UberIcon";
+import SpotifyIcon from "@/components/icons/SpotifyIcon";
+import MetaIcon from "@/components/icons/MetaIcon";
+import NotionIcon from "@/components/icons/NotionIcon";
+import MailChimpIcon from "@/components/icons/MailChimpIcon";
+import LinearIcon from "@/components/icons/LinearIcon";
 
 const HeroSection = () => {
   return (

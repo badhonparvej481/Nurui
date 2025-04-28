@@ -10,8 +10,8 @@ import { usePathname } from "next/navigation";
 import Bytenexia from "@/components/common/Bytenexia";
 import MobileApplicationDownloadCard from "@/components/common/MobileApplicationDownloadCard";
 import PlayStore from "@/components/icons/PlayStore";
-import RocketScrollToTop from "../common/RocketScrollToTop";
 import nProgress from "nprogress";
+import RocketScrollToTop from "@/components/common/RocketScrollToTop";
 
 const Footer = () => {
   const pathname = usePathname();

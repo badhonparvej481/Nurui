@@ -7,9 +7,9 @@ import { useCallback, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import Bytenexia from "@/components/common/Bytenexia";
 import { NavigationDrawer } from "@/components/common/drawer/NavigationDrawer";
-import ThemeSwitcher from "../common/ThemeSwitcher";
 import nProgress from "nprogress";
 import { RxCross2 } from "react-icons/rx";
+import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 
 const Navbar = () => {
   const pathName = usePathname();

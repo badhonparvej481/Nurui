@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Nunito, Creepster } from "next/font/google";
 import "./globals.css";
 import "../styles/main.scss";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+
 import Provider from "./Provider";
 import NProgressProvider from "@/components/common/NProgressProvider";
+import Navbar from "@/layout/Navbar";
+import Footer from "@/layout/Footer";
 
 const nunito = Nunito({
   variable: "--font-nunito",
