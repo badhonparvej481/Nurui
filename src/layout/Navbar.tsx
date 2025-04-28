@@ -17,6 +17,8 @@ const Navbar = () => {
   const handleOpen = useCallback(() => setOpen(true), []);
   const handleClose = useCallback(() => setOpen(false), []);
 
+  if(pathName === "/sing-in" || pathName === "/register") return null;
+
   return (
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">

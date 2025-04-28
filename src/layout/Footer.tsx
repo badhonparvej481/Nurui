@@ -16,6 +16,8 @@ import RocketScrollToTop from "@/components/common/RocketScrollToTop";
 const Footer = () => {
   const pathname = usePathname();
 
+  if(pathname === "/sing-in" || pathname === "/register") return null;
+
   return (
     <div className="bg-[var(--white-color)] dark:bg-[var(--background-color)] border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px] rocket-animation">
       <RocketScrollToTop className=" bg-[var(--background-color)] max-w-24 mx-auto  rounded-full -mt-16 hidden md:block" />

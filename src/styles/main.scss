@@ -2,7 +2,7 @@
 @use "abstracts/mixin";
 @use "./pages/home/banner-section";
 @use "./pages/home/feature-section";
-@use "./components/layout/footer/rocket-scrool-svg";
+@use "./layout/footer/rocket-scrool-svg";
 @use "./pages/home/testimonial-section.scss";
 
 .rounded-button {
