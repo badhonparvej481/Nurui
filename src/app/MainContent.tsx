@@ -7,7 +7,9 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <main
       className={
-        pathName === "/sing-in" ? "" : "pb-12 lg:pb-16 xl:pb-20 2xl:pb-24"
+        pathName === "/sing-in" || pathName === "/sing-up"
+          ? ""
+          : "pb-12 lg:pb-16 xl:pb-20 2xl:pb-24"
       }
     >
       {children}

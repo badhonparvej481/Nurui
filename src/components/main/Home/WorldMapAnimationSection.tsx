@@ -1,6 +1,6 @@
 "use client";
 import SectionIntro from "@/components/common/SectionIntro";
-import { WorldMap } from "@/components/common/world-map/WorldMap";
+import { WorldMap } from "@/components/common/ui/world-map/WorldMap";
 
 export function WorldMapAnimationSection() {
   return (

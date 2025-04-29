@@ -11,7 +11,7 @@ export default page;
 const data = {
   rightSection: {
     title: "Welcome back",
-    subtitle: "Sign in to continue.",
+    subtitle: "Sign up to continue.",
     authOptions: [
       {
         provider: "google",
@@ -28,8 +28,12 @@ const data = {
         action: "facebook",
       },
     ],
-    orText: "Or",
     formFields: [
+      {
+        label: "Your name:",
+        placeholder: "name",
+        type: "text",
+      },
       {
         label: "Your Email:",
         placeholder: "Email",
@@ -41,15 +45,14 @@ const data = {
         type: "password",
       },
     ],
-    forgotPasswordText: "Forgot Password?",
     submitButton: "Sign In",
   },
   leftSection: {
     greeting: "Hello, Friend!",
     description:
       "Register with your personal details to use all of site features",
-    buttonText: "Sing up",
-    navigation:'/sing-up',
+    buttonText: "Sing in",
+    navigation: "/sing-in",
   },
-  reverse: false,
+  reverse: true,
 };

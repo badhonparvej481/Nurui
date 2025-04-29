@@ -17,7 +17,7 @@ const Navbar = () => {
   const handleOpen = useCallback(() => setOpen(true), []);
   const handleClose = useCallback(() => setOpen(false), []);
 
-  if(pathName === "/sing-in" || pathName === "/register") return null;
+  if (pathName === "/sing-in" || pathName === "/sing-up") return null;
 
   return (
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">

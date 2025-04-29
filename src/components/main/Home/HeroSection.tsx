@@ -23,7 +23,7 @@ import EmailIcon from "../../icons/EmailIcon";
 import YahooIcon from "../../icons/YahooIcon";
 import OutlookIcon from "../../icons/OutlookIcon";
 import { AnimatedTooltip } from "../../common/AnimatedTooltip";
-import CollMode from "../../common/cool-mode/CollMode";
+import CollMode from "../../common/ui/cool-mode/CollMode";
 import { GrSend } from "react-icons/gr";
 import RatingStars from "@/components/common/RatingStars";
 import UberIcon from "@/components/icons/UberIcon";

@@ -1,43 +1,76 @@
 "use client";
-import AuthWithSocialMedia from "@/components/common/AuthWithSocialMedia";
+import AuthWithSocialMediaButton from "@/components/common/AuthWithSocialMediaButton";
 import Bytenexia from "@/components/common/Bytenexia";
-import { FcGoogle } from "react-icons/fc";
 import React from "react";
-import { FaFacebook } from "react-icons/fa6";
 import Link from "next/link";
 import OutlineButton from "@/components/common/OutlineButton";
 
-const SingInSingUpComponent = () => {
-  const [reverse, setReverse] = React.useState(false);
+interface SingInSingUpComponentProps {
+  data: {
+    leftSection: {
+      greeting: string;
+      description: string;
+      buttonText: string;
+      navigation: string;
+    };
+    rightSection: {
+      title: string;
+      subtitle: string;
+      authOptions: {
+        provider: string;
+        label: string;
+        icon: React.ReactNode;
+        action: string;
+      }[];
+      orText?: string;
+      formFields: {
+        label: string;
+        placeholder: string;
+        type: string;
+      }[];
+      forgotPasswordText?: string;
+      submitButton: string;
+    };
+    reverse?: boolean;
+  };
+}
+
+const SingInSingUpComponent: React.FC<SingInSingUpComponentProps> = ({
+  data,
+}) => {
   return (
     <div className="min-h-screen flex items-center">
       <div
-        className={`bg-gradient-to-t from-[var(--glass-color)] via-[var(--glass-color-2)] to-[var(--primary-color-2)] max-w-7xl mx-auto w-full flex ${
-          reverse ? "flex-row-reverse" : "flex-row"
+        className={`bg-gradient-to-t from-[var(--glass-color-2)] via-[var(--glass-color-2)] to-[var(--primary-color-1)] max-w-7xl mx-auto w-full flex ${
+          data?.reverse ? "flex-row-reverse" : "flex-row"
         } clip-path-auth-layout`}
       >
         <div
-          className={`w-1/2 bg-[var(--primary-color)] rounded-xl ${
-            reverse ? "mb-7 mt-12 ml-24 mr-7" : "mb-12 mt-7 ml-7"
-          } flex flex-col items-center justify-center text-center space-y-5 text-[var(--black-color)]`}
+          className={`w-1/2 bg-[var(--primary-color-1)] bg-[url('/images/background-layout.png')] rounded-xl ${
+            data?.reverse ? "mb-5 mt-10 ml-28 mr-5" : "mb-10 mt-5 ml-5"
+          } flex flex-col items-center justify-center text-center space-y-5`}
         >
-          <h3 className="text-4xl font-bold">Hello, Friend!</h3>
-          <p className="text-lg">
-            Register with your personal details to use all <br /> of site
-            features
-          </p>
-          <div onClick={() => setReverse(!reverse)}>
-            <OutlineButton title="Sing up" />
-          </div>
+          <h3 className="text-4xl font-bold">{data?.leftSection?.greeting}</h3>
+          <p className="text-lg max-w-96">{data?.leftSection?.description}</p>
+          <OutlineButton
+            title={data?.leftSection?.buttonText}
+            navigation={data?.leftSection?.navigation}
+          />
         </div>
-        <div className="flex flex-col items-center w-1/2 p-14 pl-20">
+        <div
+          className={`flex flex-col items-center w-1/2 ${
+            data?.reverse ? "" : "pl-20"
+          } p-14`}
+        >
           <Bytenexia />
-          <h1 className="text-3xl font-semibold mt-5">Welcome back</h1>
-          <p className="text-lg mt-3">Sign in to continue.</p>
+          <h1 className="text-3xl font-semibold mt-5">
+            {data?.rightSection?.title}
+          </h1>
+          <p className="text-lg mt-3">{data?.rightSection?.subtitle}</p>
           <div className="flex items-center gap-4 mt-4">
-            {data?.authOptions?.map((d, idx) => {
+            {data?.rightSection?.authOptions?.map((d, idx) => {
               return (
-                <AuthWithSocialMedia
+                <AuthWithSocialMediaButton
                   key={d?.label + idx}
                   title={d?.label}
                   icon={d?.icon}
@@ -45,36 +78,32 @@ const SingInSingUpComponent = () => {
               );
             })}
           </div>
-          <p className="text-lg mt-5">Or</p>
+          <p className="text-lg mt-5">{data?.rightSection?.orText}</p>
           <form className="flex flex-col w-full mt-6">
-            <div className="flex flex-col mb-1">
-              <label htmlFor="Email" className="capitalize mb-1">
-                Your Email:
-              </label>
-              <input
-                type="email"
-                placeholder="Email"
-                className="border border-gray-300 rounded p-2 mb-4"
-              />
-            </div>
-            <div className="flex flex-col mb-1">
-              <label htmlFor="Password" className="capitalize mb-1">
-                Your Password:
-              </label>
-              <input
-                type="password"
-                placeholder="Password"
-                className="border border-gray-300 rounded p-2 mb-4"
-              />
-            </div>
-            <Link href={"/"} className="text-right mb-4 text-blue-500">
-              Forgot Password?
-            </Link>
+            {data?.rightSection?.formFields?.map((d, idx) => {
+              return (
+                <div className="flex flex-col mb-1" key={d?.label + idx}>
+                  <label htmlFor={d?.placeholder} className="capitalize mb-1">
+                    {d?.label}
+                  </label>
+                  <input
+                    type={d?.type}
+                    placeholder={d?.placeholder}
+                    className="border border-gray-300 rounded p-2 mb-4"
+                  />
+                </div>
+              );
+            })}
+            {data?.rightSection?.forgotPasswordText && (
+              <Link href={"/"} className="text-right mb-4 text-blue-500">
+                {data?.rightSection?.forgotPasswordText}
+              </Link>
+            )}
             <button
               type="submit"
-              className="bg-blue-500 text-white rounded p-2"
+              className="bg-[var(--primary-color)] text-[var(--white-color)] rounded p-2"
             >
-              Sign In
+              {data?.rightSection?.submitButton}
             </button>
           </form>
         </div>
@@ -84,25 +113,3 @@ const SingInSingUpComponent = () => {
 };
 
 export default SingInSingUpComponent;
-
-const data = {
-  section: "auth",
-  heading: "Welcome back",
-  subheading: "Sign in to continue",
-  authOptions: [
-    {
-      provider: "google",
-      label: "Login with Google",
-      icon: <FcGoogle />,
-      action: "google",
-    },
-    {
-      provider: "Facebook",
-      label: "Login with Facebook",
-      icon: (
-        <FaFacebook className="text-[#0866FF] bg-[var(--white-color)] rounded-full" />
-      ),
-      action: "facebook",
-    },
-  ],
-};

@@ -1,4 +1,4 @@
-import TestimonialCard from "../../common/testimonial/TestimonialCard";
+import TestimonialCard from "../../common/ui/testimonial/TestimonialCard";
 
 export default function TestimonialSection() {
   return (

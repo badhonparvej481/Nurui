@@ -1,4 +1,4 @@
-import CollMode from "@/components/common/cool-mode/CollMode";
+import CollMode from "@/components/common/ui/cool-mode/CollMode";
 import ImageComponent from "@/components/common/Image";
 import React from "react";
 
