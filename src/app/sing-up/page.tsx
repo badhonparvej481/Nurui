@@ -15,19 +15,20 @@ const data = {
     authOptions: [
       {
         provider: "google",
-        label: "Login with Google",
+        label: "Sing up with Google",
         icon: <FcGoogle />,
         action: "google",
       },
       {
         provider: "Facebook",
-        label: "Login with Facebook",
+        label: "Sing up with Facebook",
         icon: (
           <FaFacebook className="text-[#0866FF] bg-[var(--white-color)] rounded-full" />
         ),
         action: "facebook",
       },
     ],
+    orText: "Or",
     formFields: [
       {
         label: "Your name:",

@@ -56,7 +56,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-5">
           <ThemeSwitcher />
-          <BorderAnimationButton title="sing in" />
+          <BorderAnimationButton title="sing in" navigation="/sing-in" />
         </div>
         {/* drawer */}
         <>

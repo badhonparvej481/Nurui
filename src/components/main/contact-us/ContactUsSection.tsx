@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import ShinyInput from "@/components/common/ShinyInput";
 import ShinyTextArea from "@/components/common/ShinyTextArea";
 import ButtonBackgroundShineButton from "@/components/common/ButtonBackgroundShine";
+
 const ContactUsSection = () => {
   return (
     <section className="container pt-6 lg:pt-12 flex flex-col lg:flex-row gap-8 xl:gap-14 2xl:gap-24">
