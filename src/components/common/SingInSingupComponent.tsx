@@ -36,6 +36,8 @@ interface SingInSingUpComponentProps {
   };
 }
 
+// TODO: try to remove reverse functionality;
+
 const SingInSingUpComponent: React.FC<SingInSingUpComponentProps> = ({
   data,
 }) => {
@@ -49,12 +51,12 @@ const SingInSingUpComponent: React.FC<SingInSingUpComponentProps> = ({
         <div
           className={`w-1/2 bg-[var(--primary-color-1)] bg-[url('/images/background-layout.png')] rounded-xl ${
             data?.reverse ? "mb-5 mt-10 ml-28 mr-5" : "mb-10 mt-5 ml-5"
-          } hidden md:flex flex-col items-center justify-center text-center space-y-3 lg:space-y-5`}
+          } hidden lg:flex flex-col items-center justify-center text-center space-y-3 lg:space-y-5`}
         >
           <h3 className="text-2xl lg:text-4xl font-bold">
             {data?.leftSection?.greeting}
           </h3>
-          <p className="text-lg max-w-72 lg:max-w-96">
+          <p className="text-lg max-w-72 lg:max-w-96 px-4">
             {data?.leftSection?.description}
           </p>
           <OutlineButton
@@ -63,12 +65,12 @@ const SingInSingUpComponent: React.FC<SingInSingUpComponentProps> = ({
           />
         </div>
         <div
-          className={`flex flex-col items-center w-full md:w-1/2 ${
+          className={`flex flex-col items-center w-full lg:w-1/2 ${
             data?.reverse ? "" : "lg:pl-20"
           } p-14`}
         >
           <Bytenexia />
-          <h1 className="text-3xl font-semibold mt-5">
+          <h1 className="text-2xl lg:text-3xl font-semibold mt-5">
             {data?.rightSection?.title}
           </h1>
           <p className="text-lg mt-3">{data?.rightSection?.subtitle}</p>
