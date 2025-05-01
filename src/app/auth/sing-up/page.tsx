@@ -11,17 +11,17 @@ export default page;
 const data = {
   rightSection: {
     title: "Welcome back",
-    subtitle: "Sign in to continue.",
+    subtitle: "Sign up to continue.",
     authOptions: [
       {
         provider: "google",
-        label: "Login with Google",
+        label: "Sing up with Google",
         icon: <FcGoogle />,
         action: "google",
       },
       {
         provider: "Facebook",
-        label: "Login with Facebook",
+        label: "Sing up with Facebook",
         icon: (
           <FaFacebook className="text-[#0866FF] bg-[var(--white-color)] rounded-full" />
         ),
@@ -30,6 +30,11 @@ const data = {
     ],
     orText: "Or",
     formFields: [
+      {
+        label: "Your name:",
+        placeholder: "name",
+        type: "text",
+      },
       {
         label: "Your Email:",
         placeholder: "Email",
@@ -41,15 +46,14 @@ const data = {
         type: "password",
       },
     ],
-    forgotPasswordText: "Forgot Password?",
     submitButton: "Sign In",
   },
   leftSection: {
     greeting: "Hello, Friend!",
     description:
       "Register with your personal details to use all of site features",
-    buttonText: "Sing up",
-    navigation:'/sing-up',
+    buttonText: "Sing in",
+    navigation: "/auth/sing-in",
   },
-  reverse: false,
+  reverse: true,
 };

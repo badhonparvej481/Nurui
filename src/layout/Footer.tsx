@@ -14,9 +14,14 @@ import nProgress from "nprogress";
 import RocketScrollToTop from "@/components/common/RocketScrollToTop";
 
 const Footer = () => {
-  const pathname = usePathname();
+  const pathName = usePathname();
 
-  if(pathname === "/sing-in" || pathname === "/sing-up") return null;
+  if (
+    pathName.includes("sing-in") ||
+    pathName.includes("sing-up") ||
+    pathName.includes("dashboard")
+  )
+    return null;
 
   return (
     <div className="bg-[var(--white-color)] dark:bg-[var(--background-color)] border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px] rocket-animation">
@@ -97,7 +102,7 @@ const Footer = () => {
                     ? ""
                     : "border-r border-[var(--black-color-2)]"
                 } pr-4 font-semibold ${
-                  navigationActive(data?.url, pathname)
+                  navigationActive(data?.url, pathName)
                     ? "text-[var(--primary-color)] font-bold"
                     : "text-[--copy-right-color]"
                 }`}

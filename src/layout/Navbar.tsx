@@ -17,7 +17,12 @@ const Navbar = () => {
   const handleOpen = useCallback(() => setOpen(true), []);
   const handleClose = useCallback(() => setOpen(false), []);
 
-  if (pathName === "/sing-in" || pathName === "/sing-up") return null;
+  if (
+    pathName.includes("sing-in") ||
+    pathName.includes("sing-up") ||
+    pathName.includes("dashboard")
+  )
+    return null;
 
   return (
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
@@ -56,7 +61,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-5">
           <ThemeSwitcher />
-          <BorderAnimationButton title="sing in" navigation="/sing-in" />
+          <BorderAnimationButton title="sing in" navigation="/auth/sing-in" />
         </div>
         {/* drawer */}
         <>
