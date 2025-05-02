@@ -7,7 +7,9 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <main
       className={
-        pathName === "/sing-in" || pathName === "/sing-up"
+        pathName.includes("sing-in") ||
+        pathName.includes("sing-up") ||
+        pathName.includes("dashboard")
           ? ""
           : "pb-12 lg:pb-16 xl:pb-20 2xl:pb-24"
       }
