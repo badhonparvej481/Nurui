@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./drawer.module.scss";
-import { changeAnchor } from "../../../utils/changeAnchor";
 import Image from "next/image";
 import {
   FaCogs,
@@ -9,9 +8,10 @@ import {
   FaInfoCircle,
   FaTag,
 } from "react-icons/fa";
-import DrawerMenuItem from "../DrawerMenuItem";
 import { IoHome } from "react-icons/io5";
 import { GrLogout } from "react-icons/gr";
+import DrawerMenuItem from "../../DrawerMenuItem";
+import { changeAnchor } from "@/utils/changeAnchor";
 
 interface IProps {
   open: boolean;

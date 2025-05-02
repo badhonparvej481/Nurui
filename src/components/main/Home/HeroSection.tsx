@@ -6,8 +6,8 @@ import {
 } from "react-icons/md";
 import LabelWithIcon from "../../common/LabelWithIcon";
 import { FiPhoneCall } from "react-icons/fi";
-import BackgroundGridBeam from "../../common/background-grid-beam/BackgroundGridBeam";
-import AnimatedGradientText from "../../common/animated-gradient-button/AnimatedGradientText";
+import BackgroundGridBeam from "../../common/ui/background-grid-beam/BackgroundGridBeam";
+import AnimatedGradientText from "../../common/ui/animated-gradient-button/AnimatedGradientText";
 import MessengerIcon from "../../icons/MessangerIcon";
 import { WhatsappIcon } from "../../icons/WhatsappIcon";
 import InstagramIcon from "../../icons/InstagramIcon";
