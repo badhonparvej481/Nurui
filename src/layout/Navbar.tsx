@@ -36,7 +36,7 @@ const Navbar = () => {
             <RxCross2 className="text-[var(--primary-color)] text-3xl" />
           </button>
         ) : (
-          <Bytenexia fontSize="text-2xl lg:text-3xl" />
+          <Bytenexia className="text-2xl lg:text-3xl" />
         )}
 
         <div
