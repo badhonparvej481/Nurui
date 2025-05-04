@@ -10,8 +10,8 @@ import {
 } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
 import { GrLogout } from "react-icons/gr";
-import DrawerMenuItem from "../../DrawerMenuItem";
 import { changeAnchor } from "@/utils/changeAnchor";
+import MenuItem from "../../MenuItem";
 
 interface IProps {
   open: boolean;
@@ -60,7 +60,7 @@ export const NavigationDrawer: React.FC<IProps> = (props) => {
         </header>
         <main className="flex flex-col gap-y-3 py-8 overflow-y-auto">
           {navigation.slice(0, navigation.length - 2).map((nav, index) => (
-            <DrawerMenuItem
+            <MenuItem
               key={nav?.title + index}
               icon={nav.icon}
               title={nav.title}
@@ -70,11 +70,10 @@ export const NavigationDrawer: React.FC<IProps> = (props) => {
         </main>
         <footer className="flex flex-col gap-y-3 min-h-16 border-t border-[var(--primary-color)] py-8 mt-auto">
           {navigation.slice(navigation.length - 2).map((nav, index) => (
-            <DrawerMenuItem
+            <MenuItem
               key={nav?.title + index}
               icon={nav.icon}
               title={nav.title}
-              submenu={nav?.submenu}
             />
           ))}
         </footer>
