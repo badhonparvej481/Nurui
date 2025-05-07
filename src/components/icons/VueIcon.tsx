@@ -1,7 +1,7 @@
 import { cn } from "@/utils/cn";
 import React from "react";
 
-const YahooIcon = ({
+const VueIcon = ({
   className,
   isAnimation = true,
   reSize,
@@ -15,19 +15,21 @@ const YahooIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      fill="#fff"
       width={reSize ? "80px" : "75px"}
       height={reSize ? "80px" : "75px"}
-      aria-label="Yahoo!"
-      viewBox="0 0 512 512"
-      id="yahoo"
+      viewBox="0 0 48 48"
       className={cn(isAnimation && "social-icon-animation", className)}
     >
-      <rect width={512} height={512} fill="#5f01d1" rx="15%" />
-      <path d="M203 404h-62l25-59-69-165h63l37 95 37-95h62m58 76h-69l62-148h69" />
-      <circle cx={303} cy={308} r={38} />
+      <polygon
+        fill="#81c784"
+        points="23.987,17 18.734,8 2.974,8 23.987,44 45,8 29.24,8"
+      />
+      <polygon
+        fill="#455a64"
+        points="29.24,8 23.987,17 18.734,8 11.146,8 23.987,30 36.828,8"
+      />
     </svg>
   );
 };
 
-export default YahooIcon;
+export default VueIcon;

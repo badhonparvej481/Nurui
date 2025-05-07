@@ -1,5 +1,5 @@
 import NewsLetterSection from "@/components/common/NewsLetterSection";
-import PricingSection from "@/components/main/Home/PricingSection";
+import PricingSection from "@/components/main/pricing/PricingSection";
 import FeatureComparisonSection from "@/components/main/pricing/FeatureComparisonSection";
 
 const Pricing = () => {

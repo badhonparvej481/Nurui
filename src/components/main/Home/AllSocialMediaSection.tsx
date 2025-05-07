@@ -2,25 +2,25 @@ import Gravity, { MatterBody } from "@/components/common/Gravity";
 import SectionIntro from "@/components/common/SectionIntro";
 import ShinyInput from "@/components/common/ShinyInput";
 import AmazonSesIcon from "@/components/icons/AmazonSesIcon";
-import DiscordIcon from "@/components/icons/DiscordIcon";
-import EmailIcon from "@/components/icons/EmailIcon";
-import FacebookIcon from "@/components/icons/FacebookIcon";
-import InstagramIcon from "@/components/icons/InstagramIcon";
+import JavaScriptIcon from "@/components/icons/JavaScriptIcon";
+import BulmaIcon from "@/components/icons/BulmaIcon";
+import BootstrapIcon from "@/components/icons/BootstrapIcon";
+import TailwindIcon from "@/components/icons/TailwindIcon";
 import KikIcon from "@/components/icons/KikIcon";
-import LineIcon from "@/components/icons/LineIcon";
+import SassIcon from "@/components/icons/SassIcon";
 import MastodonIcon from "@/components/icons/MastodonIcon";
-import MessengerIcon from "@/components/icons/MessangerIcon";
-import OutlookIcon from "@/components/icons/OutlookIcon";
+import HtmlIcon from "@/components/icons/HtmlIcon";
+import NustIcon from "@/components/icons/NustIcon";
 import ProtonMailIcon from "@/components/icons/ProtonMail";
 import SignalIcon from "@/components/icons/SignalIcon";
-import SkypeIcon from "@/components/icons/SkypeIcon";
-import SlackIcon from "@/components/icons/SlackIcon";
-import SnapChatIcon from "@/components/icons/SnapChatIcon";
-import TelegramIcon from "@/components/icons/TelegramIcon";
-import ViberIcon from "@/components/icons/ViberIcon";
+import SvelteIcon from "@/components/icons/SvelteIcon";
+import VueIcon from "@/components/icons/VueIcon";
+import NextJsIcon from "@/components/icons/NextJsIcon";
+import AngularIcon from "@/components/icons/AngularIcon";
+import TypescriptIcon from "@/components/icons/TypescriptIcon";
 import WeChatIcon from "@/components/icons/WeChatIcon";
-import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
-import YahooIcon from "@/components/icons/YahooIcon";
+import { CssIcon } from "@/components/icons/CssIcon";
+import ReactIcon from "@/components/icons/ReactIcon";
 import ZohoMailIcon from "@/components/icons/ZohoMailIcon";
 import { IoIosSearch } from "react-icons/io";
 
@@ -28,7 +28,7 @@ export default function AllSocialMediaSection() {
   const icons = [
     {
       icon: (
-        <TelegramIcon
+        <AngularIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -37,7 +37,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <LineIcon
+        <SassIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -46,7 +46,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <EmailIcon
+        <BulmaIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -55,7 +55,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <WhatsappIcon
+        <CssIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -64,7 +64,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <InstagramIcon
+        <TailwindIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -73,7 +73,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <MessengerIcon
+        <HtmlIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -82,7 +82,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <DiscordIcon
+        <JavaScriptIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -91,7 +91,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <FacebookIcon
+        <BootstrapIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -100,7 +100,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <YahooIcon
+        <ReactIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -109,7 +109,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <SnapChatIcon
+        <NextJsIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -118,7 +118,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <ViberIcon
+        <TypescriptIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -127,7 +127,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <SlackIcon
+        <VueIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -136,7 +136,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <OutlookIcon
+        <NustIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -145,7 +145,7 @@ export default function AllSocialMediaSection() {
     },
     {
       icon: (
-        <SkypeIcon
+        <SvelteIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}

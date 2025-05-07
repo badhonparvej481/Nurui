@@ -8,20 +8,20 @@ import LabelWithIcon from "../../common/LabelWithIcon";
 import { FiPhoneCall } from "react-icons/fi";
 import BackgroundGridBeam from "../../common/ui/background-grid-beam/BackgroundGridBeam";
 import AnimatedGradientText from "../../common/ui/animated-gradient-button/AnimatedGradientText";
-import MessengerIcon from "../../icons/MessangerIcon";
-import { WhatsappIcon } from "../../icons/WhatsappIcon";
-import InstagramIcon from "../../icons/InstagramIcon";
-import DiscordIcon from "../../icons/DiscordIcon";
-import FacebookIcon from "../../icons/FacebookIcon";
-import SnapChatIcon from "../../icons/SnapChatIcon";
-import ViberIcon from "../../icons/ViberIcon";
-import SlackIcon from "../../icons/SlackIcon";
-import SkypeIcon from "../../icons/SkypeIcon";
-import TelegramIcon from "../../icons/TelegramIcon";
-import LineIcon from "../../icons/LineIcon";
-import EmailIcon from "../../icons/EmailIcon";
-import YahooIcon from "../../icons/YahooIcon";
-import OutlookIcon from "../../icons/OutlookIcon";
+import HtmlIcon from "../../icons/HtmlIcon";
+import { CssIcon } from "../../icons/CssIcon";
+import TailwindIcon from "../../icons/TailwindIcon";
+import JavaScriptIcon from "../../icons/JavaScriptIcon";
+import BootstrapIcon from "../../icons/BootstrapIcon";
+import NextJsIcon from "../../icons/NextJsIcon";
+import TypescriptIcon from "../../icons/TypescriptIcon";
+import VueIcon from "../../icons/VueIcon";
+import SvelteIcon from "../../icons/SvelteIcon";
+import AngularIcon from "../../icons/AngularIcon";
+import SassIcon from "../../icons/SassIcon";
+import BulmaIcon from "../../icons/BulmaIcon";
+import ReactIcon from "../../icons/ReactIcon";
+import NustIcon from "../../icons/NustIcon";
 import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../common/ui/cool-mode/CollMode";
 import { GrSend } from "react-icons/gr";
@@ -40,17 +40,17 @@ const HeroSection = () => {
         {/* left side icons */}
         <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation">
           <div className="flex flex-col justify-around relative right-4">
-            <TelegramIcon className="relative left-6 icon-animation5" />
-            <LineIcon className="icon-animation6" />
-            <EmailIcon className="relative left-6 icon-animation7" />
+            <AngularIcon className="relative left-6 icon-animation5" />
+            <SassIcon className="icon-animation6" />
+            <BulmaIcon className="relative left-6 icon-animation7" />
           </div>
           <div className="flex flex-col justify-center gap-12 relative left-3">
-            <WhatsappIcon className="icon-animation3" />
-            <InstagramIcon className="icon-animation4" />
+            <CssIcon className="icon-animation3" />
+            <TailwindIcon className="icon-animation4" />
           </div>
           <div className="flex flex-col justify-between">
-            <MessengerIcon className="icon-animation1" />
-            <DiscordIcon className="icon-animation2" />
+            <HtmlIcon className="icon-animation1" />
+            <JavaScriptIcon className="icon-animation2" />
           </div>
         </div>
         {/* content */}
@@ -137,17 +137,17 @@ const HeroSection = () => {
         {/* right side icons */}
         <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation mr-8">
           <div className="flex flex-col justify-between">
-            <FacebookIcon className="icon-animation8" />
-            <YahooIcon className="icon-animation9" />
+            <BootstrapIcon className="icon-animation8" />
+            <ReactIcon className="icon-animation9" />
           </div>
           <div className="flex flex-col justify-center gap-12 relative right-3">
-            <SnapChatIcon className="icon-animation10" />
-            <ViberIcon className="icon-animation11" />
+            <NextJsIcon className="icon-animation10" />
+            <TypescriptIcon className="icon-animation11" />
           </div>
           <div className="flex flex-col justify-around relative right-2">
-            <SlackIcon className="icon-animation12" />
-            <OutlookIcon className="icon-animation13 relative left-7" />
-            <SkypeIcon className="icon-animation14" />
+            <VueIcon className="icon-animation12" />
+            <NustIcon className="icon-animation13 relative left-7" />
+            <SvelteIcon className="icon-animation14" />
           </div>
         </div>
       </section>

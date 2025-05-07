@@ -1,5 +1,4 @@
 "use client";
-import BorderAnimationButton from "@/components/common/BorderAnimationButton";
 import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
@@ -10,6 +9,9 @@ import nProgress from "nprogress";
 import { RxCross2 } from "react-icons/rx";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import { NavigationDrawer } from "@/components/common/ui/drawer/NavigationDrawer";
+import RoundedButton from "@/components/common/RoundedButton";
+import { FaDiscord, FaGithub } from "react-icons/fa";
+import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -60,8 +62,23 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-5">
+          <RoundedButton
+            icon={
+              <IoIosSearch className="text-2xl text-[var(--primary-color)]" />
+            }
+          />
+          <RoundedButton
+            href="https://github.com/Mdafsarx?tab=repositories"
+            icon={
+              <FaDiscord className="text-2xl text-[var(--primary-color)]" />
+            }
+          />
+          <RoundedButton
+            href="https://github.com/Mdafsarx?tab=repositories"
+            icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
+          />
           <ThemeSwitcher />
-          <BorderAnimationButton title="sing in" navigation="/auth/sing-in" />
+          {/* <BorderAnimationButton title="sing in" navigation="/auth/sing-in" /> */}
         </div>
         {/* drawer */}
         <>
