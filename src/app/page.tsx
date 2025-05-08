@@ -1,5 +1,6 @@
 import NewsLetterSection from "@/components/common/NewsLetterSection";
 import AllSocialMediaSection from "@/components/main/Home/AllSocialMediaSection";
+import ComponentDemosSection from "@/components/main/Home/ComponentDemosSection";
 import FaqSection from "@/components/main/Home/FaqSection";
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 import HeroSection from "@/components/main/Home/HeroSection";
@@ -14,6 +15,7 @@ const Home = () => {
       <HeroVideoDialogSection />
       <FeaturesSection />
       <AllSocialMediaSection />
+      <ComponentDemosSection />
       <WorldMapAnimationSection />
       <TestimonialSection />
       <FaqSection />

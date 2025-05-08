@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
-import plugin from 'tailwindcss/plugin'
-import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
-import svgToDataUri from 'mini-svg-data-uri'
+import plugin from "tailwindcss/plugin";
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+import svgToDataUri from "mini-svg-data-uri";
 
 export default {
   darkMode: "class",
@@ -20,8 +20,19 @@ export default {
         rotate: "rotate 5s linear infinite",
         gradient: "gradient 5s linear infinite",
         shine: "shine 4s linear infinite",
+        marquee: "marquee var(--duration, 40s) linear infinite",
+        "marquee-vertical":
+          "marquee-vertical var(--duration, 40s) linear infinite",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
         shine: {
           from: { backgroundPosition: "0 0" },
           to: { backgroundPosition: "-200% 0" },
@@ -40,19 +51,19 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1.1rem',
-        sm: '1.1rem',
-        md: '1.3rem',
-        lg: '1.5rem',
-        xl: '1.2rem',
-        '2xl': '1rem',
+        DEFAULT: "1.1rem",
+        sm: "1.1rem",
+        md: "1.3rem",
+        lg: "1.5rem",
+        xl: "1.2rem",
+        "2xl": "1rem",
       },
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1000px',
-        xl: '1280px',
-        '2xl': '1520px',
+        sm: "640px",
+        md: "768px",
+        lg: "1000px",
+        xl: "1280px",
+        "2xl": "1520px",
       },
     },
   },
@@ -60,17 +71,20 @@ export default {
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
-          'bg-grid': (value: string) => ({
+          "bg-grid": (value: string) => ({
             backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
             )}")`,
           }),
         },
         {
-          values: flattenColorPalette(theme('backgroundColor')) as Record<string, string>,
-          type: 'color',
-        }
-      )
+          values: flattenColorPalette(theme("backgroundColor")) as Record<
+            string,
+            string
+          >,
+          type: "color",
+        },
+      );
     }),
   ],
 } satisfies Config;

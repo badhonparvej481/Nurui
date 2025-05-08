@@ -22,7 +22,7 @@ const Navbar = () => {
   if (
     pathName.includes("sing-in") ||
     pathName.includes("sing-up") ||
-    pathName.includes("dashboard")
+    pathName.includes("components")
   )
     return null;
 
@@ -106,8 +106,8 @@ const navigation = [
   },
   {
     id: 2,
-    name: "Features",
-    url: "/features",
+    name: "component",
+    url: "/components",
   },
   {
     id: 3,
@@ -118,5 +118,10 @@ const navigation = [
     id: 4,
     name: "contact",
     url: "/contact-us",
+  },
+  {
+    id: 5,
+    name: "Blog",
+    url: "/blog",
   },
 ];

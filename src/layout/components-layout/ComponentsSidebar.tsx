@@ -11,7 +11,7 @@ import {
   MdOutlineSettings,
 } from "react-icons/md";
 
-const DashboardSidebar = () => {
+const ComponentsSidebar = () => {
   return (
     <div className="bg-[var(--purple-color)] border-r border-[var(--primary-color-1)] w-[17rem] min-h-screen flex flex-col justify-between pt-3 pb-6">
       <div>
@@ -71,7 +71,7 @@ const DashboardSidebar = () => {
   );
 };
 
-export default DashboardSidebar;
+export default ComponentsSidebar;
 
 const navigation = [
   {
