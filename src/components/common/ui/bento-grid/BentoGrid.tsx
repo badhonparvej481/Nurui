@@ -5,7 +5,6 @@ import {
   FileTextIcon,
   Share2Icon,
 } from "lucide-react";
-// import { Marquee } from "@/registry/magicui/marquee";
 import { cn } from "@/utils/cn";
 import { BentoCard, BentoGrid } from "./Bento";
 import { AnimatedListDemo } from "../animated-list/AnimatedList";
@@ -72,17 +71,6 @@ const features = [
     ),
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
-    description: "Get notified when something happens.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <AnimatedListDemo className="absolute right-2 top-4 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
-    ),
-  },
-  {
     Icon: Share2Icon,
     name: "Integrations",
     description: "Supports 100+ integrations and counting.",
@@ -94,14 +82,52 @@ const features = [
     ),
   },
   {
+    Icon: BellIcon,
+    name: "Notifications",
+    description: "Get notified when something happens.",
+    href: "#",
+    cta: "Learn more",
+    className: "col-span-3 lg:col-span-1",
+    background: (
+      <AnimatedListDemo className="absolute right-2 top-4 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
+    ),
+  },
+  {
     Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-3 lg:col-span-2",
     href: "#",
     cta: "Learn more",
     background: <Calendar />,
   },
+  {
+    Icon: CalendarIcon,
+    name: "Calendar",
+    description: "Use the calendar to filter your files by date.",
+    className: "col-span-3 lg:col-span-2",
+    href: "#",
+    cta: "Learn more",
+    background: <Calendar />,
+  },
+  // {
+  //   Icon: CalendarIcon,
+  //   name: "Calendar",
+  //   description: "Use the calendar to filter your files by date.",
+  //   className: "col-span-3 lg:col-span-1",
+  //   href: "#",
+  //   cta: "Learn more",
+  //   background: <Calendar />,
+  // },
+  // {
+  //   Icon: CalendarIcon,
+  //   name: "Calendar",
+  //   description: "Use the calendar to filter your files by date.",
+  //   className: "col-span-3 lg:col-span-3",
+  //   href: "#",
+  //   cta: "Learn more",
+  //   background: <Calendar />,
+  // },
 ];
 
 export function BentoDemo() {
