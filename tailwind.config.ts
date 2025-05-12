@@ -17,6 +17,8 @@ export default {
         foreground: "var(--foreground)",
       },
       animation: {
+        "background-position-spin":
+          "background-position-spin 3s ease-in-out infinite alternate",
         rotate: "rotate 5s linear infinite",
         gradient: "gradient 5s linear infinite",
         shine: "shine 4s linear infinite",
@@ -32,6 +34,14 @@ export default {
         "marquee-vertical": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        "background-position-spin": {
+          "0%": {
+            backgroundPosition: "top center",
+          },
+          "100%": {
+            backgroundPosition: "bottom center",
+          },
         },
         shine: {
           from: { backgroundPosition: "0 0" },

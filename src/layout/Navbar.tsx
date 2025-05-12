@@ -8,7 +8,7 @@ import Bytenexia from "@/components/common/Bytenexia";
 import nProgress from "nprogress";
 import { RxCross2 } from "react-icons/rx";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
-import { NavigationDrawer } from "@/components/common/ui/drawer/NavigationDrawer";
+import { NavigationDrawer } from "@/components/ui/drawer/NavigationDrawer";
 import RoundedButton from "@/components/common/RoundedButton";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";

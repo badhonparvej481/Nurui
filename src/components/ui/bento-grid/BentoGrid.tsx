@@ -1,15 +1,11 @@
-import {
-  BellIcon,
-  Calendar,
-  CalendarIcon,
-  FileTextIcon,
-  Share2Icon,
-} from "lucide-react";
+import { BellIcon, CalendarIcon, FileTextIcon, Share2Icon } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { BentoCard, BentoGrid } from "./Bento";
 import { AnimatedListDemo } from "../animated-list/AnimatedList";
 import { AnimatedBeamMultipleOutputDemo } from "../animated-beam-multiple-outputs/AnimatedBeamMultipleOutputs";
 import { Marquee } from "../marquee/Marquee";
+import { TerminalDemo } from "../terminal/TerminalDemo";
+import { AnimatedCircularProgressBarDemo } from "../progress-bar/AnimatedCircularProgressBarDemo";
 
 const files = [
   {
@@ -36,6 +32,17 @@ const files = [
 
 const features = [
   {
+    Icon: Share2Icon,
+    name: "Integrations",
+    description: "Supports 100+ integrations and counting.",
+    href: "#",
+    cta: "Learn more",
+    className: "col-span-3 lg:col-span-2",
+    background: (
+      <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
+    ),
+  },
+  {
     Icon: FileTextIcon,
     name: "Save your files",
     description: "We automatically save your files as you type.",
@@ -45,7 +52,7 @@ const features = [
     background: (
       <Marquee
         pauseOnHover
-        className="absolute top-10 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] "
+        className="absolute top-6 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] "
       >
         {files.map((f, idx) => (
           <figure
@@ -71,35 +78,24 @@ const features = [
     ),
   },
   {
-    Icon: Share2Icon,
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
-    ),
-  },
-  {
     Icon: BellIcon,
     name: "Notifications",
     description: "Get notified when something happens.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-3 lg:col-span-1 row-span-2",
     background: (
-      <AnimatedListDemo className="absolute right-2 top-4 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
+      <AnimatedListDemo className="absolute left-1/2 -translate-x-1/2 -top-20 h-[900px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
   },
   {
     Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 lg:col-span-1",
     href: "#",
     cta: "Learn more",
-    background: <Calendar />,
+    background: <AnimatedCircularProgressBarDemo className="left-24 top-14" />,
   },
   {
     Icon: CalendarIcon,
@@ -108,26 +104,10 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     href: "#",
     cta: "Learn more",
-    background: <Calendar />,
+    background: (
+      <TerminalDemo className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
+    ),
   },
-  // {
-  //   Icon: CalendarIcon,
-  //   name: "Calendar",
-  //   description: "Use the calendar to filter your files by date.",
-  //   className: "col-span-3 lg:col-span-1",
-  //   href: "#",
-  //   cta: "Learn more",
-  //   background: <Calendar />,
-  // },
-  // {
-  //   Icon: CalendarIcon,
-  //   name: "Calendar",
-  //   description: "Use the calendar to filter your files by date.",
-  //   className: "col-span-3 lg:col-span-3",
-  //   href: "#",
-  //   cta: "Learn more",
-  //   background: <Calendar />,
-  // },
 ];
 
 export function BentoDemo() {

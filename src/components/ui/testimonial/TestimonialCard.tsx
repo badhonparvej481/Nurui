@@ -1,6 +1,6 @@
 import { FaQuoteLeft } from "react-icons/fa6";
-import RatingStars from "../../RatingStars";
-import ImageComponent from "../../Image";
+import RatingStars from "../../common/RatingStars";
+import ImageComponent from "../../common/Image";
 
 interface IProps {
   position: string;

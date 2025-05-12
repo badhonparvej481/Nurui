@@ -11,7 +11,7 @@ import {
 import { IoHome } from "react-icons/io5";
 import { GrLogout } from "react-icons/gr";
 import { changeAnchor } from "@/utils/changeAnchor";
-import MenuItem from "../../MenuItem";
+import MenuItem from "../../common/MenuItem";
 
 interface IProps {
   open: boolean;

@@ -1,6 +1,5 @@
 import SectionIntro from "@/components/common/SectionIntro";
-import { BentoDemo } from "@/components/common/ui/bento-grid/BentoGrid";
-import { MarqueeDemo } from "@/components/common/ui/marquee/MarqueeDemo";
+import { BentoDemo } from "@/components/ui/bento-grid/BentoGrid";
 import React from "react";
 
 const ComponentDemosSection = () => {
@@ -15,7 +14,6 @@ const ComponentDemosSection = () => {
         description="Here are some of the components that you can use to build your landing pages."
       />
       <BentoDemo />
-      <MarqueeDemo />
     </section>
   );
 };
