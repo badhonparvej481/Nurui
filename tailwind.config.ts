@@ -25,6 +25,8 @@ export default {
         marquee: "marquee var(--duration, 40s) linear infinite",
         "marquee-vertical":
           "marquee-vertical var(--duration, 40s) linear infinite",
+        float: "float 3s ease-in-out infinite",
+        move: "move 5s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -55,6 +57,14 @@ export default {
           to: {
             "background-position": "200% center",
           },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-40px)" },
+        },
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
         },
       },
     },
