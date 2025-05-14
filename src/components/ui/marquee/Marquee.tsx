@@ -30,6 +30,7 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
    * @default 4
    */
   repeat?: number;
+  itemsCenter?: string;
 }
 
 export function Marquee({
@@ -39,6 +40,7 @@ export function Marquee({
   children,
   vertical = false,
   repeat = 4,
+  itemsCenter = "",
   ...props
 }: MarqueeProps) {
   return (
@@ -58,12 +60,16 @@ export function Marquee({
         .map((_, i) => (
           <div
             key={i}
-            className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-              "animate-marquee flex-row": !vertical,
-              "animate-marquee-vertical flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-direction:reverse]": reverse,
-            })}
+            className={cn(
+              "flex shrink-0 justify-around [gap:var(--gap)]",
+              itemsCenter,
+              {
+                "animate-marquee flex-row": !vertical,
+                "animate-marquee-vertical flex-col": vertical,
+                "group-hover:[animation-play-state:paused]": pauseOnHover,
+                "[animation-direction:reverse]": reverse,
+              },
+            )}
           >
             {children}
           </div>

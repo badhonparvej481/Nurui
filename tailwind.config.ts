@@ -28,6 +28,7 @@ export default {
           "marquee-vertical var(--duration, 40s) linear infinite",
         float: "float 3s ease-in-out infinite",
         move: "move 5s linear infinite",
+        pulse: "pulse var(--duration) ease-out infinite",
       },
       keyframes: {
         marquee: {
@@ -66,6 +67,10 @@ export default {
         move: {
           "0%": { transform: "translateX(-200px)" },
           "100%": { transform: "translateX(200px)" },
+        },
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
       },
     },
