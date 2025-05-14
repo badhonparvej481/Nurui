@@ -11,7 +11,7 @@ Follow these steps to run the project on your local machine:
 git clone https://github.com/your-username/bytenexia.git
 
 # Go to the project directory
-cd users-hub
+cd bytenexia
 
 # Install dependencies
 yarn install
