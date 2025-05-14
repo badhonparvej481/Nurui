@@ -1284,7 +1284,13 @@ const Hyperspeed: FC<HyperspeedProps> = ({ effectOptions = {} }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <div id="lights" className="w-full h-full" ref={hyperspeed}></div>;
+  return (
+    <div id="lights" className="w-full h-full" ref={hyperspeed}>
+      <p className="text-4xl font-black capitalize text-[var(--glass-color-3)] text-center pt-6">
+        Click me
+      </p>
+    </div>
+  );
 };
 
 export default Hyperspeed;

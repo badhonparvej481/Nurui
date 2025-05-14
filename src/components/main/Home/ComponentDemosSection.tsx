@@ -25,6 +25,7 @@ import {
 import { GrMysql } from "react-icons/gr";
 import { FeatureBlockAnimatedCard } from "@/components/ui/feature-block-animated-card/FeatureBlockAnimatedCard";
 import HyperspeedDemo from "@/components/ui/hyperspeed/HyperspeedDemo";
+import { VortexDemo } from "@/components/ui/vortex-background/VortexDemo";
 
 const ComponentDemosSection = () => {
   return (
@@ -221,7 +222,7 @@ const featuresDataTwo = [
     href: "#",
     cta: "Learn more",
     background: (
-      <TerminalDemo className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
+      <VortexDemo className="absolute left-1/2 -translate-x-1/2 -top-32 h-[600px] w-full" />
     ),
   },
 ];
