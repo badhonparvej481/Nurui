@@ -80,7 +80,7 @@ const featuresDataOne = [
     description: "Supports 100+ integrations and counting.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-full xl:col-span-2",
     background: (
       <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_5%,#000_100%)]" />
     ),
@@ -91,7 +91,7 @@ const featuresDataOne = [
     description: "We automatically save your files as you type.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <Marquee
         pauseOnHover
@@ -126,7 +126,7 @@ const featuresDataOne = [
     description: "Get notified when something happens.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-1 row-span-2",
+    className: "col-span-full md:col-span-2 xl:col-span-1 xl:row-span-2",
     background: (
       <AnimatedListDemo className="absolute left-1/2 -translate-x-1/2 -top-20 h-[900px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
@@ -135,16 +135,18 @@ const featuresDataOne = [
     Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-full md:col-span-2 xl:col-span-1",
     href: "#",
     cta: "Learn more",
-    background: <AnimatedCircularProgressBarDemo className="left-24 top-14" />,
+    background: (
+      <AnimatedCircularProgressBarDemo className="left-1/2 -ml-20 top-14" />
+    ),
   },
   {
     Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-full md:col-span-2 xl:col-span-2",
     href: "#",
     cta: "Learn more",
     background: (
@@ -160,7 +162,7 @@ const featuresDataTwo = [
     description: "Supports 100+ integrations and counting.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <IconCloudDemo className="absolute left-1/2 -translate-x-1/2 -top-8" />
     ),
@@ -171,7 +173,7 @@ const featuresDataTwo = [
     description: "We automatically save your files as you type.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-full md:col-span-2 xl:col-span-2",
     background: (
       <OrbitingItems3D
         duration={25}
@@ -200,7 +202,7 @@ const featuresDataTwo = [
     description: "Get notified when something happens.",
     href: "#",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-1 row-span-1",
+    className: "col-span-full md:col-span-2 xl:col-span-1 row-span-1",
     background: (
       <FeatureBlockAnimatedCard className="absolute left-1/2 -translate-x-1/2 -top-9 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
@@ -209,7 +211,7 @@ const featuresDataTwo = [
     Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-full md:col-span-2 xl:col-span-2",
     href: "#",
     cta: "Learn more",
     background: <HyperspeedDemo />,
@@ -218,7 +220,7 @@ const featuresDataTwo = [
     Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-full xl:col-span-2",
     href: "#",
     cta: "Learn more",
     background: (

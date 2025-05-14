@@ -1,8 +1,12 @@
+import { Marquee } from "@/components/ui/marquee/Marquee";
 import TestimonialCard from "../../ui/testimonial/TestimonialCard";
 
 export default function TestimonialSection() {
   return (
-    <section className="flex flex-col lg:flex-row gap-6 border-y lg:border border-[var(--primary-color)] overflow-hidden lg:mx-6 lg:rounded-2xl px-5 xl:px-6 2xl:px-10 testimonial">
+    <section
+      className="relative flex flex-col lg:flex-row gap-6 overflow-hidden
+    border-y md:border border-[var(--primary-color)] md:rounded-2xl md:px-5 xl:px-6 2xl:px-10 md:mx-6 "
+    >
       {/* title */}
       <div className="w-[40%] space-y-3.5 hidden 2xl:flex flex-col justify-center items-start">
         <p className="py-1 uppercase px-2 bg-[var(--primary-color-4)] inline-block text-[var(--primary-color)] font-semibold rounded-lg">
@@ -21,39 +25,52 @@ export default function TestimonialSection() {
       </div>
 
       {/* testimonial cards */}
-      <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 xl:gap-12 2xl:w-[60%] py-4 lg:py-0">
-        <div className="testimonial-list-bottom-to-top lg:h-[92vh] flex flex-row lg:flex-col gap-6">
-          {data?.slice(0, 10)?.map((tes, i) => (
-            <TestimonialCard
-              key={i}
-              position={tes?.position}
-              name={tes?.name}
-              review={tes?.testimonial}
-            />
-          ))}
-        </div>
-
-        <div className="testimonial-list-top-to-bottom lg:h-[92vh] flex flex-row lg:flex-col gap-6 ">
-          {data?.slice(10, 20)?.map((tes, i) => (
-            <TestimonialCard
-              key={i}
-              position={tes?.position}
-              name={tes?.name}
-              review={tes?.testimonial}
-            />
-          ))}
-        </div>
-
-        <div className="testimonial-list-bottom-to-top lg:h-[92vh] hidden lg:flex flex-col gap-6">
-          {data?.slice(20, data.length)?.map((tes, i) => (
-            <TestimonialCard
-              key={i}
-              position={tes?.position}
-              name={tes?.name}
-              review={tes?.testimonial}
-            />
-          ))}
-        </div>
+      <div className="flex flex-row items-center md:gap-2.5 xl:gap-8 2xl:w-[60%] mx-auto py-4 md:py-0 max-h-[calc(100vh-6rem)]">
+        {[
+          { data: data?.slice(0, 10), reverse: true },
+          { data: data?.slice(10, 20), reverse: false },
+          { data: data?.slice(20, data?.length), reverse: true },
+        ].map((item, idx) => (
+          <Marquee
+            key={idx}
+            pauseOnHover
+            vertical
+            reverse={item.reverse}
+            className="[--duration:100s] hidden md:block"
+          >
+            {item.data?.map((tes, i) => (
+              <TestimonialCard
+                key={i}
+                position={tes?.position}
+                name={tes?.name}
+                review={tes?.testimonial}
+                marginTop={i + 1 === 1 ? "mt-4" : ""}
+              />
+            ))}
+          </Marquee>
+        ))}
+        {[
+          { data: data?.slice(0, 10), reverse: true },
+          { data: data?.slice(10, 20), reverse: false },
+        ].map((item, idx) => (
+          <Marquee
+            key={idx}
+            pauseOnHover
+            vertical
+            reverse={item.reverse}
+            className="[--duration:100s] block md:hidden"
+          >
+            {item.data?.map((tes, i) => (
+              <TestimonialCard
+                key={i}
+                position={tes?.position}
+                name={tes?.name}
+                review={tes?.testimonial}
+                marginTop={i + 1 === 1 ? "mt-4" : ""}
+              />
+            ))}
+          </Marquee>
+        ))}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatedCircularProgressBar } from "./    <AnimatedCircularProgressBar";
+import { AnimatedCircularProgressBar } from "./AnimatedCircularProgressBar";
 
 export function AnimatedCircularProgressBarDemo({
   className,

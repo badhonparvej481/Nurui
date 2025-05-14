@@ -29,7 +29,7 @@ export const NavigationDrawer: React.FC<IProps> = (props) => {
       <div
         className={`${overlay} ${!open && overlayHidden} ${
           open && overlayOpen
-        }`}
+        } cursor-pointer`}
         onClick={onClose}
         aria-hidden="true"
       />
