@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { cn } from "@/utils/cn";
+import { ArrowRightIcon } from "lucide-react";
 
 interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
@@ -10,7 +11,6 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   name: string;
   className: string;
   background: ReactNode;
-  Icon?: React.ElementType;
   description: string;
   href: string;
   cta: string;
@@ -36,8 +36,7 @@ const BentoCard = ({
   background,
   description,
   //   href,
-  //   cta,
-  Icon,
+  cta,
   ...props
 }: BentoCardProps) => (
   <div
@@ -54,7 +53,6 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-      {/* <Icon /> */}
       <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {name}
       </h3>
@@ -63,15 +61,13 @@ const BentoCard = ({
 
     <div
       className={cn(
-        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
+        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center px-4 py-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
       )}
     >
-      {/* <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a href={href}>
-          {cta}
-          <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
-        </a>
-      </Button> */}
+      <button className="flex items-center text-sm pointer-events-auto hover:bg-[var(--glass-color-2)] p-2 rounded-xl">
+        {cta}
+        <ArrowRightIcon className="ms-2 h-4 w-4" />
+      </button>
     </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>

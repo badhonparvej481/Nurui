@@ -2,7 +2,6 @@ import React from "react";
 import SectionIntro from "@/components/common/SectionIntro";
 import ButtonsMarquee from "./ButtonsMarquee";
 import BentoDemo from "@/components/ui/bento-grid/BentoGrid";
-import { BellIcon, CalendarIcon, FileTextIcon, Share2Icon } from "lucide-react";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/animated-beam-multiple-outputs/AnimatedBeamMultipleOutputs";
 import { Marquee } from "@/components/ui/marquee/Marquee";
 import { AnimatedListDemo } from "@/components/ui/animated-list/AnimatedList";
@@ -26,6 +25,7 @@ import { GrMysql } from "react-icons/gr";
 import { FeatureBlockAnimatedCard } from "@/components/ui/feature-block-animated-card/FeatureBlockAnimatedCard";
 import HyperspeedDemo from "@/components/ui/hyperspeed/HyperspeedDemo";
 import { VortexDemo } from "@/components/ui/vortex-background/VortexDemo";
+
 
 const ComponentDemosSection = () => {
   return (
@@ -75,7 +75,6 @@ const files = [
 
 const featuresDataOne = [
   {
-    Icon: Share2Icon,
     name: "Integrations",
     description: "Supports 100+ integrations and counting.",
     href: "#",
@@ -86,7 +85,6 @@ const featuresDataOne = [
     ),
   },
   {
-    Icon: FileTextIcon,
     name: "Save your files",
     description: "We automatically save your files as you type.",
     href: "#",
@@ -121,7 +119,6 @@ const featuresDataOne = [
     ),
   },
   {
-    Icon: BellIcon,
     name: "Notifications",
     description: "Get notified when something happens.",
     href: "#",
@@ -132,7 +129,6 @@ const featuresDataOne = [
     ),
   },
   {
-    Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
     className: "col-span-full md:col-span-2 xl:col-span-1",
@@ -143,7 +139,6 @@ const featuresDataOne = [
     ),
   },
   {
-    Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
     className: "col-span-full md:col-span-2 xl:col-span-2",
@@ -157,7 +152,6 @@ const featuresDataOne = [
 
 const featuresDataTwo = [
   {
-    Icon: Share2Icon,
     name: "Integrations",
     description: "Supports 100+ integrations and counting.",
     href: "#",
@@ -168,7 +162,6 @@ const featuresDataTwo = [
     ),
   },
   {
-    Icon: FileTextIcon,
     name: "Save your files",
     description: "We automatically save your files as you type.",
     href: "#",
@@ -197,7 +190,6 @@ const featuresDataTwo = [
     ),
   },
   {
-    Icon: BellIcon,
     name: "Notifications",
     description: "Get notified when something happens.",
     href: "#",
@@ -208,7 +200,6 @@ const featuresDataTwo = [
     ),
   },
   {
-    Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
     className: "col-span-full md:col-span-2 xl:col-span-2",
@@ -217,7 +208,6 @@ const featuresDataTwo = [
     background: <HyperspeedDemo />,
   },
   {
-    Icon: CalendarIcon,
     name: "Calendar",
     description: "Use the calendar to filter your files by date.",
     className: "col-span-full xl:col-span-2",

@@ -1,12 +1,8 @@
 import React from "react";
 import { BentoCard, BentoGrid } from "./Bento";
-import { LucideProps } from "lucide-react";
 
 interface IProps {
   features: {
-    Icon: React.ForwardRefExoticComponent<
-      Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
-    >;
     name: string;
     description: string;
     href: string;

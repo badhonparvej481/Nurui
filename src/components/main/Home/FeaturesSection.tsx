@@ -1,8 +1,10 @@
 import React from "react";
 import FeatureCard from "@/components/common/FeatureCard";
 import SectionIntro from "@/components/common/SectionIntro";
-import { FaHeadset, FaLock, FaRocket } from "react-icons/fa6";
+import { FaRocket } from "react-icons/fa6";
 import { FaPaintBrush } from "react-icons/fa";
+import { BiCustomize } from "react-icons/bi";
+import { GrTechnology } from "react-icons/gr";
 
 export default function FeaturesSection() {
   return (
@@ -11,11 +13,11 @@ export default function FeaturesSection() {
         sectionName="Features"
         sectionNameColor="text-[var(--primary-color)]"
         title={{
-          highLiteWords: "Explore Our",
-          normalWords: "Key Features",
+          highLiteWords: "Choose Us",
+          normalWords: "Why Developers",
           highlightColor: "text-[var(--primary-color)]",
         }}
-        description="Discover the powerful features designed to make your experience seamless, efficient, and enjoyable. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        description="Explore cutting-edge tools designed to boost your workflow and UI development experience—across multiple frameworks, with unmatched speed, flexibility, and customization."
       />
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 xl:gap-5 2xl:gap-10">
         {data.map((feature, index) => (
@@ -37,72 +39,36 @@ const data = [
     featureItems: [
       "Optimized for speed",
       "Low latency",
-      "Efficient resource usage",
+      "Lightweight and efficient",
     ],
     icon: <FaRocket />,
   },
   {
-    featureName: "Secure Transactions",
+    featureName: "User Friendly Interface",
     featureItems: [
-      "End-to-end encryption",
-      "Fraud detection",
-      "Secure payment gateways",
-      "Efficient resource usage",
+      "Intuitive and clean design",
+      "Easy to customize",
+      "Smooth navigation",
+      "Responsive layout",
     ],
-    icon: <FaLock />,
+    icon: <FaPaintBrush />,
   },
   {
-    featureName: "User-Friendly Interface",
+    featureName: "Full Customization",
     featureItems: [
-      "Intuitive design",
-      "Easy navigation",
-      "Customizable themes",
+      "Theme support",
+      "Dark/light mode ready",
+      "Easily override styles",
     ],
-    icon: <FaPaintBrush />, // From react-icons/fa
+    icon: <BiCustomize />,
   },
   {
-    featureName: "24/7 Support",
+    featureName: "Tech Stack Agnostic",
     featureItems: [
-      "Live chat support",
-      "Dedicated help center",
-      "Quick response times",
+      "React, Angular, Next.js and more.",
+      "JS and TS support",
+      "Works anywhere",
     ],
-    icon: <FaHeadset />, // From react-icons/fa
+    icon: <GrTechnology />,
   },
-  // {
-  //   featureName: "Cross-Platform Compatibility",
-  //   featureItems: [
-  //     "Works on all devices",
-  //     "Seamless sync",
-  //     "Responsive design",
-  //   ],
-  //   icon: <FaSync />, // From react-icons/fa
-  // },
-  // {
-  //   featureName: "Advanced Analytics",
-  //   featureItems: [
-  //     "Real-time data insights",
-  //     "Custom reports",
-  //     "Trend analysis",
-  //   ],
-  //   icon: <FaChartLine />, // From react-icons/fa
-  // },
-  // {
-  //   featureName: "Scalable Solutions",
-  //   featureItems: [
-  //     "Grows with your business",
-  //     "Flexible pricing",
-  //     "Modular architecture",
-  //   ],
-  //   icon: <FaExpand />, // From react-icons/fa
-  // },
-  // {
-  //   featureName: "Eco-Friendly",
-  //   featureItems: [
-  //     "Reduced carbon footprint",
-  //     "Energy-efficient servers",
-  //     "Sustainable practices",
-  //   ],
-  //   icon: <FaLeaf />, // From react-icons/fa
-  // },
 ];

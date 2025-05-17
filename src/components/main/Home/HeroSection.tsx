@@ -1,11 +1,7 @@
 import ShadowAnimationButton from "../../common/ShadowAnimationButton";
-import {
-  MdMessage,
-  MdOutlineHistoryToggleOff,
-  MdOutlineMessage,
-} from "react-icons/md";
+import { BiCustomize, BiMobileVibration } from "react-icons/bi";
+import { MdOutlineDarkMode } from "react-icons/md";
 import LabelWithIcon from "../../common/LabelWithIcon";
-import { FiPhoneCall } from "react-icons/fi";
 import BackgroundGridBeam from "../../ui/background-grid-beam/BackgroundGridBeam";
 import AnimatedGradientText from "../../ui/animated-gradient-button/AnimatedGradientText";
 import HtmlIcon from "../../icons/HtmlIcon";
@@ -24,7 +20,7 @@ import ReactIcon from "../../icons/ReactIcon";
 import NustIcon from "../../icons/NustIcon";
 import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../ui/cool-mode/CollMode";
-import { GrSend } from "react-icons/gr";
+import { GrOptimize } from "react-icons/gr";
 import RatingStars from "@/components/common/RatingStars";
 import UberIcon from "@/components/icons/UberIcon";
 import SpotifyIcon from "@/components/icons/SpotifyIcon";
@@ -56,28 +52,27 @@ const HeroSection = () => {
         {/* content */}
         <div className="flex flex-col items-center gap-y-4 md:gap-y-6 lg::gap-y-7 text-center text-[var(--text-primary-color)]">
           <AnimatedGradientText
-            title={"Introducing Magic UI"}
+            title={"Introducing Cool Button"}
             textGradient="bg-[var(--black-color)] dark:bg-gradient-to-r from-[var(--secondary-color)] via-[var(--primary-color)] to-[var(--secondary-color)]"
             borderGradient="bg-gradient-to-r from-[#80EEB4] dark:from-[#80EEB4]/60 via-[#3CA2FA] dark:via-[#3CA2FA]/100 to-[#80EEB4] dark:to-[#80EEB4]/60"
           />
           {/* title */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-5xl 2xl:text-7xl max-w-[62rem] font-bold uppercase leading-[1.1] text-balance">
-            All of Your social apps in One{" "}
+            All Your Component in One{" "}
             <span className="text-[var(--primary-color)]">Place!</span>
           </h1>
           {/* description */}
           <p className="lg:text-xl max-w-2xl text-[var(--opacity-text-color)] text-balance">
-            Built on the CSS grid foundation, the Advanced Columns plugin is the
-            most powerful and flexible layout builder block for WordPress.
+            The ultimate UI library for Angular, React, Next.js, Vue, and more.
+            Build responsive interfaces with TypeScript and JavaScript.
           </p>
-
           {/* features */}
-          <div className="bg-[var(--glass-color)] shadow-lg dark:shadow-none px-6 py-3 rounded-2xl hidden md:flex items-center gap-7">
+          <div className="bg-[var(--glass-color)] shadow-lg dark:shadow-none px-6 py-3 rounded-2xl hidden md:flex items-center gap-4 capitalize">
             {[
-              { icon: <MdOutlineMessage />, label: "All message" },
-              { icon: <FiPhoneCall />, label: "All call" },
-              { icon: <MdMessage />, label: "All status" },
-              { icon: <MdOutlineHistoryToggleOff />, label: "All post" },
+              { icon: <BiMobileVibration />, label: "responsive" },
+              { icon: <MdOutlineDarkMode />, label: "Dark mode" },
+              { icon: <BiCustomize />, label: "customizable" },
+              { icon: <GrOptimize />, label: "Lightweight" },
             ].map(({ icon, label }, i) => (
               <LabelWithIcon key={i} icon={icon} label={label} />
             ))}
@@ -88,22 +83,24 @@ const HeroSection = () => {
             <CollMode
               options={{
                 particle: [
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740288776/instagram_wtta6a.png",
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740288886/facebook_qaxwo5.png",
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740288990/whatsapp_epyaq3.png",
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740289075/snapchat_pseu9j.png",
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1740289165/discord_wixqob.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489777/icons8-tailwindcss-480_qnf2sy.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489557/programing_i9a1o1.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489474/atom_eieqee.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489870/icons8-javascript-480_nqbmlo.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489887/icons8-typescript-480_gxf8zq.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747490019/icons8-sass-480_colnli.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747490083/icons8-vue-js-480_g76qiv.png",
                 ],
               }}
             >
-              <ShadowAnimationButton title="Get Started" icon={<GrSend />} />
+              <ShadowAnimationButton title="Get Started" />
             </CollMode>
 
             <p className="flex items-center gap-1 font-bold">
               <span className="text-[var(--primary-color)]">
-                Hurry!! $39 OFF
+                Get Early Access
               </span>{" "}
-              for 10 users
+              to New UI
             </p>
 
             <div className="flex flex-col md:flex-row items-center pt-4 md:pt-6">
@@ -111,11 +108,11 @@ const HeroSection = () => {
               <div className="flex flex-col items-center md:items-start gap-1 mt-5 md:mt-0 md:ml-5">
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
-                  Join{" "}
+                  Trusted by{" "}
                   <span className="text-[var(--text-primary-color)]">
-                    2,183
+                    1000+
                   </span>{" "}
-                  Users worldwide
+                  developer
                 </p>
               </div>
             </div>
@@ -123,7 +120,7 @@ const HeroSection = () => {
 
           {/* trusted by */}
           <div className="pt-16 hidden md:block">
-            <p className="font-semibold text-[18px] -mb-4">Trusted by</p>
+            <p className="font-semibold text-[18px] -mb-4">Used by</p>
             <div className="flex items-center gap-x-8 ">
               <UberIcon />
               <SpotifyIcon />

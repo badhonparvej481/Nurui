@@ -485,8 +485,9 @@ class CarLights {
     const geometry = new THREE.TubeGeometry(curve, 40, 1, 8, false);
 
     const instanced = new THREE.InstancedBufferGeometry().copy(
-      geometry as any,
-    ) as THREE.InstancedBufferGeometry;
+      geometry as unknown as THREE.InstancedBufferGeometry,
+    );
+
     instanced.instanceCount = options.lightPairsPerRoadWay * 2;
 
     const laneWidth = options.roadWidth / options.lanesPerRoad;
@@ -660,8 +661,9 @@ class LightsSticks {
     const options = this.options;
     const geometry = new THREE.PlaneGeometry(1, 1);
     const instanced = new THREE.InstancedBufferGeometry().copy(
-      geometry as any,
-    ) as THREE.InstancedBufferGeometry;
+      geometry as unknown as THREE.InstancedBufferGeometry,
+    );
+
     const totalSticks = options.totalSideLightSticks;
     instanced.instanceCount = totalSticks;
 
@@ -818,7 +820,7 @@ class Road {
       segments,
     );
 
-    let uniforms: Record<string, { value: any }> = {
+    let uniforms: Record<string, { value: unknown }> = {
       uTravelLength: { value: options.length },
       uColor: {
         value: new THREE.Color(
@@ -995,13 +997,13 @@ class App {
   renderPass!: RenderPass;
   bloomPass!: EffectPass;
   clock: THREE.Clock;
-  assets: Record<string, any>;
+  assets: Record<string, unknown>;
   disposed: boolean;
   road: Road;
   leftCarLights: CarLights;
   rightCarLights: CarLights;
   leftSticks: LightsSticks;
-  fogUniforms: Record<string, { value: any }>;
+  fogUniforms: Record<string, { value: unknown }>;
   fovTarget: number;
   speedUpTarget: number;
   speedUp: number;
@@ -1131,15 +1133,18 @@ class App {
 
       const searchImage = new Image();
       const areaImage = new Image();
-      assets.smaa = {};
+      assets.smaa = {} as {
+        search?: HTMLImageElement;
+        area?: HTMLImageElement;
+      };
 
       searchImage.addEventListener("load", function () {
-        assets.smaa.search = this;
+        (assets.smaa as { search?: HTMLImageElement }).search = this;
         manager.itemEnd("smaa-search");
       });
 
       areaImage.addEventListener("load", function () {
-        assets.smaa.area = this;
+        (assets.smaa as { area?: HTMLImageElement }).area = this;
         manager.itemEnd("smaa-area");
       });
 
