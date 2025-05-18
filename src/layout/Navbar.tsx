@@ -1,5 +1,4 @@
 "use client";
-import BorderAnimationButton from "@/components/common/BorderAnimationButton";
 import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
@@ -9,7 +8,10 @@ import Bytenexia from "@/components/common/Bytenexia";
 import nProgress from "nprogress";
 import { RxCross2 } from "react-icons/rx";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
-import { NavigationDrawer } from "@/components/common/ui/drawer/NavigationDrawer";
+import { NavigationDrawer } from "@/components/ui/drawer/NavigationDrawer";
+import RoundedButton from "@/components/common/RoundedButton";
+import { FaDiscord, FaGithub } from "react-icons/fa";
+import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -20,7 +22,7 @@ const Navbar = () => {
   if (
     pathName.includes("sing-in") ||
     pathName.includes("sing-up") ||
-    pathName.includes("dashboard")
+    pathName.includes("components")
   )
     return null;
 
@@ -28,13 +30,7 @@ const Navbar = () => {
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
         {open ? (
-          <button
-            type="button"
-            onClick={handleOpen}
-            className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden"
-          >
-            <RxCross2 className="text-[var(--primary-color)] text-3xl" />
-          </button>
+          <RxCross2 className="text-[var(--primary-color)] text-3xl bg-[var(--primary-color-3)] rounded p-0.5 block lg:hidden" />
         ) : (
           <Bytenexia className="text-2xl lg:text-3xl" />
         )}
@@ -60,8 +56,23 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-5">
+          <RoundedButton
+            icon={
+              <IoIosSearch className="text-2xl text-[var(--primary-color)]" />
+            }
+          />
+          <RoundedButton
+            href="https://github.com/Mdafsarx?tab=repositories"
+            icon={
+              <FaDiscord className="text-2xl text-[var(--primary-color)]" />
+            }
+          />
+          <RoundedButton
+            href="https://github.com/Mdafsarx?tab=repositories"
+            icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
+          />
           <ThemeSwitcher />
-          <BorderAnimationButton title="sing in" navigation="/auth/sing-in" />
+          {/* <BorderAnimationButton title="sing in" navigation="/auth/sing-in" /> */}
         </div>
         {/* drawer */}
         <>
@@ -84,22 +95,22 @@ export default Navbar;
 const navigation = [
   {
     id: 1,
-    name: "pricing",
-    url: "/pricing",
+    name: "component",
+    url: "/components",
   },
   {
     id: 2,
-    name: "Features",
-    url: "/features",
-  },
-  {
-    id: 3,
     name: "About",
     url: "/about-us",
   },
   {
-    id: 4,
+    id: 3,
     name: "contact",
     url: "/contact-us",
+  },
+  {
+    id: 4,
+    name: "Blog",
+    url: "/blog",
   },
 ];

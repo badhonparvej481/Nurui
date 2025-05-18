@@ -16,7 +16,7 @@ const Bytenexia = ({ className }: ClassType) => {
       )}
       onClick={() => nProgress.start()}
     >
-      <LuBotMessageSquare className="text-2xl rotate-180" /> Bytetexly
+      <LuBotMessageSquare className="text-2xl rotate-180" /> Bytenexia
     </Link>
   );
 };

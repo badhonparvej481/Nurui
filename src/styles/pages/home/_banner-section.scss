@@ -1,87 +1,85 @@
 .icon-animation {
+  .icon-animation1 {
+    animation: float 2s ease-in infinite;
+    box-shadow: 0px 0px 10px 0px #ff6f04, 0px 0px 10px 0px #ff6f04;
+  }
 
-    .icon-animation1 {
-        animation: float 2s ease-in infinite;
-        box-shadow: 0px 0px 10px 0px #E64E96, 0px 0px 10px 0px #5A61FF;
+  .icon-animation2 {
+    animation: float 2.5s ease-in infinite;
+    box-shadow: 0px 0px 10px 0px #ffd600, 0px 0px 10px 0px #ffd600;
+  }
+
+  .icon-animation3 {
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #35c1f1, 0px 0px 10px 0px #1f99ed;
+  }
+
+  .icon-animation4 {
+    animation: float 3.5s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #00acc1, 0px 0px 10px 0px #00acc1;
+  }
+
+  .icon-animation5 {
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #b31523, 0px 0px 10px 0px #ef414d;
+  }
+
+  .icon-animation6 {
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #f06292, 0px 0px 10px 0px #f06292;
+  }
+
+  .icon-animation7 {
+    animation: float 2.5s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #4db6ac, 0px 0px 10px 0px #4db6ac;
+  }
+
+  .icon-animation8 {
+    animation: float 2s ease-in infinite;
+    box-shadow: 0px 0px 10px 0px #7c4dff, 0px 0px 10px 0px #7c4dff;
+  }
+
+  .icon-animation9 {
+    animation: float 2.5s ease-in infinite;
+    box-shadow: 0px 0px 10px 0px #58c4dc, 0px 0px 10px 0px #58c4dc;
+  }
+
+  .icon-animation10 {
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #d4d4d4, 0px 0px 10px 0px #3c3c3c;
+  }
+
+  .icon-animation11 {
+    animation: float 3.5s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #1976d2, 0px 0px 10px 0px #1976d2;
+  }
+
+  .icon-animation12 {
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #81c784, 0px 0px 10px 0px #455a64;
+  }
+
+  .icon-animation13 {
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #1de9b6, 0px 0px 10px 0px #016371;
+  }
+
+  .icon-animation14 {
+    animation: float 2.5s ease-in-out infinite;
+    box-shadow: 0px 0px 10px 0px #ef4823, 0px 0px 10px 0px #ef4823;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
     }
 
-    .icon-animation2 {
-        animation: float 2.5s ease-in infinite;
-        box-shadow: 0px 0px 10px 0px #5865F2, 0px 0px 10px 0px #5865F2;
+    50% {
+      transform: translateY(10px) rotate(5deg);
     }
 
-    .icon-animation3 {
-        animation: float 3s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #60CD6E, 0px 0px 10px 0px #60CD6E;
+    100% {
+      transform: translateY(0px) rotate(0deg);
     }
-
-    .icon-animation4 {
-        animation: float 3.5s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #CC3AA2, 0px 0px 10px 0px #FFA94D;
-    }
-
-    .icon-animation5 {
-        animation: float 2s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #29B6F6, 0px 0px 10px 0px #29B6F6;
-    }
-
-    .icon-animation6 {
-        animation: float 3s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #00C300, 0px 0px 10px 0px #00C300;
-    }
-
-    .icon-animation7 {
-        animation: float 2.5s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #E53935, 0px 0px 10px 0px #4CAF50;
-    }
-
-    .icon-animation8 {
-        animation: float 2s ease-in infinite;
-        box-shadow: 0px 0px 10px 0px #228DD7, 0px 0px 10px 0px #228DD7;
-    }
-
-    .icon-animation9 {
-        animation: float 2.5s ease-in infinite;
-        box-shadow: 0px 0px 10px 0px #5F01D1, 0px 0px 10px 0px #5F01D1;
-    }
-
-    .icon-animation10 {
-        animation: float 3s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #FFFC00, 0px 0px 10px 0px #FFFC00;
-    }
-
-    .icon-animation11 {
-        animation: float 3.5s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #7F4DA0, 0px 0px 10px 0px #7F4DA0;
-    }
-
-    .icon-animation12 {
-        animation: float 2s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #E8AB06, 0px 0px 10px 0px #E81E63;
-    }
-
-    .icon-animation13 {
-        animation: float 3s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #0977C8, 0px 0px 10px 0px #0977C8;
-    }
-
-    .icon-animation14 {
-        animation: float 2.5s ease-in-out infinite;
-        box-shadow: 0px 0px 10px 0px #03A9F4, 0px 0px 10px 0px #03A9F4;
-    }
-
-    @keyframes float {
-        0% {
-            transform: translateY(0px) rotate(0deg)
-        }
-
-        50% {
-            transform: translateY(10px) rotate(5deg)
-        }
-
-        100% {
-            transform: translateY(0px) rotate(0deg)
-        }
-    }
-
+  }
 }

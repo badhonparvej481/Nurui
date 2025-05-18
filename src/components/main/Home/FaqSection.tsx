@@ -61,36 +61,33 @@ const faqsData = [
     questions: [
       {
         number: 1,
-        question: "What is omnichannel communication?",
+        question: "What is this UI component library?",
         answer:
-          "Omnichannel communication integrates multiple channels for seamless interaction.",
+          "It's a collection of pre-built, customizable UI components for React, Next.js, Vue, and more — all in one place.",
       },
       {
         number: 2,
-        question: "How do I get started with your omnichannel platform?",
+        question: "How do I install the library?",
         answer:
-          "You can sign up on our website and follow the onboarding guide.",
+          "You can install it via npm or yarn. Just run `npm install your-ui-library` in your project directory.",
       },
       {
         number: 3,
-        question: "Do I need technical skills to use your platform?",
+        question: "Do I need to configure anything after installation?",
         answer:
-          "No, our platform is designed for ease of use with a user-friendly interface.",
+          "Basic configuration like theme setup or provider wrappers may be required depending on the framework you're using.",
       },
       {
         number: 4,
-        question: "Is there a free trial available?",
-        answer: "Yes, we offer a 14-day free trial for new users.",
+        question: "Is there a free version available?",
+        answer:
+          "Yes, our core components are free to use. Premium components and templates are available in the pro version.",
       },
       {
         number: 5,
-        question: "What are the system requirements for your platform?",
-        answer: "Our platform is web-based and works on any modern browser.",
-      },
-      {
-        number: 6,
-        question: "Is there a free trial available?",
-        answer: "Yes, we offer a 14-day free trial for new users.",
+        question: "What frameworks are supported?",
+        answer:
+          "Currently, we support React, Next.js, Vue, and Angular. More framework support is coming soon.",
       },
     ],
   },
@@ -100,146 +97,141 @@ const faqsData = [
     questions: [
       {
         number: 1,
-        question: "Can I integrate your platform with other tools or systems?",
+        question: "Can I use this library with Tailwind CSS?",
         answer:
-          "Yes, our platform supports various third-party integrations via API.",
+          "Yes, our components are Tailwind-compatible and work seamlessly in any Tailwind-based project.",
       },
       {
         number: 2,
-        question: "Does your platform support CRM integrations?",
+        question: "Can I use it with a design system like Figma?",
         answer:
-          "Yes, we support integrations with major CRMs like Salesforce and HubSpot.",
+          "Absolutely. We provide Figma kits for design-to-development consistency.",
       },
       {
         number: 3,
-        question: "How do I set up API access?",
+        question: "Is it compatible with TypeScript?",
         answer:
-          "You can generate API keys from the developer section in your account.",
+          "Yes, all components are fully typed with TypeScript support for autocompletion and type safety.",
       },
       {
         number: 4,
-        question: "Can I connect multiple third-party services?",
-        answer: "Yes, you can integrate multiple services simultaneously.",
+        question: "How do I customize the components?",
+        answer:
+          "You can override styles using Tailwind utility classes, props, or extend the components as needed.",
       },
       {
         number: 5,
-        question: "What happens if an integration fails?",
+        question: "Can I use this with server-side rendering?",
         answer:
-          "Our support team is available 24/7 to assist with integration issues.",
-      },
-      {
-        number: 6,
-        question: "Can I connect multiple third-party services?",
-        answer: "Yes, you can integrate multiple services simultaneously.",
+          "Yes, the library is optimized for SSR and works smoothly with Next.js and similar frameworks.",
       },
     ],
   },
   {
-    category: "Channels",
+    category: "Components",
     id: 3,
     questions: [
       {
         number: 1,
-        question: "What channels does your platform support?",
-        answer: "We support email, SMS, live chat, social media, and more.",
+        question: "What types of components are included?",
+        answer:
+          "We offer a wide range of components including buttons, modals, tabs, accordions, forms, and more.",
       },
       {
         number: 2,
-        question: "Can I customize messages for different channels?",
+        question: "Are the components responsive?",
         answer:
-          "Yes, you can tailor messages based on each channel's requirements.",
+          "Yes, all components are mobile-first and responsive out of the box.",
       },
       {
         number: 3,
-        question: "Does your platform support push notifications?",
-        answer: "Yes, you can send push notifications to mobile and web users.",
+        question: "Can I animate components?",
+        answer:
+          "Yes, we provide built-in animation support using libraries like Framer Motion.",
       },
       {
         number: 4,
-        question: "How do I enable chatbot automation?",
-        answer: "You can set up automated responses in the chatbot settings.",
+        question: "Can I create my own components?",
+        answer:
+          "Yes, our library is flexible enough to let you build and extend your own components using the same design tokens.",
       },
       {
         number: 5,
-        question: "Can I track customer interactions across channels?",
+        question: "Do you provide accessibility support?",
         answer:
-          "Yes, our platform provides unified tracking across all channels.",
+          "Absolutely. All components follow best practices for accessibility (ARIA, keyboard nav, etc.).",
       },
     ],
   },
   {
-    category: "Customer Service",
+    category: "Documentation",
     id: 4,
     questions: [
       {
         number: 1,
-        question: "How does your platform handle customer support?",
+        question: "Where can I find documentation?",
         answer:
-          "We offer automated responses, ticketing, and live chat support.",
+          "You can access full documentation on our official website with examples and code snippets.",
       },
       {
         number: 2,
-        question: "Can I assign tickets to different support agents?",
-        answer: "Yes, you can assign tickets based on priority and expertise.",
+        question: "Do you offer community or premium support?",
+        answer:
+          "Yes, we offer community support on Discord and premium support for Pro users.",
       },
       {
         number: 3,
-        question: "Does your platform provide customer feedback collection?",
+        question: "Is there a changelog or update history?",
         answer:
-          "Yes, you can collect and analyze customer feedback through surveys.",
+          "Yes, we maintain a detailed changelog with every release in our GitHub repository.",
       },
       {
         number: 4,
-        question: "Is there an SLA tracking feature?",
-        answer: "Yes, you can define and monitor Service Level Agreements.",
+        question: "How can I contribute to the library?",
+        answer:
+          "You can fork our GitHub repo and open a pull request for fixes, features, or documentation improvements.",
       },
       {
         number: 5,
-        question: "Can I access support analytics?",
+        question: "Do you have code examples or templates?",
         answer:
-          "Yes, our platform provides detailed analytics for customer interactions.",
-      },
-      {
-        number: 6,
-        question: "Is there an SLA tracking feature?",
-        answer: "Yes, you can define and monitor Service Level Agreements.",
+          "Yes, we provide starter templates and live playgrounds to speed up development.",
       },
     ],
   },
   {
-    category: "Business Benefits",
+    category: "Licensing & Plans",
     id: 5,
     questions: [
       {
         number: 1,
-        question:
-          "What types of businesses can benefit from omnichannel communication?",
+        question: "Is the library open-source?",
         answer:
-          "E-commerce, SaaS, healthcare, and customer service industries benefit the most.",
+          "Yes, the core of the library is open-source and MIT-licensed. Additional features are available in the Pro plan.",
       },
       {
         number: 2,
-        question: "How does omnichannel improve customer engagement?",
+        question: "What’s included in the Pro plan?",
         answer:
-          "It ensures seamless communication across multiple touchpoints.",
+          "Premium components, templates, priority support, and Figma kits are included in the Pro plan.",
       },
       {
         number: 3,
-        question: "Can omnichannel help increase sales?",
+        question: "Can I use this library in commercial projects?",
         answer:
-          "Yes, businesses see higher conversion rates with consistent communication.",
+          "Yes, both free and Pro versions can be used in commercial and client projects.",
       },
       {
         number: 4,
-        question: "What is the ROI of using omnichannel communication?",
+        question: "Is there a lifetime license available?",
         answer:
-          "Companies experience improved customer retention and satisfaction.",
+          "Yes, we offer a one-time payment option for lifetime access to the Pro plan.",
       },
       {
         number: 5,
-        question: "Is omnichannel communication suitable for small businesses?",
+        question: "Do you offer team or enterprise licenses?",
         answer:
-          "Yes, even small businesses can leverage omnichannel strategies for growth.",
+          "Yes, we have flexible licensing options for teams and enterprise needs. Contact us for custom plans.",
       },
     ],
   },
