@@ -95,26 +95,21 @@ export default Navbar;
 const navigation = [
   {
     id: 1,
-    name: "pricing",
-    url: "/pricing",
-  },
-  {
-    id: 2,
     name: "component",
     url: "/components",
   },
   {
-    id: 3,
+    id: 2,
     name: "About",
     url: "/about-us",
   },
   {
-    id: 4,
+    id: 3,
     name: "contact",
     url: "/contact-us",
   },
   {
-    id: 5,
+    id: 4,
     name: "Blog",
     url: "/blog",
   },

@@ -26,7 +26,6 @@ import { FeatureBlockAnimatedCard } from "@/components/ui/feature-block-animated
 import HyperspeedDemo from "@/components/ui/hyperspeed/HyperspeedDemo";
 import { VortexDemo } from "@/components/ui/vortex-background/VortexDemo";
 
-
 const ComponentDemosSection = () => {
   return (
     <section>
@@ -75,20 +74,18 @@ const files = [
 
 const featuresDataOne = [
   {
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
+    name: "Animated Beam",
+    description: "An animated beam of light which travels along a path.",
     href: "#",
-    cta: "Learn more",
     className: "col-span-full xl:col-span-2",
     background: (
       <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_5%,#000_100%)]" />
     ),
   },
   {
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    name: "Marquee",
+    description: "An infinite scrolling component.",
     href: "#",
-    cta: "Learn more",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <Marquee
@@ -119,8 +116,8 @@ const featuresDataOne = [
     ),
   },
   {
-    name: "Notifications",
-    description: "Get notified when something happens.",
+    name: "Animated List",
+    description: "A list that animates each item in sequence with a delay.",
     href: "#",
     cta: "Learn more",
     className: "col-span-full md:col-span-2 xl:col-span-1 xl:row-span-2",
@@ -129,8 +126,8 @@ const featuresDataOne = [
     ),
   },
   {
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    name: "Animated Progress",
+    description: "Displays a circular gauge with a percentage value.",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     href: "#",
     cta: "Learn more",
@@ -139,8 +136,9 @@ const featuresDataOne = [
     ),
   },
   {
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    name: "Terminal",
+    description:
+      "An implementation of the MacOS terminal. Useful for showcasing a command line interface.",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     href: "#",
     cta: "Learn more",
@@ -152,20 +150,18 @@ const featuresDataOne = [
 
 const featuresDataTwo = [
   {
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
+    name: "3D Icon Animation",
+    description: "An interactive 3D tag cloud component.",
     href: "#",
-    cta: "Learn more",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <IconCloudDemo className="absolute left-1/2 -translate-x-1/2 -top-8" />
     ),
   },
   {
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    name: "Rounded 3D Animation",
+    description: "Fluid 3D movements that elevate your digital experience.",
     href: "#",
-    cta: "Learn more",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     background: (
       <OrbitingItems3D
@@ -190,26 +186,27 @@ const featuresDataTwo = [
     ),
   },
   {
-    name: "Notifications",
-    description: "Get notified when something happens.",
+    name: "Card",
+    description: "A set of cards that can be used for different use cases.",
     href: "#",
-    cta: "Learn more",
     className: "col-span-full md:col-span-2 xl:col-span-1 row-span-1",
     background: (
       <FeatureBlockAnimatedCard className="absolute left-1/2 -translate-x-1/2 -top-9 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
   },
   {
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    name: "Hyperspeed Background",
+    description:
+      "Experience the rush of digital pathways with dynamic light trails. Navigate your content at the speed of thought.",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     href: "#",
     cta: "Learn more",
     background: <HyperspeedDemo />,
   },
   {
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    name: "Vortex Background",
+    description:
+      "A wavy, swirly, vortex background ideal for CTAs and backgrounds.",
     className: "col-span-full xl:col-span-2",
     href: "#",
     cta: "Learn more",

@@ -13,7 +13,6 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   background: ReactNode;
   description: string;
   href: string;
-  cta: string;
 }
 
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
@@ -36,7 +35,6 @@ const BentoCard = ({
   background,
   description,
   //   href,
-  cta,
   ...props
 }: BentoCardProps) => (
   <div
@@ -65,7 +63,7 @@ const BentoCard = ({
       )}
     >
       <button className="flex items-center text-sm pointer-events-auto hover:bg-[var(--glass-color-2)] p-2 rounded-xl">
-        {cta}
+        <span>View</span>
         <ArrowRightIcon className="ms-2 h-4 w-4" />
       </button>
     </div>

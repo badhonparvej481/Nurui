@@ -27,7 +27,7 @@ const ButtonsMarquee = () => {
     <div className="border-y border-[var(--secondary-color)]">
       <div className="flex items-center justify-between bg-[var(--glass-color-2)] py-3.5 px-7">
         <p className="font-semibold">Buttons</p>
-        <button className="flex items-center gap-2">
+        <button className="flex items-center gap-2 hover:text-[var(--primary-color)] hover:underline">
           View <FaArrowRight />
         </button>
       </div>

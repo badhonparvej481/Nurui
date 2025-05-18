@@ -14,13 +14,12 @@ export default function TestimonialSection() {
         </p>
         <h1 className="text-7xl font-black pb-2">
           Hear From Our Happy{" "}
-          <span className="text-[var(--primary-color)]">Clients</span>
+          <span className="text-[var(--primary-color)]">People</span>
         </h1>
         <p className="text-balance text-lg">
-          Our customers’ satisfaction is our priority. Hear from those who’ve
-          experienced the difference Twist makes offering seamless user
-          experiences and exceptional customer support. Check out what our
-          valued clients have to say.
+          Here&apos;s what some of our users have to say about Bytenexia UI.
+          Designing became faster, smoother, and way more enjoyable. From
+          startups to scaleups, developers trust our components daily.
         </p>
       </div>
 

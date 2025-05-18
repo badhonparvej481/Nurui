@@ -1,5 +1,5 @@
 import NewsLetterSection from "@/components/common/NewsLetterSection";
-import AllSocialMediaSection from "@/components/main/Home/AllSocialMediaSection";
+import AllComponentSection from "@/components/main/Home/AllComponentSection";
 import ComponentDemosSection from "@/components/main/Home/ComponentDemosSection";
 import FaqSection from "@/components/main/Home/FaqSection";
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
@@ -13,7 +13,7 @@ const Home = () => {
       <HeroSection />
       <HeroVideoDialogSection />
       <FeaturesSection />
-      <AllSocialMediaSection />
+      <AllComponentSection />
       <ComponentDemosSection />
       <TestimonialSection />
       <FaqSection />
