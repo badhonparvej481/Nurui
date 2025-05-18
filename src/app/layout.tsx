@@ -43,7 +43,7 @@ export default function RootLayout({
       >
         <Provider>
           <NProgressProvider />
-          <SplashCursor />
+          {/* <SplashCursor /> */}
           <Navbar />
           <MainContent>{children}</MainContent>
           <Footer />

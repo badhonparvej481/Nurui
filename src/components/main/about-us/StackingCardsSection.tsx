@@ -4,52 +4,13 @@ import StackingCards, {
   StackingCardItem,
 } from "@/components/common/StackingCards";
 import SectionIntro from "@/components/common/SectionIntro";
-import missionAnimationData from "../../../../public/json/mission-animation-lottie.json";
+import designAnimationData from "../../../../public/json/design-animation-lottie.json";
+import developerAnimationData from "../../../../public/json/developer-lottie.json";
+import communityAnimationData from "../../../../public/json/community-lottie.json";
+import visionAnimationData from "../../../../public/json/vision-lottie.json";
+import missionAnimationData from "../../../../public/json/mission-lottie.json";
 import Lottie from "lottie-react";
 import ImageComponent from "@/components/common/Image";
-
-const cards = [
-  {
-    title: "The Guiding Light",
-    description:
-      "Lighthouses have stood as beacons of hope for centuries, guiding sailors safely through treacherous waters. Their glowing light and towering presence serve as a reminder of humanity’s connection to the sea.",
-    icon: missionAnimationData,
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
-  },
-  {
-    title: "Life Beneath the Waves",
-    description:
-      "From shimmering schools of fish to solitary hunters, the ocean is home to an incredible variety of marine life. Each species plays a vital role in maintaining the balance of underwater ecosystems.",
-    icon: missionAnimationData,
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
-  },
-  {
-    title: "Alone on the Open Sea",
-    description:
-      "Drifting across the endless horizon, traveling alone on the sea is a test of courage and resilience. With nothing but the waves and the sky, solitude becomes both a challenge and a source of deep reflection.",
-    icon: missionAnimationData,
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
-  },
-  {
-    title: "The Art of Sailing",
-    description:
-      "Harnessing the power of the wind, sailing is both a skill and an adventure. Whether racing across the waves or leisurely cruising, it’s a timeless way to explore the vast blue expanse.",
-    icon: missionAnimationData,
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
-  },
-  {
-    title: "The Era of Whaling",
-    description:
-      "Once a thriving industry, whale hunting shaped economies and cultures across the world. Today, efforts to protect these majestic creatures highlight the shift toward conservation and respect for marine life.",
-    icon: missionAnimationData,
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
-  },
-];
 
 export default function StackingCardsSection() {
   const [container, setContainer] = useState<HTMLElement | null>(null);
@@ -61,11 +22,14 @@ export default function StackingCardsSection() {
     >
       <SectionIntro
         title={{
-          highLiteWords: "Why Choose Us",
-          normalWords: "At Kompose lorem dolor sit amet inter",
+          highLiteWords: "Stands Out",
+          normalWords: "Why Bytenexia",
           highlightColor: "text-[var(--secondary-color)]",
         }}
         sectionGap="pb-2.5 xl:pb-3"
+        description="Bytenexia delivers elegant, modular UI components built for speed and scalability.
+        Bytenexia focuses on minimalist design, intuitive use, and developer experience.
+        Bytenexia is powered by an open-source community with a future-ready vision."
       />
       <StackingCards
         totalCards={cards.length}
@@ -86,7 +50,7 @@ export default function StackingCardsSection() {
                   <Lottie
                     animationData={icon}
                     loop={true}
-                    className="size-24 hidden xl:block"
+                    className="size-28 hidden xl:block bg-[var(--secondary-color-3)] hover:bg-[var(--secondary-color-2)] border border-[var(--secondary-color)] rounded-full p-2"
                   />
                   <h2 className="text-3xl xl:text-5xl font-semibold">
                     {title}
@@ -94,9 +58,6 @@ export default function StackingCardsSection() {
                   <p className="text-xl text-balance xl:text-pretty">
                     {description}
                   </p>
-                  <button className="bg-[var(--secondary-color)] text-[var(--black-color)] font-semibold px-4 py-2 text-xl rounded-full">
-                    Get started
-                  </button>
                 </div>
                 <ImageComponent
                   src={image}
@@ -110,3 +71,46 @@ export default function StackingCardsSection() {
     </section>
   );
 }
+
+const cards = [
+  {
+    title: "Our Mission",
+    description:
+      "To simplify UI development by providing developers with elegant, modular components that promote speed, consistency, and scalability across every project.",
+    icon: missionAnimationData,
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
+  },
+  {
+    title: "Design Philosophy",
+    description:
+      "Bytenexia blends minimalism with functionality—each component is crafted with care, focusing on clean aesthetics and purposeful interactions.",
+    icon: designAnimationData,
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
+  },
+  {
+    title: "Developer Experience",
+    description:
+      "We obsess over DX. That means clear docs, predictable APIs, smart defaults, and zero unnecessary friction—from install to production.",
+    icon: developerAnimationData,
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
+  },
+  {
+    title: "Community & Open Source",
+    description:
+      "Bytenexia is built with and for the community. We're open-source, transparent, and always eager to learn and grow with developers worldwide.",
+    icon: communityAnimationData,
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
+  },
+  {
+    title: "Future Vision",
+    description:
+      "We're not just building components—we're creating an ecosystem. Expect design systems, headless UI, plugin support, and more in our future roadmap.",
+    icon: visionAnimationData,
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1741872282/mail_jrgkjh.png",
+  },
+];

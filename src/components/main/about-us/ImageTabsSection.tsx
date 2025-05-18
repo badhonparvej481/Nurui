@@ -10,7 +10,7 @@ import {
 import SectionIntro from "@/components/common/SectionIntro";
 import RadioTabs from "@/components/common/RadioTabs";
 import Lottie from "lottie-react";
-import missionAnimationData from "../../../../public/json/mission-animation-lottie.json";
+import missionAnimationData from "../../../../public/json/vision-lottie.json";
 
 const ImageTabsSection = () => {
   return (
