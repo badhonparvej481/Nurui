@@ -10,7 +10,19 @@ import {
 import SectionIntro from "@/components/common/SectionIntro";
 import RadioTabs from "@/components/common/RadioTabs";
 import Lottie from "lottie-react";
-import missionAnimationData from "../../../../public/json/vision-lottie.json";
+import designAnimationData from "../../../../public/json/design-animation-lottie.json";
+import developerAnimationData from "../../../../public/json/developer-lottie.json";
+import {
+  FaReact,
+  FaCode,
+  FaRocket,
+  FaCogs,
+  FaTools,
+  FaLayerGroup,
+  FaTerminal,
+  FaLaptopCode,
+  FaPuzzlePiece,
+} from "react-icons/fa";
 
 const ImageTabsSection = () => {
   return (
@@ -18,11 +30,11 @@ const ImageTabsSection = () => {
       <SectionIntro
         title={{
           highLiteWords: "Why Choose Us",
-          normalWords: "At Kompose",
+          normalWords: "At Bytenexia",
           highlightColor: "text-[var(--primary-color)]",
         }}
         sectionNameColor="text-[var(--primary-color)]"
-        description="lorem Ips incorrectly spelled incorrectly  because of incorrect formatting rules in the description section of the document document type definition  definition definition definition"
+        description="At Bytenexia, we prioritize clean code, seamless tools, and fast integration. Our solutions reduce complexity, boost development speed, and ensure consistency."
       />
 
       <TabsProvider
@@ -61,7 +73,7 @@ const ImageTabsSection = () => {
                   </span>
                   fers
                 </h2>
-                <h1 className="text-3xl xl:text-5xl font-semibold max-w-xl mx-auto lg:mx-0 text-center lg:text-start">
+                <h1 className="text-3xl xl:text-5xl font-semibold max-w-2xl mx-auto lg:mx-0 text-center lg:text-start">
                   {tab?.Content?.heading
                     .split(" ")
                     .slice(0, tab?.Content?.heading?.split(" ")?.length - 3)
@@ -88,38 +100,97 @@ const ImageTabsSection = () => {
 
 export default ImageTabsSection;
 
+
 const tabs = [
   {
     id: "1",
     tabList: {
-      icon: missionAnimationData,
-      title: "Custom Software Development",
+      icon: designAnimationData,
+      title: "UI Component Library",
       description:
-        "UI components can improve UX by providing familiar consistent interactions",
+        "Install and use production-ready components instantly via CLI.",
     },
     Content: {
       title: "What We Provide",
-      heading: "Your business obstacles solved with precision.",
+      heading: "Production-ready UI components accessible with one command.",
       description:
-        "We follow a structured approach with four key phases, each customized to fit your project's scope, budget, and timeline. Our process is influenced by past successful projects, ensuring each step is given the right amount of attention and refinement.",
+        "Bytenexia’s CLI-based component library empowers developers to instantly scaffold fully functional UI components into their projects. Designed for speed, consistency, and scalability, our components follow modern best practices and can be customized easily.",
       tabs: [
         {
-          id: "alpha",
-          title: "Alpha",
+          id: "install",
+          title: "Easy Installation",
           content:
-            "We focus on delivering modern, sleek designs integrated with a robust backend architecture, guaranteeing high-performance and scalable solutions for our clients.",
+            "Get started with a single CLI command. Just run `npx bytenexia install` to bring in the latest version of components directly into your codebase without setup hassle.",
+          items: [
+            {
+              icon: <FaTerminal />,
+              title: "One Command Setup",
+              description:
+                "Run a single CLI command to install everything you need.",
+            },
+            {
+              icon: <FaRocket />,
+              title: "Instant Access",
+              description:
+                "Start using components immediately without additional setup.",
+            },
+            {
+              icon: <FaTools />,
+              title: "No Config Needed",
+              description:
+                "Pre-configured components ready to use in any environment.",
+            },
+          ],
         },
         {
-          id: "beta",
-          title: "Beta",
+          id: "customize",
+          title: "Customization",
           content:
-            "Our expertise lies in creating seamless user experiences combined with a fast and secure infrastructure, ensuring top-tier reliability and efficiency.",
+            "All components come with built-in support for theming and customization. Whether you're using Tailwind, SCSS, or vanilla CSS — our styles adapt to your stack seamlessly.",
+          items: [
+            {
+              icon: <FaCogs />,
+              title: "Theme Support",
+              description:
+                "Apply your brand theme easily using config options.",
+            },
+            {
+              icon: <FaLayerGroup />,
+              title: "Flexible Styles",
+              description: "Supports Tailwind, SCSS, CSS Modules, and more.",
+            },
+            {
+              icon: <FaPuzzlePiece />,
+              title: "Composable Design",
+              description: "Build custom UIs by combining modular components.",
+            },
+          ],
         },
         {
-          id: "gamma",
-          title: "Gamma",
+          id: "performance",
+          title: "Performance",
           content:
-            "With a customer-first mindset, we build solutions that prioritize both aesthetics and performance, ensuring long-term sustainability and success.",
+            "Components are tree-shakable, lightweight, and optimized for accessibility and responsiveness, ensuring fast load times and inclusive UX across devices.",
+          items: [
+            {
+              icon: <FaReact />,
+              title: "React Optimized",
+              description:
+                "Seamlessly integrates with React for dynamic and responsive UI rendering.",
+            },
+            {
+              icon: <FaCode />,
+              title: "Lightweight Codebase",
+              description:
+                "Every component is designed with performance in mind, minimizing bundle size.",
+            },
+            {
+              icon: <FaRocket />,
+              title: "Fast Load Times",
+              description:
+                "Optimized for speed, our components load instantly across all devices.",
+            },
+          ],
         },
       ],
     },
@@ -127,34 +198,90 @@ const tabs = [
   {
     id: "2",
     tabList: {
-      icon: missionAnimationData,
-      title: "Custom Software Development",
+      icon: developerAnimationData,
+      title: "Developer Experience",
       description:
-        "UI components can improve UX by providing familiar consistent interactions",
+        "Enhance productivity with tools that prioritize code quality and speed.",
     },
     Content: {
       title: "What We Provide",
-      heading: "Your business obstacles solved with precision.",
+      heading: "Developer-first tools to accelerate UI development.",
       description:
-        "We follow a structured approach with four key phases, each customized to fit your project's scope, budget, and timeline. Our process is influenced by past successful projects, ensuring each step is given the right amount of attention and refinement.",
+        "Bytenexia is built for developers who value clean, modular code and efficient workflows. From strict TypeScript support to flexible integration options, our tools help you stay focused on building features, not boilerplate.",
       tabs: [
         {
-          id: "alpha",
-          title: "Alpha",
+          id: "typescript",
+          title: "TypeScript",
           content:
-            "We focus on delivering modern, sleek designs integrated with a robust backend architecture, guaranteeing high-performance and scalable solutions for our clients.",
+            "All components are fully typed with TypeScript, offering intelligent autocompletion and safer code in modern editors like VSCode.",
+          items: [
+            {
+              icon: <FaCode />,
+              title: "Full Typing",
+              description:
+                "Type-safe components for robust and predictable code.",
+            },
+            {
+              icon: <FaLaptopCode />,
+              title: "Editor IntelliSense",
+              description:
+                "Get real-time suggestions and docs inside your IDE.",
+            },
+            {
+              icon: <FaReact />,
+              title: "TS + React",
+              description:
+                "Designed to work flawlessly with React and TSX files.",
+            },
+          ],
         },
         {
-          id: "beta",
-          title: "Beta",
+          id: "cli-tools",
+          title: "CLI Tools",
           content:
-            "Our expertise lies in creating seamless user experiences combined with a fast and secure infrastructure, ensuring top-tier reliability and efficiency.",
+            "Beyond installation, the Bytenexia CLI supports component generation, config updates, and live previews — making your dev workflow smoother and faster.",
+          items: [
+            {
+              icon: <FaTerminal />,
+              title: "Component Generator",
+              description:
+                "Quickly scaffold new components with prebuilt templates.",
+            },
+            {
+              icon: <FaCogs />,
+              title: "Smart Config",
+              description: "Easily update and manage your component settings.",
+            },
+            {
+              icon: <FaRocket />,
+              title: "Live Preview",
+              description: "See component changes in real-time while coding.",
+            },
+          ],
         },
         {
-          id: "gamma",
-          title: "Gamma",
+          id: "frameworks",
+          title: "Framework Support",
           content:
-            "With a customer-first mindset, we build solutions that prioritize both aesthetics and performance, ensuring long-term sustainability and success.",
+            "Seamlessly integrates with React, Next.js, and other popular frameworks. We also offer guides and templates to help you get started instantly.",
+          items: [
+            {
+              icon: <FaReact />,
+              title: "React",
+              description: "First-class support for React applications.",
+            },
+            {
+              icon: <FaCode />,
+              title: "Next.js",
+              description:
+                "Works perfectly with Next.js dynamic routing and SSR.",
+            },
+            {
+              icon: <FaTools />,
+              title: "Starter Templates",
+              description: "Boilerplates available for major frameworks.",
+            },
+          ],
         },
       ],
     },
