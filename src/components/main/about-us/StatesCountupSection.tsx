@@ -30,19 +30,19 @@ export default StatesCount;
 
 const metricsData = [
   {
-    count: 26,
-    description: "Total projects created.",
+    count: 120,
+    description: "Components available in the library",
   },
   {
-    count: 36,
-    description: "Total teams under all projects.",
+    count: 2500,
+    description: "Developers using Bytenexia",
   },
   {
-    count: 64,
-    description: "Total assigned tasks.",
+    count: 75,
+    description: "Open-source contributors",
   },
   {
-    count: 78,
-    description: "Customers use bableforge.com",
+    count: 3200,
+    description: "GitHub stars",
   },
 ];

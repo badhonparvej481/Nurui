@@ -13,19 +13,21 @@ const ContactUsSection = () => {
           Get in touch
         </h3>
         <div className="space-y-1">
-          <h4 className="text-xl font-bold">Visit us</h4>
-          <p>{getInTouch?.visit_us?.description}</p>
-          <p className="font-bold">{getInTouch?.visit_us?.address}</p>
-        </div>
-        <div className="space-y-1">
           <h4 className="text-xl font-bold">Chat to us</h4>
           <p>{getInTouch?.chat_to_us?.description}</p>
           <p className="font-bold">{getInTouch?.chat_to_us?.email}</p>
         </div>
         <div className="space-y-1">
-          <h4 className="text-xl font-bold">Call us</h4>
-          <p>{getInTouch?.call_us?.description}</p>
-          <p className="font-bold">{getInTouch?.call_us?.phone}</p>
+          <h4 className="text-xl font-bold">Contribute</h4>
+          <p>{getInTouch?.contribute?.description}</p>
+          <a
+            href={getInTouch?.contribute?.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-blue-500 hover:underline"
+          >
+            GitHub Repository
+          </a>
         </div>
         <div className="space-y-3">
           <h4 className="text-xl font-bold">Social media</h4>
@@ -38,7 +40,7 @@ const ContactUsSection = () => {
         <fieldset className="space-y-2">
           <label className="capitalize font-semibold">First name</label>
           <ShinyInput
-            placeholder="John Doe"
+            placeholder="Your first name"
             type="text"
             name="first_name"
             required
@@ -46,15 +48,19 @@ const ContactUsSection = () => {
         </fieldset>
         <fieldset className="space-y-2">
           <label className="capitalize font-semibold">Last name</label>
-          <ShinyInput placeholder="Doe" type="text" name="last_name" required />
+          <ShinyInput
+            placeholder="Your last name"
+            type="text"
+            name="last_name"
+            required
+          />
         </fieldset>
         <fieldset className="space-y-2 col-span-full">
           <label className="capitalize font-semibold">Company name</label>
           <ShinyInput
-            placeholder="Your company"
+            placeholder="Your organization (optional)"
             type="text"
             name="company_name"
-            required
           />
         </fieldset>
         <fieldset className="space-y-2 col-span-full">
@@ -69,16 +75,15 @@ const ContactUsSection = () => {
         <fieldset className="space-y-2 col-span-full">
           <label className="capitalize font-semibold">Phone</label>
           <ShinyInput
-            placeholder="Your phone number"
+            placeholder="Your phone number (optional)"
             type="tel"
             name="phone_number"
-            required
           />
         </fieldset>
         <fieldset className="space-y-2 col-span-full">
           <label className="capitalize font-semibold">Message</label>
           <ShinyTextArea
-            placeholder="Your message"
+            placeholder="Tell us what you need or suggest!"
             name="message"
             rows={5}
             required
@@ -96,17 +101,13 @@ const ContactUsSection = () => {
 export default ContactUsSection;
 
 const getInTouch = {
-  visit_us: {
-    description: "Come say hello at our office HQ.",
-    address: "67 Wisteria Way Croydon South VIC 3136 AU",
+  contribute: {
+    description: "Want to help us improve the UI library?",
+    link: "https://github.com/your-org/your-ui-library",
   },
   chat_to_us: {
-    description: "Our friendly team is here to help.",
-    email: "hello@paysphere.com",
-  },
-  call_us: {
-    description: "Mon-Fri from 8am to 5pm",
-    phone: "(+995) 555-56-55-55",
+    description: "We’d love to hear your feedback and ideas.",
+    email: "support@bytenexia.dev",
   },
   social_media: {
     platforms: [

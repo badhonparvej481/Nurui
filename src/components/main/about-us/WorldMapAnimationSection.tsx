@@ -10,8 +10,8 @@ export function WorldMapAnimationSection() {
         sectionNameColor="text-[var(--secondary-color)]"
         sectionNameStyle="bg-[var(--secondary-color-3)] inline-block px-2 py-1"
         title={{
-          normalWords: "Experience the",
-          highLiteWords: "Future of Networking",
+          normalWords: "Connecting Innovation",
+          highLiteWords: "Across the Globe",
           highlightColor: "text-[var(--secondary-color)]",
         }}
       />

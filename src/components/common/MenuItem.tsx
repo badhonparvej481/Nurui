@@ -8,6 +8,7 @@ interface IProps {
   submenu?: { name: string; href: string }[];
   parentHover?: boolean;
   subMenuHover?: boolean;
+  sideBar?: boolean;
 }
 
 const MenuItem: React.FC<IProps> = ({
@@ -16,38 +17,49 @@ const MenuItem: React.FC<IProps> = ({
   submenu,
   parentHover = true,
   subMenuHover = false,
+  sideBar,
 }) => {
   const [subMenu, setSubMenu] = useState<boolean>(false);
   return (
     <>
-      <div
-        className={`text-[var(--black-color-4)] ${
-          parentHover && "hover:bg-[var(--primary-color-2)]"
-        } hover:text-[var(--primary-color)] rounded py-2 px-2.5`}
-      >
-        {submenu ? (
-          <div
-            onClick={() => setSubMenu(!subMenu)}
-            className="flex items-center justify-between w-full cursor-pointer"
-          >
-            <div className="flex items-center gap-3.5">
-              <span className="text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded">
-                {icon}
-              </span>
-              <p className="font-semibold">{title}</p>
-            </div>
-            {subMenu ? <IoIosArrowUp /> : <IoIosArrowDown />}
-          </div>
-        ) : (
-          <div className="flex items-center gap-3.5 cursor-pointer">
-            <p className="text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded">
-              {icon}
-            </p>
-            <span className="font-semibold">{title}</span>
-          </div>
-        )}
-      </div>
-      {subMenu && submenu && (
+      {sideBar ? (
+        <div
+          className={`text-[var(--black-color-4)] ${
+            parentHover && "hover:bg-[var(--primary-color-2)]"
+          } hover:text-[var(--primary-color)] rounded py-2 px-2.5`}
+        >
+          <>
+            {submenu ? (
+              <div
+                onClick={() => setSubMenu(!subMenu)}
+                className="flex items-center justify-between w-full cursor-pointer"
+              >
+                <div className="flex items-center gap-3.5">
+                  <span className="text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded">
+                    {icon}
+                  </span>
+                  <p className="font-semibold">{title}</p>
+                </div>
+                {subMenu ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              </div>
+            ) : (
+              <div className="flex items-center gap-3.5 cursor-pointer">
+                <p className="text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded">
+                  {icon}
+                </p>
+                <span className="font-semibold">{title}</span>
+              </div>
+            )}
+          </>
+        </div>
+      ) : (
+        <div className="py-2">
+          <p className="text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded">
+            {icon}
+          </p>
+        </div>
+      )}
+      {subMenu && submenu && sideBar && (
         <div
           className={`flex flex-col gap-y-1 ml-5 pl-2 py-0.5 border-l border-[var(--primary-color)] min-h-9`}
         >

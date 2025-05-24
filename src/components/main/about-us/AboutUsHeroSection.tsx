@@ -13,19 +13,19 @@ const AboutUsHeroSection = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between gap-y-3 xl:gap-y-0 text-center xl:text-left">
           <h2 className="uppercase text-3xl xl:text-5xl font-bold max-w-sm leading-tight">
             So how did{" "}
-            <span className="text-[var(--primary-color)]">About</span> come to
-            be?
+            <span className="text-[var(--primary-color)]">Bytenexia</span> come
+            to be?
           </h2>
           <p className="max-w-2xl text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi rem
-            maxime quibusdam accusamus magnam laudantium deleniti, quidem eaque
-            numquam voluptatibus illum recusandae aperiam fugiat blanditiis eos
-            quo temporibus corrupti magni.
+            Bytenexia was born from the vision of simplifying UI development for
+            modern web applications. Our goal is to empower developers with
+            high-quality, reusable components that speed up workflow, reduce
+            repetitive tasks, and ensure consistency across projects.
           </p>
         </div>
         <div className="pt-8 xl:pt-20">
           <p className="uppercase text-xl pb-6 text-center xl:text-left">
-            Trusted by 30000 Leading gym team:
+            Trusted by Many Developer & Company:
           </p>
           <Marquee>
             <div className="flex items-center gap-x-20">

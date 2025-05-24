@@ -4,6 +4,9 @@ import StickyScrollSection from "@/components/main/blog/StickyScrollSection";
 import FeaturesSection from "@/components/main/Home/FeaturesSection";
 
 const page = () => {
+  const working = true;
+  if (working)
+    return <div>Blog page is under development. Coming soon!</div>;
   return (
     <main className="section-gap">
       <DashboardBannerSection />
