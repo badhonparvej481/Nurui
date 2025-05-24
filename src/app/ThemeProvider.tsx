@@ -1,28 +1,30 @@
 "use client";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
 import React from "react";
 
 interface IProps {
   children: React.ReactNode;
 }
 
-const Provider: React.FC<IProps> = ({ children }) => {
+const ThemeProvider: React.FC<IProps> = ({ children }) => {
   const [mounted, setMounted] = React.useState(false);
+
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) return null;
+
   return (
-    <ThemeProvider
+    <NextThemeProvider
       attribute="class"
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
     >
       {children}
-    </ThemeProvider>
+    </NextThemeProvider>
   );
 };
 
-export default Provider;
+export default ThemeProvider;
