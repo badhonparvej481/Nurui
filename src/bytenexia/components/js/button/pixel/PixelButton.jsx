@@ -1,6 +1,6 @@
 import React from "react";
 
-const PixelArtButton = () => {
+const PixelButton = () => {
   return (
     <div className="group relative cursor-pointer w-[120px] h-[60px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-lg overflow-hidden">
       <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
@@ -82,4 +82,4 @@ const PixelArtButton = () => {
   );
 };
 
-export default PixelArtButton;
+export default PixelButton;

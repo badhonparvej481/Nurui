@@ -1,6 +1,6 @@
 import React from "react";
 
-const HoverShadowAnimationButton = () => {
+const HoverShadowButton = () => {
   return (
     <button className="relative px-8 py-3 bg-black text-white font-semibold rounded-lg border-2 border-purple-500 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_10px_rgba(168,85,247,0.6)] active:scale-95 active:shadow-[0_0_10px_5px_rgba(168,85,247,0.4)] group">
       <span className="flex items-center space-x-2">
@@ -25,4 +25,4 @@ const HoverShadowAnimationButton = () => {
   );
 };
 
-export default HoverShadowAnimationButton;
+export default HoverShadowButton;

@@ -20,6 +20,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/icons/Viber.Icontsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/icons/Viber.Icontsx", "src/bytenexia/components/js/cursor/blink-cursor/BlinkButton.jsx"],
   "exclude": ["node_modules"]
 }
