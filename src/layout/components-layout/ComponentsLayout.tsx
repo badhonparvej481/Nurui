@@ -1,16 +1,15 @@
 import React from "react";
-import DashboardSidebar from "./ComponentsSidebar";
-import DashboardNavbar from "./ComponentsNavbar";
+import ComponentsLeftSidebar from "./ComponentsLeftSidebar";
+import ComponentsNavbar from "./ComponentsNavbar";
+import { IChildren } from "@/types/type";
 
-const ComponentsLayout = ({ children }: { children: React.ReactNode }) => {
+const ComponentsLayout = ({ children }: IChildren) => {
   return (
-    <div>
-      <div className="flex items-start">
-        <DashboardSidebar />
-        <DashboardNavbar />
-      </div>
-      {children}
-    </div>
+    <>
+      <ComponentsLeftSidebar />
+      <ComponentsNavbar />
+      <main>{children}</main>
+    </>
   );
 };
 

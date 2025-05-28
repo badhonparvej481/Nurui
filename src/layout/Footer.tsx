@@ -17,7 +17,7 @@ const Footer = () => {
   if (
     pathName.includes("sing-in") ||
     pathName.includes("sing-up") ||
-    pathName.includes("components")
+    pathName.includes("docs")
   )
     return null;
 
