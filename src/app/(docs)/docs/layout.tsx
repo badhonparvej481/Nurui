@@ -10,7 +10,7 @@ const Layout = ({ children }: IChildren) => {
   return (
     <div className={`flex items-start pt-16 ${sideBar ? "pl-72" : "pl-16"}`}>
       <div className="w-[calc(100%-18rem)] flex flex-col min-h-screen">
-        <main className="p-5">{children}</main>
+        <main className="px-12 py-8">{children}</main>
         <ComponentsFooter />
       </div>
       <ComponentsRightSidebar />

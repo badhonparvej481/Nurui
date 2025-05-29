@@ -1,6 +1,7 @@
 "use client";
 import RoundedButton from "@/components/common/RoundedButton";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
+import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 import { useAppContext } from "@/context/AppContext";
 import React from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
@@ -35,7 +36,8 @@ const ComponentsNavbar = () => {
             />
           )}
         </>
-        <div className="hidden lg:flex items-center gap-5 *:text-2xl">
+        <VaulDrawer />
+        <div className="flex items-center md:gap-5 *:text-2xl">
           <RoundedButton
             icon={
               <IoIosSearch className="text-xl text-[var(--primary-color)]" />

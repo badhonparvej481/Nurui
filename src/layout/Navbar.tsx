@@ -2,22 +2,16 @@
 import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
-import { useCallback, useState } from "react";
-import { CgMenuRight } from "react-icons/cg";
 import Bytenexia from "@/components/common/Bytenexia";
 import nProgress from "nprogress";
-import { RxCross2 } from "react-icons/rx";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
-import { NavigationDrawer } from "@/components/ui/drawer/NavigationDrawer";
 import RoundedButton from "@/components/common/RoundedButton";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
+import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 
 const Navbar = () => {
   const pathName = usePathname();
-  const [open, setOpen] = useState(false);
-  const handleOpen = useCallback(() => setOpen(true), []);
-  const handleClose = useCallback(() => setOpen(false), []);
 
   if (
     pathName.includes("sing-in") ||
@@ -29,11 +23,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
-        {open ? (
-          <RxCross2 className="text-[var(--primary-color)] text-3xl bg-[var(--primary-color-3)] rounded p-0.5 block lg:hidden" />
-        ) : (
-          <Bytenexia className="text-2xl lg:text-3xl" />
-        )}
+        <Bytenexia className="text-2xl lg:text-3xl" />
 
         <div
           className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] dark:bg-[white]/5 border 
@@ -74,17 +64,7 @@ const Navbar = () => {
           <ThemeSwitcher />
           {/* <BorderAnimationButton title="sing in" navigation="/auth/sing-in" /> */}
         </div>
-        {/* drawer */}
-        <>
-          <button
-            type="button"
-            onClick={handleOpen}
-            className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden"
-          >
-            <CgMenuRight className="text-[var(--primary-color)] text-3xl" />
-          </button>
-          <NavigationDrawer anchor="right" open={open} onClose={handleClose} />
-        </>
+        <VaulDrawer />
       </nav>
     </div>
   );

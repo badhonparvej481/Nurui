@@ -14,7 +14,7 @@ export default function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="bg-[var(--primary-color)] dark:bg-[var(--primary-color-3)] hover:bg-[#3CA2FACC] hover:dark:bg-[var(--primary-color-2)] size-11 p-2 rounded-full flex items-center justify-center">
+    <div className="md:bg-[var(--primary-color)] md:dark:bg-[var(--primary-color-3)] hover:bg-[#3CA2FACC] hover:dark:bg-[var(--primary-color-2)] size-11 p-2 rounded-full flex items-center justify-center">
       <DarkModeSwitch
         sunColor="white"
         moonColor="var(--primary-color)"

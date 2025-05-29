@@ -2,7 +2,7 @@ import React from "react";
 
 const ComponentsFooter = () => {
   return (
-    <footer className="relative py-6 md:py-0 mt-auto">
+    <footer className="relative py-6 md:py-0 mt-auto hidden">
       <div
         className="absolute top-0 h-px w-full "
         style={{

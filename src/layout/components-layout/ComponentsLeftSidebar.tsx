@@ -13,7 +13,7 @@ const ComponentsLeftSidebar = () => {
   const { sideBar } = useAppContext();
 
   return (
-    <div className="fixed top-0 left-0">
+    <div className="fixed top-0 left-0 hidden md:block">
       <div
         className={`bg-[var(--purple-color)] border-r border-[var(--primary-color-1)] border-dashed min-h-screen flex flex-col justify-between pt-3 pb-6 ${
           sideBar ? "w-72" : "w-16 items-center"
@@ -40,7 +40,6 @@ const ComponentsLeftSidebar = () => {
                 submenu={nav?.submenu}
                 parentHover={false}
                 subMenuHover={true}
-                sideBar={sideBar}
               />
             ))}
           </div>
@@ -58,7 +57,6 @@ const ComponentsLeftSidebar = () => {
               submenu={nav?.submenu}
               parentHover={false}
               subMenuHover={true}
-              sideBar={sideBar}
             />
           ))}
         </div>
