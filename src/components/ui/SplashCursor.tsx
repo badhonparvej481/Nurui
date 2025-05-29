@@ -1551,7 +1551,7 @@ export default function SplashCursor({
   ]);
 
   const pathName = usePathname();
-  if (pathName?.includes("components")) return null;
+  if (pathName?.includes("docs")) return null;
 
   return (
     <div className="fixed top-0 left-0 z-50 pointer-events-none w-full h-full">

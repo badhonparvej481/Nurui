@@ -23,6 +23,7 @@
   @apply space-y-12 lg:space-y-16 xl:space-y-20  2xl:space-y-24;
 }
 
+
 .font-nunito {
   font-family: var(--font-nunito);
 }
@@ -30,6 +31,7 @@
 .font-creepster {
   font-family: var(--font-creepster);
 }
+
 .clip-path-auth-layout {
   clip-path: polygon(
     50.279% 0.127%,

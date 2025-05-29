@@ -4,7 +4,7 @@ import { ReactNode, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 interface IProps {
-  tabs: { id: string; label: string; content: ReactNode }[];
+  tabs: { id: string; icon?: ReactNode; label: string; content: ReactNode }[];
 }
 
 export default function AnimatedTabs({ tabs }: IProps) {
@@ -12,28 +12,28 @@ export default function AnimatedTabs({ tabs }: IProps) {
   const uniqueId = uuidv4();
 
   return (
-    <div className="space-y-8">
-      <div className="w-60 mx-auto rounded-full py-3 flex justify-center items-center bg-[var(--glass-color-2)] gap-1">
+    <div className="space-y-4">
+      <div className="flex items-center gap-x-2">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`${
-              activeTab === tab.id ? "" : "hover:text-white/60"
-            } relative rounded-full px-6 py-3 font-semibold text-[var(--white-color)] transition focus-visible:outline-2`}
-            style={{
-              WebkitTapHighlightColor: "transparent",
-            }}
+              activeTab === tab.id
+                ? ""
+                : "hover:bg-white/10 border border-white/15 rounded-xl"
+            } relative px-3 py-1.5 font-semibold flex items-center gap-x-1`}
           >
             {activeTab === tab.id && (
               <motion.span
                 layoutId={`bubble-${uniqueId}`}
-                className="absolute inset-0 z-10 bg-[var(--white-color)] mix-blend-difference"
-                style={{ borderRadius: 9999 }}
+                className="absolute inset-0 z-10 bg-white/15 border border-white/10 mix-blend-difference"
+                style={{ borderRadius: 12 }}
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />
             )}
-            {tab.label}
+            {tab?.icon}
+            {tab?.label}
           </button>
         ))}
       </div>

@@ -1,26 +1,25 @@
-import BlinkButton from "@/bytenexia/button/BlinkButton";
-import GetStartedButton from "@/bytenexia/button/GetStartedButton";
-import GoBackButton from "@/bytenexia/button/GoBackButton";
-import HoverShadowAnimationButton from "@/bytenexia/button/HoverShadowAnimationButton";
-import UnapologeticButton from "@/bytenexia/button/UnapologeticButton";
-import NewButton from "@/bytenexia/button/NewButton";
-import PingPongAnimationButton from "@/bytenexia/button/PingPongAnimationButton";
-import PixelArtButton from "@/bytenexia/button/PixelArtButton";
-import { PulsatingButton } from "@/bytenexia/button/PulsatingButton";
-import RoundedAnimationButton from "@/bytenexia/button/RoundedAnimationButton";
-import ShinyAnimationButton from "@/bytenexia/button/ShinyAnimationButton";
-import StatusButton from "@/bytenexia/button/StatusButton";
-import SwipeButton from "@/bytenexia/button/SwipeButton";
-import WorkButton from "@/bytenexia/button/WorkButton";
+import GetStartedButton from "@/bytenexia/components/ts/button/get-started/GetStartedButton";
+import GoBackButton from "@/bytenexia/components/ts/button/go-back/GoBackButton";
+import HoverShadowAnimationButton from "@/bytenexia/components/ts/button/hover-shadow/HoverShadowButton";
+import UnapologeticButton from "@/bytenexia/components/ts/button/unapologetic/UnapologeticButton";
+import NewButton from "@/bytenexia/components/ts/button/new/NewButton";
+import PingPongAnimationButton from "@/bytenexia/components/ts/button/ping-pong/PingPongButton";
+import PixelArtButton from "@/bytenexia/components/ts/button/pixel/PixelButton";
+import { PulsatingButton } from "@/bytenexia/components/ts/button/pulsating/PulsatingButton";
+import RoundedAnimationButton from "@/bytenexia/components/ts/button/rounded/RoundedButton";
+import ShinyAnimationButton from "@/bytenexia/components/ts/button/shiny/ShinyButton";
+import StatusButton from "@/bytenexia/components/ts/button/status/StatusButton";
+import SwipeButton from "@/bytenexia/components/ts/button/swiper/SwipeButton";
+import WorkButton from "@/bytenexia/components/ts/button/work/WorkButton";
 import { Marquee } from "@/components/ui/marquee/Marquee";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import BorderMagicButton from "@/bytenexia/button/BorderMagicButton";
-import { ColorChangingButton } from "@/bytenexia/button/ColorChangingButton";
-import { SpotlightButton } from "@/bytenexia/button/SpotlightButton";
-import BorderAnimationButton from "@/bytenexia/button/BorderAnimationButton";
-import StarWarsButton from "@/bytenexia/button/StarWarsButton";
-import GradientButton from "@/bytenexia/button/GradientButton";
+import BorderMagicButton from "@/bytenexia/components/ts/button/border-magic/BorderMagicButton";
+import { ColorChangingButton } from "@/bytenexia/components/ts/button/color-changing/ColorChangingButton";
+import { SpotlightButton } from "@/bytenexia/components/ts/button/spotlight/SpotlightButton";
+import BorderAnimationButton from "@/bytenexia/components/ts/button/border-animation/BorderAnimationButton";
+import StarWarsButton from "@/bytenexia/components/ts/button/star-wars/StarWarsButton";
+import GradientButton from "@/bytenexia/components/ts/button/gradient/GradientButton";
 
 const ButtonsMarquee = () => {
   return (
@@ -57,7 +56,6 @@ const ButtonsMarquee = () => {
         >
           <StarWarsButton />
           <PingPongAnimationButton />
-          <BlinkButton />
           <ShinyAnimationButton />
           <HoverShadowAnimationButton />
           <PulsatingButton>Join Affiliate Program</PulsatingButton>
