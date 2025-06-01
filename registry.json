@@ -7,7 +7,7 @@
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "/src/bytenexia/components/ts/button/star"
+          "path": "/src/bytenexia/components/ts/button/star/StarButton.tsx"
         }
       ]
     }
