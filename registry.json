@@ -1,0 +1,15 @@
+{
+  "name": "bytenexia",
+  "homepage": "https://bytenexia.vercel.app",
+  "items": [
+    {
+      "name": "star-button",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "/src/bytenexia/components/ts/button/star"
+        }
+      ]
+    }
+  ]
+}
