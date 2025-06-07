@@ -13,13 +13,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [{
-      "name": "next"
-    }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/icons/Viber.Icontsx", "src/bytenexia/components/js/cursor/blink-cursor/BlinkButton.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/icons/Viber.Icontsx",
+    "src/bytenexia/components/js/cursor/blink-cursor/BlinkButton.jsx",
+    "next.config.ts",
+    "src/app/(docs)/docs/[slug]/page.tsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -23,7 +23,6 @@
   @apply space-y-12 lg:space-y-16 xl:space-y-20  2xl:space-y-24;
 }
 
-
 .font-nunito {
   font-family: var(--font-nunito);
 }
@@ -159,4 +158,17 @@
 
 .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#27272A] text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-46px] mt-[-4px];
+    background-color: var(--glass-color-3);
+    content: counter(step);
+  }
 }
