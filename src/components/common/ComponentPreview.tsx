@@ -4,6 +4,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa";
 import Preview from "./Preview";
 import { CodeBlockDemo } from "../ui/code-block/CodeBlockDemo";
+import ComponentPreviewIntro from "./ComponentPreviewIntro";
 
 const ComponentPreview = () => {
   const tabs = [
@@ -22,7 +23,7 @@ const ComponentPreview = () => {
   ];
   return (
     <div>
-      <h2 className="text-4xl font-bold pb-4">Button</h2>
+      <ComponentPreviewIntro />
       <AnimatedTabs tabs={tabs} />
     </div>
   );

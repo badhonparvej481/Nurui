@@ -1,7 +1,6 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import { promises as fs } from "fs";
 import path from "path";
-import ComponentPreview from "@/components/common/ComponentPreview";
 import { getMDXComponents } from "../../../../../mdx-components";
 import { Metadata } from "next";
 
@@ -23,7 +22,6 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
     "src",
     "content",
     "docs",
-    "components",
     `${params.slug}.mdx`,
   );
 
@@ -45,7 +43,7 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
 
 export async function generateStaticParams() {
   const files = await fs.readdir(
-    path.join(process.cwd(), "src", "content", "docs", "components"),
+    path.join(process.cwd(), "src", "content", "docs"),
   );
 
   const paths = files
@@ -63,7 +61,6 @@ const Page = async ({ params }: IParams) => {
     "src",
     "content",
     "docs",
-    "components",
     `${params.slug}.mdx`,
   );
   const rawMDX = await fs.readFile(filePath, "utf-8");
@@ -73,12 +70,7 @@ const Page = async ({ params }: IParams) => {
     components: getMDXComponents({}),
   });
 
-  return (
-    <div>
-      <ComponentPreview />
-      {content}
-    </div>
-  );
+  return <div>{content}</div>;
 };
 
 export default Page;
