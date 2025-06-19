@@ -3,6 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { getMDXComponents } from "../../../../../mdx-components";
 import { Metadata } from "next";
+import remarkGfm from "remark-gfm";
 
 interface IParams {
   params: {
@@ -66,7 +67,12 @@ const Page = async ({ params }: IParams) => {
   const rawMDX = await fs.readFile(filePath, "utf-8");
   const { content } = await compileMDX<Frontmatter>({
     source: rawMDX,
-    options: { parseFrontmatter: true },
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    },
     components: getMDXComponents({}),
   });
 

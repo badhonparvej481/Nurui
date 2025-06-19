@@ -33,8 +33,8 @@ export const CodeBlock = ({ language = "tsx", code = "" }: CodeBlockProps) => {
   };
 
   return (
-    <div className="border border-white/15 rounded-lg max-h-[30rem] overflow-auto w-full text-sm">
-      <div className="flex items-center justify-end gap-3 p-3 bg-white/10">
+    <div className="border border-[var(--primary-color-3)] rounded-2xl max-h-[30rem] overflow-auto w-full text-sm">
+      <div className="flex items-center justify-end gap-3 p-3 bg-[var(--primary-color-5)]">
         <button
           onClick={copyToClipboard}
           className="flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
@@ -53,12 +53,12 @@ export const CodeBlock = ({ language = "tsx", code = "" }: CodeBlockProps) => {
 
           {/* Dropdown Menu */}
           {isOpen && (
-            <div className="absolute z-50 right-0 mt-3.5 border border-white/15 rounded-lg min-w-40 bg-[var(--glass-color)] p-1">
+            <div className="absolute z-50 right-0 mt-3.5 border border-[var(--primary-color-3)] rounded-lg min-w-40 bg-[var(--primary-color-5)] p-1">
               {languages.map((language, index) => (
                 <button
                   key={index}
                   onClick={() => handleSelect(language?.name)}
-                  className="w-full flex items-center gap-1 p-2 z-50 hover:bg-white/10 rounded-lg"
+                  className="w-full flex items-center gap-1 p-2 z-50 hover:bg-[var(--primary-color-4)] rounded-lg"
                 >
                   <span>{language.icon}</span>
                   <span>{language.name}</span>

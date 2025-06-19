@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/icons/Viber.Icontsx",
-    "src/bytenexia/components/js/cursor/blink-cursor/BlinkButton.jsx",
+    "src/cli/components/js/cursor/blink-cursor/BlinkButton.jsx",
     "next.config.ts",
     "src/app/(docs)/docs/[slug]/page.tsx"
   ],

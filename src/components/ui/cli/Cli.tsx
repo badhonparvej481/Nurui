@@ -1,5 +1,4 @@
 "use client";
-import { SiNpm } from "react-icons/si";
 import { useState } from "react";
 import {
   Snippet,
@@ -9,33 +8,47 @@ import {
   SnippetCopyButton,
   SnippetTabsContent,
 } from "./Snippet";
+import PnpmIcon from "@/components/icons/PnpmIcon";
+import NpmIcon from "@/components/icons/NpmIcon";
+import YarnIcon from "@/components/icons/YarnIcon";
+import BunIcon from "@/components/icons/BunIcon";
+import { usePathname } from "next/navigation";
+
+interface IDependencies {
+  dependencies: {
+    label: string;
+    command: string;
+  }[];
+}
 
 const commands = [
   {
     label: "npm",
-    icon: <SiNpm className="bg-[white] text-[#C12127]" />,
-    code: `npx kibo-ui@latest add snippet`,
+    icon: <NpmIcon />,
+    code: `npx bytenexia add`,
   },
   {
     label: "pnpm",
-    icon: <SiNpm className="" />,
-    code: `npx shadcn@latest add https://www.kibo-ui.com/registry/snippet.json`,
+    icon: <PnpmIcon />,
+    code: `bunx bytenexia add`,
   },
   {
     label: "bun",
-    icon: <SiNpm className="" />,
-    code: `npx shadcn@latest add https://www.kibo-ui.com/registry/snippet.json`,
+    icon: <BunIcon />,
+    code: `yarn dlx bytenexia add`,
   },
   {
     label: "yarn",
-    icon: <SiNpm className="" />,
-    code: `npx shadcn@latest add https://www.kibo-ui.com/registry/snippet.json`,
+    icon: <YarnIcon />,
+    code: `pnpm dlx bytenexia add`,
   },
 ];
 
-const Cli = () => {
+const Cli: React.FC<IDependencies> = ({ dependencies }) => {
   const [value, setValue] = useState(commands[0].label);
-  const activeCommand = commands.find((command) => command.label === value);
+  const activeCommand = commands?.find((command) => command.label === value);
+  const dependencieCommand = dependencies?.find((dep) => dep.label === value);
+  const componentName = usePathname().split("/");
 
   return (
     <Snippet value={value} onValueChange={setValue} className="w-full">
@@ -46,7 +59,9 @@ const Cli = () => {
               key={command.label}
               value={command.label}
               className={
-                command.label === value ? "!bg-white/10 rounded-lg" : ""
+                command.label === value
+                  ? "!bg-[var(--primary-color-4)] rounded-lg"
+                  : ""
               }
             >
               <span>{command.icon}</span>
@@ -54,23 +69,23 @@ const Cli = () => {
             </SnippetTabsTrigger>
           ))}
         </SnippetTabsList>
-        <SnippetCopyButton
-          value={activeCommand?.code ?? ""}
-          onCopy={() =>
-            console.log(`Copied "${activeCommand?.code}" to clipboard`)
-          }
-          onError={() =>
-            console.error(
-              `Failed to copy "${activeCommand?.code}" to clipboard`,
-            )
-          }
-        />
+        {dependencies?.length ? (
+          <SnippetCopyButton value={dependencieCommand?.command ?? ""} />
+        ) : (
+          <SnippetCopyButton value={activeCommand?.code ?? ""} />
+        )}
       </SnippetHeader>
-      {commands.map((command) => (
-        <SnippetTabsContent key={command.label} value={command.label}>
-          {command.code}
-        </SnippetTabsContent>
-      ))}
+      {dependencies?.length
+        ? dependencies.map((dep) => (
+            <SnippetTabsContent key={dep.label} value={dep.label}>
+              {dep.command}
+            </SnippetTabsContent>
+          ))
+        : commands.map((command) => (
+            <SnippetTabsContent key={command.label} value={command.label}>
+              {command.code} {componentName[componentName.length - 1]}
+            </SnippetTabsContent>
+          ))}
     </Snippet>
   );
 };

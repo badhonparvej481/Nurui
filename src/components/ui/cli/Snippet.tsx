@@ -17,7 +17,7 @@ export type SnippetProps = ComponentProps<typeof Tabs>;
 export const Snippet = ({ className, ...props }: SnippetProps) => (
   <Tabs
     className={cn(
-      "group overflow-hidden rounded-xl border border-white/15",
+      "group overflow-hidden rounded-xl border border-[var(--primary-color-3)]",
       className,
     )}
     {...props}
@@ -29,7 +29,7 @@ export type SnippetHeaderProps = HTMLAttributes<HTMLDivElement>;
 export const SnippetHeader = ({ className, ...props }: SnippetHeaderProps) => (
   <div
     className={cn(
-      "flex flex-row items-center justify-between border-b border-white/15 p-1",
+      "flex flex-row items-center justify-between border-b border-[var(--primary-color-3)] p-1",
       className,
     )}
     {...props}
@@ -113,7 +113,7 @@ export const SnippetTabsContent = ({
   children,
   ...props
 }: SnippetTabsContentProps) => (
-  <TabsContent asChild className={cn("mt-0 p-4 text-sm bg-white/5", className)} {...props}>
+  <TabsContent asChild className={cn("mt-0 p-4 text-sm bg-[var(--primary-color-5)]", className)} {...props}>
     <pre>{children}</pre>
   </TabsContent>
 );

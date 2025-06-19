@@ -21,13 +21,13 @@ export default function AnimatedTabs({ tabs }: IProps) {
             className={`${
               activeTab === tab.id
                 ? ""
-                : "hover:bg-white/10 border border-white/15 rounded-xl"
-            } relative px-3 py-1.5 font-semibold flex items-center gap-x-1`}
+                : "hover:bg-[var(--primary-color-4)] border border-[var(--primary-color-3)] rounded-xl"
+            } relative px-3 py-1.5 font-semibold flex items-center gap-x-1 text-[var(--primary-color)]`}
           >
             {activeTab === tab.id && (
               <motion.span
                 layoutId={`bubble-${uniqueId}`}
-                className="absolute inset-0 z-10 bg-white/15 border border-white/10 mix-blend-difference"
+                className="absolute inset-0 z-10 bg-[var(--primary-color-4)] border border-[var(--primary-color-3)] mix-blend-difference"
                 style={{ borderRadius: 12 }}
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />

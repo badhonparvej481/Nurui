@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 import type { MDXComponents } from "mdx/types";
 import ComponentPreview from "@/components/common/ComponentPreview";
 import Cli from "@/components/ui/cli/Cli";
+import { CodeBlock } from "@/components/ui/code-block/CodeBlock";
 import {
   Tabs,
   TabsContent,
@@ -17,7 +18,81 @@ export function getMDXComponents(
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h2
         className={cn(
-          "text-3xl font-semibold pt-10 pb-2 border-b border-white/15",
+          "text-2xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
+          className,
+        )}
+        {...props}
+      />
+    ),
+
+    p: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLParagraphElement>) => (
+      <p
+        className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+        {...props}
+      />
+    ),
+
+    table: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLTableElement>) => (
+      <div className="my-6 w-full overflow-y-auto rounded-lg border  border-[var(--primary-color-3)]">
+        <table
+          className={cn("my-0 w-full overflow-hidden", className)}
+          {...props}
+        />
+      </div>
+    ),
+
+    thead: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLTableSectionElement>) => (
+      <thead
+        className={cn(
+          "border-b border-[var(--primary-color-3)] bg-[var(--primary-color-5)]",
+          className,
+        )}
+        {...props}
+      />
+    ),
+
+    tr: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLTableRowElement>) => (
+      <tr
+        className={cn(
+          "border-b border-[var(--primary-color-3)] last:border-b-0",
+          className,
+        )}
+        {...props}
+      />
+    ),
+
+    th: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLTableCellElement>) => (
+      <th
+        className={cn(
+          "text-balance border-r border-[var(--primary-color-3)] px-6 py-3 text-left font-mono text-sm font-semibold tracking-tight last:border-r-0",
+          className,
+        )}
+        {...props}
+      />
+    ),
+
+    td: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLTableCellElement>) => (
+      <td
+        className={cn(
+          "border-r border-[var(--primary-color-3)] px-6 py-3 text-sm last:border-r-0 [&[align=center]]:text-center [&[align=right]]:text-right",
           className,
         )}
         {...props}
@@ -37,7 +112,7 @@ export function getMDXComponents(
     }: React.ComponentProps<typeof TabsList>) => (
       <TabsList
         className={cn(
-          "w-full justify-start rounded-none border-b border-white/15 bg-transparent p-0",
+          "w-full justify-start rounded-none border-b border-[var(--primary-color-3)] bg-transparent p-0",
           className,
         )}
         {...props}
@@ -75,22 +150,37 @@ export function getMDXComponents(
     ),
 
     Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
-      <h3
+      <h3 className={cn("font-heading tracking-tight", className)} {...props} />
+    ),
+
+    Steps: ({ ...props }) => (
+      <div
+        className="[&>h3]:step steps ml-4 border-l border-white/20 pl-8 [counter-reset:step] -mt-7 space-y-4"
+        {...props}
+      />
+    ),
+
+    code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+      <code
         className={cn(
-          "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+          "relative rounded bg-white/10 px-[0.3rem] py-[0.2rem] font-mono text-sm",
           className,
         )}
         {...props}
       />
     ),
 
-    Steps: ({ ...props }) => (
-      <div
-        className="[&>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]"
+    blockquote: ({
+      className,
+      ...props
+    }: React.HTMLAttributes<HTMLElement>) => (
+      <blockquote
+        className={cn("mt-6 border-l-2 pl-6 italic", className)}
         {...props}
       />
     ),
 
+    CodeBlock,
     ComponentPreview,
     Cli,
     ...components,

@@ -166,8 +166,8 @@
   }
 
   .step:before {
-    @apply absolute inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#27272A] text-center -indent-px font-mono text-base font-medium;
-    @apply ml-[-46px] mt-[-4px];
+    @apply absolute inline-flex h-7 w-7 items-center justify-center rounded-full text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-47px] ;
     background-color: var(--glass-color-3);
     content: counter(step);
   }

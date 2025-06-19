@@ -1,5 +1,3 @@
-"use client";
-
 import { CodeBlock } from "./CodeBlock";
 
 export function CodeBlockDemo() {
