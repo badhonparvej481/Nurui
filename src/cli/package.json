@@ -3,24 +3,25 @@
   "version": "1.0.0",
   "description": "Add beautiful components with one command",
   "bin": {
-    "bytenexia": "./cli/index.js"
+    "bytenexia": "./src/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "copy:components": "node ./script/copy-components.js",
-    "rename:components": "node ./script/rename-to-jsx.js",
-    "convert:tsx-to-jsx": "yarn copy:components && yarn rename:components"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "files": [
+    "dist"
+  ],
   "author": "Md Afsar Mahmud",
   "license": "MIT",
   "type": "module",
   "dependencies": {
     "@clack/prompts": "^0.11.0",
-    "clsx": "^2.1.1",
     "execa": "^9.6.0",
-    "framer-motion": "^12.14.0",
-    "lucide-react": "^0.511.0",
+    "node-fetch": "^3.3.2",
     "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }

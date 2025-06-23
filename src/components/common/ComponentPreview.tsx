@@ -1,5 +1,5 @@
 import React from "react";
-import { Index } from "@/__registry__";
+import { Index } from "@/registry";
 import AnimatedTabs from "./AnimatedTabs";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa";

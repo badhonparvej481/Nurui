@@ -5,10 +5,8 @@ import { getMDXComponents } from "../../../../../mdx-components";
 import { Metadata } from "next";
 import remarkGfm from "remark-gfm";
 
-interface IParams {
-  params: {
-    slug: string;
-  };
+interface AsyncParams {
+  params: Promise<{ slug: string }>;
 }
 
 interface Frontmatter {
@@ -17,7 +15,9 @@ interface Frontmatter {
   creator: string;
 }
 
-export async function generateMetadata({ params }: IParams): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: AsyncParams): Promise<Metadata> {
   const { slug } = await params;
   const filePath = path.join(
     process.cwd(),
@@ -57,7 +57,7 @@ export async function generateStaticParams() {
   return paths;
 }
 
-const Page = async ({ params }: IParams) => {
+const Page = async ({ params }: AsyncParams) => {
   const { slug } = await params;
   const filePath = path.join(
     process.cwd(),

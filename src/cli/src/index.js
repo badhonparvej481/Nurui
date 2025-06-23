@@ -4,25 +4,40 @@ import colors from "picocolors";
 import fs from "fs";
 import path from "path";
 import { execa } from "execa";
-import { fileURLToPath } from "url";
+import fetch from "node-fetch";
+import ts from "typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Bytenexia/dev/registry.json`;
+const basePath = `https://raw.githubusercontent.com/Mdafsarx/Bytenexia`;
 
 // CLI args
-const [command, category, componentName] = process.argv.slice(2);
+const [command, componentName] = process.argv.slice(2);
 
-// CLI intro
-intro(colors.bold("Bytenexia CLI - Component Importer"));
+intro(colors.bold("Welcome to Bytenexia CLI"));
 
-// Validate command
+if (command === "list") {
+  const s = spinner();
+  s.start(colors.white("Fetching available components..."));
+  try {
+    const registry = await fetchRegistry();
+    s.stop(colors.green("📦 Available components:\n"));
+    for (const item of registry.items) {
+      console.log(`${colors.green("•")} ${item.name}`);
+    }
+    outro(colors.bold(colors.green("✨ End of list.")));
+    process.exit(0);
+  } catch (err) {
+    s.stop(colors.red("❌ Failed to fetch registry."));
+    console.error(err);
+    process.exit(1);
+  }
+}
 if (command !== "add" || !componentName) {
-  cancel(colors.red("Usage: npx bytenexia add <ComponentName>"));
+  cancel(colors.red("Usage: npx bytenexia add component-name"));
   process.exit(0);
 }
 
-// Language select
-const language = await select({
+let language = await select({
   message: "Select the language of the component:",
   options: [
     { label: "TypeScript (.tsx)", value: "ts" },
@@ -30,97 +45,103 @@ const language = await select({
   ],
 });
 
-const extension = language === "ts" ? "ts" : "js";
-const categoryFolder = category.toLowerCase();
-const ComponentFolder = componentName.toLowerCase();
-const srcPath = path.join(
-  __dirname,
-  `../components/${extension}`,
-  categoryFolder,
-  ComponentFolder,
-);
-const destPath = path.join(
-  process.cwd(),
-  "components",
-  "ui",
-  categoryFolder,
-  ComponentFolder,
-);
-
-if (!fs.existsSync(srcPath)) {
-  cancel(
-    colors.red(
-      `❌ Component folder "${ComponentFolder}" not found in bytenexia/components/`,
-    ),
-  );
-  process.exit(1);
+function convertTsxToJsx(code) {
+  const output = ts.transpileModule(code, {
+    compilerOptions: {
+      jsx: ts.JsxEmit.Preserve,
+      target: ts.ScriptTarget.ESNext,
+      module: ts.ModuleKind.ESNext,
+      allowJs: true,
+    },
+    fileName: "component.tsx",
+  });
+  return output.outputText;
 }
 
-const s = spinner();
-s.start(colors.gray(`Adding ${componentName} to your project...`));
-
-try {
-  await fs.promises.mkdir(path.dirname(destPath), { recursive: true });
-  await fs.promises.cp(srcPath, destPath, { recursive: true });
-  s.stop(
-    colors.green(
-      `✅ ${componentName} folder added to components/ui/${ComponentFolder}/`,
-    ),
-  );
-} catch (err) {
-  s.stop(colors.red("❌ Failed to copy component folder."));
-  console.error(err);
-  process.exit(1);
+async function fetchRegistry() {
+  const res = await fetch(registryPath);
+  if (!res.ok) throw new Error("Failed to fetch registry.json");
+  return await res.json();
 }
 
-// Detect user's package manager
+async function downloadFileFromGitHub(filePath, localPath) {
+  const rawUrl = `${basePath}/${filePath}`;
+  const res = await fetch(rawUrl);
+  if (!res.ok) throw new Error(`Failed to download ${filePath}`);
+  const content = await res.text();
+
+  const fileName = path.basename(filePath);
+  const targetPath = path.join(localPath, fileName);
+
+  if (language === "js" && fileName.endsWith(".tsx")) {
+    const jsx = convertTsxToJsx(content);
+    const newPath = targetPath.replace(/\.tsx$/, ".jsx");
+    await fs.promises.mkdir(path.dirname(newPath), { recursive: true });
+    await fs.promises.writeFile(newPath, jsx, "utf8");
+  } else {
+    await fs.promises.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.promises.writeFile(targetPath, content, "utf8");
+  }
+}
+
 function detectPackageManager() {
   const cwd = process.cwd();
   if (fs.existsSync(path.join(cwd, "yarn.lock"))) return "yarn";
   if (fs.existsSync(path.join(cwd, "pnpm-lock.yaml"))) return "pnpm";
   if (fs.existsSync(path.join(cwd, "bun.lockb"))) return "bun";
-  return "npm"; // default
+  return "npm";
 }
 
-// 🔽 Load dependencies from JSON
-// After the component is copied
-const depFile = path.join(__dirname, "../dependencies.json");
+// Main logic
+const s = spinner();
+s.start(colors.white(`Adding ${componentName}...`));
 
-if (fs.existsSync(depFile)) {
-  const depsMap = JSON.parse(fs.readFileSync(depFile, "utf8"));
-  const deps = depsMap[componentName] || [];
+try {
+  const registry = await fetchRegistry();
+  const match = registry.items.find((item) => item.name === componentName);
 
-  if (deps.length > 0) {
-    const packageManager = detectPackageManager();
+  if (!match) {
+    s.stop(
+      colors.red(`❌ Component '${componentName}' not found in registry.`),
+    );
+    process.exit(1);
+  }
+
+  const destPath = path.join(
+    process.cwd(),
+    "components",
+    "bytenexia",
+    componentName.toLowerCase(),
+  );
+
+  for (const file of match.files) {
+    await downloadFileFromGitHub(file.path, destPath);
+  }
+
+  s.stop(colors.green(`✅ ${componentName} downloaded successfully!`));
+
+  if (match?.dependencies?.length) {
+    const pm = detectPackageManager();
     const s2 = spinner();
     s2.start(
-      colors.gray(
-        `📦 Installing dependencies with ${packageManager}: ${deps.join(", ")}`,
-      ),
+      `📦 Installing dependencies with ${pm}: ${match.dependencies.join(", ")}`,
     );
 
-    let installCommand;
-    switch (packageManager) {
-      case "yarn":
-        installCommand = ["add", ...deps];
-        break;
-      case "pnpm":
-        installCommand = ["add", ...deps];
-        break;
-      case "bun":
-        installCommand = ["add", ...deps];
-        break;
-      default:
-        installCommand = ["install", ...deps];
-    }
+    const cmd = ["add", ...match.dependencies];
+    const fallback = ["install", ...match.dependencies];
 
     try {
-      await execa(packageManager, installCommand, { stdio: "inherit" });
-      s2.stop(colors.green("✅ Dependencies installed successfully!"));
+      await execa(pm, pm === "npm" ? fallback : cmd, { stdio: "inherit" });
+      s2.stop(colors.green("✅ Dependencies installed."));
     } catch (err) {
       s2.stop(colors.red("❌ Failed to install dependencies."));
       console.error(err);
     }
   }
+
+  outro(colors.bold(colors.green("🎉 Done!")));
+} catch (err) {
+  s.stop(colors.red("❌ Failed."));
+  console.error(err);
+  process.exit(1);
 }
-outro(colors.bold(colors.green("🎉 Done!")));

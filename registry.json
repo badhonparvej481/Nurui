@@ -1,13 +1,18 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "bytenexia",
   "homepage": "https://bytenexia.vercel.app",
   "items": [
     {
       "name": "star-button",
-      "dependencies": ["motion"],
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
-          "path": "./src/bytenexia/components/ts/button/star/StarButton.tsx"
+          "path": "./src/bytenexia/button/star/StarButton.tsx",
+          "type": "registry:component"
         }
       ]
     }
