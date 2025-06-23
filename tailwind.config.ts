@@ -5,11 +5,13 @@ import svgToDataUri from "mini-svg-data-uri";
 
 export default {
   darkMode: "class",
+  safelist: ["step"],
   content: [
     "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/bytenexia/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./mdx-components.tsx",
   ],
   theme: {
     extend: {

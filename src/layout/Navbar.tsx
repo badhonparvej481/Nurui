@@ -76,7 +76,7 @@ const navigation = [
   {
     id: 1,
     name: "component",
-    url: "/docs",
+    url: "/docs/components",
   },
   {
     id: 2,

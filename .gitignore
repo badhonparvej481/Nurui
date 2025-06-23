@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/src/bytenexia/node_modules
+/src/cli/node_modules
 /.pnp
 .pnp.*
 .yarn/*
