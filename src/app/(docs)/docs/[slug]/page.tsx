@@ -18,12 +18,13 @@ interface Frontmatter {
 }
 
 export async function generateMetadata({ params }: IParams): Promise<Metadata> {
+  const { slug } = await params;
   const filePath = path.join(
     process.cwd(),
     "src",
     "content",
     "docs",
-    `${params.slug}.mdx`,
+    `${slug}.mdx`,
   );
 
   const content = await fs.readFile(filePath, "utf-8");
@@ -57,12 +58,13 @@ export async function generateStaticParams() {
 }
 
 const Page = async ({ params }: IParams) => {
+  const { slug } = await params;
   const filePath = path.join(
     process.cwd(),
     "src",
     "content",
     "docs",
-    `${params.slug}.mdx`,
+    `${slug}.mdx`,
   );
   const rawMDX = await fs.readFile(filePath, "utf-8");
   const { content } = await compileMDX<Frontmatter>({

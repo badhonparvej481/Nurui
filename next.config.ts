@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
     ],
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      resourceQuery: /raw/, // *.tsx?raw
+      use: "raw-loader",
+    });
+    return config;
+  },
 };
 
 const withMDX = createMDX({
