@@ -4,7 +4,7 @@ import { MdOutlineModeEditOutline } from "react-icons/md";
 
 const ComponentsRightSidebar = () => {
   return (
-    <div className="fixed top-16 right-0 hidden md:block">
+    <div className="fixed top-16 right-0 hidden xl:block">
       <div className="w-72 min-h-screen border-l border-[var(--primary-color-1)] border-dashed p-4 space-y-3">
         <div className="flex flex-col gap-y-2">
           <h3 className="font-semibold pb-1">On this page</h3>
