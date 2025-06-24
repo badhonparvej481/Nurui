@@ -1,25 +1,25 @@
-import GetStartedButton from "@/bytenexia/button/get-started/GetStartedButton";
-import GoBackButton from "@/bytenexia/button/go-back/GoBackButton";
-import HoverShadowAnimationButton from "@/bytenexia/button/hover-shadow/HoverShadowButton";
-import UnapologeticButton from "@/bytenexia/button/unapologetic/UnapologeticButton";
-import NewButton from "@/bytenexia/button/new/NewButton";
-import PingPongAnimationButton from "@/bytenexia/button/ping-pong/PingPongButton";
-import PixelArtButton from "@/bytenexia/button/pixel/PixelButton";
-import { PulsatingButton } from "@/bytenexia/button/pulsating/PulsatingButton";
-import RoundedAnimationButton from "@/bytenexia/button/rounded/RoundedButton";
-import ShinyAnimationButton from "@/bytenexia/button/shiny/ShinyButton";
-import StatusButton from "@/bytenexia/button/status/StatusButton";
-import SwipeButton from "@/bytenexia/button/swiper/SwipeButton";
-import WorkButton from "@/bytenexia/button/work/WorkButton";
+import GetStartedButton from "@/bytenexia/button/GetStartedButton";
+import GoBackButton from "@/bytenexia/button/GoBackButton";
+import HoverShadowAnimationButton from "@/bytenexia/button/HoverShadowButton";
+import UnapologeticButton from "@/bytenexia/button/UnapologeticButton";
+import NewButton from "@/bytenexia/button/NewButton";
+import PingPongAnimationButton from "@/bytenexia/button/PingPongButton";
+import PixelArtButton from "@/bytenexia/button/PixelButton";
+import { PulsatingButton } from "@/bytenexia/button/PulsatingButton";
+import RoundedAnimationButton from "@/bytenexia/button/RoundedButton";
+import ShinyAnimationButton from "@/bytenexia/button/ShinyButton";
+import StatusButton from "@/bytenexia/button/StatusButton";
+import SwipeButton from "@/bytenexia/button/SwipeButton";
+import WorkButton from "@/bytenexia/button/WorkButton";
 import { Marquee } from "@/components/ui/marquee/Marquee";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import BorderMagicButton from "@/bytenexia/button/border-magic/BorderMagicButton";
-import { ColorChangingButton } from "@/bytenexia/button/color-changing/ColorChangingButton";
-import { SpotlightButton } from "@/bytenexia/button/spotlight/SpotlightButton";
-import BorderAnimationButton from "@/bytenexia/button/border-animation/BorderAnimationButton";
-import StarWarsButton from "@/bytenexia/button/star-wars/StarWarsButton";
-import GradientButton from "@/bytenexia/button/gradient/GradientButton";
+import BorderMagicButton from "@/bytenexia/button/BorderMagicButton";
+import { ColorChangingButton } from "@/bytenexia/button/ColorChangingButton";
+import { SpotlightButton } from "@/bytenexia/button/SpotlightButton";
+import BorderAnimationButton from "@/bytenexia/button/BorderAnimationButton";
+import StarWarsButton from "@/bytenexia/button/StarWarsButton";
+import GradientButton from "@/bytenexia/button/GradientButton";
 
 const ButtonsMarquee = () => {
   return (

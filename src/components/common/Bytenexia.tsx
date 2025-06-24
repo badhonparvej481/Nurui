@@ -1,23 +1,17 @@
-"use client";
-import { cn } from "@/utils/cn";
-import Link from "next/link";
-import nProgress from "nprogress";
-import React from "react";
 import { LuBotMessageSquare } from "react-icons/lu";
-type ClassType = { className?: string };
+import LinkWithProgress from "./LinkWithProgress";
+type ClassType = { textSize?: string };
 
-const Bytenexia = ({ className }: ClassType) => {
+const Bytenexia = ({ textSize }: ClassType) => {
   return (
-    <Link
+    <LinkWithProgress
       href="/"
-      className={cn(
-        `text-[var(--primary-color)] font-creepster text-3xl flex items-center`,
-        className,
-      )}
-      onClick={() => nProgress.start()}
+      className={`text-[var(--primary-color)] font-creepster ${
+        textSize || "text-3xl"
+      } flex items-center`}
     >
       <LuBotMessageSquare className="text-2xl rotate-180" /> Bytenexia
-    </Link>
+    </LinkWithProgress>
   );
 };
 

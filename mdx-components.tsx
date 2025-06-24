@@ -10,17 +10,52 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/common/Tabs";
+import Link from "next/link";
 
 export function getMDXComponents(
   components: MDXComponents = {},
 ): MDXComponents {
   return {
+    h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+      <h1
+        className={cn(
+          "text-3xl font-semibold pb-2 border-b border-[var(--primary-color-3)] text-[var(--primary-color)]",
+          className,
+        )}
+        {...props}
+      />
+    ),
+
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h2
         className={cn(
           "text-2xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
           className,
         )}
+        {...props}
+      />
+    ),
+
+    h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+      <h3
+        className={cn(
+          "text-xl font-semibold pt-10 pb-2 borderb border-[var(--primary-color-3)]",
+          className,
+        )}
+        {...props}
+      />
+    ),
+
+    h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+      <h6
+        className={cn("text-base font-semibold py-5", className)}
+        {...props}
+      />
+    ),
+
+    a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
+      <CustomLink
+        className={cn("font-medium underline underline-offset-4", className)}
         {...props}
       />
     ),
@@ -33,6 +68,16 @@ export function getMDXComponents(
         className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
         {...props}
       />
+    ),
+
+    ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
+      <ul className={cn("ml-6 list-disc", className)} {...props} />
+    ),
+    ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
+      <ol className={cn("ml-6 list-decimal", className)} {...props} />
+    ),
+    li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+      <li className={cn("mt-2", className)} {...props} />
     ),
 
     table: ({
@@ -150,7 +195,10 @@ export function getMDXComponents(
     ),
 
     Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
-      <h3 className={cn("font-heading tracking-tight", className)} {...props} />
+      <h3
+        className={cn("font-heading tracking-tight capitalize", className)}
+        {...props}
+      />
     ),
 
     Steps: ({ ...props }) => (
@@ -186,3 +234,29 @@ export function getMDXComponents(
     ...components,
   };
 }
+
+const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  const { href = "", children, ...rest } = props;
+
+  if (href.startsWith("/")) {
+    return (
+      <Link {...rest} href={href}>
+        {children}
+      </Link>
+    );
+  }
+
+  if (href.startsWith("#")) {
+    return (
+      <a {...rest} href={href}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <a target="_blank" rel="noopener noreferrer" {...rest} href={href}>
+      {children}
+    </a>
+  );
+};

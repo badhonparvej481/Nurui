@@ -11,7 +11,7 @@ import { TfiHelpAlt } from "react-icons/tfi";
 export default function VaulDrawer() {
   return (
     <Drawer.Root>
-      <Drawer.Trigger className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block lg:hidden">
+      <Drawer.Trigger className="bg-[var(--primary-color-3)] hover:bg-[var(--primary-color-2)] rounded p-0.5 block xl:hidden">
         <CgMenuRight className="text-[var(--primary-color)] text-2xl md:text-3xl" />
       </Drawer.Trigger>
 

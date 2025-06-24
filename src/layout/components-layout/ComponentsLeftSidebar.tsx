@@ -2,18 +2,17 @@
 import Bytenexia from "@/components/common/Bytenexia";
 import MenuItem from "@/components/common/MenuItem";
 import React from "react";
-import { LuBotMessageSquare } from "react-icons/lu";
-import { TfiHelpAlt } from "react-icons/tfi";
 import { useAppContext } from "@/context/AppContext";
-import { TbComponents, TbHandClick } from "react-icons/tb";
-import { GrInstallOption } from "react-icons/gr";
-import { AiOutlineFileSearch } from "react-icons/ai";
+import { LuBotMessageSquare } from "react-icons/lu";
+import Authentication from "@/components/common/DropDown";
+import GoPro from "@/components/ui/GoPro";
+import { navigation } from "@/registry/ComponentNavigation";
 
 const ComponentsLeftSidebar = () => {
   const { sideBar } = useAppContext();
 
   return (
-    <div className="fixed top-0 left-0 hidden md:block">
+    <div className="fixed top-0 left-0 hidden xl:block">
       <div
         className={`bg-[var(--purple-color)] border-r border-[var(--primary-color-1)] border-dashed min-h-screen flex flex-col justify-between pt-3 pb-6 ${
           sideBar ? "w-72" : "w-16 items-center"
@@ -22,7 +21,7 @@ const ComponentsLeftSidebar = () => {
         <div className="space-y-5">
           {sideBar ? (
             <div className="flex items-center justify-center gap-1">
-              <Bytenexia className="text-xl" />
+              <Bytenexia textSize="text-2xl" />
               <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem]">
                 Basic
               </p>
@@ -30,10 +29,16 @@ const ComponentsLeftSidebar = () => {
           ) : (
             <LuBotMessageSquare className="text-[var(--primary-color)] text-2xl rotate-180 w-fit mx-auto" />
           )}
+          {/* login and pro */}
+          <div className="space-y-2.5 w-[87%] mx-auto">
+            <GoPro sideBar={sideBar} />
+            <Authentication sideBar={sideBar} />
+          </div>
 
           <div className="text-sm px-2 space-y-1">
             {navigation?.slice(0, navigation?.length - 1).map((nav, index) => (
               <MenuItem
+                href={nav?.href}
                 key={nav?.title + index}
                 icon={nav.icon}
                 title={nav.title}
@@ -51,6 +56,7 @@ const ComponentsLeftSidebar = () => {
           </p>
           {navigation?.slice(navigation?.length - 1).map((nav, index) => (
             <MenuItem
+              href={nav.href}
               key={nav?.title + index}
               icon={nav.icon}
               title={nav.title}
@@ -66,27 +72,3 @@ const ComponentsLeftSidebar = () => {
 };
 
 export default ComponentsLeftSidebar;
-
-const navigation = [
-  {
-    icon: <AiOutlineFileSearch />,
-    title: "Introduction",
-  },
-  {
-    icon: <GrInstallOption />,
-    title: "Installation",
-  },
-  {
-    icon: <TbComponents />,
-    title: "Components",
-  },
-  {
-    icon: <TbHandClick />,
-    title: "Buttons",
-    submenu: [{ name: "overview", href: "/" }],
-  },
-  {
-    icon: <TfiHelpAlt />,
-    title: "Help",
-  },
-];
