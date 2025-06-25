@@ -4,12 +4,11 @@ import { MdOutlineMail, MdOutlinePhone } from "react-icons/md";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
-import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
 import Nurui from "@/components/common/Nurui";
-import nProgress from "nprogress";
 import RocketScrollToTop from "@/components/common/RocketScrollToTop";
+import LinkWithProgress from "@/components/common/LinkWithProgress";
 
 const Footer = () => {
   const pathName = usePathname();
@@ -73,8 +72,7 @@ const Footer = () => {
               <MdOutlinePhone className="flex-shrink-0" /> +8801722877040
             </a>
             <a className="flex gap-2.5 items-center cursor-pointer">
-              <MdOutlineMail className="flex-shrink-0" />{" "}
-              contact@Nurui.com
+              <MdOutlineMail className="flex-shrink-0" /> contact@Nurui.com
             </a>
           </nav>
         </div>
@@ -82,10 +80,9 @@ const Footer = () => {
         <div className="border-t border-[var(--border-color)] border-opacity-20 p-5 flex items-center justify-center lg:justify-between">
           <div className="hidden lg:flex flex-wrap items-center justify-between gap-4">
             {navigation.map((data, i) => (
-              <Link
+              <LinkWithProgress
                 key={data?.id + i}
                 href={data?.url}
-                onClick={() => nProgress.start()}
                 className={`${
                   navigation?.length === i + 1
                     ? ""
@@ -97,7 +94,7 @@ const Footer = () => {
                 }`}
               >
                 {data?.name}
-              </Link>
+              </LinkWithProgress>
             ))}
           </div>
           <p className="text-[--copy-right-color]">
@@ -120,7 +117,7 @@ const navigation = [
   {
     id: 2,
     name: "components",
-    url: "/components",
+    url: "/docs/gradient-button",
   },
   {
     id: 3,

@@ -4,9 +4,10 @@ import MenuItem from "@/components/common/MenuItem";
 import React from "react";
 import { useAppContext } from "@/context/AppContext";
 import { LuBotMessageSquare } from "react-icons/lu";
-import Authentication from "@/components/common/DropDown";
-import GoPro from "@/components/ui/GoPro";
+// import Authentication from "@/components/common/DropDown";
+// import GoPro from "@/components/ui/GoPro";
 import { navigation } from "@/registry/ComponentNavigation";
+import LinkWithProgress from "@/components/common/LinkWithProgress";
 
 const ComponentsLeftSidebar = () => {
   const { sideBar } = useAppContext();
@@ -27,13 +28,15 @@ const ComponentsLeftSidebar = () => {
               </p>
             </div>
           ) : (
-            <LuBotMessageSquare className="text-[var(--primary-color)] text-2xl rotate-180 w-fit mx-auto" />
+            <LinkWithProgress href="/">
+              <LuBotMessageSquare className="text-[var(--primary-color)] text-2xl rotate-180 w-fit mx-auto" />
+            </LinkWithProgress>
           )}
           {/* login and pro */}
-          <div className="space-y-2.5 w-[87%] mx-auto">
+          {/* <div className="space-y-2.5 w-[87%] mx-auto">
             <GoPro sideBar={sideBar} />
             <Authentication sideBar={sideBar} />
-          </div>
+          </div> */}
 
           <div className="text-sm px-2 space-y-1">
             {navigation?.slice(0, navigation?.length - 1).map((nav, index) => (

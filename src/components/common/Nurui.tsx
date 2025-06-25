@@ -2,7 +2,7 @@ import { LuBotMessageSquare } from "react-icons/lu";
 import LinkWithProgress from "./LinkWithProgress";
 type ClassType = { textSize?: string };
 
-const Bytenexia = ({ textSize }: ClassType) => {
+const Nurui = ({ textSize }: ClassType) => {
   return (
     <LinkWithProgress
       href="/"
@@ -15,4 +15,4 @@ const Bytenexia = ({ textSize }: ClassType) => {
   );
 };
 
-export default Bytenexia;
+export default Nurui;

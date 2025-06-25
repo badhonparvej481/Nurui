@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { FC } from "react";
+import LinkWithProgress from "./LinkWithProgress";
 interface IPros {
   titleColor?: string;
   title: string;
@@ -11,7 +11,7 @@ const BorderAnimationButton: FC<IPros> = ({
   navigation = "",
 }) => {
   return (
-    <Link
+    <LinkWithProgress
       href={navigation}
       className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-xl dark:rounded-lg p-[2px] dark:p-[1px] focus:outline-none"
     >
@@ -23,7 +23,7 @@ const BorderAnimationButton: FC<IPros> = ({
       >
         {title}
       </span>
-    </Link>
+    </LinkWithProgress>
   );
 };
 

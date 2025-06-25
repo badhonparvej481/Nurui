@@ -1,0 +1,69 @@
+---
+title: "border-animation-button"
+description: "A stylish border animation button component for modern UIs, built with accessibility and animation in mind."
+creator: Md Afsar Mahmud
+---
+
+<ComponentPreview componentName="borderAnimationButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli
+  dependencies={[
+    { label: "npm", command: "npm i clsx tailwind-merge" },
+    { label: "pnpm", command: "pnpm add clsx tailwind-merge" },
+    { label: "bun", command: "bun add clsx tailwind-merge" },
+    { label: "yarn", command: "yarn add clsx tailwind-merge" },
+  ]}
+/>
+
+<Step>Add util file</Step>
+
+`utils/cn.ts`
+
+<CodeBlock 
+code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`
+}/>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/border-animation-button.tsx`
+
+<CodeBlock
+  componentName="borderAnimationButton"
+  fileName="borderAnimationButton"
+/>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop   | Type     | Default | Description                               |
+| ------ | -------- | ------- | ----------------------------------------- |
+| `text` | `string` | `-`     | Text content displayed inside the button. |

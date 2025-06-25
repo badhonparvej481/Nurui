@@ -1,11 +1,11 @@
 import React from "react";
-import { Index } from "@/registry/componentsRegistry";
 import AnimatedTabs from "./AnimatedTabs";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa";
 import Preview from "./Preview";
 import ComponentPreviewIntro from "./ComponentPreviewIntro";
 import { CodeBlock } from "../ui/code-block/CodeBlock";
+import { Index } from "@/registry/componentsRegistry";
 
 interface ComponentPreviewProps {
   componentName: keyof typeof Index;
@@ -28,7 +28,7 @@ const ComponentPreview = ({ componentName }: ComponentPreviewProps) => {
       id: "Preview",
       icon: <IoEyeOutline />,
       label: "Preview",
-      content: <Preview component={<DemoComponent />} />,
+      content: <Preview component={DemoComponent} />,
     },
     {
       id: "Code",
