@@ -5,7 +5,7 @@ import nProgress from "nprogress";
 import React from "react";
 
 interface ILinkProgress {
-  className: string;
+  className?: string;
   children: React.ReactNode;
   href: string;
 }

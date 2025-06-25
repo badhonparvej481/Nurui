@@ -1,26 +1,25 @@
 import Gravity, { MatterBody } from "@/components/common/Gravity";
 import SectionIntro from "@/components/common/SectionIntro";
 import JavaScriptIcon from "@/components/icons/JavaScriptIcon";
-import BulmaIcon from "@/components/icons/BulmaIcon";
-import BootstrapIcon from "@/components/icons/BootstrapIcon";
 import TailwindIcon from "@/components/icons/TailwindIcon";
 import SassIcon from "@/components/icons/SassIcon";
 import HtmlIcon from "@/components/icons/HtmlIcon";
-import NustIcon from "@/components/icons/NustIcon";
-import SvelteIcon from "@/components/icons/SvelteIcon";
-import VueIcon from "@/components/icons/VueIcon";
 import NextJsIcon from "@/components/icons/NextJsIcon";
-import AngularIcon from "@/components/icons/AngularIcon";
 import TypescriptIcon from "@/components/icons/TypescriptIcon";
 import { CssIcon } from "@/components/icons/CssIcon";
 import ReactIcon from "@/components/icons/ReactIcon";
-import FramerIcon from "@/components/icons/FramerIcon";
+import GsapIcon from "@/components/icons/GsapIcon";
+import ZDogIcon from "@/components/icons/ZDogIcon";
+import ThreeJsIcon from "@/components/icons/ThreeJsIcon";
+import MotionIcon from "@/components/icons/MotionIcon";
+import AnimeJsIcon from "@/components/icons/AnimeJsIcon";
+import ReactSpringIcon from "@/components/icons/ReactSpringIcon";
 
 export default function AllComponentSection() {
   const icons = [
     {
       icon: (
-        <AngularIcon
+        <ZDogIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -74,7 +73,7 @@ export default function AllComponentSection() {
     },
     {
       icon: (
-        <BootstrapIcon
+        <ThreeJsIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -110,7 +109,7 @@ export default function AllComponentSection() {
     },
     {
       icon: (
-        <VueIcon
+        <MotionIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -119,7 +118,7 @@ export default function AllComponentSection() {
     },
     {
       icon: (
-        <NustIcon
+        <AnimeJsIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -128,7 +127,7 @@ export default function AllComponentSection() {
     },
     {
       icon: (
-        <BulmaIcon
+        <GsapIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}
@@ -137,16 +136,7 @@ export default function AllComponentSection() {
     },
     {
       icon: (
-        <FramerIcon
-          isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
-          reSize={true}
-        />
-      ),
-    },
-    {
-      icon: (
-        <SvelteIcon
+        <ReactSpringIcon
           isAnimation={false}
           className="rounded-full size-12 md:size-16 lg:size-auto"
           reSize={true}

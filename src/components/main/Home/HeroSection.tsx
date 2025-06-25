@@ -8,16 +8,10 @@ import HtmlIcon from "../../icons/HtmlIcon";
 import { CssIcon } from "../../icons/CssIcon";
 import TailwindIcon from "../../icons/TailwindIcon";
 import JavaScriptIcon from "../../icons/JavaScriptIcon";
-import BootstrapIcon from "../../icons/BootstrapIcon";
 import NextJsIcon from "../../icons/NextJsIcon";
 import TypescriptIcon from "../../icons/TypescriptIcon";
-import VueIcon from "../../icons/VueIcon";
-import SvelteIcon from "../../icons/SvelteIcon";
-import AngularIcon from "../../icons/AngularIcon";
 import SassIcon from "../../icons/SassIcon";
-import BulmaIcon from "../../icons/BulmaIcon";
 import ReactIcon from "../../icons/ReactIcon";
-import NustIcon from "../../icons/NustIcon";
 import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../ui/cool-mode/CollMode";
 import { GrOptimize } from "react-icons/gr";
@@ -28,6 +22,12 @@ import MetaIcon from "@/components/icons/MetaIcon";
 import NotionIcon from "@/components/icons/NotionIcon";
 import MailChimpIcon from "@/components/icons/MailChimpIcon";
 import LinearIcon from "@/components/icons/LinearIcon";
+import GsapIcon from "../../icons/GsapIcon";
+import ThreeJsIcon from "../../icons/ThreeJsIcon";
+import AnimeJsIcon from "../../icons/AnimeJsIcon";
+import MotionIcon from "../../icons/MotionIcon";
+import ReactSpringIcon from "../../icons/ReactSpringIcon";
+import ZDogIcon from "../../icons/ZDogIcon";
 
 const HeroSection = () => {
   return (
@@ -36,9 +36,9 @@ const HeroSection = () => {
         {/* left side icons */}
         <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation">
           <div className="flex flex-col justify-around relative right-4">
-            <AngularIcon className="relative left-6 icon-animation5" />
+            <ZDogIcon className="relative left-6 icon-animation5" />
             <SassIcon className="icon-animation6" />
-            <BulmaIcon className="relative left-6 icon-animation7" />
+            <GsapIcon className="relative left-6 icon-animation7" />
           </div>
           <div className="flex flex-col justify-center gap-12 relative left-3">
             <CssIcon className="icon-animation3" />
@@ -137,7 +137,7 @@ const HeroSection = () => {
         {/* right side icons */}
         <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation mr-8">
           <div className="flex flex-col justify-between">
-            <BootstrapIcon className="icon-animation8" />
+            <ThreeJsIcon className="icon-animation8" />
             <ReactIcon className="icon-animation9" />
           </div>
           <div className="flex flex-col justify-center gap-12 relative right-3">
@@ -145,9 +145,9 @@ const HeroSection = () => {
             <TypescriptIcon className="icon-animation11" />
           </div>
           <div className="flex flex-col justify-around relative right-2">
-            <VueIcon className="icon-animation12" />
-            <NustIcon className="icon-animation13 relative left-7" />
-            <SvelteIcon className="icon-animation14" />
+            <MotionIcon className="icon-animation12" />
+            <AnimeJsIcon className="icon-animation13 relative left-7" />
+            <ReactSpringIcon className="icon-animation14" />
           </div>
         </div>
       </section>

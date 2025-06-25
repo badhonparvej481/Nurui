@@ -1,14 +1,13 @@
 "use client";
-import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
 import Nurui from "@/components/common/Nurui";
-import nProgress from "nprogress";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import RoundedButton from "@/components/common/RoundedButton";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
+import LinkWithProgress from "@/components/common/LinkWithProgress";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -30,7 +29,7 @@ const Navbar = () => {
          border-[var(--border-color)] dark:border-white/15 rounded-full font-semibold"
         >
           {navigation.map((nav) => (
-            <Link
+            <LinkWithProgress
               className={
                 navigationActive(nav.url, pathName)
                   ? `navigation-active text-[--text-primary-color] bg-[var(--primary-color)] dark:bg-white/10 hover:dark:bg-[var(--glass-color-4)]`
@@ -38,10 +37,9 @@ const Navbar = () => {
               }
               key={nav.id}
               href={nav.url}
-              onClick={() => nProgress.start()}
             >
               {nav.name}
-            </Link>
+            </LinkWithProgress>
           ))}
         </div>
 

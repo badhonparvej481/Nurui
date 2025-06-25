@@ -1,6 +1,5 @@
 "use client";
-
-import Link from "next/link";
+import LinkWithProgress from "@/components/common/LinkWithProgress";
 
 export default function NotFound() {
   return (
@@ -16,7 +15,7 @@ export default function NotFound() {
           </p>
 
           <div className="group mt-6 flex w-full shrink-0 items-center gap-x-3 sm:w-auto">
-            <Link href="/">Take me home</Link>
+            <LinkWithProgress href="/">Take me home</LinkWithProgress>
           </div>
         </div>
       </div>

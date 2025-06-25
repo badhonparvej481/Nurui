@@ -1,14 +1,18 @@
 {
   "name": "nurui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add beautiful components with one command",
   "bin": {
-    "nurui": "./src/index.js"
+    "nurui": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "nurui-cli",
+    "nurui",
+    "add commponent by cli"
+  ],
   "files": [
     "dist"
   ],
@@ -19,9 +23,7 @@
     "@clack/prompts": "^0.11.0",
     "execa": "^9.6.0",
     "node-fetch": "^3.3.2",
-    "picocolors": "^1.1.1"
-  },
-  "devDependencies": {
+    "picocolors": "^1.1.1",
     "typescript": "^5.8.3"
   }
 }
