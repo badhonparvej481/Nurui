@@ -25,22 +25,22 @@ const commands = [
   {
     label: "npm",
     icon: <NpmIcon />,
-    code: `npx bytenexia add`,
+    code: `npx nurui add`,
   },
   {
     label: "pnpm",
     icon: <PnpmIcon />,
-    code: `bunx bytenexia add`,
+    code: `bunx nurui add`,
   },
   {
     label: "bun",
     icon: <BunIcon />,
-    code: `yarn dlx bytenexia add`,
+    code: `yarn dlx nurui add`,
   },
   {
     label: "yarn",
     icon: <YarnIcon />,
-    code: `pnpm dlx bytenexia add`,
+    code: `pnpm dlx nurui add`,
   },
 ];
 

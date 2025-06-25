@@ -7,13 +7,13 @@ import { execa } from "execa";
 import fetch from "node-fetch";
 import ts from "typescript";
 
-const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Bytenexia/dev/registry.json`;
-const basePath = `https://raw.githubusercontent.com/Mdafsarx/Bytenexia`;
+const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry.json`;
+const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui`;
 
 // CLI args
 const [command, componentName] = process.argv.slice(2);
 
-intro(colors.bold("Welcome to Bytenexia CLI"));
+intro(colors.bold("Welcome to Nurui CLI"));
 
 if (command === "list") {
   const s = spinner();
@@ -33,11 +33,11 @@ if (command === "list") {
   }
 }
 if (command !== "add" || !componentName) {
-  cancel(colors.red("Usage: npx bytenexia add component-name"));
+  cancel(colors.red("Usage: npx nurui add component-name"));
   process.exit(0);
 }
 
-let language = await select({
+const language = await select({
   message: "Select the language of the component:",
   options: [
     { label: "TypeScript (.tsx)", value: "ts" },
@@ -107,10 +107,34 @@ try {
     process.exit(1);
   }
 
+  const cnContent = {
+    ts: `import { ClassValue, clsx } from "clsx";
+    import { twMerge } from "tailwind-merge";
+
+    export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
+    }`,
+    js: `import { clsx } from "clsx";
+    import { twMerge } from "tailwind-merge";
+
+    export function cn(...inputs) {
+    return twMerge(clsx(inputs));
+    }`,
+  };
+
+  const utilsPath = path.join(process.cwd(), "utils");
+  const cnPath = path.join(utilsPath, `cn.${language === "js" ? "js" : "ts"}`);
+
+  if (!fs.existsSync(cnPath)) {
+    await fs.promises.mkdir(utilsPath, { recursive: true });
+    await fs.promises.writeFile(cnPath, cnContent[language], "utf8");
+    console.log(colors.green(`🛠️ Created utils/cn.${language}`));
+  }
+
   const destPath = path.join(
     process.cwd(),
     "components",
-    "bytenexia",
+    "nurui",
     componentName.toLowerCase(),
   );
 

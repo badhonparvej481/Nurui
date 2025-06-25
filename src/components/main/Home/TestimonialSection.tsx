@@ -17,7 +17,7 @@ export default function TestimonialSection() {
           <span className="text-[var(--primary-color)]">People</span>
         </h1>
         <p className="text-balance text-lg">
-          Here&apos;s what some of our users have to say about Bytenexia UI.
+          Here&apos;s what some of our users have to say about nurui UI.
           Designing became faster, smoother, and way more enjoyable. From
           startups to scaleups, developers trust our components daily.
         </p>

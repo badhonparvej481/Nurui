@@ -1,5 +1,5 @@
 import { TfiHelpAlt } from "react-icons/tfi";
-import { TbComponents, TbHandClick } from "react-icons/tb";
+import { TbHandClick } from "react-icons/tb";
 import { GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
 
@@ -16,11 +16,11 @@ export const navigation = [
     title: "Installation",
     href: `${baseUrl}/installation`,
   },
-  {
-    icon: <TbComponents />,
-    title: "Components",
-    href: `${baseUrl}/components`,
-  },
+  // {
+  //   icon: <TbComponents />,
+  //   title: "Components",
+  //   href: `${baseUrl}/components`,
+  // },
   {
     icon: <TbHandClick />,
     title: "Buttons",

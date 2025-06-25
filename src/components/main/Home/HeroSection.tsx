@@ -93,7 +93,10 @@ const HeroSection = () => {
                 ],
               }}
             >
-              <ShadowAnimationButton title="Get Started" />
+              <ShadowAnimationButton
+                href={"/docs/gradient-button"}
+                title="Get Started"
+              />
             </CollMode>
 
             <p className="flex items-center gap-1 font-bold">

@@ -1,17 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "bytenexia",
-  "homepage": "https://bytenexia.vercel.app",
+  "name": "nurui",
+  "homepage": "https://nurui.vercel.app",
   "items": [
     {
-      "name": "star-button",
+      "name": "gradient-button",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/bytenexia/button/star/StarButton.tsx",
+          "path": "./src/components/nurui/gradient-button.tsx",
           "type": "registry:component"
         }
       ]

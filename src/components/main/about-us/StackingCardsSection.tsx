@@ -22,13 +22,13 @@ export default function StackingCardsSection() {
       <SectionIntro
         title={{
           highLiteWords: "Stands Out",
-          normalWords: "Why Bytenexia",
+          normalWords: "Why Nurui",
           highlightColor: "text-[var(--secondary-color)]",
         }}
         sectionGap="pb-2.5 xl:pb-3"
-        description="Bytenexia delivers elegant, modular UI components built for speed and scalability.
-        Bytenexia focuses on minimalist design, intuitive use, and developer experience.
-        Bytenexia is powered by an open-source community with a future-ready vision."
+        description="nurui delivers elegant, modular UI components built for speed and scalability.
+        nurui focuses on minimalist design, intuitive use, and developer experience.
+        nurui is powered by an open-source community with a future-ready vision."
       />
       <StackingCards
         totalCards={cards.length}
@@ -79,7 +79,7 @@ const cards = [
   {
     title: "Design Philosophy",
     description:
-      "Bytenexia blends minimalism with functionality—each component is crafted with care, focusing on clean aesthetics and purposeful interactions.",
+      "nurui blends minimalism with functionality—each component is crafted with care, focusing on clean aesthetics and purposeful interactions.",
     icon: designAnimationData,
   },
   {
@@ -91,7 +91,7 @@ const cards = [
   {
     title: "Open Source",
     description:
-      "Bytenexia is built with and for the community. We're open-source, transparent, and always eager to learn and grow with developers worldwide.",
+      "nurui is built with and for the community. We're open-source, transparent, and always eager to learn and grow with developers worldwide.",
     icon: communityAnimationData,
   },
   {

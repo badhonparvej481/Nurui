@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
-import Bytenexia from "@/components/common/Bytenexia";
+import Nurui from "@/components/common/Nurui";
 import nProgress from "nprogress";
 import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import RoundedButton from "@/components/common/RoundedButton";
@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-24">
-        <Bytenexia textSize="text-2xl lg:text-3xl" />
+        <Nurui textSize="text-2xl lg:text-3xl" />
 
         <div
           className="hidden lg:flex items-center  py-2.5 px-3.5 bg-[var(--glass-color)] dark:bg-[white]/5 border 

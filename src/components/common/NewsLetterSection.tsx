@@ -26,7 +26,7 @@ export default NewsLetterSection;
 const newsLetter = {
   title: "Subscribe to our newsletter",
   description:
-    "Join our newsletter for regular updates from Bytenexia UI. No spam ever.",
+    "Join our newsletter for regular updates from nurui UI. No spam ever.",
   subscribe_button: {
     label: "Subscribe",
     action: "subscribe",

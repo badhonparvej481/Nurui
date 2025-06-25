@@ -1,5 +1,5 @@
 import React from "react";
-import { Index } from "@/registry";
+import { Index } from "@/registry/componentsRegistry";
 import AnimatedTabs from "./AnimatedTabs";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa";
@@ -8,17 +8,17 @@ import ComponentPreviewIntro from "./ComponentPreviewIntro";
 import { CodeBlock } from "../ui/code-block/CodeBlock";
 
 interface ComponentPreviewProps {
-  name: keyof typeof Index;
+  componentName: keyof typeof Index;
 }
 
-const ComponentPreview = ({ name }: ComponentPreviewProps) => {
-  const DemoComponent = Index[name]?.component;
-  const sourceCode = Index[name]?.code ?? "";
+const ComponentPreview = ({ componentName }: ComponentPreviewProps) => {
+  const DemoComponent = Index[componentName]?.component;
+  const sourceCode = Index[componentName]?.demoCode ?? "";
 
   if (!DemoComponent) {
     return (
       <p className="text-sm text-red-500">
-        Component {name} not found in registry.
+        Component {componentName} not found in registry.
       </p>
     );
   }
