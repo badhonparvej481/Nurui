@@ -27,8 +27,8 @@ const MenuItem: React.FC<IProps> = ({
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const { sideBar } = useAppContext();
   const activeNavigation = navigationActive(href, pathName);
-  const activeSubMenuHeading = navigationActive(submenu?.[0]?.href, pathName);
-
+  const singleSubmenu = submenu?.find((sub) => sub?.href === pathName);
+  const activeSubMenuHeading = navigationActive(singleSubmenu?.href, pathName);
 
   const iconWrapperClasses =
     "text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded";

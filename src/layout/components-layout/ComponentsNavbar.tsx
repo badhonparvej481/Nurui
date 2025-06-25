@@ -1,12 +1,12 @@
 "use client";
 import RoundedButton from "@/components/common/RoundedButton";
-import ThemeSwitcher from "@/components/common/ThemeSwitcher";
+// import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 import { useAppContext } from "@/context/AppContext";
 import React from "react";
-import { FaDiscord, FaGithub } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
-import { IoIosSearch } from "react-icons/io";
+// import { IoIosSearch } from "react-icons/io";
 
 const ComponentsNavbar = () => {
   const { sideBar, setSideBar } = useAppContext();
@@ -38,20 +38,28 @@ const ComponentsNavbar = () => {
         </>
         <VaulDrawer />
         <div className="flex items-center md:gap-5 *:text-2xl">
-          <RoundedButton
+          {/* <RoundedButton
             icon={
               <IoIosSearch className="text-xl text-[var(--primary-color)]" />
             }
+          /> */}
+          <RoundedButton
+            href="https://discord.gg/XzAh8V3S"
+            icon={
+              <FaDiscord className="text-2xl text-[var(--primary-color)]" />
+            }
           />
           <RoundedButton
-            href="https://github.com/Mdafsarx?tab=repositories"
-            icon={<FaDiscord className="text-xl text-[var(--primary-color)]" />}
+            href="https://github.com/Mdafsarx/Nurui"
+            icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
           />
           <RoundedButton
-            href="https://github.com/Mdafsarx?tab=repositories"
-            icon={<FaGithub className="text-xl text-[var(--primary-color)]" />}
+            href="https://x.com/md_afsar_mahmud"
+            icon={
+              <FaXTwitter className="text-2xl text-[var(--primary-color)]" />
+            }
           />
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
         </div>
       </nav>
     </div>

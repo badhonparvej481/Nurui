@@ -1,6 +1,6 @@
 import React from "react";
 
-const BorderAnimationButton = () => {
+const OutLineAnimationButton = () => {
   return (
     <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
       <span className="absolute inset-0 overflow-hidden rounded-full">
@@ -29,4 +29,4 @@ const BorderAnimationButton = () => {
   );
 };
 
-export default BorderAnimationButton;
+export default OutLineAnimationButton;

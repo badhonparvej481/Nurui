@@ -52,7 +52,8 @@ const HeroSection = () => {
         {/* content */}
         <div className="flex flex-col items-center gap-y-4 md:gap-y-6 lg::gap-y-7 text-center text-[var(--text-primary-color)]">
           <AnimatedGradientText
-            title={"Introducing Cool Button"}
+            href="/docs/gradient-button"
+            title={"Introducing Gradient Button"}
             textGradient="bg-[var(--black-color)] dark:bg-gradient-to-r from-[var(--secondary-color)] via-[var(--primary-color)] to-[var(--secondary-color)]"
             borderGradient="bg-gradient-to-r from-[#80EEB4] dark:from-[#80EEB4]/60 via-[#3CA2FA] dark:via-[#3CA2FA]/100 to-[#80EEB4] dark:to-[#80EEB4]/60"
           />
@@ -63,8 +64,8 @@ const HeroSection = () => {
           </h1>
           {/* description */}
           <p className="lg:text-xl max-w-2xl text-[var(--opacity-text-color)] text-balance">
-            The ultimate UI library for Angular, React, Next.js, Vue, and more.
-            Build responsive interfaces with TypeScript and JavaScript.
+            React and Next.js based UI library with CLI scaffolding, TS-to-JS conversion,
+            and v0 live previews.
           </p>
           {/* features */}
           <div className="bg-[var(--glass-color)] shadow-lg dark:shadow-none px-6 py-3 rounded-2xl hidden md:flex items-center gap-4 capitalize">
@@ -94,7 +95,7 @@ const HeroSection = () => {
               }}
             >
               <ShadowAnimationButton
-                href={"/docs/gradient-button"}
+                href={"/docs/installation"}
                 title="Get Started"
               />
             </CollMode>
@@ -113,9 +114,9 @@ const HeroSection = () => {
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
                   Trusted by{" "}
                   <span className="text-[var(--text-primary-color)]">
-                    1000+
+                    10+
                   </span>{" "}
-                  developer
+                  developers
                 </p>
               </div>
             </div>
@@ -177,14 +178,14 @@ const people = [
     name: "Jane Smith",
     designation: "Data Scientist",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 4,
     name: "Emily Davis",
     designation: "UX Designer",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 5,

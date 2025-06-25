@@ -117,7 +117,7 @@ const navigation = [
   {
     id: 2,
     name: "components",
-    url: "/components",
+    url: "/docs/gradient-button",
   },
   {
     id: 3,

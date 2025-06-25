@@ -65,7 +65,7 @@ const data = [
   {
     featureName: "Tech Stack Agnostic",
     featureItems: [
-      "React, Angular, Next.js and more.",
+      "React, Next.js.",
       "JS and TS support",
       "Works anywhere",
     ],

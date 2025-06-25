@@ -6,7 +6,6 @@ import NewButton from "@/components/nurui/NewButton";
 import PingPongAnimationButton from "@/components/nurui/PingPongButton";
 import PixelArtButton from "@/components/nurui/PixelButton";
 import { PulsatingButton } from "@/components/nurui/PulsatingButton";
-import RoundedAnimationButton from "@/components/nurui/RoundedButton";
 import ShinyAnimationButton from "@/components/nurui/ShinyButton";
 import StatusButton from "@/components/nurui/StatusButton";
 import SwipeButton from "@/components/nurui/SwipeButton";
@@ -17,19 +16,24 @@ import { FaArrowRight } from "react-icons/fa";
 import BorderMagicButton from "@/components/nurui/BorderMagicButton";
 import { ColorChangingButton } from "@/components/nurui/ColorChangingButton";
 import { SpotlightButton } from "@/components/nurui/SpotlightButton";
-import BorderAnimationButton from "@/components/nurui/BorderAnimationButton";
 import StarWarsButton from "@/components/nurui/StarWarsButton";
 import GradientButton from "@/components/nurui/gradient-button";
+import LinkWithProgress from "@/components/common/LinkWithProgress";
+import OutLineAnimationButton from "@/components/nurui/outline-animation-button";
+import BorderAnimationButton from "@/components/nurui/border-animation-button";
 
 const ButtonsMarquee = () => {
   return (
     <div className="border-y border-[var(--secondary-color)]">
-      <div className="flex items-center justify-between bg-[var(--glass-color-2)] py-3.5 px-7">
+      <LinkWithProgress
+        href="/docs/gradient-button"
+        className="flex items-center justify-between bg-[var(--glass-color-2)] py-3.5 px-7"
+      >
         <p className="font-semibold">Buttons</p>
         <button className="flex items-center gap-2 hover:text-[var(--primary-color)] hover:underline">
           View <FaArrowRight />
         </button>
-      </div>
+      </LinkWithProgress>
 
       <div className="py-4 space-y-2">
         <Marquee
@@ -43,10 +47,10 @@ const ButtonsMarquee = () => {
           <WorkButton />
           <GradientButton />
           <SwipeButton />
-          <BorderAnimationButton />
+          <OutLineAnimationButton />
           <PixelArtButton />
           <NewButton />
-          <RoundedAnimationButton />
+          <BorderAnimationButton title="Contact me" />
         </Marquee>
         <Marquee
           itemsCenter="items-center"

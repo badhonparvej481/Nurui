@@ -61,33 +61,33 @@ const faqsData = [
     questions: [
       {
         number: 1,
-        question: "What is this UI component library?",
+        question: "What is NurUI?",
         answer:
-          "It's a collection of pre-built, customizable UI components for React, Next.js, Vue, and more — all in one place.",
+          "NurUI is a modern, developer-focused UI component library for React and Next.js. It provides reusable, customizable components designed to speed up your development workflow.",
       },
       {
         number: 2,
-        question: "How do I install the library?",
+        question: "How do I install NurUI?",
         answer:
-          "You can install it via npm or yarn. Just run `npm install your-ui-library` in your project directory.",
+          "You can install components directly using our CLI with `npx nurui add <component-name>`. This will generate the component in your project folder.",
       },
       {
         number: 3,
         question: "Do I need to configure anything after installation?",
         answer:
-          "Basic configuration like theme setup or provider wrappers may be required depending on the framework you're using.",
+          "Minimal setup may be required, such as Tailwind configuration or importing global styles. Check the documentation for exact steps.",
       },
       {
         number: 4,
-        question: "Is there a free version available?",
+        question: "Is NurUI free to use?",
         answer:
-          "Yes, our core components are free to use. Premium components and templates are available in the pro version.",
+          "Yes, all core components of NurUI are completely free and open-source. A Pro version with additional templates and tools is planned.",
       },
       {
         number: 5,
-        question: "What frameworks are supported?",
+        question: "Which frameworks are supported?",
         answer:
-          "Currently, we support React, Next.js, Vue, and Angular. More framework support is coming soon.",
+          "NurUI is optimized for React and Next.js. Support for additional frameworks is under consideration.",
       },
     ],
   },
@@ -97,33 +97,33 @@ const faqsData = [
     questions: [
       {
         number: 1,
-        question: "Can I use this library with Tailwind CSS?",
+        question: "Can I use NurUI with Tailwind CSS?",
         answer:
-          "Yes, our components are Tailwind-compatible and work seamlessly in any Tailwind-based project.",
+          "Yes. NurUI is built to work perfectly with Tailwind CSS. All components use utility-first classes for easy customization.",
       },
       {
         number: 2,
-        question: "Can I use it with a design system like Figma?",
+        question: "Is NurUI compatible with design tools like Figma?",
         answer:
-          "Absolutely. We provide Figma kits for design-to-development consistency.",
+          "Figma kits are in development to help bridge the gap between design and code. Stay tuned for updates.",
       },
       {
         number: 3,
-        question: "Is it compatible with TypeScript?",
+        question: "Does NurUI support TypeScript?",
         answer:
-          "Yes, all components are fully typed with TypeScript support for autocompletion and type safety.",
+          "Yes. NurUI components are fully typed and provide excellent support for TypeScript with type safety and autocomplete.",
       },
       {
         number: 4,
-        question: "How do I customize the components?",
+        question: "How customizable are the components?",
         answer:
-          "You can override styles using Tailwind utility classes, props, or extend the components as needed.",
+          "NurUI components are fully customizable. You can use props, Tailwind utility classes, or directly modify the generated component code.",
       },
       {
         number: 5,
-        question: "Can I use this with server-side rendering?",
+        question: "Can I use NurUI with server-side rendering?",
         answer:
-          "Yes, the library is optimized for SSR and works smoothly with Next.js and similar frameworks.",
+          "Absolutely. NurUI is SSR-friendly and integrates smoothly with frameworks like Next.js.",
       },
     ],
   },
@@ -133,33 +133,33 @@ const faqsData = [
     questions: [
       {
         number: 1,
-        question: "What types of components are included?",
+        question: "What components are available in NurUI?",
         answer:
-          "We offer a wide range of components including buttons, modals, tabs, accordions, forms, and more.",
+          "NurUI includes a wide range of components such as buttons, modals, cards, inputs, tabs, accordions, and animation elements — with more added regularly.",
       },
       {
         number: 2,
-        question: "Are the components responsive?",
+        question: "Are components mobile-friendly?",
         answer:
-          "Yes, all components are mobile-first and responsive out of the box.",
+          "Yes, every component in NurUI is responsive by default and follows a mobile-first approach.",
       },
       {
         number: 3,
         question: "Can I animate components?",
         answer:
-          "Yes, we provide built-in animation support using libraries like Framer Motion.",
+          "Yes. Many components include animations out of the box, and NurUI supports integration with libraries like Framer Motion for advanced animation needs.",
       },
       {
         number: 4,
-        question: "Can I create my own components?",
+        question: "Can I create or extend custom components?",
         answer:
-          "Yes, our library is flexible enough to let you build and extend your own components using the same design tokens.",
+          "Definitely. NurUI encourages you to extend and create your own components using our base structure and design tokens.",
       },
       {
         number: 5,
-        question: "Do you provide accessibility support?",
+        question: "Is accessibility supported?",
         answer:
-          "Absolutely. All components follow best practices for accessibility (ARIA, keyboard nav, etc.).",
+          "Yes. NurUI follows accessibility best practices, including ARIA roles and keyboard navigation where appropriate.",
       },
     ],
   },
@@ -169,69 +169,69 @@ const faqsData = [
     questions: [
       {
         number: 1,
-        question: "Where can I find documentation?",
+        question: "Where can I find NurUI documentation?",
         answer:
-          "You can access full documentation on our official website with examples and code snippets.",
+          "The full documentation, including setup guides and examples, is available on the NurUI website.",
       },
       {
         number: 2,
-        question: "Do you offer community or premium support?",
+        question: "Is there support available?",
         answer:
-          "Yes, we offer community support on Discord and premium support for Pro users.",
+          "Yes. You can get community support on GitHub and Discord. Premium support will be available with NurUI Pro.",
       },
       {
         number: 3,
-        question: "Is there a changelog or update history?",
+        question: "Do you maintain a changelog?",
         answer:
-          "Yes, we maintain a detailed changelog with every release in our GitHub repository.",
+          "Yes. Every update is tracked in a public changelog available on GitHub.",
       },
       {
         number: 4,
-        question: "How can I contribute to the library?",
+        question: "Can I contribute to NurUI?",
         answer:
-          "You can fork our GitHub repo and open a pull request for fixes, features, or documentation improvements.",
+          "Yes, contributions are welcome! Fork the repo, make your changes, and open a pull request.",
       },
       {
         number: 5,
-        question: "Do you have code examples or templates?",
+        question: "Are there starter templates or previews?",
         answer:
-          "Yes, we provide starter templates and live playgrounds to speed up development.",
+          "Yes. NurUI includes starter templates and v0 live previews to help you quickly build and test UI ideas.",
       },
     ],
   },
   {
-    category: "Licensing & Plans",
+    category: "CLI & Licensing",
     id: 5,
     questions: [
       {
         number: 1,
-        question: "Is the library open-source?",
+        question: "Does NurUI have a CLI?",
         answer:
-          "Yes, the core of the library is open-source and MIT-licensed. Additional features are available in the Pro plan.",
+          "Yes! NurUI comes with a powerful CLI. You can scaffold components into your project with commands like `npx nurui add button`.",
       },
       {
         number: 2,
-        question: "What’s included in the Pro plan?",
+        question: "Does the CLI support TS to JS conversion?",
         answer:
-          "Premium components, templates, priority support, and Figma kits are included in the Pro plan.",
+          "Yes. The CLI detects your project type and generates components in either TypeScript or JavaScript based on your setup.",
       },
       {
         number: 3,
-        question: "Can I use this library in commercial projects?",
+        question: "Is NurUI open-source?",
         answer:
-          "Yes, both free and Pro versions can be used in commercial and client projects.",
+          "Yes. NurUI is open-source and MIT-licensed, which means you can use it freely in personal and commercial projects.",
       },
       {
         number: 4,
-        question: "Is there a lifetime license available?",
+        question: "Will there be a Pro version?",
         answer:
-          "Yes, we offer a one-time payment option for lifetime access to the Pro plan.",
+          "Yes. A Pro version with premium templates, animations, and design resources is planned for the near future.",
       },
       {
         number: 5,
-        question: "Do you offer team or enterprise licenses?",
+        question: "Can I use NurUI in client and commercial projects?",
         answer:
-          "Yes, we have flexible licensing options for teams and enterprise needs. Contact us for custom plans.",
+          "Yes, you can use both the free and Pro versions of NurUI in client, SaaS, and commercial applications.",
       },
     ],
   },

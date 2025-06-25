@@ -8,7 +8,7 @@ const ComponentPreviewIntro = () => {
 
   return (
     <h2 className="text-4xl font-bold pb-4 capitalize">
-      {name[name.length - 1]}
+      {name[name.length - 1].split("-").join(" ")}
     </h2>
   );
 };

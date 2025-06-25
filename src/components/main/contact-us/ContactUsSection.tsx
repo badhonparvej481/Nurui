@@ -1,5 +1,4 @@
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
-import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import ShinyInput from "@/components/common/ShinyInput";
 import ShinyTextArea from "@/components/common/ShinyTextArea";
@@ -103,7 +102,7 @@ export default ContactUsSection;
 const getInTouch = {
   contribute: {
     description: "Want to help us improve the UI library?",
-    link: "https://github.com/your-org/your-ui-library",
+    link: "https://github.com/Mdafsarx/Nurui",
   },
   chat_to_us: {
     description: "We’d love to hear your feedback and ideas.",
@@ -112,8 +111,8 @@ const getInTouch = {
   social_media: {
     platforms: [
       <FaFacebook key="facebook" className="text-2xl text-[#1877F2]" />,
-      <BsInstagram key="instagram" className="text-2xl text-[#FE0173]" />,
-      <BsYoutube key="youtube" className="text-2xl text-[#FF0033]" />,
+      // <BsInstagram key="instagram" className="text-2xl text-[#FE0173]" />,
+      // <BsYoutube key="youtube" className="text-2xl text-[#FF0033]" />,
       <FaXTwitter
         key="twitter"
         className="text-2xl text-[var(--black-color)] dark:text-[var(--white-color)]"

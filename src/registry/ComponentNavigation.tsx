@@ -24,12 +24,15 @@ export const navigation = [
   {
     icon: <TbHandClick />,
     title: "Buttons",
-    submenu: [{ name: "Gradient", href: `${baseUrl}/gradient-button` }],
+    submenu: [
+      { name: "Gradient", href: `${baseUrl}/gradient-button` },
+      { name: "Border Animation", href: `${baseUrl}/border-animation-button` },
+    ],
   },
   // last item
   {
     icon: <TfiHelpAlt />,
     title: "Help",
-    href: `${baseUrl}/help`,
+    href: `/contact-us`,
   },
 ];

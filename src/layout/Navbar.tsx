@@ -2,12 +2,13 @@
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
 import Nurui from "@/components/common/Nurui";
-import ThemeSwitcher from "@/components/common/ThemeSwitcher";
+// import ThemeSwitcher from "@/components/common/ThemeSwitcher";s
 import RoundedButton from "@/components/common/RoundedButton";
 import { FaDiscord, FaGithub } from "react-icons/fa";
-import { IoIosSearch } from "react-icons/io";
+// import { IoIosSearch } from "react-icons/io";
 import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -44,22 +45,26 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-5">
-          <RoundedButton
+          {/* <RoundedButton
             icon={
               <IoIosSearch className="text-2xl text-[var(--primary-color)]" />
             }
-          />
+          /> */}
           <RoundedButton
-            href="https://github.com/Mdafsarx?tab=repositories"
+            href="https://discord.gg/XzAh8V3S"
             icon={
               <FaDiscord className="text-2xl text-[var(--primary-color)]" />
             }
           />
           <RoundedButton
-            href="https://github.com/Mdafsarx?tab=repositories"
+            href="https://github.com/Mdafsarx/Nurui"
             icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
           />
-          <ThemeSwitcher />
+          <RoundedButton
+            href="https://x.com/md_afsar_mahmud"
+            icon={<FaXTwitter className="text-2xl text-[var(--primary-color)]" />}
+          />
+          {/* <ThemeSwitcher /> */}
           {/* <BorderAnimationButton title="sing in" navigation="/auth/sing-in" /> */}
         </div>
         <VaulDrawer />
@@ -74,7 +79,7 @@ const navigation = [
   {
     id: 1,
     name: "component",
-    url: "/docs/components",
+    url: "/docs/gradient-button",
   },
   {
     id: 2,
