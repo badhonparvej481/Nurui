@@ -5,8 +5,7 @@ import fs from "fs";
 import path from "path";
 import { execa } from "execa";
 import fetch from "node-fetch";
-import ts from "typescript";
-
+import { convertTsxToJsx } from "../utils/convertTsxToJsx";
 const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry.json`;
 const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev`;
 
@@ -45,19 +44,6 @@ const language = await select({
   ],
 });
 
-function convertTsxToJsx(code) {
-  const output = ts.transpileModule(code, {
-    compilerOptions: {
-      jsx: ts.JsxEmit.Preserve,
-      target: ts.ScriptTarget.ESNext,
-      module: ts.ModuleKind.ESNext,
-      allowJs: true,
-    },
-    fileName: "component.tsx",
-  });
-  return output.outputText;
-}
-
 async function fetchRegistry() {
   const res = await fetch(registryPath);
   if (!res.ok) throw new Error("Failed to fetch registry.json");
@@ -74,7 +60,7 @@ async function downloadFileFromGitHub(filePath, localPath) {
   const targetPath = path.join(localPath, fileName);
 
   if (language === "js" && fileName.endsWith(".tsx")) {
-    const jsx = convertTsxToJsx(content);
+    const jsx = await convertTsxToJsx(content);
     const newPath = targetPath.replace(/\.tsx$/, ".jsx");
     await fs.promises.mkdir(path.dirname(newPath), { recursive: true });
     await fs.promises.writeFile(newPath, jsx, "utf8");

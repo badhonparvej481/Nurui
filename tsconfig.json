@@ -31,6 +31,6 @@
     "src/cli/components/js/cursor/blink-cursor/BlinkButton.jsx",
     "next.config.ts",
     "src/app/(docs)/docs/[slug]/page.tsx"
-  ],
+, "src/cli/utils/convertTsxToJsx.js"  ],
   "exclude": ["node_modules"]
 }

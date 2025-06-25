@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { RxCopy } from "react-icons/rx";
@@ -8,6 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { FaJsSquare } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Index } from "@/registry/componentsRegistry";
+import { convertTsxToJsx } from "@/utils/convertTsxToJsx";
 
 type CodeBlockProps = {
   language?: string;
@@ -24,16 +25,19 @@ export const CodeBlock = ({
 }: CodeBlockProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("TypeScript (.tsx)");
+  const [sourceCode, setSourceCode] = useState(code);
   const [copied, setCopied] = React.useState(false);
   const selectedLang = languages.find((lang) => lang.name === selectedLanguage);
 
-  let sourceCode = code;
-  if (!code && componentName && fileName) {
-    const matched = Index[componentName]?.othersCode?.find(
-      (otherCode) => otherCode.fileName === fileName,
-    );
-    sourceCode = matched?.code || Index[componentName]?.demoCode || "";
-  }
+  useEffect(() => {
+    if (!code && componentName && fileName) {
+      const matched = Index[componentName]?.othersCode?.find(
+        (otherCode) => otherCode.fileName === fileName,
+      );
+      const content = matched?.code || Index[componentName]?.demoCode || "";
+      setSourceCode(content);
+    }
+  }, [code, componentName, fileName]);
 
   const copyToClipboard = async () => {
     if (sourceCode) {
@@ -43,9 +47,25 @@ export const CodeBlock = ({
     }
   };
 
-  const handleSelect = (languageName: string) => {
+  const handleSelect = async (languageName: string) => {
     setSelectedLanguage(languageName);
     setIsOpen(false);
+
+    if (languageName === "JavaScript (.jsx)" && sourceCode) {
+      const jsxCode = await convertTsxToJsx(sourceCode);
+      setSourceCode(jsxCode);
+    } else {
+      // Reload original TS code
+      if (code) {
+        setSourceCode(code);
+      } else if (componentName && fileName) {
+        const matched = Index[componentName]?.othersCode?.find(
+          (otherCode) => otherCode.fileName === fileName,
+        );
+        const content = matched?.code || Index[componentName]?.demoCode || "";
+        setSourceCode(content);
+      }
+    }
   };
 
   return (
@@ -105,7 +125,8 @@ export const CodeBlock = ({
           background: "transparent",
         }}
       >
-        {sourceCode || `Component ${componentName} not found in registry.`}
+        {sourceCode.trim() ||
+          `Component ${componentName} not found in registry.`}
       </SyntaxHighlighter>
     </div>
   );
