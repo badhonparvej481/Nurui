@@ -50,7 +50,7 @@ const ButtonsMarquee = () => {
           <OutLineAnimationButton />
           <PixelArtButton />
           <NewButton />
-          <BorderAnimationButton title="Contact me" />
+          <BorderAnimationButton text="Contact me" />
         </Marquee>
         <Marquee
           itemsCenter="items-center"

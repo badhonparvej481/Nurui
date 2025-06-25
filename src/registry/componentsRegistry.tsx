@@ -23,7 +23,7 @@ export const Index: Record<string, ComponentEntry> = {
     othersCode: [{ fileName: "gradientButton", code: GradientButtonCode }],
   },
   borderAnimationButton: {
-    component: <BorderAnimationButton title="Contact me" />,
+    component: <BorderAnimationButton text="Contact me" />,
     demoCode: BorderAnimationButtonDemoCode,
     othersCode: [
       { fileName: "borderAnimationButton", code: BorderAnimationButtonCode },

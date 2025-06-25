@@ -8,7 +8,7 @@ import fetch from "node-fetch";
 import ts from "typescript";
 
 const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry.json`;
-const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui`;
+const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev`;
 
 // CLI args
 const [command, componentName] = process.argv.slice(2);

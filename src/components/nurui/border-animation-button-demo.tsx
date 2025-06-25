@@ -4,7 +4,7 @@ import BorderAnimationButton from "@/components/nurui/border-animation-button";
 const BorderAnimationButtonDemo = () => {
   return (
     <div className="flex items-center justify-center">
-      <BorderAnimationButton title="Contact me" />
+      <BorderAnimationButton text="Contact me" />
     </div>
   );
 };
