@@ -1,9 +1,9 @@
 {
-  "name": "bytenexia",
+  "name": "nurui",
   "version": "1.0.0",
   "description": "Add beautiful components with one command",
   "bin": {
-    "bytenexia": "./src/index.js"
+    "nurui": "./src/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

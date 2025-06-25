@@ -7,7 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
-import Bytenexia from "@/components/common/Bytenexia";
+import Nurui from "@/components/common/Nurui";
 import nProgress from "nprogress";
 import RocketScrollToTop from "@/components/common/RocketScrollToTop";
 
@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="container">
         <div className=" grid md:grid-cols-2 lg:grid-cols-4 xl:flex flex-col md:flex-row 2xl:justify-between gap-10 xl:gap-14 2xl:gap-24 py-7 xl:py-16 pl-1 xl:pl-0">
           <div className="space-y-3 lg:space-y-4 xl:space-y-6 max-w-80 col-span-full">
-            <Bytenexia textSize="text-2xl lg:text-3xl" />
+            <Nurui textSize="text-2xl lg:text-3xl" />
             <p>
               Beautifully crafted, accessible components built with Tailwind CSS
               — perfect for modern developers and creative teams.
@@ -43,7 +43,7 @@ const Footer = () => {
 
           <nav className="space-y-4 max-w-80 flex flex-col">
             <h6 className="font-semibold text-lg">Products</h6>
-            <a className="cursor-pointer">Bytenexia UI</a>
+            <a className="cursor-pointer">Nurui</a>
           </nav>
 
           <nav className="space-y-4 max-w-80 flex flex-col">
@@ -74,7 +74,7 @@ const Footer = () => {
             </a>
             <a className="flex gap-2.5 items-center cursor-pointer">
               <MdOutlineMail className="flex-shrink-0" />{" "}
-              contact@bytenexia-ui.com
+              contact@Nurui.com
             </a>
           </nav>
         </div>

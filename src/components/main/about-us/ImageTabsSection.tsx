@@ -30,11 +30,11 @@ const ImageTabsSection = () => {
       <SectionIntro
         title={{
           highLiteWords: "Why Choose Us",
-          normalWords: "At Bytenexia",
+          normalWords: "At Nurui",
           highlightColor: "text-[var(--primary-color)]",
         }}
         sectionNameColor="text-[var(--primary-color)]"
-        description="At Bytenexia, we prioritize clean code, seamless tools, and fast integration. Our solutions reduce complexity, boost development speed, and ensure consistency."
+        description="At Nurui, we prioritize clean code, seamless tools, and fast integration. Our solutions reduce complexity, boost development speed, and ensure consistency."
       />
 
       <TabsProvider
@@ -100,7 +100,6 @@ const ImageTabsSection = () => {
 
 export default ImageTabsSection;
 
-
 const tabs = [
   {
     id: "1",
@@ -108,19 +107,19 @@ const tabs = [
       icon: designAnimationData,
       title: "UI Component Library",
       description:
-        "Install and use production-ready components instantly via CLI.",
+        "Install and use production ready components instantly via CLI.",
     },
     Content: {
       title: "What We Provide",
       heading: "Production-ready UI components accessible with one command.",
       description:
-        "Bytenexia’s CLI-based component library empowers developers to instantly scaffold fully functional UI components into their projects. Designed for speed, consistency, and scalability, our components follow modern best practices and can be customized easily.",
+        "Nurui CLI-based component library empowers developers to instantly scaffold fully functional UI components into their projects. Designed for speed, consistency, and scalability, our components follow modern best practices and can be customized easily.",
       tabs: [
         {
           id: "install",
           title: "Easy Installation",
           content:
-            "Get started with a single CLI command. Just run `npx bytenexia install` to bring in the latest version of components directly into your codebase without setup hassle.",
+            "Get started with a single CLI command. Just run `npx nurui install` to bring in the latest version of components directly into your codebase without setup hassle.",
           items: [
             {
               icon: <FaTerminal />,
@@ -207,7 +206,7 @@ const tabs = [
       title: "What We Provide",
       heading: "Developer-first tools to accelerate UI development.",
       description:
-        "Bytenexia is built for developers who value clean, modular code and efficient workflows. From strict TypeScript support to flexible integration options, our tools help you stay focused on building features, not boilerplate.",
+        "Nurui is built for developers who value clean, modular code and efficient workflows. From strict TypeScript support to flexible integration options, our tools help you stay focused on building features, not boilerplate.",
       tabs: [
         {
           id: "typescript",
@@ -239,7 +238,7 @@ const tabs = [
           id: "cli-tools",
           title: "CLI Tools",
           content:
-            "Beyond installation, the Bytenexia CLI supports component generation, config updates, and live previews — making your dev workflow smoother and faster.",
+            "Beyond installation, the nurui CLI supports component generation, config updates, and live previews — making your dev workflow smoother and faster.",
           items: [
             {
               icon: <FaTerminal />,

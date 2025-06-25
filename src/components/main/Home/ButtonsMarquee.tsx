@@ -1,25 +1,25 @@
-import GetStartedButton from "@/bytenexia/button/GetStartedButton";
-import GoBackButton from "@/bytenexia/button/GoBackButton";
-import HoverShadowAnimationButton from "@/bytenexia/button/HoverShadowButton";
-import UnapologeticButton from "@/bytenexia/button/UnapologeticButton";
-import NewButton from "@/bytenexia/button/NewButton";
-import PingPongAnimationButton from "@/bytenexia/button/PingPongButton";
-import PixelArtButton from "@/bytenexia/button/PixelButton";
-import { PulsatingButton } from "@/bytenexia/button/PulsatingButton";
-import RoundedAnimationButton from "@/bytenexia/button/RoundedButton";
-import ShinyAnimationButton from "@/bytenexia/button/ShinyButton";
-import StatusButton from "@/bytenexia/button/StatusButton";
-import SwipeButton from "@/bytenexia/button/SwipeButton";
-import WorkButton from "@/bytenexia/button/WorkButton";
+import GetStartedButton from "@/components/nurui/GetStartedButton";
+import GoBackButton from "@/components/nurui/GoBackButton";
+import HoverShadowAnimationButton from "@/components/nurui/HoverShadowButton";
+import UnapologeticButton from "@/components/nurui/UnapologeticButton";
+import NewButton from "@/components/nurui/NewButton";
+import PingPongAnimationButton from "@/components/nurui/PingPongButton";
+import PixelArtButton from "@/components/nurui/PixelButton";
+import { PulsatingButton } from "@/components/nurui/PulsatingButton";
+import RoundedAnimationButton from "@/components/nurui/RoundedButton";
+import ShinyAnimationButton from "@/components/nurui/ShinyButton";
+import StatusButton from "@/components/nurui/StatusButton";
+import SwipeButton from "@/components/nurui/SwipeButton";
+import WorkButton from "@/components/nurui/WorkButton";
 import { Marquee } from "@/components/ui/marquee/Marquee";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import BorderMagicButton from "@/bytenexia/button/BorderMagicButton";
-import { ColorChangingButton } from "@/bytenexia/button/ColorChangingButton";
-import { SpotlightButton } from "@/bytenexia/button/SpotlightButton";
-import BorderAnimationButton from "@/bytenexia/button/BorderAnimationButton";
-import StarWarsButton from "@/bytenexia/button/StarWarsButton";
-import GradientButton from "@/bytenexia/button/GradientButton";
+import BorderMagicButton from "@/components/nurui/BorderMagicButton";
+import { ColorChangingButton } from "@/components/nurui/ColorChangingButton";
+import { SpotlightButton } from "@/components/nurui/SpotlightButton";
+import BorderAnimationButton from "@/components/nurui/BorderAnimationButton";
+import StarWarsButton from "@/components/nurui/StarWarsButton";
+import GradientButton from "@/components/nurui/GradientButton";
 
 const ButtonsMarquee = () => {
   return (

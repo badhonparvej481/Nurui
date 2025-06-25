@@ -10,7 +10,7 @@ const Bytenexia = ({ textSize }: ClassType) => {
         textSize || "text-3xl"
       } flex items-center`}
     >
-      <LuBotMessageSquare className="text-2xl rotate-180" /> Bytenexia
+      <LuBotMessageSquare className="text-2xl rotate-180" /> NurUI
     </LinkWithProgress>
   );
 };

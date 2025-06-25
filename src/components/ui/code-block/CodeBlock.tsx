@@ -7,21 +7,37 @@ import { FaCheck } from "react-icons/fa6";
 import { ChevronDown } from "lucide-react";
 import { FaJsSquare } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
+import { Index } from "@/registry/componentsRegistry";
 
 type CodeBlockProps = {
   language?: string;
   code?: string;
+  componentName?: keyof typeof Index;
+  fileName?: string;
 };
 
-export const CodeBlock = ({ language = "tsx", code = "" }: CodeBlockProps) => {
+export const CodeBlock = ({
+  language = "tsx",
+  code = "",
+  componentName,
+  fileName,
+}: CodeBlockProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("TypeScript (.tsx)");
   const [copied, setCopied] = React.useState(false);
   const selectedLang = languages.find((lang) => lang.name === selectedLanguage);
 
+  let sourceCode = code;
+  if (!code && componentName && fileName) {
+    const matched = Index[componentName]?.othersCode?.find(
+      (otherCode) => otherCode.fileName === fileName,
+    );
+    sourceCode = matched?.code || Index[componentName]?.demoCode || "";
+  }
+
   const copyToClipboard = async () => {
-    if (code) {
-      await navigator.clipboard.writeText(code);
+    if (sourceCode) {
+      await navigator.clipboard.writeText(sourceCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
@@ -89,7 +105,7 @@ export const CodeBlock = ({ language = "tsx", code = "" }: CodeBlockProps) => {
           background: "transparent",
         }}
       >
-        {code}
+        {sourceCode || `Component ${componentName} not found in registry.`}
       </SyntaxHighlighter>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 import AuthWithSocialMediaButton from "@/components/common/AuthWithSocialMediaButton";
-import Bytenexia from "@/components/common/Bytenexia";
+import Nurui from "@/components/common/Nurui";
 import React from "react";
 import Link from "next/link";
 import OutlineButton from "@/components/common/OutlineButton";
@@ -69,7 +69,7 @@ const SingInSingUpComponent: React.FC<SingInSingUpComponentProps> = ({
             data?.reverse ? "" : "lg:pl-20"
           } p-14`}
         >
-          <Bytenexia />
+          <Nurui />
           <h1 className="text-2xl lg:text-3xl font-semibold mt-5">
             {data?.rightSection?.title}
           </h1>

@@ -1,5 +1,5 @@
 "use client";
-import Bytenexia from "@/components/common/Bytenexia";
+import Nurui from "@/components/common/Nurui";
 import MenuItem from "@/components/common/MenuItem";
 import React from "react";
 import { useAppContext } from "@/context/AppContext";
@@ -21,7 +21,7 @@ const ComponentsLeftSidebar = () => {
         <div className="space-y-5">
           {sideBar ? (
             <div className="flex items-center justify-center gap-1">
-              <Bytenexia textSize="text-2xl" />
+              <Nurui textSize="text-2xl" />
               <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem]">
                 Basic
               </p>

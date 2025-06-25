@@ -7,13 +7,13 @@ import { execa } from "execa";
 import fetch from "node-fetch";
 import ts from "typescript";
 
-const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Bytenexia/dev/registry.json`;
-const basePath = `https://raw.githubusercontent.com/Mdafsarx/Bytenexia`;
+const registryPath = `https://raw.githubusercontent.com/Mdafsarx/nurui/dev/registry.json`;
+const basePath = `https://raw.githubusercontent.com/Mdafsarx/nurui`;
 
 // CLI args
 const [command, componentName] = process.argv.slice(2);
 
-intro(colors.bold("Welcome to Bytenexia CLI"));
+intro(colors.bold("Welcome to Nurui CLI"));
 
 if (command === "list") {
   const s = spinner();
@@ -33,7 +33,7 @@ if (command === "list") {
   }
 }
 if (command !== "add" || !componentName) {
-  cancel(colors.red("Usage: npx bytenexia add component-name"));
+  cancel(colors.red("Usage: npx nurui add component-name"));
   process.exit(0);
 }
 
@@ -110,7 +110,7 @@ try {
   const destPath = path.join(
     process.cwd(),
     "components",
-    "bytenexia",
+    "nurui",
     componentName.toLowerCase(),
   );
 

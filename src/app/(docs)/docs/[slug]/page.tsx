@@ -37,7 +37,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: `${frontmatter?.title} | Bytenexia`,
+    title: `${frontmatter?.title} | Nurui`,
     description: frontmatter?.description,
     creator: frontmatter?.creator,
   };

@@ -195,10 +195,7 @@ export function getMDXComponents(
     ),
 
     Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
-      <h3
-        className={cn("font-heading tracking-tight capitalize", className)}
-        {...props}
-      />
+      <h3 className={cn("font-heading tracking-tight", className)} {...props} />
     ),
 
     Steps: ({ ...props }) => (

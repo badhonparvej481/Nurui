@@ -1,10 +1,10 @@
 ---
-title: "Blog"
-description: "Create a blog that you can use to share your career experiences and projects."
+title: "gradient-button"
+description: "A stylish gradient button component for modern UIs, built with accessibility and animation in mind."
 creator: Md Afsar Mahmud
 ---
 
-<ComponentPreview name="Bytenexia"/>
+<ComponentPreview componentName="GradientButton" />
 
 ## Installation
 
@@ -27,28 +27,31 @@ creator: Md Afsar Mahmud
 
 <Cli
   dependencies={[
-    { label: "npm", command: "npm i motion clsx tailwind-merge" },
-    { label: "pnpm", command: "pnpm add motion clsx tailwind-merge" },
-    { label: "bun", command: "bun add motion clsx tailwind-merge" },
-    { label: "yarn", command: "yarn add motion clsx tailwind-merge" },
+    { label: "npm", command: "npm i clsx tailwind-merge" },
+    { label: "pnpm", command: "pnpm add clsx tailwind-merge" },
+    { label: "bun", command: "bun add clsx tailwind-merge" },
+    { label: "yarn", command: "yarn add clsx tailwind-merge" },
   ]}
 />
 
+<Step>Add util file</Step>
+
+`utils/cn.ts`
+
+<CodeBlock 
+code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`
+}/>
+
 <Step>Copy and paste the following code into your project.</Step>
 
-`components/ui/3d-pin.tsx`
+`components/nurui/GradientButton.tsx`
 
-<CodeBlock
-code={`css title="app/globals.css" {2-6}
-:root {
-  --color-1: 0 100% 63%;
-  --color-2: 270 100% 63%;
-  --color-3: 210 100% 63%;
-  --color-4: 195 100% 63%;
-  --color-5: 90 100% 63%;
-}
-`}
-/>
+<CodeBlock componentName="GradientButton" fileName="GradientButton" />
 
 </Steps>
 
@@ -58,11 +61,13 @@ code={`css title="app/globals.css" {2-6}
 
 ### Props
 
-| Prop           | Type      | Default | Description                                                                  |
-| -------------- | --------- | ------- | ---------------------------------------------------------------------------- |
-| `className`    | `string`  | `-`     | The class name to apply to the component.                                    |
-| `reverse`      | `boolean` | `false` | Whether or not to reverse the direction of the marquee.                      |
-| `pauseOnHover` | `boolean` | `false` | Whether or not to pause the marquee when the user hovers over the component. |
-| `vertical`     | `boolean` | `false` | Whether or not to display the marquee vertically.                            |
-| `children`     | `node`    | `-`     | The content to display in the marquee.                                       |
-| `repeat`       | `number`  | `1`     | The number of times to repeat the content.                                   |
+| Prop           | Type       | Default                                                                                      | Description                                                         |
+| -------------- | ---------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `borderWidth`  | `number`   | `2`                                                                                          | Width of the animated border (in pixels).                           |
+| `colors`       | `string[]` | `[ "#FF0000", "#FFA500", "#FFFF00", "#008000", "#0000FF", "#4B0082", "#EE82EE", "#FF0000" ]` | Array of gradient colors used for the border animation.             |
+| `duration`     | `number`   | `2500`                                                                                       | Duration (in milliseconds) for the rainbow gradient animation loop. |
+| `borderRadius` | `number`   | `8`                                                                                          | Border radius for the button corners (in pixels).                   |
+| `blur`         | `number`   | `4`                                                                                          | Blur level for the animated gradient background.                    |
+| `className`    | `string`   | `-`                                                                                          | Additional CSS classes to apply to the button.                      |
+| `bgColor`      | `string`   | `"#000"`                                                                                     | Background color of the button.                                     |
+| `text`         | `string`   | `"Zooooooooooom 🚀"`                                                                         | Text content displayed inside the button.                           |

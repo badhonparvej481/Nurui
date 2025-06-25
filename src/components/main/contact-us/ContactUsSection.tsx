@@ -107,7 +107,7 @@ const getInTouch = {
   },
   chat_to_us: {
     description: "We’d love to hear your feedback and ideas.",
-    email: "support@bytenexia.dev",
+    email: "support@nurui.dev",
   },
   social_media: {
     platforms: [
