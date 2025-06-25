@@ -1,6 +1,6 @@
-import GradientButton from "@/components/nurui/GradientButton";
-import GradientButtonCode from "@/components/nurui/GradientButton.tsx?raw";
-import GradientButtonDemoCode from "@/components/nurui/GradientButtonDemo.tsx?raw";
+import GradientButton from "@/components/nurui/gradient-button";
+import GradientButtonCode from "@/components/nurui/gradient-button.tsx?raw";
+import GradientButtonDemoCode from "@/components/nurui/gradient-button-demo.tsx?raw";
 
 type CodeEntry = {
   fileName: string;

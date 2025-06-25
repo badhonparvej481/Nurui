@@ -19,7 +19,7 @@ import { ColorChangingButton } from "@/components/nurui/ColorChangingButton";
 import { SpotlightButton } from "@/components/nurui/SpotlightButton";
 import BorderAnimationButton from "@/components/nurui/BorderAnimationButton";
 import StarWarsButton from "@/components/nurui/StarWarsButton";
-import GradientButton from "@/components/nurui/GradientButton";
+import GradientButton from "@/components/nurui/gradient-button";
 
 const ButtonsMarquee = () => {
   return (
