@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 import { intro, outro, spinner, cancel, select } from "@clack/prompts";
+import { format } from "prettier/standalone";
+import babel from "prettier/plugins/babel";
+import estree from "prettier/plugins/estree";
+import ts from "typescript";
 import colors from "picocolors";
 import fs from "fs";
 import path from "path";
 import { execa } from "execa";
 import fetch from "node-fetch";
-import { convertTsxToJsx } from "../utils/convertTsxToJsx";
 const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry.json`;
 const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev`;
 
@@ -48,6 +51,32 @@ async function fetchRegistry() {
   const res = await fetch(registryPath);
   if (!res.ok) throw new Error("Failed to fetch registry.json");
   return await res.json();
+}
+
+async function convertTsxToJsx(code) {
+  const transpiled = ts.transpileModule(code, {
+    compilerOptions: {
+      jsx: ts.JsxEmit.Preserve,
+      target: ts.ScriptTarget.ESNext,
+      module: ts.ModuleKind.ESNext,
+      allowJs: true,
+    },
+    fileName: "component.tsx",
+  }).outputText;
+  return await format(transpiled, {
+    parser: "babel",
+    plugins: [babel, estree],
+    singleQuote: false,
+    semi: true,
+    trailingComma: "all",
+    tabWidth: 2,
+    printWidth: 80,
+    bracketSpacing: true,
+    jsxBracketSameLine: false,
+    arrowParens: "always",
+    endOfLine: "lf",
+    bracketSameLine: true,
+  });
 }
 
 async function downloadFileFromGitHub(filePath, localPath) {

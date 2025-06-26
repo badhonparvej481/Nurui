@@ -1,7 +1,7 @@
 "use client";
 import { useAppContext } from "@/context/AppContext";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import LinkWithProgress from "./LinkWithProgress";
 import { navigationActive } from "@/utils/navigationActive";
@@ -25,17 +25,26 @@ const MenuItem: React.FC<IProps> = ({
 }) => {
   const pathName = usePathname();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [activeSubMenuHeading, setActiveSubMenuHeading] = useState(false);
   const { sideBar } = useAppContext();
   const activeNavigation = navigationActive(href, pathName);
   const singleSubmenu = submenu?.find((sub) => sub?.href === pathName);
-  const activeSubMenuHeading = navigationActive(singleSubmenu?.href, pathName);
+
+  useEffect(() => {
+    setActiveSubMenuHeading(() =>
+      navigationActive(singleSubmenu?.href, pathName),
+    );
+  }, [singleSubmenu?.href, pathName]);
 
   const iconWrapperClasses =
     "text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded";
 
   const withSubmenu = (
     <div
-      onClick={() => setIsSubMenuOpen((prev) => !prev)}
+      onClick={() => {
+        setIsSubMenuOpen((prev) => !prev);
+        setActiveSubMenuHeading(false);
+      }}
       className="flex items-center justify-between w-full cursor-pointer"
     >
       <div className="flex items-center gap-3.5">
@@ -78,7 +87,7 @@ const MenuItem: React.FC<IProps> = ({
       </div>
 
       <div>
-        {isSubMenuOpen && submenu && (
+        {(isSubMenuOpen || activeSubMenuHeading) && submenu && (
           <div className="flex flex-col gap-y-1 ml-5 pl-2 py-0.5 border-l border-[var(--primary-color)] min-h-9">
             {submenu.map((sub, index) => (
               <LinkWithProgress

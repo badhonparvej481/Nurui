@@ -1,4 +1,4 @@
-import ContactUsSection from "@/components/main/contact-us/ContactUsSection";
+import ContactUsSection from "@/components/pages/contact-us/ContactUsSection";
 
 const page = () => {
   return <ContactUsSection />;
