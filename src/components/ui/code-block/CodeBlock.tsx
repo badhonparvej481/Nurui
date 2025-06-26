@@ -34,7 +34,7 @@ export const CodeBlock = ({
       const matched = Index[componentName]?.othersCode?.find(
         (otherCode) => otherCode.fileName === fileName,
       );
-      const content = matched?.code || Index[componentName]?.demoCode || "";
+      const content = matched?.code || Index[componentName]?.code || "";
       setSourceCode(content);
     }
   }, [code, componentName, fileName]);
@@ -62,7 +62,7 @@ export const CodeBlock = ({
         const matched = Index[componentName]?.othersCode?.find(
           (otherCode) => otherCode.fileName === fileName,
         );
-        const content = matched?.code || Index[componentName]?.demoCode || "";
+        const content = matched?.code || Index[componentName]?.code || "";
         setSourceCode(content);
       }
     }

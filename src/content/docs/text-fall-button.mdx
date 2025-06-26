@@ -1,0 +1,60 @@
+---
+title: "text-fall-button"
+description: "A stylish text fall button component for modern UIs, built with accessibility and animation in mind."
+creator: Md Afsar Mahmud
+---
+
+<ComponentPreview componentName="textFallButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli
+  dependencies={[
+    { label: "npm", command: "npm i gsap @gsap/react" },
+    { label: "pnpm", command: "pnpm add gsap @gsap/react" },
+    { label: "bun", command: "bun add gsap @gsap/react" },
+    { label: "yarn", command: "yarn add gsap @gsap/react" },
+  ]}
+/>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/text-fall-button.tsx`
+
+<CodeBlock componentName="textFallButton" fileName="text-fall-button" />
+
+<Step>Update the import paths to fit your project setup</Step>
+ 
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop            | Type                          | Default | Description                                                                |
+| --------------- | ----------------------------- | ------- | -------------------------------------------------------------------------- |
+| `effectOnHover` | `boolean`                     | `true`  | Enables the text fall animation when the button is hovered.                |
+| `effectOnLoad`  | `boolean`                     | `true`  | Triggers the text fall animation once on component load.                   |
+| `className`     | `string`                      | `-`     | Custom CSS classes to apply to the button.                                 |
+| `children`      | `React.ReactNode`             | `-`     | Text or elements to display inside the button. Animation is applied to it. |
+| `onClick`       | `(event: MouseEvent) => void` | `-`     | Function called when the button is clicked. Also triggers the animation.   |
+| `...props`      | `ComponentProps<"button">`    | `-`     | Inherits all native HTML button attributes like `type`, `disabled`, etc.   |

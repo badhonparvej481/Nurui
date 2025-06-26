@@ -1,6 +1,5 @@
 import GetStartedButton from "@/components/nurui/GetStartedButton";
 import GoBackButton from "@/components/nurui/GoBackButton";
-import HoverShadowAnimationButton from "@/components/nurui/HoverShadowButton";
 import UnapologeticButton from "@/components/nurui/UnapologeticButton";
 import NewButton from "@/components/nurui/NewButton";
 import PingPongAnimationButton from "@/components/nurui/PingPongButton";
@@ -21,6 +20,7 @@ import GradientButton from "@/components/nurui/gradient-button";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
 import OutLineAnimationButton from "@/components/nurui/outline-animation-button";
 import BorderAnimationButton from "@/components/nurui/border-animation-button";
+import HoverShadowButton from "@/components/nurui/hover-shadow-button";
 
 const ButtonsMarquee = () => {
   return (
@@ -61,7 +61,7 @@ const ButtonsMarquee = () => {
           <StarWarsButton />
           <PingPongAnimationButton />
           <ShinyAnimationButton />
-          <HoverShadowAnimationButton />
+          <HoverShadowButton text="Subscribe" />
           <PulsatingButton>Join Affiliate Program</PulsatingButton>
           <UnapologeticButton />
           <BorderMagicButton />
