@@ -10,6 +10,21 @@ creator: Md Afsar Mahmud
 
 <Steps>
 
+<Step>Optional: Components list</Step>
+
+To see the full `list` of available components you can install:
+
+<Cli
+  dependencies={[
+    { label: "npm", command: "npx nurui list" },
+    { label: "pnpm", command: "pnpm dlx nurui list" },
+    { label: "bun", command: "bunx nurui list" },
+    { label: "yarn", command: "yarn dlx nurui list" },
+  ]}
+/>
+
+This will display all the components supported by nurui.
+
 <Step>Add Components</Step>
 
 You can now start adding components to your project.
@@ -41,19 +56,6 @@ export default function Home() {
 }`}
 />
 
-<Step>Optional: Components list</Step>
-
-To see the full `list` of available components you can install:
-
-<Cli
-  dependencies={[
-    { label: "npm", command: "npx nurui list" },
-    { label: "pnpm", command: "pnpm dlx nurui list" },
-    { label: "bun", command: "bunx nurui list" },
-    { label: "yarn", command: "yarn dlx nurui list" },
-  ]}
-/>
-
-This will display all the components supported by nurui.
+<Step>Update the import paths to fit your project setup</Step>
 
 </Steps>

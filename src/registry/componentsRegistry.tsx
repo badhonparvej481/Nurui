@@ -10,6 +10,9 @@ import HoverShadowButtonCode from "@/components/nurui/hover-shadow-button.tsx?ra
 import { TextFallButtonDemo } from "@/components/nurui/text-fall-button-demo";
 import TextFallButtonDemoCode from "@/components/nurui/text-fall-button-demo.tsx?raw";
 import TextFallButtonCode from "@/components/nurui/text-fall-button.tsx?raw";
+import MagnetButtonDemo from "@/components/nurui/magnet-button-demo";
+import MagnetButtonDemoCode from "@/components/nurui/magnet-button-demo.tsx?raw";
+import MagnetButtonCode from "@/components/nurui/magnet-button.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -17,34 +20,39 @@ type CodeEntry = {
 };
 
 type ComponentEntry = {
-  component: React.ReactNode;
-  demoCode: string;
+  preview: React.ReactNode;
+  code: string;
   othersCode?: CodeEntry[];
 };
 
 export const Index: Record<string, ComponentEntry> = {
   gradientButton: {
-    component: <GradientButton />,
-    demoCode: GradientButtonDemoCode,
+    preview: <GradientButton />,
+    code: GradientButtonDemoCode,
     othersCode: [{ fileName: "gradient-button", code: GradientButtonCode }],
   },
   borderAnimationButton: {
-    component: <BorderAnimationButton text="Contact me" />,
-    demoCode: BorderAnimationButtonDemoCode,
+    preview: <BorderAnimationButton text="Contact me" />,
+    code: BorderAnimationButtonDemoCode,
     othersCode: [
       { fileName: "border-animation-button", code: BorderAnimationButtonCode },
     ],
   },
   hoverShadowButton: {
-    component: <HoverShadowButton text="Subscribe" />,
-    demoCode: HoverShadowButtonDemoCode,
+    preview: <HoverShadowButton text="Subscribe" />,
+    code: HoverShadowButtonDemoCode,
     othersCode: [
       { fileName: "hover-shadow-button", code: HoverShadowButtonCode },
     ],
   },
   textFallButton: {
-    component: <TextFallButtonDemo />,
-    demoCode: TextFallButtonDemoCode,
+    preview: <TextFallButtonDemo />,
+    code: TextFallButtonDemoCode,
     othersCode: [{ fileName: "text-fall-button", code: TextFallButtonCode }],
+  },
+  magnetButton: {
+    preview: <MagnetButtonDemo />,
+    code: MagnetButtonDemoCode,
+    othersCode: [{ fileName: "magnet-button", code: MagnetButtonCode }],
   },
 };

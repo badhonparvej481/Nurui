@@ -12,8 +12,8 @@ interface ComponentPreviewProps {
 }
 
 const ComponentPreview = ({ componentName }: ComponentPreviewProps) => {
-  const DemoComponent = Index[componentName]?.component;
-  const sourceCode = Index[componentName]?.demoCode ?? "";
+  const DemoComponent = Index[componentName]?.preview;
+  const sourceCode = Index[componentName]?.code ?? "";
 
   if (!DemoComponent) {
     return (

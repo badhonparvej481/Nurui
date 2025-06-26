@@ -9,7 +9,7 @@ import fs from "fs";
 import path from "path";
 import { execa } from "execa";
 import fetch from "node-fetch";
-const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry.json`;
+const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry-cli.json`;
 const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev`;
 
 // CLI args
