@@ -24,6 +24,10 @@
       "registryDependencies": [],
       "files": [
         {
+          "path": "./src/components/nurui/border-animation-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "./src/components/nurui/border-animation-button.tsx",
           "type": "registry:component"
         }

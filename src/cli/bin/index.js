@@ -92,7 +92,7 @@ async function downloadFileFromGitHub(filePath, localPath) {
     const jsx = await convertTsxToJsx(content);
     const newPath = targetPath.replace(/\.tsx$/, ".jsx");
     await fs.promises.mkdir(path.dirname(newPath), { recursive: true });
-    await fs.promises.writeFile(newPath, jsx, "utf8");
+    await fs.promises.writeFile(newPath, jsx.trim(), "utf8");
   } else {
     await fs.promises.mkdir(path.dirname(targetPath), { recursive: true });
     await fs.promises.writeFile(targetPath, content, "utf8");
