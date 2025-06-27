@@ -28,6 +28,7 @@ export function getMDXComponents(
 
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h2
+        id="installation"
         className={cn(
           "text-2xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
           className,
@@ -37,9 +38,10 @@ export function getMDXComponents(
     ),
 
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-      <h3
+      <h2
+        id="props"
         className={cn(
-          "text-xl font-semibold pt-10 pb-2 borderb border-[var(--primary-color-3)]",
+          "text-xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
           className,
         )}
         {...props}
@@ -146,7 +148,10 @@ export function getMDXComponents(
 
     Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
       <Tabs
-        className={cn("relative mt-6 w-full overflow-x-auto overflow-y-hidden", className)}
+        className={cn(
+          "relative mt-6 w-full overflow-x-auto overflow-y-hidden",
+          className,
+        )}
         {...props}
       />
     ),

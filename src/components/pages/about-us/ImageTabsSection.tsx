@@ -145,7 +145,7 @@ const tabs = [
           id: "customize",
           title: "Customization",
           content:
-            "All components come with built-in support for theming and customization. Whether you're using Tailwind, SCSS, or vanilla CSS — our styles adapt to your stack seamlessly.",
+            "All components come with built-in support for theming and customization. Whether you're using Tailwind, SCSS, or vanilla CSS our styles adapt to your stack seamlessly.",
           items: [
             {
               icon: <FaCogs />,
@@ -238,7 +238,7 @@ const tabs = [
           id: "cli-tools",
           title: "CLI Tools",
           content:
-            "Beyond installation, the nurui CLI supports component generation, config updates, and live previews — making your dev workflow smoother and faster.",
+            "Beyond installation, the nurui CLI supports component generation, config updates, and live previews making your dev workflow smoother and faster.",
           items: [
             {
               icon: <FaTerminal />,
