@@ -6,12 +6,18 @@ import { MdOutlineModeEditOutline } from "react-icons/md";
 
 const ComponentsRightSidebar = () => {
   const pathname = usePathname();
-  const title = `[bug]: ${pathname}`;
   const issueUrl =
     `https://github.com/Mdafsarx/nurui/issues/new?` +
-    `title=${encodeURIComponent(title)}` +
+    `title=${encodeURIComponent(`[bug]: ${pathname}`)}` +
     `&labels=bug&labels=documentation` +
     `&template=bug_report.md`;
+
+  const featureUrl =
+    `https://github.com/Mdafsarx/nurui/issues/new?` +
+    `title=${encodeURIComponent(`[feature]: ${pathname}`)}` +
+    `&labels=enhancement,documentation&template=feature_request.md`;
+
+  const editUrl = `https://github.com/Mdafsarx/nurui/blob/main/src/content${pathname}.mdx`;
 
   const navigation = {
     onThisPage: [
@@ -35,12 +41,12 @@ const ComponentsRightSidebar = () => {
       {
         label: "Request a feature",
         icon: <FaRegLightbulb />,
-        href: "https://github.com/your-repo/issues/new?template=feature_request.md",
+        href: featureUrl,
       },
       {
         label: "Edit this page",
         icon: <MdOutlineModeEditOutline />,
-        href: "https://github.com/your-repo/edit/main/docs/page.md",
+        href: editUrl,
       },
     ],
   };
@@ -64,7 +70,7 @@ const ComponentsRightSidebar = () => {
           <h3 className="font-semibold pb-1">Contribute</h3>
           {navigation?.contribute?.map((item) => (
             <a
-              href={issueUrl}
+              href={item?.href}
               key={item?.label}
               target="_blank"
               className="text-[var(--opacity-text-color)] flex items-center gap-1"
