@@ -6,7 +6,7 @@ import MenuItem from "@/components/common/MenuItem";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { GrInstallOption } from "react-icons/gr";
 import { TbComponents, TbHandClick } from "react-icons/tb";
-import { TfiHelpAlt } from "react-icons/tfi";
+import { navigation as componentNavigation } from "@/registry/ComponentNavigation";
 
 export default function VaulDrawer() {
   return (
@@ -26,6 +26,7 @@ export default function VaulDrawer() {
                   key={nav?.title + index}
                   icon={nav.icon}
                   title={nav.title}
+                  href={nav?.href}
                   submenu={nav?.submenu}
                   parentHover={false}
                   subMenuHover={true}
@@ -39,42 +40,40 @@ export default function VaulDrawer() {
   );
 }
 
-const navigation = [
+type NavigationItem = {
+  icon: React.ReactNode;
+  title: string;
+  href?: string;
+  submenu?: {
+    name: string;
+    href: string;
+  }[];
+};
+
+const baseNavigation: NavigationItem[] = [
   {
     icon: <AiOutlineFileSearch />,
-    title: "component",
+    title: "Component",
+    href: "/docs/gradient-button",
   },
   {
     icon: <GrInstallOption />,
     title: "About",
+    href: "/about-us",
   },
   {
     icon: <TbComponents />,
     title: "contact",
+    href: "/contact-us",
   },
   {
     icon: <TbHandClick />,
     title: "Blog",
+    href: "/blog",
   },
-  {
-    icon: <AiOutlineFileSearch />,
-    title: "Introduction",
-  },
-  {
-    icon: <GrInstallOption />,
-    title: "Installation",
-  },
-  {
-    icon: <TbComponents />,
-    title: "Components",
-  },
-  {
-    icon: <TbHandClick />,
-    title: "Buttons",
-    submenu: [{ name: "overview", href: "/" }],
-  },
-  {
-    icon: <TfiHelpAlt />,
-    title: "Help",
-  },
+];
+
+const navigation: NavigationItem[] = [
+  ...baseNavigation,
+  ...componentNavigation,
 ];

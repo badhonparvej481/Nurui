@@ -13,6 +13,9 @@ import TextFallButtonCode from "@/components/nurui/text-fall-button.tsx?raw";
 import MagnetButtonDemo from "@/components/nurui/magnet-button-demo";
 import MagnetButtonDemoCode from "@/components/nurui/magnet-button-demo.tsx?raw";
 import MagnetButtonCode from "@/components/nurui/magnet-button.tsx?raw";
+import PlayingCardDemo from "@/components/nurui/playing-card-demo";
+import PlayingCardDemoCode from "@/components/nurui/playing-card-demo.tsx?raw";
+import PlayingCardCode from "@/components/nurui/playing-card.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -26,6 +29,7 @@ type ComponentEntry = {
 };
 
 export const Index: Record<string, ComponentEntry> = {
+  // buttons
   gradientButton: {
     preview: <GradientButton />,
     code: GradientButtonDemoCode,
@@ -54,5 +58,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <MagnetButtonDemo />,
     code: MagnetButtonDemoCode,
     othersCode: [{ fileName: "magnet-button", code: MagnetButtonCode }],
+  },
+  // cards
+  playingCard: {
+    preview: <PlayingCardDemo />,
+    code: PlayingCardDemoCode,
+    othersCode: [{ fileName: "playing-card", code: PlayingCardCode }],
   },
 };

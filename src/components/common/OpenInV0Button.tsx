@@ -6,7 +6,7 @@ interface IV0Button {
   url: string;
 }
 
-export default function V0Button({ className, url }: IV0Button) {
+export default function OpenInV0Button({ className, url }: IV0Button) {
   return (
     <Button
       aria-label="Open in v0"

@@ -66,6 +66,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "playing-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["three", "@react-three/fiber"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/playing-card.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

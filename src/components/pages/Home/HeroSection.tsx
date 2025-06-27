@@ -85,12 +85,12 @@ const HeroSection = () => {
               options={{
                 particle: [
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489777/icons8-tailwindcss-480_qnf2sy.png",
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489557/programing_i9a1o1.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751019213/CSS3_enijzz.png",
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489474/atom_eieqee.png",
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489870/icons8-javascript-480_nqbmlo.png",
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747489887/icons8-typescript-480_gxf8zq.png",
                   "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747490019/icons8-sass-480_colnli.png",
-                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1747490083/icons8-vue-js-480_g76qiv.png",
+                  "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751018871/zdog_xc145m.png",
                 ],
               }}
             >
