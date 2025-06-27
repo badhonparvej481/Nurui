@@ -1,5 +1,5 @@
 import { TfiHelpAlt } from "react-icons/tfi";
-import { TbHandClick } from "react-icons/tb";
+import { TbCards, TbHandClick } from "react-icons/tb";
 import { GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
 
@@ -31,6 +31,11 @@ export const navigation = [
       { name: "Hover Shadow", href: `${baseUrl}/hover-shadow-button` },
       { name: "Text Fall", href: `${baseUrl}/text-fall-button` },
     ],
+  },
+  {
+    icon: <TbCards />,
+    title: "Cards",
+    submenu: [{ name: "Playing", href: `${baseUrl}/playing-card` }],
   },
   // last item
   {

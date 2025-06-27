@@ -15,6 +15,7 @@ type CodeBlockProps = {
   code?: string;
   componentName?: keyof typeof Index;
   fileName?: string;
+  isLanguage?: boolean;
 };
 
 export const CodeBlock = ({
@@ -22,6 +23,7 @@ export const CodeBlock = ({
   code = "",
   componentName,
   fileName,
+  isLanguage = true,
 }: CodeBlockProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("TypeScript (.tsx)");
@@ -78,39 +80,43 @@ export const CodeBlock = ({
           {copied ? <FaCheck /> : <RxCopy />}
         </button>
 
-        <div className="relative">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center gap-1"
-          >
-            <span>{selectedLang?.icon}</span>
-            <ChevronDown className={`w-3 h-3 ${isOpen ? "rotate-180" : ""}`} />
-          </button>
+        {isLanguage && (
+          <div className="relative">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex items-center gap-1"
+            >
+              <span>{selectedLang?.icon}</span>
+              <ChevronDown
+                className={`w-3 h-3 ${isOpen ? "rotate-180" : ""}`}
+              />
+            </button>
 
-          {/* Dropdown Menu */}
-          {isOpen && (
-            <div className="absolute z-50 right-0 mt-3.5 border border-[var(--primary-color-3)] rounded-lg min-w-40 bg-[var(--primary-color-5)] p-1">
-              {languages.map((language, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleSelect(language?.name)}
-                  className="w-full flex items-center gap-1 p-2 z-50 hover:bg-[var(--primary-color-4)] rounded-lg"
-                >
-                  <span>{language.icon}</span>
-                  <span>{language.name}</span>
-                </button>
-              ))}
-            </div>
-          )}
+            {/* Dropdown Menu */}
+            {isOpen && (
+              <div className="absolute z-50 right-0 mt-3.5 border border-[var(--primary-color-3)] rounded-lg min-w-40 bg-[var(--primary-color-5)] p-1">
+                {languages.map((language, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleSelect(language?.name)}
+                    className="w-full flex items-center gap-1 p-2 z-50 hover:bg-[var(--primary-color-4)] rounded-lg"
+                  >
+                    <span>{language.icon}</span>
+                    <span>{language.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
 
-          {/* Backdrop to close dropdown when clicking outside */}
-          {isOpen && (
-            <div
-              className="fixed inset-0 z-0"
-              onClick={() => setIsOpen(false)}
-            />
-          )}
-        </div>
+            {/* Backdrop to close dropdown when clicking outside */}
+            {isOpen && (
+              <div
+                className="fixed inset-0 z-0"
+                onClick={() => setIsOpen(false)}
+              />
+            )}
+          </div>
+        )}
       </div>
 
       <SyntaxHighlighter
