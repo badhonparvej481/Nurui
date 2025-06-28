@@ -1,28 +1,34 @@
 "use client";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { FaRegLightbulb } from "react-icons/fa6";
 import { LuBug } from "react-icons/lu";
 import { MdOutlineModeEditOutline } from "react-icons/md";
 
 const ComponentsRightSidebar = () => {
+  const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
-  const title = `[bug]: ${pathname}`;
   const issueUrl =
     `https://github.com/Mdafsarx/nurui/issues/new?` +
-    `title=${encodeURIComponent(title)}` +
+    `title=${encodeURIComponent(`[bug]: ${pathname}`)}` +
     `&labels=bug&labels=documentation` +
     `&template=bug_report.md`;
+
+  const featureUrl =
+    `https://github.com/Mdafsarx/nurui/issues/new?` +
+    `title=${encodeURIComponent(`[feature]: ${pathname}`)}` +
+    `&labels=enhancement,documentation&template=feature_request.md`;
+
+  const editUrl = `https://github.com/Mdafsarx/nurui/blob/main/src/content${pathname}.mdx`;
 
   const navigation = {
     onThisPage: [
       {
-        label: "Installation",
-        icon: "📦",
+        label: "installation",
         href: "#installation",
       },
       {
-        label: "Props",
-        icon: "⚙️",
+        label: "props",
         href: "#props",
       },
     ],
@@ -35,42 +41,63 @@ const ComponentsRightSidebar = () => {
       {
         label: "Request a feature",
         icon: <FaRegLightbulb />,
-        href: "https://github.com/your-repo/issues/new?template=feature_request.md",
+        href: featureUrl,
       },
       {
         label: "Edit this page",
         icon: <MdOutlineModeEditOutline />,
-        href: "https://github.com/your-repo/edit/main/docs/page.md",
+        href: editUrl,
       },
     ],
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("h2");
+
+      sections.forEach((section) => {
+        const top = window.scrollY;
+        const offset = section.offsetTop - 100;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id");
+
+        if (id && top >= offset && top < offset + height) {
+          setActiveSection(id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection]);
 
   return (
     <div className="fixed top-16 right-0 hidden xl:block">
       <div className="w-72 min-h-screen border-l border-[var(--primary-color-1)] border-dashed p-4 space-y-3">
         <div className="flex flex-col gap-y-2">
           <h3 className="font-semibold pb-1">On this page</h3>
-          {navigation?.onThisPage?.map((item) => (
+          {navigation?.onThisPage?.map((nav) => (
             <a
-              key={item?.label}
-              className="text-[var(--opacity-text-color)] cursor-pointer"
+              key={nav?.label}
+              href={nav?.href}
+              className={`${activeSection === nav?.label ? "text-white" : "text-[var(--opacity-text-color)]"}  cursor-pointer`}
             >
-              {item?.label}
+              {nav?.label}
             </a>
           ))}
         </div>
         {/* Contribute */}
         <div className="flex flex-col gap-y-2">
           <h3 className="font-semibold pb-1">Contribute</h3>
-          {navigation?.contribute?.map((item) => (
+          {navigation?.contribute?.map((nav) => (
             <a
-              href={issueUrl}
-              key={item?.label}
+              href={nav?.href}
+              key={nav?.label}
               target="_blank"
-              className="text-[var(--opacity-text-color)] flex items-center gap-1"
+              className="text-[var(--opacity-text-color)] flex navs-center gap-1"
             >
-              {item?.icon}
-              {item?.label}
+              {nav?.icon}
+              {nav?.label}
             </a>
           ))}
         </div>

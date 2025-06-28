@@ -79,13 +79,13 @@ const cards = [
   {
     title: "Design Philosophy",
     description:
-      "nurui blends minimalism with functionality—each component is crafted with care, focusing on clean aesthetics and purposeful interactions.",
+      "nurui blends minimalism with functionality each component is crafted with care, focusing on clean aesthetics and purposeful interactions.",
     icon: designAnimationData,
   },
   {
     title: "Developer Experience",
     description:
-      "We obsess over DX. That means clear docs, predictable APIs, smart defaults, and zero unnecessary friction—from install to production.",
+      "We obsess over DX. That means clear docs, predictable APIs, smart defaults, and zero unnecessary friction from install to production.",
     icon: developerAnimationData,
   },
   {
@@ -97,7 +97,7 @@ const cards = [
   {
     title: "Future Vision",
     description:
-      "We're not just building components—we're creating an ecosystem. Expect design systems, headless UI, plugin support, and more in our future roadmap.",
+      "We're not just building components we're creating an ecosystem. Expect design systems, plugin support, and more in our future roadmap.",
     icon: visionAnimationData,
   },
 ];
