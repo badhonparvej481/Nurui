@@ -64,8 +64,8 @@ const HeroSection = () => {
           </h1>
           {/* description */}
           <p className="lg:text-xl max-w-2xl text-[var(--opacity-text-color)] text-balance">
-            React and Next.js based UI library with CLI scaffolding, TS-to-JS conversion,
-            and v0 live previews.
+            React and Next.js based UI library with CLI scaffolding, TS-to-JS
+            conversion, and v0 live previews.
           </p>
           {/* features */}
           <div className="bg-[var(--glass-color)] shadow-lg dark:shadow-none px-6 py-3 rounded-2xl hidden md:flex items-center gap-4 capitalize">
@@ -113,9 +113,7 @@ const HeroSection = () => {
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
                   Trusted by{" "}
-                  <span className="text-[var(--text-primary-color)]">
-                    10+
-                  </span>{" "}
+                  <span className="text-[var(--text-primary-color)]">10+</span>{" "}
                   developers
                 </p>
               </div>
@@ -161,29 +159,29 @@ export default HeroSection;
 const people = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
+    name: "Ajhar Ahmed Chowdhury",
+    designation: "Frontend Developer",
     image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751194657/download_gngifc.jpg",
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "Naeemul Islam",
+    designation: "Full-Stack Developer",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751194990/1744978175454_ttxfza.jpg",
   },
   {
     id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
+    name: "MD Yahya",
+    designation: "UI/UX Designer",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751195172/457868884_2128378500890953_2967294619988437201_n_noc8ul.jpg",
   },
   {
     id: 4,
     name: "Emily Davis",
-    designation: "UX Designer",
+    designation: "Frontend Developer",
     image:
       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
   },

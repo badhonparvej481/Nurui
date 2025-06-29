@@ -93,7 +93,7 @@ const navigation = [
   },
   {
     id: 4,
-    name: "Blog",
-    url: "/blog",
+    name: "playground",
+    url: "/playground",
   },
 ];

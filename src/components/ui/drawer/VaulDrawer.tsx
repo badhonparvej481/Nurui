@@ -68,8 +68,8 @@ const baseNavigation: NavigationItem[] = [
   },
   {
     icon: <TbHandClick />,
-    title: "Blog",
-    href: "/blog",
+    title: "playground",
+    href: "/playground",
   },
 ];
 

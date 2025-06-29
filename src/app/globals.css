@@ -27,9 +27,9 @@
   font-family: var(--font-nunito);
 }
 
-.font-creepster {
+/* .font-creepster {
   font-family: var(--font-creepster);
-}
+} */
 
 .clip-path-auth-layout {
   clip-path: polygon(

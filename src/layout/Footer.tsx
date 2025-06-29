@@ -132,6 +132,6 @@ const navigation = [
   {
     id: 5,
     name: "Blog",
-    url: "/blog",
+    url: "/playground",
   },
 ];

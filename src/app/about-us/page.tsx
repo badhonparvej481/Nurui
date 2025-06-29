@@ -5,6 +5,12 @@ import StackingCardsSection from "@/components/pages/about-us/StackingCardsSecti
 import StatesCountupSection from "@/components/pages/about-us/StatesCountupSection";
 import { WorldMapAnimationSection } from "@/components/pages/about-us/WorldMapAnimationSection";
 
+export const metadata = {
+  title: "About Us",
+  description:
+    "Learn more about the Nurui, our mission, and how we build the future of UI components.",
+};
+
 const page = () => {
   return (
     <main className="section-gap">
