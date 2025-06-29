@@ -1,5 +1,6 @@
 "use client";
 import StatesCountup from "@/components/common/StatesCountup";
+import { Index } from "@/registry/componentsRegistry";
 import { useInView } from "react-intersection-observer";
 
 const StatesCount = () => {
@@ -30,19 +31,19 @@ export default StatesCount;
 
 const metricsData = [
   {
-    count: 120,
+    count: Object.keys(Index).length - 1,
     description: "Components available in the library",
   },
   {
-    count: 2500,
+    count: 10,
     description: "Developers using nurui",
   },
   {
-    count: 75,
+    count: 0,
     description: "Open-source contributors",
   },
   {
-    count: 3200,
+    count: 2,
     description: "GitHub stars",
   },
 ];

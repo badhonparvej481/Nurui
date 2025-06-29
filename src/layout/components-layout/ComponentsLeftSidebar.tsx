@@ -3,11 +3,11 @@ import Nurui from "@/components/common/Nurui";
 import MenuItem from "@/components/common/MenuItem";
 import React from "react";
 import { useAppContext } from "@/context/AppContext";
-import { LuBotMessageSquare } from "react-icons/lu";
 // import Authentication from "@/components/common/DropDown";
 // import GoPro from "@/components/ui/GoPro";
 import { navigation } from "@/registry/ComponentNavigation";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
+import NuruiLogo from "@/components/common/NuruiLogo";
 
 const ComponentsLeftSidebar = () => {
   const { sideBar } = useAppContext();
@@ -22,14 +22,14 @@ const ComponentsLeftSidebar = () => {
         <div className="space-y-5">
           {sideBar ? (
             <div className="flex items-center justify-center gap-1">
-              <Nurui textSize="text-2xl" />
+              <Nurui />
               <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem]">
                 Basic
               </p>
             </div>
           ) : (
             <LinkWithProgress href="/">
-              <LuBotMessageSquare className="text-[var(--primary-color)] text-2xl rotate-180 w-fit mx-auto" />
+              <NuruiLogo />
             </LinkWithProgress>
           )}
           {/* login and pro */}

@@ -13,6 +13,7 @@ interface Frontmatter {
   title: string;
   description: string;
   creator: string;
+  keywords?: string[];
 }
 
 export async function generateMetadata({
@@ -37,9 +38,34 @@ export async function generateMetadata({
   });
 
   return {
-    title: `${frontmatter?.title} | Nurui`,
-    description: frontmatter?.description,
-    creator: frontmatter?.creator,
+    title: frontmatter.title,
+    description: frontmatter.description,
+    keywords: frontmatter.keywords ?? [],
+    creator: "Md Afsar Mahmud",
+    applicationName: "Nurui",
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      url: `https://nurui.vercel.app/docs/${slug}`,
+      siteName: "Nurui",
+      locale: "en_US",
+      type: "article",
+      images: [
+        {
+          url: "https://nurui.vercel.app/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "NURUI OG Image",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: frontmatter.title,
+      description: frontmatter.description,
+      images: [{ url: "https://nurui.vercel.app/og-image.jpg" }],
+      creator: "@md_afsar_mahmud",
+    },
   };
 }
 
