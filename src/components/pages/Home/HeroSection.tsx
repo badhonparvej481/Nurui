@@ -168,7 +168,7 @@ const people = [
   {
     id: 3,
     name: "MD Yahya",
-    designation: "UI/UX Designer",
+    designation: "Frontend Designer",
     image:
       "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751195172/457868884_2128378500890953_2967294619988437201_n_noc8ul.jpg",
   },

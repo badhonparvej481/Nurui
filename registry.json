@@ -34,6 +34,10 @@
         {
           "path": "./src/components/nurui/gradient-button.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/gradient-button.css",
+          "type": "registry:component"
         }
       ]
     },
@@ -50,6 +54,61 @@
         },
         {
           "path": "./src/components/nurui/border-animation-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hover-shadow-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["react-icons"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/hover-shadow-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/hover-shadow-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "text-fall-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["gsap", "@gsap/react", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/text-fall-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/text-fall-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "playing-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["three", "@react-three/fiber", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/playing-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/playing-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles//playing-card.css",
           "type": "registry:component"
         }
       ]
