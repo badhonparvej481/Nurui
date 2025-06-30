@@ -50,7 +50,7 @@ const GradientButton: React.FC<GradientButtonProps> = ({
           className,
         )}
       >
-        <span className="btn-content inline-flex w-full h-full items-center justify-center px-4 py-2">
+        <span className="text-white btn-content inline-flex w-full h-full items-center justify-center px-4 py-2">
           {text}
         </span>
       </button>

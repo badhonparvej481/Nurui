@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import PlayingCard from "./playing-card";
+import PlayingCard from "@/components/nurui/playing-card";
 
 // Helper to parse the CSS variable string into an array of RGB arrays
 function parseCanvasColors(cssVar: string): number[][] {

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Nunito } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import "../styles/main.scss";
 
@@ -96,11 +98,13 @@ export default function RootLayout({
       >
         <AppProvider>
           <ThemeProvider>
+            <Toaster />
             <NProgressProvider />
             <SplashCursor />
             <Navbar />
             <MainContent>{children}</MainContent>
             <Footer />
+            <Analytics />
           </ThemeProvider>
         </AppProvider>
       </body>

@@ -68,7 +68,7 @@ const ShinyTextArea = ({
         name={name}
         rows={rows}
         required={required}
-        className={`w-full h-36 cursor-default rounded-md border border-[var(--glass-color)] bg-[var(--glass-color)] p-3.5 
+        className={`w-full cursor-pointer h-36 rounded-md border border-[var(--glass-color)] bg-[var(--glass-color)] p-3.5 
         text-[var(--black-color)] dark:text-[var(--white-color)] transition-colors duration-500 placeholder:select-none placeholder:text-[var(--placeholder-color)] ${focus} focus:outline-none resize-none`}
       />
 

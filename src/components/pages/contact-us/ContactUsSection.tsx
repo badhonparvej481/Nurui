@@ -1,10 +1,40 @@
+"use client";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ShinyInput from "@/components/common/ShinyInput";
 import ShinyTextArea from "@/components/common/ShinyTextArea";
 import ButtonBackgroundShineButton from "@/components/common/ButtonBackgroundShine";
+import toast from "react-hot-toast";
 
 const ContactUsSection = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const target = e.target as HTMLFormElement;
+    const firstName = target.first_name.value;
+    const lastName = target.last_name.value;
+    const companyName = target.company_name.value;
+    const email = target.email.value;
+    const phoneNumber = target.phone_number.value;
+    const message = target.message.value;
+
+    if (
+      email &&
+      firstName &&
+      lastName &&
+      message &&
+      companyName &&
+      phoneNumber
+    ) {
+      toast.success("Thank you for your message!", {
+        style: {
+          background: "#1b1d2b",
+          color: "#fff",
+        },
+      });
+      target.reset();
+    }
+  };
+
   return (
     <section className="container pt-6 lg:pt-12 flex flex-col lg:flex-row gap-8 xl:gap-14 2xl:gap-24">
       <div className="lg:w-1/3 bg-gradient-to-t from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] rounded-2xl p-6 2xl:p-14 space-y-8 lg:space-y-10">
@@ -35,7 +65,10 @@ const ContactUsSection = () => {
           </div>
         </div>
       </div>
-      <form className="lg:w-2/3 grid lg:grid-cols-2 gap-6">
+      <form
+        onSubmit={handleSubmit}
+        className="lg:w-2/3 grid lg:grid-cols-2 gap-6"
+      >
         <fieldset className="space-y-2">
           <label className="capitalize font-semibold">First name</label>
           <ShinyInput
@@ -106,13 +139,11 @@ const getInTouch = {
   },
   chat_to_us: {
     description: "We’d love to hear your feedback and ideas.",
-    email: "support@nurui.dev",
+    email: "",
   },
   social_media: {
     platforms: [
       <FaFacebook key="facebook" className="text-2xl text-[#1877F2]" />,
-      // <BsInstagram key="instagram" className="text-2xl text-[#FE0173]" />,
-      // <BsYoutube key="youtube" className="text-2xl text-[#FF0033]" />,
       <FaXTwitter
         key="twitter"
         className="text-2xl text-[var(--black-color)] dark:text-[var(--white-color)]"
