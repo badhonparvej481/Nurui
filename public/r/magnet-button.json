@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "./src/components/nurui/magnet-button-demo.tsx",
-      "content": "import React from \"react\";\nimport MagnetButton from \"@/components/nurui/magnet-button\";\n\nconst MagnetButtonDemo = () => {\n  return (\n    <div className=\"flex items-center justify-center\">\n      <MagnetButton />\n    </div>\n  );\n};\n\nexport default MagnetButtonDemo;\n",
+      "content": "import React from \"react\";\nimport MagnetButton from \"@/components/nurui/magnet-button\";\n\nconst MagnetButtonDemo = () => {\n  return (\n    <div className=\"flex items-center justify-center min-h-[30rem]\">\n      <MagnetButton />\n    </div>\n  );\n};\n\nexport default MagnetButtonDemo;\n",
       "type": "registry:component"
     },
     {

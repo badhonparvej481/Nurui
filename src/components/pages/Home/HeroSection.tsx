@@ -16,18 +16,13 @@ import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../ui/cool-mode/CollMode";
 import { GrOptimize } from "react-icons/gr";
 import RatingStars from "@/components/common/RatingStars";
-import UberIcon from "@/components/icons/UberIcon";
-import SpotifyIcon from "@/components/icons/SpotifyIcon";
-import MetaIcon from "@/components/icons/MetaIcon";
-import NotionIcon from "@/components/icons/NotionIcon";
-import MailChimpIcon from "@/components/icons/MailChimpIcon";
-import LinearIcon from "@/components/icons/LinearIcon";
 import GsapIcon from "../../icons/GsapIcon";
 import ThreeJsIcon from "../../icons/ThreeJsIcon";
 import AnimeJsIcon from "../../icons/AnimeJsIcon";
 import MotionIcon from "../../icons/MotionIcon";
 import ReactSpringIcon from "../../icons/ReactSpringIcon";
 import ZDogIcon from "../../icons/ZDogIcon";
+import GradientText from "@/components/nurui/GradientText";
 
 const HeroSection = () => {
   return (
@@ -120,17 +115,16 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* trusted by */}
-          <div className="pt-16 hidden md:block">
-            <p className="font-semibold text-[18px] -mb-4">Used by</p>
-            <div className="flex items-center gap-x-8 ">
-              <UberIcon />
-              <SpotifyIcon />
-              <MetaIcon />
-              <NotionIcon />
-              <MailChimpIcon />
-              <LinearIcon />
-            </div>
+          {/* used by */}
+          <div className="pt-36 hidden md:flex items-center gap-2">
+            <GradientText
+              colors={["#3ca2fa", "#80eeb4", "#3ca2fa", "#80eeb4", "#3ca2fa"]}
+              animationSpeed={3}
+              showBorder={false}
+              className="text-3xl font-bold"
+            >
+              Used by 2+ Companies
+            </GradientText>
           </div>
         </div>
         {/* right side icons */}

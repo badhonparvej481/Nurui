@@ -1,10 +1,9 @@
-import NewsLetterSection from "@/components/common/NewsLetterSection";
+// import NewsLetterSection from "@/components/common/NewsLetterSection";
 import AllComponentSection from "@/components/pages/Home/AllComponentSection";
 import ComponentDemosSection from "@/components/pages/Home/ComponentDemosSection";
 import FaqSection from "@/components/pages/Home/FaqSection";
 import FeaturesSection from "@/components/pages/Home/FeaturesSection";
 import HeroSection from "@/components/pages/Home/HeroSection";
-// import HeroVideoDialogSection from "@/components/main/Home/HeroVideoDialogSection";
 import TestimonialSection from "@/components/pages/Home/TestimonialSection";
 
 const Home = () => {
@@ -17,7 +16,7 @@ const Home = () => {
       <ComponentDemosSection />
       <TestimonialSection />
       <FaqSection />
-      <NewsLetterSection />
+      {/* <NewsLetterSection /> */}
     </main>
   );
 };

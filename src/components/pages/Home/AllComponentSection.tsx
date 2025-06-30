@@ -150,8 +150,8 @@ export default function AllComponentSection() {
       <div>
         <SectionIntro
           title={{
-            highLiteWords: "One Place",
-            normalWords: "Your Favorite Tools,",
+            highLiteWords: "Everything You Need In",
+            normalWords: "Your Stack",
             firstHighLightColor: "text-[var(--secondary-color)]",
           }}
           description="From TypeScript to Tailwind, discover a powerful collection of tools designed to supercharge your development workflow."
