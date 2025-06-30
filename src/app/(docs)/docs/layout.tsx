@@ -5,7 +5,7 @@ import ComponentsRightSidebar from "@/layout/components-layout/ComponentsRightSi
 import { useAppContext } from "@/context/AppContext";
 import ComponentsFooter from "@/layout/components-layout/ComponentsFooter";
 import { usePathname } from "next/navigation";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 const Layout = ({ children }: IChildren) => {
   const { sideBar } = useAppContext();

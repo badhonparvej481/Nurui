@@ -14,7 +14,7 @@ import {
   type MotionValue,
   type UseScrollOptions,
 } from "motion/react";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 interface StackingCardsProps
   extends PropsWithChildren,
@@ -78,7 +78,7 @@ const StackingCardItem = ({
     <div
       className={cn(
         "h-full sticky top-28 md:top-24 lg:top-36 xl:top-40",
-        className
+        className,
       )}
       {...props}
     >

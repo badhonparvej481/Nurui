@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import "./styles/playing-card.css";
 
 // --- CanvasRevealEffect and Shader Logic ---

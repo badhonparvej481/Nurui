@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { CheckIcon, CopyIcon } from "lucide-react";
 import {
   type ComponentProps,
@@ -113,7 +113,11 @@ export const SnippetTabsContent = ({
   children,
   ...props
 }: SnippetTabsContentProps) => (
-  <TabsContent asChild className={cn("mt-0 p-4 text-sm bg-[var(--primary-color-5)]", className)} {...props}>
+  <TabsContent
+    asChild
+    className={cn("mt-0 p-4 text-sm bg-[var(--primary-color-5)]", className)}
+    {...props}
+  >
     <pre>{children}</pre>
   </TabsContent>
 );

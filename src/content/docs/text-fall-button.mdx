@@ -26,12 +26,25 @@ description: "A stylish text fall button component for modern UIs, built with ac
 
 <Cli
   dependencies={[
-    { label: "npm", command: "npm i gsap @gsap/react" },
-    { label: "pnpm", command: "pnpm add gsap @gsap/react" },
-    { label: "bun", command: "bun add gsap @gsap/react" },
-    { label: "yarn", command: "yarn add gsap @gsap/react" },
+    { label: "npm", command: "npm i gsap @gsap/react clsx tailwind-merge" },
+    { label: "pnpm", command: "pnpm add gsap @gsap/react clsx tailwind-merge" },
+    { label: "bun", command: "bun add gsap @gsap/react clsx tailwind-merge" },
+    { label: "yarn", command: "yarn add gsap @gsap/react clsx tailwind-merge" },
   ]}
 />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock 
+code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`
+}/>
 
 <Step>Copy and paste the following code into your project.</Step>
 

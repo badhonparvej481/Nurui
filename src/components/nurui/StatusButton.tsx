@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, CircleDashed } from "lucide-react";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 const wait = async (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
@@ -56,7 +56,7 @@ export default function StatusButton() {
           {status == "loading" ? (
             <CircleDashed className="h-4 w-4 animate-spin" />
           ) : (
-            status ?? "Add to cart"
+            (status ?? "Add to cart")
           )}
         </motion.span>
       </AnimatePresence>

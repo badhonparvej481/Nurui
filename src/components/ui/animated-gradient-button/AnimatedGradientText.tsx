@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import AnimatedGradientButton from "./AnimatedGradientButton";
 
 interface IProps {
@@ -21,7 +21,7 @@ const AnimatedGradientText: React.FC<IProps> = ({
       <hr className="mx-2 h-4 w-[1px] shrink-0 bg-[var(--black-color)] dark:bg-[var(--white-color)]" />{" "}
       <span
         className={cn(
-          `inline animate-gradient ${textGradient} bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent font-semibold`
+          `inline animate-gradient ${textGradient} bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent font-semibold`,
         )}
       >
         {title}

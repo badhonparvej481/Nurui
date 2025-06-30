@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 interface IGetStartedButtonProps {
