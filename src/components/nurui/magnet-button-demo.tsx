@@ -3,7 +3,7 @@ import MagnetButton from "@/components/nurui/magnet-button";
 
 const MagnetButtonDemo = () => {
   return (
-    <div className="flex items-center justify-center py-20">
+    <div className="flex items-center justify-center min-h-[30rem]">
       <MagnetButton />
     </div>
   );

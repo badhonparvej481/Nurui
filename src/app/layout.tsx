@@ -65,7 +65,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       type: "website",
       images: [
         {
-          url: "https://nurui.vercel.app/og-image.jpg",
+          url: "https://nurui.vercel.app/og-image.png",
           width: 1200,
           height: 630,
           alt: "NURUI OG Image",
@@ -77,7 +77,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       title: "Nurui",
       description:
         "React and Next.js based UI library with CLI scaffolding, TS-to-JS conversion, and v0 live previews.",
-      images: [{ url: "https://nurui.vercel.app/og-image.jpg" }],
+      images: [{ url: "https://nurui.vercel.app/og-image.png" }],
       creator: "@md_afsar_mahmud",
       // site: "@nurui",
     },
@@ -97,7 +97,7 @@ export default function RootLayout({
         <AppProvider>
           <ThemeProvider>
             <NProgressProvider />
-            <SplashCursor />
+            {/* <SplashCursor /> */}
             <Navbar />
             <MainContent>{children}</MainContent>
             <Footer />

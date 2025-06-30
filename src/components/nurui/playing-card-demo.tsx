@@ -45,7 +45,7 @@ export default function PlayingCardDemo() {
   }, []);
 
   return (
-    <div style={{ maxWidth: 440, margin: "0 auto" }}>
+    <div className="max-w-[440px] mx-auto min-h-[30rem] flex flex-col items-center justify-center ">
       <div className="text-sm">
         Click on the card to show/hide dynamic background
       </div>

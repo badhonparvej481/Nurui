@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "./src/components/nurui/border-animation-button-demo.tsx",
-      "content": "import React from \"react\";\nimport BorderAnimationButton from \"@/components/nurui/border-animation-button\";\n\nconst BorderAnimationButtonDemo = () => {\n  return <BorderAnimationButton text=\"Contact me\" />;\n};\n\nexport default BorderAnimationButtonDemo;",
+      "content": "import React from \"react\";\nimport BorderAnimationButton from \"@/components/nurui/border-animation-button\";\n\nconst BorderAnimationButtonDemo = () => {\n  return (\n    <div className=\"flex items-center justify-center min-h-screen\">\n      <BorderAnimationButton text=\"Contact me\" />\n    </div>\n  );\n};\n\nexport default BorderAnimationButtonDemo;\n",
       "type": "registry:component"
     },
     {

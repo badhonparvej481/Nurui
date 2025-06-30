@@ -52,7 +52,7 @@ export async function generateMetadata({
       type: "article",
       images: [
         {
-          url: "https://nurui.vercel.app/og-image.jpg",
+          url: "https://nurui.vercel.app/og-image.png",
           width: 1200,
           height: 630,
           alt: "NURUI OG Image",
@@ -63,7 +63,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: frontmatter.title,
       description: frontmatter.description,
-      images: [{ url: "https://nurui.vercel.app/og-image.jpg" }],
+      images: [{ url: "https://nurui.vercel.app/og-image.png" }],
       creator: "@md_afsar_mahmud",
     },
   };
