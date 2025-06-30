@@ -1,4 +1,4 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { Marquee } from "./Marquee";
 import Image from "next/image";
 

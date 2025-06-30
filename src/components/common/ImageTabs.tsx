@@ -1,7 +1,7 @@
 "use client";
 import React, { ReactNode, useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 interface TabsContextType {

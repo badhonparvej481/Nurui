@@ -3,7 +3,7 @@ import { ComponentProps, MouseEvent, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(SplitText);
 

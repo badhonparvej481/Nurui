@@ -1,6 +1,6 @@
 import React from "react";
 import { Vortex } from "./Vortex";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 export function VortexDemo({ className }: { className: string }) {
   return (

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 export const StickyScroll = ({
   content,
@@ -33,7 +33,7 @@ export const StickyScroll = ({
         }
         return acc;
       },
-      0
+      0,
     );
     setActiveCard(closestBreakpointIndex);
   });
@@ -44,11 +44,11 @@ export const StickyScroll = ({
       "linear-gradient(to bottom right, #ec4899, #6366f1)",
       "linear-gradient(to bottom right, #f97316, #eab308)",
     ],
-    []
+    [],
   );
 
   const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
+    linearGradients[0],
   );
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export const StickyScroll = ({
         style={{ background: backgroundGradient }}
         className={cn(
           "sticky top-10  w-1/2 h-[530px] overflow-hidden rounded-xl bg-white hidden lg:block",
-          contentClassName
+          contentClassName,
         )}
       >
         {content[activeCard].content ?? null}

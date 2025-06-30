@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion"; // Fix: should be 'framer-motion' not 'motion/react'
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 interface VortexProps {
   children?: React.ReactNode;

@@ -25,7 +25,7 @@ import Matter, {
   Runner,
   World,
 } from "matter-js";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 type GravityProps = {
   children: ReactNode;
@@ -66,7 +66,7 @@ const GravityContext = createContext<{
   registerElement: (
     id: string,
     element: HTMLElement,
-    props: MatterBodyProps
+    props: MatterBodyProps,
   ) => void;
   unregisterElement: (id: string) => void;
 } | null>(null);
@@ -127,7 +127,7 @@ export const MatterBody = ({
       className={cn(
         "absolute",
         className,
-        isDraggable && "pointer-events-none"
+        isDraggable && "pointer-events-none",
       )}
     >
       {children}
@@ -148,7 +148,7 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
     const canvas = useRef<HTMLDivElement>(null);
     const engine = useRef(Engine.create());
@@ -223,7 +223,7 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
           bodiesMap.current.set(id, { element, body, props });
         }
       },
-      [debug]
+      [debug],
     );
 
     // Unregister Matter.js body from the physics world
@@ -329,7 +329,7 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
       const touchingMouse = () =>
         Query.point(
           engine.current.world.bodies,
-          mouseConstraint.current?.mouse.position || { x: 0, y: 0 }
+          mouseConstraint.current?.mouse.position || { x: 0, y: 0 },
         ).length > 0;
 
       if (grabCursor) {
@@ -461,12 +461,12 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
         const x = calculatePosition(
           props.x,
           canvasSize.width,
-          element.offsetWidth
+          element.offsetWidth,
         );
         const y = calculatePosition(
           props.y,
           canvasSize.height,
-          element.offsetHeight
+          element.offsetHeight,
         );
         body.position.x = x;
         body.position.y = y;
@@ -482,7 +482,7 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
         stop: stopEngine,
         reset,
       }),
-      [startEngine, stopEngine]
+      [startEngine, stopEngine],
     );
 
     useEffect(() => {
@@ -513,7 +513,7 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
         </div>
       </GravityContext.Provider>
     );
-  }
+  },
 );
 
 Gravity.displayName = "Gravity";

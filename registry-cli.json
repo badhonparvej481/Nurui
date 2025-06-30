@@ -25,6 +25,10 @@
         {
           "path": "./src/components/nurui/gradient-button.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/gradient-button.css",
+          "type": "registry:component"
         }
       ]
     },

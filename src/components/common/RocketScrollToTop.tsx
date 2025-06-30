@@ -3,7 +3,7 @@ import { FC, useEffect, useRef, useState } from "react";
 interface IProps {
   className?: string;
 }
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 const RocketScrollToTop: FC<IProps> = ({ className }) => {
   const elementRef = useRef<HTMLButtonElement>(null);
@@ -50,7 +50,7 @@ const RocketScrollToTop: FC<IProps> = ({ className }) => {
           <button
             className={cn(
               "FooterScrollToTopButton canHover",
-              rocketLaunch ? "FooterRocketLaunch" : ""
+              rocketLaunch ? "FooterRocketLaunch" : "",
             )}
             id="js-FooterScrollToTopClick"
             ref={elementRef}
@@ -60,7 +60,7 @@ const RocketScrollToTop: FC<IProps> = ({ className }) => {
             <span
               className={cn(
                 "FooterScrollToTopRocket",
-                rocketLaunch ? "shakeRocket flyRocket" : ""
+                rocketLaunch ? "shakeRocket flyRocket" : "",
               )}
               id="js-FooterScrollToTopAnimate"
               style={{ top: rocketLaunch ? scrollPosition : undefined }}

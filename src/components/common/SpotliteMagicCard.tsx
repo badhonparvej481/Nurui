@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect } from "react";
 
@@ -43,7 +43,7 @@ export default function SpotliteMagicCard({
   const bg = useTransform(
     [mouseX, mouseY],
     ([x, y]) =>
-      `radial-gradient(${gradientSize}px circle at ${x}px ${y}px, ${gradientColor}, transparent 100%)`
+      `radial-gradient(${gradientSize}px circle at ${x}px ${y}px, ${gradientColor}, transparent 100%)`,
   );
 
   return (
@@ -66,7 +66,7 @@ export default function SpotliteMagicCard({
               ? "border border-[var(--white-color)]"
               : "border border-[var(--border-color)]"
           }`,
-          className
+          className,
         )}
       >
         <div className="relative z-10">{children}</div>

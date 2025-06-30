@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import nProgress from "nprogress";
 import React from "react";

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, ReactNode } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 const ShinyInput = ({
   className,
@@ -52,7 +52,7 @@ const ShinyInput = ({
   const shineBorder = useTransform(
     [positionX, positionY],
     ([x, y]) =>
-      `radial-gradient(30% 30px at ${x}px ${y}px, black 45%, transparent)`
+      `radial-gradient(30% 30px at ${x}px ${y}px, black 45%, transparent)`,
   );
 
   return (

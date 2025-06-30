@@ -7,7 +7,7 @@ import { Marquee } from "@/components/ui/marquee/Marquee";
 import { AnimatedListDemo } from "@/components/ui/animated-list/AnimatedList";
 import { AnimatedCircularProgressBarDemo } from "@/components/ui/progress-bar/AnimatedCircularProgressBarDemo";
 import { TerminalDemo } from "@/components/ui/terminal/TerminalDemo";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { IconCloudDemo } from "@/components/ui/icon-cloud/IconCloudDemo";
 import OrbitingItems3D from "@/components/ui/orbiting-Items-3D/OrbitingItems3d";
 import {

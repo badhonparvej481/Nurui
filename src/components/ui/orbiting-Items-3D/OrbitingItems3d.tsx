@@ -10,7 +10,7 @@ import {
   CodeIcon,
 } from "lucide-react";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 export const CenterIcon = (
   <CodeIcon

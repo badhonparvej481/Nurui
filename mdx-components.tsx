@@ -1,5 +1,5 @@
 import { ComponentSource } from "@/components/common/component-source";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import type { MDXComponents } from "mdx/types";
 import ComponentPreview from "@/components/common/ComponentPreview";
 import Cli from "@/components/ui/cli/Cli";
