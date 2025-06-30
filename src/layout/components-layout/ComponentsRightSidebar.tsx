@@ -71,6 +71,14 @@ const ComponentsRightSidebar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
+  if (
+    pathname === "/docs/installation" ||
+    pathname === "/docs/introduction" ||
+    pathname === "/docs/components"
+  ) {
+    return null;
+  }
+
   return (
     <div className="fixed top-16 right-0 hidden xl:block">
       <div className="w-72 min-h-screen border-l border-[var(--primary-color-1)] border-dashed p-4 space-y-3">
