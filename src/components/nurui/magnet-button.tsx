@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "motion/react";
 import { Magnet } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
