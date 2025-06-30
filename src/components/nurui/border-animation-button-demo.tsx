@@ -2,7 +2,11 @@ import React from "react";
 import BorderAnimationButton from "@/components/nurui/border-animation-button";
 
 const BorderAnimationButtonDemo = () => {
-  return <BorderAnimationButton text="Contact me" />;
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <BorderAnimationButton text="Contact me" />
+    </div>
+  );
 };
 
 export default BorderAnimationButtonDemo;

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import React, { CSSProperties } from "react";
+import "./styles/gradient-button.css";
 
 interface GradientButtonProps {
   borderWidth?: number;
@@ -41,11 +42,11 @@ const GradientButton: React.FC<GradientButtonProps> = ({
   } as CSSProperties;
 
   return (
-    <div className="gradient-button inline-block">
+    <div className="inline-block">
       <button
         style={gradientStyle}
         className={cn(
-          "relative gradient-button flex items-center justify-center min-w-28 min-h-10 overflow-hidden rainbow-btn before:absolute before:-inset-[200%] animate-rainbow",
+          "relative flex items-center justify-center min-w-28 min-h-10 overflow-hidden rainbow-btn before:absolute before:-inset-[200%] animate-rainbow",
           className,
         )}
       >
