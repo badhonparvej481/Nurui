@@ -1,5 +1,5 @@
-import React, { CSSProperties } from "react";
 import { cn } from "@/utils/cn";
+import React, { CSSProperties } from "react";
 
 interface GradientButtonProps {
   borderWidth?: number;

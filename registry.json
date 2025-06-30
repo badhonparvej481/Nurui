@@ -4,12 +4,33 @@
   "homepage": "https://nurui.vercel.app",
   "items": [
     {
+      "name": "magnet-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "motion", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/magnet-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/magnet-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "gradient-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
+        {
+          "path": "./src/components/nurui/gradient-button-demo.tsx",
+          "type": "registry:component"
+        },
         {
           "path": "./src/components/nurui/gradient-button.tsx",
           "type": "registry:component"

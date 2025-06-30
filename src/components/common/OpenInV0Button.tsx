@@ -1,17 +1,21 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/cn";
+import { usePathname } from "next/navigation";
 
 interface IV0Button {
   className: string;
-  url: string;
 }
 
-export default function OpenInV0Button({ className, url }: IV0Button) {
+export default function OpenInV0Button({ className }: IV0Button) {
+  const pathName = usePathname();
+  const componentName = pathName.split("/")[pathName.split("/").length - 1];
+  const url = `https://nurui.vercel.app/r/${componentName}.json`;
   return (
     <Button
       aria-label="Open in v0"
       className={cn(
-        "gap-1 rounded-lg shadow-none bg-black px-3 text-xs text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 transition-colors duration-200 not-prose",
+        "gap-1 rounded-lg shadow-none font-semibold px-2 text-xs border dark:bg-white dark:text-black  dark:hover:text-white dark:hover:bg-black dark:border-white transition-colors duration-200 not-prose",
         className,
       )}
       asChild

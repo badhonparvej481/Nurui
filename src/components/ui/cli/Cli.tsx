@@ -30,17 +30,17 @@ const commands = [
   {
     label: "pnpm",
     icon: <PnpmIcon />,
-    code: `bunx nurui add`,
+    code: `pnpm dlx nurui add`,
   },
   {
     label: "bun",
     icon: <BunIcon />,
-    code: `yarn dlx nurui add`,
+    code: `bunx nurui add`,
   },
   {
     label: "yarn",
     icon: <YarnIcon />,
-    code: `pnpm dlx nurui add`,
+    code: `yarn dlx nurui add`,
   },
 ];
 

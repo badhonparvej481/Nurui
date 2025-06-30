@@ -4,12 +4,24 @@ import { IChildren } from "@/types/types";
 import ComponentsRightSidebar from "@/layout/components-layout/ComponentsRightSidebar";
 import { useAppContext } from "@/context/AppContext";
 import ComponentsFooter from "@/layout/components-layout/ComponentsFooter";
+import { usePathname } from "next/navigation";
+import { cn } from "@/utils/cn";
 
 const Layout = ({ children }: IChildren) => {
   const { sideBar } = useAppContext();
+  const pathname = usePathname();
+  const isLeftSideBar =
+    pathname === "/docs/installation" ||
+    pathname === "/docs/introduction" ||
+    pathname === "/docs/components";
+
   return (
     <div className={`flex items-start pt-16 ${sideBar ? "xl:pl-72" : "pl-16"}`}>
-      <div className="w-full xl:w-[calc(100%-18rem)] flex flex-col min-h-screen">
+      <div
+        className={cn(`w-full flex flex-col min-h-screen`, {
+          "xl:w-[calc(100%-18rem)]": !isLeftSideBar,
+        })}
+      >
         <main className="px-6 md:px-12 py-8">{children}</main>
         <ComponentsFooter />
       </div>
