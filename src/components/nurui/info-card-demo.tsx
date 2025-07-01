@@ -29,7 +29,7 @@ const fileContainerStyle: React.CSSProperties = {
 };
 
 export const InfoCardDemo: React.FC = () => (
-  <div className="container" style={containerStyle}>
+  <div className="py-24" style={containerStyle}>
     <div
       className="file-container"
       id="container1"

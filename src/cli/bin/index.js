@@ -79,7 +79,7 @@ async function convertTsxToJsx(code) {
   });
 }
 
-async function downloadFileFromGitHub(filePath, componentName) {
+async function downloadFileFromGitHub(filePath) {
   const rawUrl = `${basePath}/${filePath.replace(/^\.\//, "")}`;
   const res = await fetch(rawUrl);
   if (!res.ok) throw new Error(`Failed to download ${filePath}`);
@@ -89,13 +89,8 @@ async function downloadFileFromGitHub(filePath, componentName) {
   const isCss = fileName.endsWith(".css");
 
   const targetDir = isCss
-    ? path.join(process.cwd(), "styles", componentName.toLowerCase())
-    : path.join(
-        process.cwd(),
-        "components",
-        "nurui",
-        componentName.toLowerCase(),
-      );
+    ? path.join(process.cwd(), "components", "nurui", "styles")
+    : path.join(process.cwd(), "components", "nurui");
 
   const targetPath = path.join(targetDir, fileName);
 
@@ -151,8 +146,11 @@ try {
     }`,
   };
 
-  const utilsPath = path.join(process.cwd(), "utils");
-  const cnPath = path.join(utilsPath, `cn.${language === "js" ? "js" : "ts"}`);
+  const utilsPath = path.join(process.cwd(), "lib");
+  const cnPath = path.join(
+    utilsPath,
+    `utils.${language === "js" ? "js" : "ts"}`,
+  );
 
   if (!fs.existsSync(cnPath)) {
     await fs.promises.mkdir(utilsPath, { recursive: true });
@@ -160,15 +158,8 @@ try {
     console.log(colors.green(`🛠️ Created utils/cn.${language}`));
   }
 
-  // const destPath = path.join(
-  //   process.cwd(),
-  //   "components",
-  //   "nurui",
-  //   componentName.toLowerCase(),
-  // );
-
   for (const file of match.files) {
-    await downloadFileFromGitHub(file.path, componentName);
+    await downloadFileFromGitHub(file.path);
   }
 
   s.stop(colors.green(`✅ ${componentName} downloaded successfully!`));

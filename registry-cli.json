@@ -81,6 +81,10 @@
         {
           "path": "./src/components/nurui/playing-card.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/playing-card.css",
+          "type": "registry:component"
         }
       ]
     },
@@ -88,11 +92,15 @@
       "name": "info-card",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["three", "@react-three/fiber"],
+      "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
           "path": "./src/components/nurui/info-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/info-card.css",
           "type": "registry:component"
         }
       ]

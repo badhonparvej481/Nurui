@@ -100,7 +100,7 @@ export default function RootLayout({
           <ThemeProvider>
             <Toaster />
             <NProgressProvider />
-            {/* <SplashCursor /> */}
+            <SplashCursor />
             <Navbar />
             <MainContent>{children}</MainContent>
             <Footer />
