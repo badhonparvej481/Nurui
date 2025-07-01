@@ -108,7 +108,28 @@
           "type": "registry:component"
         },
         {
-          "path": "./src/components/nurui/styles//playing-card.css",
+          "path": "./src/components/nurui/styles/playing-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "info-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/info-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/info-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/info-card.css",
           "type": "registry:component"
         }
       ]

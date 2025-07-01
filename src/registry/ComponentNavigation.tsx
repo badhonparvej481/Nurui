@@ -35,7 +35,10 @@ export const navigation = [
   {
     icon: <TbCards />,
     title: "Cards",
-    submenu: [{ name: "Playing", href: `${baseUrl}/playing-card` }],
+    submenu: [
+      { name: "Playing", href: `${baseUrl}/playing-card` },
+      { name: "Info", href: `${baseUrl}/info-card` },
+    ],
   },
   // last item
   {

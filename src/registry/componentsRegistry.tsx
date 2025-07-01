@@ -16,6 +16,9 @@ import MagnetButtonCode from "@/components/nurui/magnet-button.tsx?raw";
 import PlayingCardDemo from "@/components/nurui/playing-card-demo";
 import PlayingCardDemoCode from "@/components/nurui/playing-card-demo.tsx?raw";
 import PlayingCardCode from "@/components/nurui/playing-card.tsx?raw";
+import { InfoCardDemo } from "@/components/nurui/info-card-demo";
+import InfoCardDemoCode from "@/components/nurui/info-card-demo.tsx?raw";
+import InfoCardCode from "@/components/nurui/info-card.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -64,5 +67,10 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <PlayingCardDemo />,
     code: PlayingCardDemoCode,
     othersCode: [{ fileName: "playing-card", code: PlayingCardCode }],
+  },
+  infoCard: {
+    preview: <InfoCardDemo />,
+    code: InfoCardDemoCode,
+    othersCode: [{ fileName: "info-card", code: InfoCardCode }],
   },
 };

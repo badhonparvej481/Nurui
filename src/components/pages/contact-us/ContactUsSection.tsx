@@ -12,19 +12,12 @@ const ContactUsSection = () => {
     const target = e.target as HTMLFormElement;
     const firstName = target.first_name.value;
     const lastName = target.last_name.value;
-    const companyName = target.company_name.value;
+    // const companyName = target.company_name.value;
     const email = target.email.value;
-    const phoneNumber = target.phone_number.value;
+    // const phoneNumber = target.phone_number.value;
     const message = target.message.value;
 
-    if (
-      email &&
-      firstName &&
-      lastName &&
-      message &&
-      companyName &&
-      phoneNumber
-    ) {
+    if (email && firstName && lastName && message) {
       toast.success("Thank you for your message!", {
         style: {
           background: "#1b1d2b",

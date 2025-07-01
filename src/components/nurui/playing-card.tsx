@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useEffect, useState, useMemo } from "react";
-import Image from "next/image";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { cn } from "@/lib/utils";
@@ -376,9 +375,6 @@ export interface PlayingCardProps {
   innerRounding?: string;
   backgroundColor?: string;
   foregroundColor?: string;
-  imageHeightPercentage?: number;
-  imageSrc: string;
-  imageAlt?: string;
   outlineColor?: string;
   hoverOutlineColor?: string;
   textArray: string[];
@@ -407,9 +403,6 @@ const PlayingCard: React.FC<PlayingCardProps> = ({
   innerRounding = "16px",
   backgroundColor = "#FFF",
   foregroundColor = "#000",
-  imageHeightPercentage = 70,
-  imageSrc,
-  imageAlt = "",
   outlineColor = "#E879F9",
   hoverOutlineColor = "#6366F1",
   textArray,
@@ -590,46 +583,6 @@ const PlayingCard: React.FC<PlayingCardProps> = ({
                 {letter}
               </div>
             ))}
-          </div>
-          {/* Centered Image */}
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 2,
-              pointerEvents: "none",
-            }}
-          >
-            <div
-              style={{
-                height: `${imageHeightPercentage}%`,
-                aspectRatio: "1/1",
-                width: "auto",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Image
-                src={imageSrc}
-                alt={imageAlt}
-                fill
-                style={{
-                  objectFit: "contain",
-                  objectPosition: "center",
-                  pointerEvents: "none",
-                }}
-                priority
-                sizes={`${componentWidth} ${aspectRatio.replace("/", " ")}`}
-                draggable={false}
-              />
-            </div>
           </div>
         </div>
       </div>

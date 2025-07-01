@@ -56,9 +56,6 @@ export default function PlayingCardDemo() {
         innerRounding="18px"
         backgroundColor="var(--playingcard-bg)"
         foregroundColor="var(--playingcard-fg)"
-        imageHeightPercentage={36}
-        imageSrc="https://raw.githubusercontent.com/Northstrix/my-portfolio/refs/heads/main/public/playground-card-image.webp"
-        imageAlt=""
         outlineColor="var(--playingcard-outline-color)"
         hoverOutlineColor="var(--playingcard-hover-outline-color)"
         textArray={["洪", "秀", "全"]}

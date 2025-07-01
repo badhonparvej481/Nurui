@@ -9,8 +9,8 @@ import fs from "fs";
 import path from "path";
 import { execa } from "execa";
 import fetch from "node-fetch";
-const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev/registry-cli.json`;
-const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/dev`;
+const registryPath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/main/registry-cli.json`;
+const basePath = `https://raw.githubusercontent.com/Mdafsarx/Nurui/main`;
 
 // CLI args
 const [command, componentName] = process.argv.slice(2);
@@ -79,23 +79,37 @@ async function convertTsxToJsx(code) {
   });
 }
 
-async function downloadFileFromGitHub(filePath, localPath) {
-  const rawUrl = `${basePath}/${filePath}`;
+async function downloadFileFromGitHub(filePath, componentName) {
+  const rawUrl = `${basePath}/${filePath.replace(/^\.\//, "")}`;
   const res = await fetch(rawUrl);
   if (!res.ok) throw new Error(`Failed to download ${filePath}`);
   const content = await res.text();
 
   const fileName = path.basename(filePath);
-  const targetPath = path.join(localPath, fileName);
+  const isCss = fileName.endsWith(".css");
 
-  if (language === "js" && fileName.endsWith(".tsx")) {
+  const targetDir = isCss
+    ? path.join(process.cwd(), "styles", componentName.toLowerCase())
+    : path.join(
+        process.cwd(),
+        "components",
+        "nurui",
+        componentName.toLowerCase(),
+      );
+
+  const targetPath = path.join(targetDir, fileName);
+
+  // Convert .tsx to .jsx if JS mode and it's a .tsx file
+  if (!isCss && language === "js" && fileName.endsWith(".tsx")) {
     const jsx = await convertTsxToJsx(content);
     const newPath = targetPath.replace(/\.tsx$/, ".jsx");
     await fs.promises.mkdir(path.dirname(newPath), { recursive: true });
     await fs.promises.writeFile(newPath, jsx.trim(), "utf8");
+    console.log(colors.cyan(`📦 Saved: ${newPath}`));
   } else {
-    await fs.promises.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.promises.mkdir(targetDir, { recursive: true });
     await fs.promises.writeFile(targetPath, content, "utf8");
+    console.log(colors.cyan(`📦 Saved: ${targetPath}`));
   }
 }
 
@@ -146,15 +160,15 @@ try {
     console.log(colors.green(`🛠️ Created utils/cn.${language}`));
   }
 
-  const destPath = path.join(
-    process.cwd(),
-    "components",
-    "nurui",
-    componentName.toLowerCase(),
-  );
+  // const destPath = path.join(
+  //   process.cwd(),
+  //   "components",
+  //   "nurui",
+  //   componentName.toLowerCase(),
+  // );
 
   for (const file of match.files) {
-    await downloadFileFromGitHub(file.path, destPath);
+    await downloadFileFromGitHub(file.path, componentName);
   }
 
   s.stop(colors.green(`✅ ${componentName} downloaded successfully!`));
