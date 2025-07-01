@@ -19,6 +19,12 @@ import PlayingCardCode from "@/components/nurui/playing-card.tsx?raw";
 import { InfoCardDemo } from "@/components/nurui/info-card-demo";
 import InfoCardDemoCode from "@/components/nurui/info-card-demo.tsx?raw";
 import InfoCardCode from "@/components/nurui/info-card.tsx?raw";
+import ContactFormDemo from "@/components/nurui/contact-form-demo";
+import ContactFormDemoCode from "@/components/nurui/contact-form-demo.tsx?raw";
+import ContactFormCode from "@/components/nurui/contact-form.tsx?raw";
+import BackgroundShineButtonCode from "@/components/nurui/background-shine-button.tsx?raw";
+import ShinyInputCode from "@/components/nurui/shiny-input.tsx?raw";
+import ShinyTextAreaCode from "@/components/nurui/shiny-text-area.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -72,5 +78,16 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <InfoCardDemo />,
     code: InfoCardDemoCode,
     othersCode: [{ fileName: "info-card", code: InfoCardCode }],
+  },
+  // forms
+  contactForm: {
+    preview: <ContactFormDemo />,
+    code: ContactFormDemoCode,
+    othersCode: [
+      { fileName: "contact-form", code: ContactFormCode },
+      { fileName: "background-shine-button", code: BackgroundShineButtonCode },
+      { fileName: "shiny-input", code: ShinyInputCode },
+      { fileName: "shiny-text-area", code: ShinyTextAreaCode },
+    ],
   },
 };

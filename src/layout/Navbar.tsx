@@ -78,18 +78,18 @@ export default Navbar;
 const navigation = [
   {
     id: 1,
+    name: "docs",
+    url: "/docs/installation",
+  },
+  {
+    id: 2,
     name: "component",
     url: "/docs/gradient-button",
   },
   {
-    id: 2,
+    id: 3,
     name: "About",
     url: "/about-us",
-  },
-  {
-    id: 3,
-    name: "contact",
-    url: "/contact-us",
   },
   {
     id: 4,

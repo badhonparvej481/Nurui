@@ -133,6 +133,35 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "contact-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["framer-motion","clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/contact-form-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/contact-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/background-shine-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shiny-input.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shiny-text-area.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

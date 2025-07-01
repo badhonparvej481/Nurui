@@ -5,8 +5,9 @@ import { CgMenuRight } from "react-icons/cg";
 import MenuItem from "@/components/common/MenuItem";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { GrInstallOption } from "react-icons/gr";
-import { TbComponents, TbHandClick } from "react-icons/tb";
+import { TbHandClick } from "react-icons/tb";
 import { navigation as componentNavigation } from "@/registry/ComponentNavigation";
+import { SlDocs } from "react-icons/sl";
 
 export default function VaulDrawer() {
   return (
@@ -62,13 +63,13 @@ const baseNavigation: NavigationItem[] = [
     href: "/about-us",
   },
   {
-    icon: <TbComponents />,
-    title: "contact",
-    href: "/contact-us",
+    icon: <SlDocs />,
+    title: "Docs",
+    href: "/docs/installation",
   },
   {
     icon: <TbHandClick />,
-    title: "playground",
+    title: "Playground",
     href: "/playground",
   },
 ];

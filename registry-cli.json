@@ -75,7 +75,7 @@
       "name": "playing-card",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["three", "@react-three/fiber"],
+      "dependencies": ["three", "@react-three/fiber","tw-animate-css"],
       "registryDependencies": [],
       "files": [
         {
@@ -92,7 +92,7 @@
       "name": "info-card",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": [],
+      "dependencies": ["tw-animate-css"],
       "registryDependencies": [],
       "files": [
         {
@@ -101,6 +101,31 @@
         },
         {
           "path": "./src/components/nurui/styles/info-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "contact-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/contact-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/background-shine-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shiny-input.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shiny-text-area.tsx",
           "type": "registry:component"
         }
       ]

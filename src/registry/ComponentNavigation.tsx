@@ -2,6 +2,7 @@ import { TfiHelpAlt } from "react-icons/tfi";
 import { TbCards, TbHandClick } from "react-icons/tb";
 import { GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
+import { FaWpforms } from "react-icons/fa";
 
 const baseUrl = "/docs";
 
@@ -38,6 +39,14 @@ export const navigation = [
     submenu: [
       { name: "Playing", href: `${baseUrl}/playing-card` },
       { name: "Info", href: `${baseUrl}/info-card` },
+    ],
+  },
+  {
+    icon: <FaWpforms />,
+    title: "Forms",
+    submenu: [
+      { name: "contact", href: `${baseUrl}/contact-form` },
+      // { name: "login", href: `${baseUrl}/playing-card` },
     ],
   },
   // last item

@@ -6,7 +6,7 @@ interface IProps {
   className?: string;
 }
 
-const ButtonBackgroundShineButton: FC<IProps> = ({ title, className }) => {
+const BackgroundShineButton: FC<IProps> = ({ title, className }) => {
   return (
     <button
       type={"submit"}
@@ -20,4 +20,4 @@ const ButtonBackgroundShineButton: FC<IProps> = ({ title, className }) => {
   );
 };
 
-export default ButtonBackgroundShineButton;
+export default BackgroundShineButton;

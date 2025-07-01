@@ -140,6 +140,11 @@ const navigation = [
   },
   {
     id: 2,
+    name: "Docs",
+    url: "/docs/installation",
+  },
+  {
+    id: 2,
     name: "Components",
     url: "/docs/gradient-button",
   },
@@ -150,11 +155,6 @@ const navigation = [
   },
   {
     id: 4,
-    name: "Contact",
-    url: "/contact-us",
-  },
-  {
-    id: 5,
     name: "Playground",
     url: "/playground",
   },
