@@ -111,6 +111,19 @@
       ]
     },
     {
+      "name": "cursor-draw",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["gsap"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/cursor-draw.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "magnet-button",
       "type": "registry:component",
       "devDependencies": [],

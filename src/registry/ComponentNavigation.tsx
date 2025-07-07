@@ -39,6 +39,7 @@ export const navigation = [
       { name: "Project showcase", href: `${baseUrl}/project-showcase` },
       { name: "Story", href: `${baseUrl}/story` },
       { name: "following eye", href: `${baseUrl}/following-eye` },
+      { name: "cursor draw", href: `${baseUrl}/cursor-draw` },
     ],
   },
   {

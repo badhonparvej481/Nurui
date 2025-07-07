@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import type React from "react";
 import { ShaderCanvas } from "@/components/nurui/shader-canvas";
 import { RippleButton } from "@/components/nurui/multi-type-ripple-buttons";
 
@@ -39,20 +39,22 @@ export const AnimatedPricingCard = ({
   isPopular = false,
   buttonVariant = "primary",
 }: PricingCardProps) => {
+  // Prevent runtime errors if `features` is undefined
+  const safeFeatures = features ?? [];
   const cardClasses = `
-    backdrop-blur-[14px] bg-gradient-to-br rounded-2xl shadow-xl flex-1 max-w-xs px-7 py-8 flex flex-col transition-all duration-300
-    from-black/5 to-black/0 border border-black/10
-    dark:from-white/10 dark:to-white/5 dark:border-white/10 dark:backdrop-brightness-[0.91]
-    ${isPopular ? "scale-105 relative ring-2 ring-cyan-400/20 dark:from-white/20 dark:to-white/10 dark:border-cyan-400/30 shadow-2xl" : ""}
-  `;
+  backdrop-blur-[14px] bg-gradient-to-br rounded-2xl shadow-xl flex-1 max-w-xs px-7 py-8 flex flex-col transition-all duration-300
+  from-black/5 to-black/0 border border-black/10
+  dark:from-white/10 dark:to-white/5 dark:border-white/10 dark:backdrop-brightness-[0.91]
+  ${isPopular ? "scale-105 relative ring-2 ring-cyan-400/20 dark:from-white/20 dark:to-white/10 dark:border-cyan-400/30 shadow-2xl" : ""}
+`;
   const buttonClasses = `
-    mt-auto w-full py-2.5 rounded-xl font-semibold text-[14px] transition font-sans
-    ${
-      buttonVariant === "primary"
-        ? "bg-cyan-400 hover:bg-cyan-300 text-foreground"
-        : "bg-black/10 hover:bg-black/20 text-foreground border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/20"
-    }
-  `;
+  mt-auto w-full py-2.5 rounded-xl font-semibold text-[14px] transition font-sans
+  ${
+    buttonVariant === "primary"
+      ? "bg-cyan-400 hover:bg-cyan-300 text-foreground"
+      : "bg-black/10 hover:bg-black/20 text-foreground border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/20"
+  }
+`;
 
   return (
     <div className={cardClasses.trim()}>
@@ -76,8 +78,9 @@ export const AnimatedPricingCard = ({
         <span className="text-[14px] text-foreground/70 font-sans">/mo</span>
       </div>
       <div className="card-divider w-full mb-5 h-px bg-[linear-gradient(90deg,transparent,rgba(0,0,0,0.1)_50%,transparent)] dark:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.09)_20%,rgba(255,255,255,0.22)_50%,rgba(255,255,255,0.09)_80%,transparent)]"></div>
+      {/* use safeFeatures instead of features */}
       <ul className="flex flex-col gap-2 text-[14px] text-foreground/90 mb-6 font-sans">
-        {features.map((feature, index) => (
+        {safeFeatures.map((feature, index) => (
           <li key={index} className="flex items-center gap-2">
             <CheckIcon className="text-cyan-400 w-4 h-4" /> {feature}
           </li>

@@ -48,6 +48,9 @@ import ShaderCanvasCode from "@/components/nurui/shader-canvas.tsx?raw";
 import { FollowingEyeDemo } from "@/components/nurui/following-eye-demo";
 import FollowingEyeDemoCode from "@/components/nurui/following-eye-demo.tsx?raw";
 import FollowingEyeCode from "@/components/nurui/following-eye.tsx?raw";
+import { CursorDrawDemo } from "@/components/nurui/cursor-draw-demo";
+import CursorDrawDemoCode from "@/components/nurui/cursor-draw-demo.tsx?raw";
+import CursorDrawCode from "@/components/nurui/cursor-draw.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -105,6 +108,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <FollowingEyeDemo />,
     code: FollowingEyeDemoCode,
     othersCode: [{ fileName: "following-eye", code: FollowingEyeCode }],
+  },
+  cursorDraw: {
+    preview: <CursorDrawDemo />,
+    code: CursorDrawDemoCode,
+    othersCode: [{ fileName: "cursor-draw", code: CursorDrawCode }],
   },
   // buttons
   gradientButton: {

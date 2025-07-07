@@ -24,6 +24,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "nurui.vercel.app",
+      },
     ],
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
