@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "./src/components/nurui/contact-form-demo.tsx",
-      "content": "import React from \"react\";\nimport ContactForm from \"@/components/nurui/contact-form\";\n\nconst ContactFormDemo = () => {\n  return (\n    <div className=\"py-10\">\n      <ContactForm />\n    </div>\n  );\n};\n\nexport default ContactFormDemo;\n",
+      "content": "import React from \"react\";\nimport ContactForm from \"@/components/nurui/contact-form\";\n\nconst ContactFormDemo = () => {\n  return (\n    <div className=\"p-10\">\n      <ContactForm />\n    </div>\n  );\n};\n\nexport default ContactFormDemo;\n",
       "type": "registry:component"
     },
     {

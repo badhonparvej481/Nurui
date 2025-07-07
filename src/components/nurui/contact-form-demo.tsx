@@ -3,7 +3,7 @@ import ContactForm from "@/components/nurui/contact-form";
 
 const ContactFormDemo = () => {
   return (
-    <div className="py-10">
+    <div className="p-10">
       <ContactForm />
     </div>
   );

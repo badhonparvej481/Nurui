@@ -29,6 +29,7 @@ export const navigation = [
     submenu: [
       { name: "Neobrutalism faq", href: `${baseUrl}/neobrutalism-faq` },
       { name: "Premium testimonial", href: `${baseUrl}/premium-testimonial` },
+      { name: "animated pricing", href: `${baseUrl}/animated-pricing` },
     ],
   },
   {
@@ -36,7 +37,8 @@ export const navigation = [
     title: "Components",
     submenu: [
       { name: "Project showcase", href: `${baseUrl}/project-showcase` },
-      { name: "Story", href: `${baseUrl}/story` }
+      { name: "Story", href: `${baseUrl}/story` },
+      { name: "following eye", href: `${baseUrl}/following-eye` },
     ],
   },
   {

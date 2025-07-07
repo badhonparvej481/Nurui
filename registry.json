@@ -44,6 +44,31 @@
       ]
     },
     {
+      "name": "animated-pricing",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/animated-pricing-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/modern-pricing-page.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shader-canvas.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/multi-type-ripple-buttons.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "project-showcase",
       "type": "registry:component",
       "devDependencies": [],
@@ -74,7 +99,8 @@
         "class-variance-authority",
         "@radix-ui/react-slot",
         "@radix-ui/react-dialog",
-        "lucide-react"
+        "lucide-react",
+        "@radix-ui/react-avatar"
       ],
       "registryDependencies": [],
       "files": [
@@ -92,6 +118,27 @@
         },
         {
           "path": "./src/components/nurui/story-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/avatar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "following-eye",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/following-eye-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/following-eye.tsx",
           "type": "registry:component"
         }
       ]

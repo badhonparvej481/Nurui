@@ -40,6 +40,14 @@ import StoryDemoCode from "@/components/nurui/story-demo.tsx?raw";
 import StoryCode from "@/components/nurui/story.tsx?raw";
 import StoryButtonCode from "@/components/nurui/story-button.tsx?raw";
 import StoryDialogCode from "@/components/nurui/story-dialog.tsx?raw";
+import { AnimatedPricingDemo } from "@/components/nurui/animated-pricing-demo";
+import AnimatedPricingDemoCode from "@/components/nurui/animated-pricing-demo.tsx?raw";
+import RippleButtonCode from "@/components/nurui/multi-type-ripple-buttons.tsx?raw";
+import ModernPricingPageCode from "@/components/nurui/modern-pricing-page.tsx?raw";
+import ShaderCanvasCode from "@/components/nurui/shader-canvas.tsx?raw";
+import { FollowingEyeDemo } from "@/components/nurui/following-eye-demo";
+import FollowingEyeDemoCode from "@/components/nurui/following-eye-demo.tsx?raw";
+import FollowingEyeCode from "@/components/nurui/following-eye.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -66,6 +74,15 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "premium-testimonial", code: PremiumTestimonialCode },
     ],
   },
+  animatedPricing: {
+    preview: <AnimatedPricingDemo />,
+    code: AnimatedPricingDemoCode,
+    othersCode: [
+      { fileName: "modern-pricing-page", code: ModernPricingPageCode },
+      { fileName: "multi-type-ripple-buttons", code: RippleButtonCode },
+      { fileName: "shader-canvas", code: ShaderCanvasCode },
+    ],
+  },
   // components
   projectShowCase: {
     preview: <ProjectShowCaseDemo />,
@@ -83,6 +100,11 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "story-button", code: StoryButtonCode },
       { fileName: "story-dialog", code: StoryDialogCode },
     ],
+  },
+  followingEye: {
+    preview: <FollowingEyeDemo />,
+    code: FollowingEyeDemoCode,
+    othersCode: [{ fileName: "following-eye", code: FollowingEyeCode }],
   },
   // buttons
   gradientButton: {
