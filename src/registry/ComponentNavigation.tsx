@@ -3,6 +3,7 @@ import { TbCards, TbHandClick } from "react-icons/tb";
 import { GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
+import { RxComponent2, RxSection } from "react-icons/rx";
 
 const baseUrl = "/docs";
 
@@ -22,6 +23,22 @@ export const navigation = [
   //   title: "Components",
   //   href: `${baseUrl}/components`,
   // },
+  {
+    icon: <RxSection />,
+    title: "Sections",
+    submenu: [
+      { name: "Neobrutalism faq", href: `${baseUrl}/neobrutalism-faq` },
+      { name: "Premium testimonial", href: `${baseUrl}/premium-testimonial` },
+    ],
+  },
+  {
+    icon: <RxComponent2 />,
+    title: "Components",
+    submenu: [
+      { name: "Project showcase", href: `${baseUrl}/project-showcase` },
+      { name: "Story", href: `${baseUrl}/story` }
+    ],
+  },
   {
     icon: <TbHandClick />,
     title: "Buttons",

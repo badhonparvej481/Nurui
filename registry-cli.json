@@ -3,6 +3,75 @@
   "homepage": "https://nurui.vercel.app",
   "items": [
     {
+      "name": "neobrutalism-faq",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/neobrutalism-faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "premium-testimonial",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["lucide-react", "framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/premium-testimonial.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "project-showcase",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/project-showcase.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/halomot-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "story",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-dialog",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/story.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story-dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "magnet-button",
       "type": "registry:component",
       "devDependencies": [],
@@ -19,7 +88,7 @@
       "name": "gradient-button",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["clsx", "tailwind-merge"],
+      "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
@@ -75,7 +144,7 @@
       "name": "playing-card",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["three", "@react-three/fiber","tw-animate-css"],
+      "dependencies": ["three", "@react-three/fiber", "tw-animate-css"],
       "registryDependencies": [],
       "files": [
         {

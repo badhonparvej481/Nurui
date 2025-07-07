@@ -4,6 +4,99 @@
   "homepage": "https://nurui.vercel.app",
   "items": [
     {
+      "name": "neobrutalism-faq",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/neobrutalism-faq-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/neobrutalism-faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "premium-testimonial",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "lucide-react",
+        "framer-motion",
+        ""
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/premium-testimonial-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/premium-testimonial.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "project-showcase",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "framer-motion", ""],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/project-showcase-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/project-showcase.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/halomot-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "story",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "class-variance-authority",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-dialog",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/story-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story-dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "magnet-button",
       "type": "registry:component",
       "devDependencies": [],
@@ -45,7 +138,7 @@
       "name": "border-animation-button",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["react-icons"],
+      "dependencies": ["react-icons", "clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {
@@ -62,7 +155,7 @@
       "name": "hover-shadow-button",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["react-icons"],
+      "dependencies": ["react-icons", "clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {
@@ -138,7 +231,7 @@
       "name": "contact-form",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["framer-motion","clsx", "tailwind-merge"],
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {

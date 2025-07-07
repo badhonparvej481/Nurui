@@ -155,7 +155,7 @@ try {
   if (!fs.existsSync(cnPath)) {
     await fs.promises.mkdir(utilsPath, { recursive: true });
     await fs.promises.writeFile(cnPath, cnContent[language], "utf8");
-    console.log(colors.green(`🛠️ Created utils/cn.${language}`));
+    console.log(colors.green(`🛠️ Created lib/utils${language}`));
   }
 
   for (const file of match.files) {

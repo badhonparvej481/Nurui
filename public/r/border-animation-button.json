@@ -3,7 +3,9 @@
   "name": "border-animation-button",
   "type": "registry:component",
   "dependencies": [
-    "react-icons"
+    "react-icons",
+    "clsx",
+    "tailwind-merge"
   ],
   "devDependencies": [],
   "registryDependencies": [],

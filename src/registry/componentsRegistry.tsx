@@ -25,6 +25,21 @@ import ContactFormCode from "@/components/nurui/contact-form.tsx?raw";
 import BackgroundShineButtonCode from "@/components/nurui/background-shine-button.tsx?raw";
 import ShinyInputCode from "@/components/nurui/shiny-input.tsx?raw";
 import ShinyTextAreaCode from "@/components/nurui/shiny-text-area.tsx?raw";
+import NeobrutalismFaqDemo from "@/components/nurui/neobrutalism-faq-demo";
+import NeobrutalismFaqDemoCode from "@/components/nurui/neobrutalism-faq-demo.tsx?raw";
+import NeobrutalismFaqCode from "@/components/nurui/neobrutalism-faq.tsx?raw";
+import PremiumTestimonialDemo from "@/components/nurui/premium-testimonial-demo";
+import PremiumTestimonialDemoCode from "@/components/nurui/premium-testimonial-demo.tsx?raw";
+import PremiumTestimonialCode from "@/components/nurui/premium-testimonial.tsx?raw";
+import ProjectShowCaseDemo from "@/components/nurui/project-showcase-demo";
+import ProjectShowCaseDemoCode from "@/components/nurui/project-showcase-demo.tsx?raw";
+import ProjectShowCaseCode from "@/components/nurui/project-showcase.tsx?raw";
+import HalomotButtonCode from "@/components/nurui/halomot-button.tsx?raw";
+import { StoryDemo } from "@/components/nurui/story-demo";
+import StoryDemoCode from "@/components/nurui/story-demo.tsx?raw";
+import StoryCode from "@/components/nurui/story.tsx?raw";
+import StoryButtonCode from "@/components/nurui/story-button.tsx?raw";
+import StoryDialogCode from "@/components/nurui/story-dialog.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -38,6 +53,37 @@ type ComponentEntry = {
 };
 
 export const Index: Record<string, ComponentEntry> = {
+  // sections
+  neobrutalismFaq: {
+    preview: <NeobrutalismFaqDemo />,
+    code: NeobrutalismFaqDemoCode,
+    othersCode: [{ fileName: "neobrutalism-faq", code: NeobrutalismFaqCode }],
+  },
+  premiumTestimonial: {
+    preview: <PremiumTestimonialDemo />,
+    code: PremiumTestimonialDemoCode,
+    othersCode: [
+      { fileName: "premium-testimonial", code: PremiumTestimonialCode },
+    ],
+  },
+  // components
+  projectShowCase: {
+    preview: <ProjectShowCaseDemo />,
+    code: ProjectShowCaseDemoCode,
+    othersCode: [
+      { fileName: "project-showcase", code: ProjectShowCaseCode },
+      { fileName: "halomot-button", code: HalomotButtonCode },
+    ],
+  },
+  story: {
+    preview: <StoryDemo />,
+    code: StoryDemoCode,
+    othersCode: [
+      { fileName: "story", code: StoryCode },
+      { fileName: "story-button", code: StoryButtonCode },
+      { fileName: "story-dialog", code: StoryDialogCode },
+    ],
+  },
   // buttons
   gradientButton: {
     preview: <GradientButton />,
