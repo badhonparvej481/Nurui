@@ -1,7 +1,7 @@
-"use client";
-import type React from "react";
-import { ShaderCanvas } from "@/components/nurui/shader-canvas";
-import { RippleButton } from "@/components/nurui/multi-type-ripple-buttons";
+"use client"
+import type React from "react"
+import { ShaderCanvas } from "@/components/nurui/shader-canvas"
+import { RippleButton } from "@/components/nurui/multi-type-ripple-buttons"
 
 const CheckIcon = ({ className }: { className?: string }) => (
   <svg
@@ -18,16 +18,16 @@ const CheckIcon = ({ className }: { className?: string }) => (
   >
     <path d="M20 6 9 17l-5-5" />
   </svg>
-);
+)
 
 export interface PricingCardProps {
-  planName: string;
-  description: string;
-  price: string;
-  features: string[];
-  buttonText: string;
-  isPopular?: boolean;
-  buttonVariant?: "primary" | "secondary";
+  planName: string
+  description: string
+  price: string
+  features: string[]
+  buttonText: string
+  isPopular?: boolean
+  buttonVariant?: "primary" | "secondary"
 }
 
 export const AnimatedPricingCard = ({
@@ -40,13 +40,13 @@ export const AnimatedPricingCard = ({
   buttonVariant = "primary",
 }: PricingCardProps) => {
   // Prevent runtime errors if `features` is undefined
-  const safeFeatures = features ?? [];
+  const safeFeatures = features ?? []
   const cardClasses = `
-  backdrop-blur-[14px] bg-gradient-to-br rounded-2xl shadow-xl flex-1 max-w-xs px-7 py-8 flex flex-col transition-all duration-300
-  from-black/5 to-black/0 border border-black/10
-  dark:from-white/10 dark:to-white/5 dark:border-white/10 dark:backdrop-brightness-[0.91]
-  ${isPopular ? "scale-105 relative ring-2 ring-cyan-400/20 dark:from-white/20 dark:to-white/10 dark:border-cyan-400/30 shadow-2xl" : ""}
-`;
+  backdrop-blur-[14px] bg-white/80 dark:bg-black/20 rounded-2xl shadow-xl 
+  flex-1 max-w-sm w-full px-6 py-8 flex flex-col transition-all duration-300
+  border border-gray-200/50 dark:border-white/10
+  ${isPopular ? "scale-105 relative ring-2 ring-cyan-400/50 shadow-2xl bg-white/90 dark:bg-black/30" : "hover:scale-[1.02]"}
+`
   const buttonClasses = `
   mt-auto w-full py-2.5 rounded-xl font-semibold text-[14px] transition font-sans
   ${
@@ -54,7 +54,7 @@ export const AnimatedPricingCard = ({
       ? "bg-cyan-400 hover:bg-cyan-300 text-foreground"
       : "bg-black/10 hover:bg-black/20 text-foreground border border-black/20 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/20"
   }
-`;
+`
 
   return (
     <div className={cardClasses.trim()}>
@@ -64,17 +64,11 @@ export const AnimatedPricingCard = ({
         </div>
       )}
       <div className="mb-3">
-        <h2 className="text-[48px] font-extralight tracking-[-0.03em] text-foreground font-display">
-          {planName}
-        </h2>
-        <p className="text-[16px] text-foreground/70 mt-1 font-sans">
-          {description}
-        </p>
+        <h2 className="text-[48px] font-extralight tracking-[-0.03em] text-foreground font-display">{planName}</h2>
+        <p className="text-[16px] text-foreground/70 mt-1 font-sans">{description}</p>
       </div>
       <div className="my-6 flex items-baseline gap-2">
-        <span className="text-[48px] font-extralight text-foreground font-display">
-          ${price}
-        </span>
+        <span className="text-[48px] font-extralight text-foreground font-display">${price}</span>
         <span className="text-[14px] text-foreground/70 font-sans">/mo</span>
       </div>
       <div className="card-divider w-full mb-5 h-px bg-[linear-gradient(90deg,transparent,rgba(0,0,0,0.1)_50%,transparent)] dark:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.09)_20%,rgba(255,255,255,0.22)_50%,rgba(255,255,255,0.09)_80%,transparent)]"></div>
@@ -88,14 +82,14 @@ export const AnimatedPricingCard = ({
       </ul>
       <RippleButton className={buttonClasses.trim()}>{buttonText}</RippleButton>
     </div>
-  );
-};
+  )
+}
 
 interface ModernPricingPageProps {
-  title: React.ReactNode;
-  subtitle: React.ReactNode;
-  plans: PricingCardProps[];
-  showAnimatedBackground?: boolean;
+  title: React.ReactNode
+  subtitle: React.ReactNode
+  plans: PricingCardProps[]
+  showAnimatedBackground?: boolean
 }
 
 export const ModernPricingPage = ({
@@ -111,9 +105,7 @@ export const ModernPricingPage = ({
           <h1 className="text-[48px] md:text-[64px] font-extralight leading-tight tracking-[-0.03em] bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-cyan-500 to-blue-600 dark:from-white dark:via-cyan-300 dark:to-blue-400 font-display">
             {title}
           </h1>
-          <p className="mt-3 text-[16px] md:text-[20px] text-foreground/80 max-w-2xl mx-auto font-sans">
-            {subtitle}
-          </p>
+          <p className="mt-3 text-[16px] md:text-[20px] text-foreground/80 max-w-2xl mx-auto font-sans">{subtitle}</p>
         </div>
 
         <div className="relative w-full max-w-6xl">
@@ -122,7 +114,7 @@ export const ModernPricingPage = ({
               <ShaderCanvas />
             </div>
           )}
-          <div className="relative z-10 flex flex-col md:flex-row gap-8 md:gap-6 justify-center items-center w-full px-4 py-10">
+          <div className="relative z-10 flex flex-col lg:flex-row gap-6 justify-center items-stretch w-full px-4 py-10 max-w-5xl mx-auto">
             {plans.map((plan) => (
               <AnimatedPricingCard key={plan.planName} {...plan} />
             ))}
@@ -130,5 +122,5 @@ export const ModernPricingPage = ({
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
