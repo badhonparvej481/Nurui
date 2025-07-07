@@ -13,7 +13,7 @@ interface Props {
   followEffect?: boolean;
 }
 
-const DrawingCursorEffect: React.FC<Props> = ({
+const DrawCursor: React.FC<Props> = ({
   children,
   strokeColor = "#FF9900",
   strokeWidth = 10,
@@ -105,4 +105,4 @@ const DrawingCursorEffect: React.FC<Props> = ({
   );
 };
 
-export default DrawingCursorEffect;
+export default DrawCursor;

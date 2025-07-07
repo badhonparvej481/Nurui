@@ -1,4 +1,7 @@
-import { ModernPricingPage, PricingCardProps } from "@/components/nurui/modern-pricing-page";
+import {
+  ModernPricingPage,
+  PricingCardProps,
+} from "@/components/nurui/modern-pricing-page";
 
 const myPricingPlans: PricingCardProps[] = [
   {
@@ -40,18 +43,16 @@ const myPricingPlans: PricingCardProps[] = [
 
 const AnimatedPricingDemo = () => {
   return (
-    <div>
-      <ModernPricingPage
-        title={
-          <>
-            Find the <span className="text-cyan-400">Perfect Plan</span>
-          </>
-        }
-        subtitle="Start for free, then grow with us. Flexible plans for projects of all sizes."
-        plans={myPricingPlans}
-        showAnimatedBackground={true}
-      />
-    </div>
+    <ModernPricingPage
+      title={
+        <>
+          Find the <span className="text-cyan-400">Perfect Plan</span>
+        </>
+      }
+      subtitle="Start for free, then grow with us. Flexible plans for projects of all sizes."
+      plans={myPricingPlans}
+      showAnimatedBackground={true}
+    />
   );
 };
 

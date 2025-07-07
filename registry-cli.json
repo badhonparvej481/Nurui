@@ -49,6 +49,7 @@
         }
       ]
     },
+
     {
       "name": "project-showcase",
       "type": "registry:component",
@@ -110,19 +111,7 @@
         }
       ]
     },
-    {
-      "name": "cursor-draw",
-      "type": "registry:component",
-      "devDependencies": [],
-      "dependencies": ["gsap"],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "./src/components/nurui/cursor-draw.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
+
     {
       "name": "magnet-button",
       "type": "registry:component",
@@ -192,6 +181,7 @@
         }
       ]
     },
+
     {
       "name": "playing-card",
       "type": "registry:component",
@@ -226,6 +216,7 @@
         }
       ]
     },
+
     {
       "name": "contact-form",
       "type": "registry:component",
@@ -247,6 +238,46 @@
         },
         {
           "path": "./src/components/nurui/shiny-text-area.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "draw-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["gsap"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/draw-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hacker-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/hacker-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "terminal-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/terminal-cursor.tsx",
           "type": "registry:component"
         }
       ]

@@ -1,9 +1,8 @@
-// In your page or parent component file
-import DrawingCursorEffect from "@/components/nurui/cursor-draw";
+import DrawCursor from "@/components/nurui/draw-cursor";
 
-export function CursorDrawDemo() {
+export function DrawCursorDemo() {
   return (
-    <DrawingCursorEffect
+    <DrawCursor
       type="drawAlways"
       strokeColor="#80eeb4"
       strokeWidth={10}
@@ -12,6 +11,6 @@ export function CursorDrawDemo() {
       <p className="text-3xl text-center pt-12 text-[#80eeb4] font-bold">
         Move cursor to see the effect.
       </p>
-    </DrawingCursorEffect>
+    </DrawCursor>
   );
 }

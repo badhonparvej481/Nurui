@@ -48,9 +48,15 @@ import ShaderCanvasCode from "@/components/nurui/shader-canvas.tsx?raw";
 import { FollowingEyeDemo } from "@/components/nurui/following-eye-demo";
 import FollowingEyeDemoCode from "@/components/nurui/following-eye-demo.tsx?raw";
 import FollowingEyeCode from "@/components/nurui/following-eye.tsx?raw";
-import { CursorDrawDemo } from "@/components/nurui/cursor-draw-demo";
-import CursorDrawDemoCode from "@/components/nurui/cursor-draw-demo.tsx?raw";
-import CursorDrawCode from "@/components/nurui/cursor-draw.tsx?raw";
+import { DrawCursorDemo } from "@/components/nurui/draw-cursor-demo";
+import DrawCursorDemoCode from "@/components/nurui/draw-cursor-demo.tsx?raw";
+import DrawCursorCode from "@/components/nurui/draw-cursor.tsx?raw";
+import HackerCursorDemo from "@/components/nurui/hacker-cursor-demo";
+import HackerCursorDemoCode from "@/components/nurui/hacker-cursor-demo.tsx?raw";
+import HackerCursorCode from "@/components/nurui/hacker-cursor.tsx?raw";
+import TerminalCursorDemo from "@/components/nurui/terminal-cursor-demo";
+import TerminalCursorDemoCode from "@/components/nurui/terminal-cursor-demo.tsx?raw";
+import TerminalCursorCode from "@/components/nurui/terminal-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -109,11 +115,7 @@ export const Index: Record<string, ComponentEntry> = {
     code: FollowingEyeDemoCode,
     othersCode: [{ fileName: "following-eye", code: FollowingEyeCode }],
   },
-  cursorDraw: {
-    preview: <CursorDrawDemo />,
-    code: CursorDrawDemoCode,
-    othersCode: [{ fileName: "cursor-draw", code: CursorDrawCode }],
-  },
+
   // buttons
   gradientButton: {
     preview: <GradientButton />,
@@ -165,5 +167,21 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "shiny-input", code: ShinyInputCode },
       { fileName: "shiny-text-area", code: ShinyTextAreaCode },
     ],
+  },
+  // cursors
+  drawCursor: {
+    preview: <DrawCursorDemo />,
+    code: DrawCursorDemoCode,
+    othersCode: [{ fileName: "draw-cursor", code: DrawCursorCode }],
+  },
+  hackerCursor: {
+    preview: <HackerCursorDemo />,
+    code: HackerCursorDemoCode,
+    othersCode: [{ fileName: "hacker-cursor", code: HackerCursorCode }],
+  },
+  terminalCursor: {
+    preview: <TerminalCursorDemo />,
+    code: TerminalCursorDemoCode,
+    othersCode: [{ fileName: "terminal-cursor", code: TerminalCursorCode }],
   },
 };

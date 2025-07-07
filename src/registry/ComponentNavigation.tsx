@@ -4,15 +4,18 @@ import { GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { RxComponent2, RxSection } from "react-icons/rx";
+import { PiCursorClickDuotone } from "react-icons/pi";
 
 const baseUrl = "/docs";
 
 export const navigation = [
+  // introduction
   {
     icon: <AiOutlineFileSearch />,
     title: "Introduction",
     href: `${baseUrl}/introduction`,
   },
+  // installation
   {
     icon: <GrInstallOption />,
     title: "Installation",
@@ -23,6 +26,7 @@ export const navigation = [
   //   title: "Components",
   //   href: `${baseUrl}/components`,
   // },
+  // sections
   {
     icon: <RxSection />,
     title: "Sections",
@@ -32,6 +36,7 @@ export const navigation = [
       { name: "animated pricing", href: `${baseUrl}/animated-pricing` },
     ],
   },
+  // components
   {
     icon: <RxComponent2 />,
     title: "Components",
@@ -39,9 +44,9 @@ export const navigation = [
       { name: "Project showcase", href: `${baseUrl}/project-showcase` },
       { name: "Story", href: `${baseUrl}/story` },
       { name: "following eye", href: `${baseUrl}/following-eye` },
-      { name: "cursor draw", href: `${baseUrl}/cursor-draw` },
     ],
   },
+  // buttons
   {
     icon: <TbHandClick />,
     title: "Buttons",
@@ -53,6 +58,7 @@ export const navigation = [
       { name: "Text Fall", href: `${baseUrl}/text-fall-button` },
     ],
   },
+  // cards
   {
     icon: <TbCards />,
     title: "Cards",
@@ -61,15 +67,23 @@ export const navigation = [
       { name: "Info", href: `${baseUrl}/info-card` },
     ],
   },
+  // forms
   {
     icon: <FaWpforms />,
     title: "Forms",
+    submenu: [{ name: "contact", href: `${baseUrl}/contact-form` }],
+  },
+  // cursors
+  {
+    icon: <PiCursorClickDuotone />,
+    title: "Cursors",
     submenu: [
-      { name: "contact", href: `${baseUrl}/contact-form` },
-      // { name: "login", href: `${baseUrl}/playing-card` },
+      { name: "draw", href: `${baseUrl}/draw-cursor` },
+      { name: "hacker", href: `${baseUrl}/hacker-cursor` },
+      { name: "terminal", href: `${baseUrl}/terminal-cursor` },
     ],
   },
-  // last item
+  // help
   {
     icon: <TfiHelpAlt />,
     title: "Help",
