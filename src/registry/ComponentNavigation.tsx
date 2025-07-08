@@ -34,6 +34,7 @@ export const navigation = [
       { name: "Neobrutalism faq", href: `${baseUrl}/neobrutalism-faq` },
       { name: "Premium testimonial", href: `${baseUrl}/premium-testimonial` },
       { name: "animated pricing", href: `${baseUrl}/animated-pricing` },
+      { name: "creative pricing", href: `${baseUrl}/creative-pricing` },
     ],
   },
   // components
@@ -63,8 +64,9 @@ export const navigation = [
     icon: <TbCards />,
     title: "Cards",
     submenu: [
-      { name: "Playing", href: `${baseUrl}/playing-card` },
-      { name: "Info", href: `${baseUrl}/info-card` },
+      { name: "playing", href: `${baseUrl}/playing-card` },
+      { name: "info", href: `${baseUrl}/info-card` },
+      { name: "wave", href: `${baseUrl}/wave-card` },
     ],
   },
   // forms

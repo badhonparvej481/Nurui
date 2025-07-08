@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "./src/components/nurui/matrix-cursor-demo.tsx",
-      "content": "import React from \"react\";\nimport MatrixCursor from \"./matrix-cursor\";\n\nconst MatrixCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <MatrixCursor />\n    </>\n  );\n};\n\nexport default MatrixCursorDemo;\n",
+      "content": "import React from \"react\";\nimport MatrixCursor from \"@/components/nurui/matrix-cursor\";\n\nconst MatrixCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <MatrixCursor />\n    </>\n  );\n};\n\nexport default MatrixCursorDemo;\n",
       "type": "registry:component"
     },
     {

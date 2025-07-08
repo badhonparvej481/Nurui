@@ -1,5 +1,5 @@
 import React from "react";
-import TechCursor from "./tech-cursor";
+import TechCursor from "@/components/nurui/tech-cursor";
 
 const TechCursorDemo = () => {
   return (

@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "./src/components/nurui/tech-cursor-demo.tsx",
-      "content": "import React from \"react\";\nimport TechCursor from \"./tech-cursor\";\n\nconst TechCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <TechCursor />\n    </>\n  );\n};\n\nexport default TechCursorDemo;\n",
+      "content": "import React from \"react\";\nimport TechCursor from \"@/components/nurui/tech-cursor\";\n\nconst TechCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <TechCursor />\n    </>\n  );\n};\n\nexport default TechCursorDemo;\n",
       "type": "registry:component"
     },
     {

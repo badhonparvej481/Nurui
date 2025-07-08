@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "./src/components/nurui/ghost-cursor-demo.tsx",
-      "content": "import React from \"react\";\nimport GhostTrailCursor from \"./ghost-cursor\";\n\nconst GhostCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <GhostTrailCursor />\n    </>\n  );\n};\n\nexport default GhostCursorDemo;\n",
+      "content": "import React from \"react\";\nimport GhostTrailCursor from \"@/components/nurui/ghost-cursor\";\n\nconst GhostCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <GhostTrailCursor />\n    </>\n  );\n};\n\nexport default GhostCursorDemo;\n",
       "type": "registry:component"
     },
     {

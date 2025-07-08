@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "./src/components/nurui/fire-cursor-demo.tsx",
-      "content": "import React from \"react\";\nimport FireCursor from \"./fire-cursor\";\n\nconst FireCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <FireCursor />\n    </>\n  );\n};\n\nexport default FireCursorDemo;\n",
+      "content": "import React from \"react\";\nimport FireCursor from \"@/components/nurui/fire-cursor\";\n\nconst FireCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <FireCursor />\n    </>\n  );\n};\n\nexport default FireCursorDemo;\n",
       "type": "registry:component"
     },
     {

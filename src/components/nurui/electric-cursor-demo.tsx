@@ -1,4 +1,4 @@
-import ElectricCursor from "./electric-cursor";
+import ElectricCursor from "@/components/nurui/electric-cursor";
 
 const ElectricCursorDemo = () => {
   return (

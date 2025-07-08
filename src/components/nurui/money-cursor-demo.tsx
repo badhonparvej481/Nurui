@@ -1,4 +1,4 @@
-import MoneyCursor from "./money-cursor";
+import MoneyCursor from "@/components/nurui/money-cursor";
 
 const MoneyCursorDemo = () => {
   return (

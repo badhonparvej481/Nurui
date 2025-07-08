@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "./src/components/nurui/electric-cursor-demo.tsx",
-      "content": "import ElectricCursor from \"./electric-cursor\";\n\nconst ElectricCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <ElectricCursor />\n    </>\n  );\n};\n\nexport default ElectricCursorDemo;\n",
+      "content": "import ElectricCursor from \"@/components/nurui/electric-cursor\";\n\nconst ElectricCursorDemo = () => {\n  return (\n    <>\n      <p className=\"text-3xl text-center pt-4 text-[#3ca2fa] font-bold\">\n        Move cursor to see the effect.\n      </p>\n      <ElectricCursor />\n    </>\n  );\n};\n\nexport default ElectricCursorDemo;\n",
       "type": "registry:component"
     },
     {

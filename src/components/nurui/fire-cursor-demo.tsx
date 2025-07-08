@@ -1,5 +1,5 @@
 import React from "react";
-import FireCursor from "./fire-cursor";
+import FireCursor from "@/components/nurui/fire-cursor";
 
 const FireCursorDemo = () => {
   return (

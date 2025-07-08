@@ -78,6 +78,13 @@ import FireCursorCode from "@/components/nurui/fire-cursor.tsx?raw";
 import MatrixCursorDemo from "@/components/nurui/matrix-cursor-demo";
 import MatrixCursorDemoCode from "@/components/nurui/matrix-cursor-demo.tsx?raw";
 import MatrixCursorCode from "@/components/nurui/matrix-cursor.tsx?raw";
+import WaveCardDemo from "@/components/nurui/wave-card-demo";
+import WaveCardDemoCode from "@/components/nurui/wave-card-demo.tsx?raw";
+import WaveCardCode from "@/components/nurui/wave-card.tsx?raw";
+import { CreativePricingDemo } from "@/components/nurui/creative-pricing-demo";
+import CreativePricingDemoCode from "@/components/nurui/creative-pricing-demo.tsx?raw";
+import CreativePricingCode from "@/components/nurui/creative-pricing.tsx?raw";
+import ButtonCode from "@/components/nurui/button.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -111,6 +118,14 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "modern-pricing-page", code: ModernPricingPageCode },
       { fileName: "multi-type-ripple-buttons", code: RippleButtonCode },
       { fileName: "shader-canvas", code: ShaderCanvasCode },
+    ],
+  },
+  creativePricing: {
+    preview: <CreativePricingDemo />,
+    code: CreativePricingDemoCode,
+    othersCode: [
+      { fileName: "creative-pricing", code: CreativePricingCode },
+      { fileName: "button", code: ButtonCode },
     ],
   },
   // components
@@ -177,6 +192,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <InfoCardDemo />,
     code: InfoCardDemoCode,
     othersCode: [{ fileName: "info-card", code: InfoCardCode }],
+  },
+  waveCard: {
+    preview: <WaveCardDemo />,
+    code: WaveCardDemoCode,
+    othersCode: [{ fileName: "wave-card", code: WaveCardCode }],
   },
   // forms
   contactForm: {

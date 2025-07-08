@@ -1,5 +1,5 @@
 import React from "react";
-import MatrixCursor from "./matrix-cursor";
+import MatrixCursor from "@/components/nurui/matrix-cursor";
 
 const MatrixCursorDemo = () => {
   return (

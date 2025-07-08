@@ -1,5 +1,5 @@
 import React from "react";
-import GhostTrailCursor from "./ghost-cursor";
+import GhostTrailCursor from "@/components/nurui/ghost-cursor";
 
 const GhostCursorDemo = () => {
   return (

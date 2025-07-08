@@ -49,6 +49,27 @@
         }
       ]
     },
+    {
+      "name": "creative-pricing",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "lucide-react",
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/creative-pricing.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "project-showcase",
@@ -212,6 +233,23 @@
         },
         {
           "path": "./src/components/nurui/styles/info-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "wave-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["tw-animate-css"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/wave-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/wave-card.css",
           "type": "registry:component"
         }
       ]
