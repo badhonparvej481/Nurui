@@ -79,11 +79,15 @@ export const navigation = [
     title: "Cursors",
     submenu: [
       { name: "draw", href: `${baseUrl}/draw-cursor` },
+      { name: "matrix", href: `${baseUrl}/matrix-cursor` },
       { name: "hacker", href: `${baseUrl}/hacker-cursor` },
       { name: "terminal", href: `${baseUrl}/terminal-cursor` },
       { name: "code", href: `${baseUrl}/code-cursor` },
       { name: "money", href: `${baseUrl}/money-cursor` },
       { name: "electric", href: `${baseUrl}/electric-cursor` },
+      { name: "ghost", href: `${baseUrl}/ghost-cursor` },
+      { name: "tech", href: `${baseUrl}/tech-cursor` },
+      { name: "fire", href: `${baseUrl}/fire-cursor` },
     ],
   },
   // help

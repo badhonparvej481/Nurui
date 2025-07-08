@@ -66,6 +66,18 @@ import MoneyCursorCode from "@/components/nurui/money-cursor.tsx?raw";
 import ElectricCursorDemo from "@/components/nurui/electric-cursor-demo";
 import ElectricCursorDemoCode from "@/components/nurui/electric-cursor-demo.tsx?raw";
 import ElectricCursorCode from "@/components/nurui/electric-cursor.tsx?raw";
+import TechCursorDemo from "@/components/nurui/tech-cursor-demo";
+import TechCursorDemoCode from "@/components/nurui/tech-cursor-demo.tsx?raw";
+import TechCursorCode from "@/components/nurui/tech-cursor.tsx?raw";
+import GhostCursorDemo from "@/components/nurui/ghost-cursor-demo";
+import GhostCursorDemoCode from "@/components/nurui/ghost-cursor-demo.tsx?raw";
+import GhostCursorCode from "@/components/nurui/ghost-cursor.tsx?raw";
+import FireCursorDemo from "@/components/nurui/fire-cursor-demo";
+import FireCursorDemoCode from "@/components/nurui/fire-cursor-demo.tsx?raw";
+import FireCursorCode from "@/components/nurui/fire-cursor.tsx?raw";
+import MatrixCursorDemo from "@/components/nurui/matrix-cursor-demo";
+import MatrixCursorDemoCode from "@/components/nurui/matrix-cursor-demo.tsx?raw";
+import MatrixCursorCode from "@/components/nurui/matrix-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -183,6 +195,11 @@ export const Index: Record<string, ComponentEntry> = {
     code: DrawCursorDemoCode,
     othersCode: [{ fileName: "draw-cursor", code: DrawCursorCode }],
   },
+  matrixCursor: {
+    preview: <MatrixCursorDemo />,
+    code: MatrixCursorDemoCode,
+    othersCode: [{ fileName: "matrix-cursor", code: MatrixCursorCode }],
+  },
   hackerCursor: {
     preview: <HackerCursorDemo />,
     code: HackerCursorDemoCode,
@@ -206,6 +223,21 @@ export const Index: Record<string, ComponentEntry> = {
   electricCursor: {
     preview: <ElectricCursorDemo />,
     code: ElectricCursorDemoCode,
-    othersCode: [{ fileName: "money-cursor", code: ElectricCursorCode }],
+    othersCode: [{ fileName: "electric-cursor", code: ElectricCursorCode }],
+  },
+  techCursor: {
+    preview: <TechCursorDemo />,
+    code: TechCursorDemoCode,
+    othersCode: [{ fileName: "tech-cursor", code: TechCursorCode }],
+  },
+  ghostCursor: {
+    preview: <GhostCursorDemo />,
+    code: GhostCursorDemoCode,
+    othersCode: [{ fileName: "ghost-cursor", code: GhostCursorCode }],
+  },
+  fireCursor: {
+    preview: <FireCursorDemo />,
+    code: FireCursorDemoCode,
+    othersCode: [{ fileName: "fire-cursor", code: FireCursorCode }],
   },
 };

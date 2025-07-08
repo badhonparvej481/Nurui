@@ -320,6 +320,58 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "ghost-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/ghost-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tech-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/tech-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "fire-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/fire-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "matrix-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/matrix-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
