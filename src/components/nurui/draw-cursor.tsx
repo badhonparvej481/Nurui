@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 type DrawingType = "drawOnHold" | "drawAlways";
 
 interface Props {
-  children?: React.ReactNode;
   strokeColor?: string;
   strokeWidth?: number;
   type: DrawingType;
@@ -14,7 +13,6 @@ interface Props {
 }
 
 const DrawCursor: React.FC<Props> = ({
-  children,
   strokeColor = "#FF9900",
   strokeWidth = 10,
   type = "drawAlways",
@@ -23,18 +21,33 @@ const DrawCursor: React.FC<Props> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
   const isDrawing = useRef(false);
-  const last = useRef<{ x: number | null; y: number | null }>({ x: null, y: null });
+  const last = useRef<{ x: number | null; y: number | null }>({
+    x: null,
+    y: null,
+  });
 
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
     const svgNS = "http://www.w3.org/2000/svg";
 
+    // Create SVG
     const svg = document.createElementNS(svgNS, "svg");
-    svg.classList.add("absolute", "top-0", "left-0", "w-full", "h-full", "pointer-events-none");
-    el.appendChild(svg);
+    svg.style.position = "fixed";
+    svg.style.top = "0";
+    svg.style.left = "0";
+    svg.style.width = "100vw";
+    svg.style.height = "100vh";
+    svg.style.pointerEvents = "none";
+    svg.style.zIndex = "9999"; // high z-index to be above everything
+    document.body.appendChild(svg);
     svgRef.current = svg;
+
+    // Resize handler to keep SVG full screen
+    const resizeSvg = () => {
+      svg.setAttribute("width", window.innerWidth.toString());
+      svg.setAttribute("height", window.innerHeight.toString());
+    };
+    resizeSvg();
+    window.addEventListener("resize", resizeSvg);
 
     const drawLine = (x1: number, y1: number, x2: number, y2: number) => {
       const line = document.createElementNS(svgNS, "line");
@@ -60,9 +73,8 @@ const DrawCursor: React.FC<Props> = ({
     const onMouseMove = (e: MouseEvent) => {
       if (type === "drawOnHold" && !isDrawing.current) return;
 
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = e.clientX;
+      const y = e.clientY;
 
       if (last.current.x != null && last.current.y != null) {
         drawLine(last.current.x, last.current.y, x, y);
@@ -77,6 +89,7 @@ const DrawCursor: React.FC<Props> = ({
 
     const onMouseUp = () => {
       if (type === "drawOnHold") isDrawing.current = false;
+      last.current = { x: null, y: null }; // reset on mouse up
     };
 
     const onMouseLeave = () => {
@@ -84,25 +97,22 @@ const DrawCursor: React.FC<Props> = ({
       isDrawing.current = false;
     };
 
-    el.addEventListener("mousemove", onMouseMove);
-    el.addEventListener("mousedown", onMouseDown);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mousedown", onMouseDown);
     window.addEventListener("mouseup", onMouseUp);
-    el.addEventListener("mouseleave", onMouseLeave);
+    window.addEventListener("mouseleave", onMouseLeave);
 
     return () => {
-      el.removeEventListener("mousemove", onMouseMove);
-      el.removeEventListener("mousedown", onMouseDown);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mousedown", onMouseDown);
       window.removeEventListener("mouseup", onMouseUp);
-      el.removeEventListener("mouseleave", onMouseLeave);
+      window.removeEventListener("mouseleave", onMouseLeave);
+      window.removeEventListener("resize", resizeSvg);
       svg.remove();
     };
   }, [strokeColor, strokeWidth, type, followEffect]);
 
-  return (
-    <div ref={containerRef} className="relative w-full min-h-[50vh] overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none z-10">{children}</div>
-    </div>
-  );
+  return <div ref={containerRef} className="relative overflow-hidden" />;
 };
 
 export default DrawCursor;

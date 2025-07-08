@@ -281,6 +281,45 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "code-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/code-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "money-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/money-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "electric-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/electric-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

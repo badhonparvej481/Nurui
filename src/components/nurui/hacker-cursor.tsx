@@ -2,17 +2,17 @@
 import React, { useRef, useEffect } from "react";
 
 interface CursorTrailProps {
-  trailColor?: string; // Color of the trail (hex or rgba)
-  dotSize?: number; // Size of each dot in pixels
-  fadeDuration?: number; // How fast the trail fades (in ms)
-  className?: string; // Custom class for container size
+  trailColor?: string;
+  dotSize?: number;
+  fadeDuration?: number;
+  className?: string;
 }
 
 const HackerCursor: React.FC<CursorTrailProps> = ({
   trailColor = "#D0FBB6",
   dotSize = 4,
   fadeDuration = 600,
-  className = "w-full h-full fixed inset-0 pointer-events-none z-50",
+  className = "fixed inset-0 w-full h-full pointer-events-none z-50",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -31,7 +31,6 @@ const HackerCursor: React.FC<CursorTrailProps> = ({
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Convert trailColor (hex) to RGB
     const hexToRGB = (hex: string) => {
       const num = parseInt(hex.replace("#", ""), 16);
       return {

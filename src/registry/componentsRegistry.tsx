@@ -57,6 +57,15 @@ import HackerCursorCode from "@/components/nurui/hacker-cursor.tsx?raw";
 import TerminalCursorDemo from "@/components/nurui/terminal-cursor-demo";
 import TerminalCursorDemoCode from "@/components/nurui/terminal-cursor-demo.tsx?raw";
 import TerminalCursorCode from "@/components/nurui/terminal-cursor.tsx?raw";
+import CodeCursorDemo from "@/components/nurui/code-cursor-demo";
+import CodeCursorDemoCode from "@/components/nurui/code-cursor-demo.tsx?raw";
+import CodeCursorCode from "@/components/nurui/code-cursor.tsx?raw";
+import MoneyCursorDemo from "@/components/nurui/money-cursor-demo";
+import MoneyCursorDemoCode from "@/components/nurui/money-cursor-demo.tsx?raw";
+import MoneyCursorCode from "@/components/nurui/money-cursor.tsx?raw";
+import ElectricCursorDemo from "@/components/nurui/electric-cursor-demo";
+import ElectricCursorDemoCode from "@/components/nurui/electric-cursor-demo.tsx?raw";
+import ElectricCursorCode from "@/components/nurui/electric-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -183,5 +192,20 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <TerminalCursorDemo />,
     code: TerminalCursorDemoCode,
     othersCode: [{ fileName: "terminal-cursor", code: TerminalCursorCode }],
+  },
+  codeCursor: {
+    preview: <CodeCursorDemo />,
+    code: CodeCursorDemoCode,
+    othersCode: [{ fileName: "code-cursor", code: CodeCursorCode }],
+  },
+  moneyCursor: {
+    preview: <MoneyCursorDemo />,
+    code: MoneyCursorDemoCode,
+    othersCode: [{ fileName: "money-cursor", code: MoneyCursorCode }],
+  },
+  electricCursor: {
+    preview: <ElectricCursorDemo />,
+    code: ElectricCursorDemoCode,
+    othersCode: [{ fileName: "money-cursor", code: ElectricCursorCode }],
   },
 };
