@@ -84,7 +84,7 @@ const navigation = [
   {
     id: 2,
     name: "component",
-    url: "/docs/gradient-button",
+    url: "/docs/wave-card",
   },
   {
     id: 3,

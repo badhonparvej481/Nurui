@@ -137,7 +137,7 @@ const navigation = [
   {
     id: 2,
     name: "Components",
-    url: "/docs/gradient-button",
+    url: "/docs/wave-card",
   },
   {
     id: 3,
