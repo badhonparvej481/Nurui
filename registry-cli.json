@@ -202,6 +202,28 @@
         }
       ]
     },
+    {
+      "name": "future-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/future-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/future-frame.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "playing-card",

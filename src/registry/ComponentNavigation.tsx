@@ -57,6 +57,7 @@ export const navigation = [
       { name: "Border Animation", href: `${baseUrl}/border-animation-button` },
       { name: "Hover Shadow", href: `${baseUrl}/hover-shadow-button` },
       { name: "Text Fall", href: `${baseUrl}/text-fall-button` },
+      { name: "future", href: `${baseUrl}/future-button` },
     ],
   },
   // cards

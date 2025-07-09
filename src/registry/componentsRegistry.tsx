@@ -85,6 +85,10 @@ import { CreativePricingDemo } from "@/components/nurui/creative-pricing-demo";
 import CreativePricingDemoCode from "@/components/nurui/creative-pricing-demo.tsx?raw";
 import CreativePricingCode from "@/components/nurui/creative-pricing.tsx?raw";
 import ButtonCode from "@/components/nurui/button.tsx?raw";
+import FutureButtonDemo from "@/components/nurui/future-button-demo";
+import FutureButtonCode from "@/components/nurui/future-button.tsx?raw";
+import FutureButtonDemoCode from "@/components/nurui/future-button-demo.tsx?raw";
+import  FrameCode from "@/components/nurui/future-frame.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -181,6 +185,14 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <MagnetButtonDemo />,
     code: MagnetButtonDemoCode,
     othersCode: [{ fileName: "magnet-button", code: MagnetButtonCode }],
+  },
+  futureButton: {
+    preview: <FutureButtonDemo />,
+    code: FutureButtonDemoCode,
+    othersCode: [
+      { fileName: "future-button", code: FutureButtonCode },
+      { fileName: "future-frame", code: FrameCode },
+    ],
   },
   // cards
   playingCard: {
