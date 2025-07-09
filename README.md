@@ -1,13 +1,17 @@
-<p align="center">
+<div align="center">
   <img
     src="nurui-logo.png"
     alt="Nurui Logo"
-    width="50"
+    width="200"
     height="50"
-    style="margin-bottom: -2.6rem;"
+    style="
+        border-radius: 6px;
+        object-fit: fill;
+      "
   />
-  <h1 align="center" style="color: #3ca2fa;">Nurui</h1>
-</p>
+</div>
+
+---
 
 <p align="center">Nurui is a modern React and Next.js based UI component library that streamlines front-end development. It offers CLI scaffolding, automatic TypeScript-to-JavaScript conversion, and live component previews for a faster, more customizable workflow.</p>
 
@@ -49,57 +53,57 @@ NURUI/
 │   │   ├── about-us/                                                                       # About us page
 │   │   ├── playground/                                                                     # Interactive playground for components
 │   │   ├── favicon.ico                                                                     # Site favicon
-│   │   ├── globals.css                                          
-│   │   ├── layout.tsx                                               
-│   │   ├── MainContent.tsx                                                   
-│   │   ├── page.tsx                                               
-│   │   └── ThemeProvider.tsx                                         
-│   ├── cli/                                                                     
-│   │   ├── bin/                                                    
-│   │   └── node_modules/                                                
-│   │       ├── README.md                                        
-│   │       ├── .npmignore                                             
-│   │       ├── package-lock.json                            
-│   │       └── package.json                                             
-│   └── components/                                                   
-│       ├── common/                                                     
-│       ├── icons/                                                            
-│       ├── nurui/                                                              
-│       ├── pages/                                                      
-│       └── ui/                                                          
-├── content/                                                                              
-├── docs/                                                            
-├── context/                                                                                
-├── hooks/                                                                      
-├── layout/                                                                    
-├── lib/                                                                            
-├── registry/                                                                  
-│   ├── ComponentNavigation.tsx                                                  
-│   └── componentsRegistry.tsx                                                  
-├── styles/                                                                  
-├── types/                                                                                
-├── utils/                                                                   
-├── .gitignore                                                  
-├── .prettierrc.json                                                                  
-├── CONTRIBUTING.md                                                    
-├── custom.d.ts                                                               
-├── eslint.config.mjs                                                       
-├── LICENSE                                                    
-├── mdx-components.tsx                                                                     
-├── next-env.d.ts                                                                    
-├── next.config.ts                                                   
-├── nurui-logo.png                                                
-├── og-image.png                                                  
-├── package.json                                                            
-├── postcss.config.mjs                                               
-├── README.md                                                        
-├── registry-cli.json                                                     
-├── registry.json                                                               
-├── SECURITY.md                                                               
-├── tailwind.config.ts                                                    
-├── tailwindcss.d.ts                                                          
-├── tsconfig.json                                                       
-└── yarn.lock                                                           
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── MainContent.tsx
+│   │   ├── page.tsx
+│   │   └── ThemeProvider.tsx
+│   ├── cli/
+│   │   ├── bin/
+│   │   └── node_modules/
+│   │       ├── README.md
+│   │       ├── .npmignore
+│   │       ├── package-lock.json
+│   │       └── package.json
+│   └── components/
+│       ├── common/
+│       ├── icons/
+│       ├── nurui/
+│       ├── pages/
+│       └── ui/
+├── content/
+├── docs/
+├── context/
+├── hooks/
+├── layout/
+├── lib/
+├── registry/
+│   ├── ComponentNavigation.tsx
+│   └── componentsRegistry.tsx
+├── styles/
+├── types/
+├── utils/
+├── .gitignore
+├── .prettierrc.json
+├── CONTRIBUTING.md
+├── custom.d.ts
+├── eslint.config.mjs
+├── LICENSE
+├── mdx-components.tsx
+├── next-env.d.ts
+├── next.config.ts
+├── nurui-logo.png
+├── og-image.png
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── registry-cli.json
+├── registry.json
+├── SECURITY.md
+├── tailwind.config.ts
+├── tailwindcss.d.ts
+├── tsconfig.json
+└── yarn.lock
 ```
 
 ## Activity
