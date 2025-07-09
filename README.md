@@ -6,9 +6,9 @@
   />
 </h1>
 
-<p align="center">Nurui is a modern React and Next.js based UI component library that streamlines front-end development. It offers CLI scaffolding, automatic TypeScript-to-JavaScript conversion, and live component previews for a faster, more customizable workflow.</p>
+<p align="center">Nurui is a modern React and Next.js based UI component library that streamlines front-end development. It offers CLI scaffolding, automatic TypeScript to JavaScript conversion, and live component previews for a faster, more customizable workflow.</p>
 
-<img src="og-image.png" alt="UI component library" width="100%" />
+<img src="nurui.gif" alt="UI component library" width="100%" />
 
 ## Documentation
 
@@ -34,18 +34,18 @@ yarn dev
 
 ```sh
 NURUI/
-├── .github/                                                                         
-├── .next/                                                                           
-├── .vercel/                                                                          
-├── .vscode/                                                                     
-├── node_modules/                                                          
-├── public/                                                                
-├── src/                                                          
-│   ├── app/                                                                               
-│   │   ├── (docs)/                                                                       
-│   │   ├── about-us/                                               
-│   │   ├── playground/                                                                     
-│   │   ├── favicon.ico                                            
+├── .github/
+├── .next/
+├── .vercel/
+├── .vscode/
+├── node_modules/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── (docs)/
+│   │   ├── about-us/
+│   │   ├── playground/
+│   │   ├── favicon.ico
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── MainContent.tsx
@@ -110,6 +110,13 @@ Licensed under the [MIT license.](https://github.com/afsar-dev/Nurui/blob/main/L
 ## Contributing
 
 visit this [Documentation](https://github.com/afsar-dev/Nurui/blob/main/CONTRIBUTING.md)
+
+## Support
+
+If you find this project useful, please consider [sponsoring me](https://github.com/sponsors/your-username).
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-%F0%9F%92%96-pink)](https://github.com/sponsors/your-username)
+
 
 ## Author
 
