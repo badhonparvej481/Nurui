@@ -11,11 +11,11 @@
   />
 </div>
 
----
+----
 
 <p align="center">Nurui is a modern React and Next.js based UI component library that streamlines front-end development. It offers CLI scaffolding, automatic TypeScript-to-JavaScript conversion, and live component previews for a faster, more customizable workflow.</p>
 
-<img src="og-image.png" alt="Libra – Minimal Library Management System" width="100%" height="350"/>
+<img src="og-image.png" alt="UI component library" width="100%" />
 
 ## Documentation
 
@@ -41,18 +41,18 @@ yarn dev
 
 ```sh
 NURUI/
-├── .github/                                                                                # GitHub workflows and templates
-├── .next/                                                                                  # Next.js build output and cache
-├── .vercel/                                                                                # Vercel deployment configuration
-├── .vscode/                                                                                # VS Code workspace settings
-├── node_modules/                                                                           # Project dependencies
-├── public/                                                                                 # Static public assets
-├── src/                                                                                    # Source code
-│   ├── app/                                                                                # Next.js App Router pages and layouts
-│   │   ├── (docs)/                                                                         # Route group for documentation pages
-│   │   ├── about-us/                                                                       # About us page
-│   │   ├── playground/                                                                     # Interactive playground for components
-│   │   ├── favicon.ico                                                                     # Site favicon
+├── .github/                                                                         
+├── .next/                                                                           
+├── .vercel/                                                                          
+├── .vscode/                                                                     
+├── node_modules/                                                          
+├── public/                                                                
+├── src/                                                          
+│   ├── app/                                                                               
+│   │   ├── (docs)/                                                                       
+│   │   ├── about-us/                                               
+│   │   ├── playground/                                                                     
+│   │   ├── favicon.ico                                            
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── MainContent.tsx
@@ -112,11 +112,11 @@ NURUI/
 
 ## License
 
-Licensed under the [MIT license.](https://github.com/karthikmudunuri/eldoraui/blob/main/LICENSE)
+Licensed under the [MIT license.](https://github.com/afsar-dev/Nurui/blob/main/LICENSE)
 
 ## Contributing
 
-visit this [Documentation](https://github.com/karthikmudunuri/eldoraui/blob/main/CONTRIBUTING.md)
+visit this [Documentation](https://github.com/afsar-dev/Nurui/blob/main/CONTRIBUTING.md)
 
 ## Author
 
