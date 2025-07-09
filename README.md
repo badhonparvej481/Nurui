@@ -3,11 +3,6 @@
     src="nurui-logo.png"
     alt="Nurui Logo"
     width="200"
-    height="50"
-    style="
-        border-radius: 6px;
-        object-fit: fill;
-      "
   />
 </h1>
 
