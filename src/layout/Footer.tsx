@@ -1,9 +1,6 @@
 "use client";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
-import { BsInstagram, BsYoutube } from "react-icons/bs";
-import { FaXTwitter } from "react-icons/fa6";
 import { navigationActive } from "@/utils/navigationActive";
 import { usePathname } from "next/navigation";
 import Nurui from "@/components/common/Nurui";
@@ -29,15 +26,9 @@ const Footer = () => {
             <Nurui textSize="text-2xl lg:text-3xl" />
             <p>
               Beautifully crafted, accessible components built with Tailwind CSS
-              — perfect for modern developers and creative teams.
+              perfect for modern developers and creative teams.
             </p>
-            <div className="flex items-center gap-5 *:cursor-pointer">
-              <FaFacebook className="text-2xl text-[#1877F2]" />
-              <BsInstagram className="text-2xl text-[#FE0173]" />
-              <BsYoutube className="text-2xl text-[#FF0033]" />
-              <FaXTwitter className="text-2xl text-[var(--black-color)] dark:text-[var(--white-color)]" />
-              <FaLinkedin className="text-2xl text-[#0073B2]" />
-            </div>
+            
           </div>
 
           <nav className="space-y-4 max-w-80 flex flex-col">

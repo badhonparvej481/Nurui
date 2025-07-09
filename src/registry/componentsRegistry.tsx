@@ -88,7 +88,10 @@ import ButtonCode from "@/components/nurui/button.tsx?raw";
 import FutureButtonDemo from "@/components/nurui/future-button-demo";
 import FutureButtonCode from "@/components/nurui/future-button.tsx?raw";
 import FutureButtonDemoCode from "@/components/nurui/future-button-demo.tsx?raw";
-import  FrameCode from "@/components/nurui/future-frame.tsx?raw";
+import FrameCode from "@/components/nurui/future-frame.tsx?raw";
+import GridFeatureDemo from "@/components/nurui/grid-feature-demo";
+import GridFeatureDemoCode from "@/components/nurui/grid-feature-demo.tsx?raw";
+import GridFeatureCode from "@/components/nurui/grid-feature.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -131,6 +134,11 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "creative-pricing", code: CreativePricingCode },
       { fileName: "button", code: ButtonCode },
     ],
+  },
+  gridFeature: {
+    preview: <GridFeatureDemo />,
+    code: GridFeatureDemoCode,
+    othersCode: [{ fileName: "grid-feature", code: GridFeatureCode }],
   },
   // components
   projectShowCase: {

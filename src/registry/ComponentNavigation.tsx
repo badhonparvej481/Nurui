@@ -35,6 +35,7 @@ export const navigation = [
       { name: "Premium testimonial", href: `${baseUrl}/premium-testimonial` },
       { name: "animated pricing", href: `${baseUrl}/animated-pricing` },
       { name: "creative pricing", href: `${baseUrl}/creative-pricing` },
+      { name: "grid feature", href: `${baseUrl}/grid-feature` },
     ],
   },
   // components

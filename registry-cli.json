@@ -70,6 +70,19 @@
         }
       ]
     },
+    {
+      "name": "grid-feature",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react", "motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/grid-feature.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "project-showcase",
