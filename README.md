@@ -1,4 +1,4 @@
-<div align="center">
+<h1 align="center">
   <img
     src="nurui-logo.png"
     alt="Nurui Logo"
@@ -9,9 +9,7 @@
         object-fit: fill;
       "
   />
-</div>
-
-----
+</h1>
 
 <p align="center">Nurui is a modern React and Next.js based UI component library that streamlines front-end development. It offers CLI scaffolding, automatic TypeScript-to-JavaScript conversion, and live component previews for a faster, more customizable workflow.</p>
 
