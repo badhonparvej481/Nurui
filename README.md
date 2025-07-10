@@ -111,11 +111,11 @@ Licensed under the [MIT license.](https://github.com/afsar-dev/Nurui/blob/main/L
 
 visit this [Documentation](https://github.com/afsar-dev/Nurui/blob/main/CONTRIBUTING.md)
 
-## Support
+<!-- ## Support
 
 If you find this project useful, please consider [sponsoring me](https://github.com/sponsors/your-username).
 
-[![Sponsor](https://img.shields.io/badge/Sponsor-%F0%9F%92%96-pink)](https://github.com/sponsors/your-username)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%F0%9F%92%96-pink)](https://github.com/sponsors/your-username) -->
 
 
 ## Author
