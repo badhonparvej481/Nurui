@@ -75,7 +75,12 @@ export const navigation = [
   {
     icon: <FaWpforms />,
     title: "Forms",
-    submenu: [{ name: "contact", href: `${baseUrl}/contact-form` }],
+    submenu: [
+      { name: "contact", href: `${baseUrl}/contact-form` },
+      { name: "gaming", href: `${baseUrl}/gaming-form` },
+      { name: "singin", href: `${baseUrl}/singin-form` },
+      { name: "flow", href: `${baseUrl}/flow-form` },
+    ],
   },
   // cursors
   {

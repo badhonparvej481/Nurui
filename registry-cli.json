@@ -315,6 +315,45 @@
         }
       ]
     },
+    {
+      "name": "gaming-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/gaming-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "singin-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["lucide-react", "framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/singin-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "flow-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["@react-three/fiber", "framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/flow-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "draw-cursor",

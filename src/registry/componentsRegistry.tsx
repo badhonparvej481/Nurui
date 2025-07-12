@@ -92,6 +92,15 @@ import FrameCode from "@/components/nurui/future-frame.tsx?raw";
 import GridFeatureDemo from "@/components/nurui/grid-feature-demo";
 import GridFeatureDemoCode from "@/components/nurui/grid-feature-demo.tsx?raw";
 import GridFeatureCode from "@/components/nurui/grid-feature.tsx?raw";
+import GamingFormDemo from "@/components/nurui/gaming-form-demo";
+import GamingFormDemoCode from "@/components/nurui/gaming-form-demo.tsx?raw";
+import GamingFormCode from "@/components/nurui/gaming-form.tsx?raw";
+import { SingInFormDemo } from "@/components/nurui/singin-form-demo";
+import SingInFormDemoCode from "@/components/nurui/singin-form-demo.tsx?raw";
+import SingInFormCode from "@/components/nurui/singin-form.tsx?raw";
+import { FlowFormDemo } from "@/components/nurui/flow-form-demo";
+import FlowFormDemoCode from "@/components/nurui/flow-form-demo.tsx?raw";
+import FlowFormCode from "@/components/nurui/flow-form.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -228,6 +237,21 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "shiny-input", code: ShinyInputCode },
       { fileName: "shiny-text-area", code: ShinyTextAreaCode },
     ],
+  },
+  gamingForm: {
+    preview: <GamingFormDemo />,
+    code: GamingFormDemoCode,
+    othersCode: [{ fileName: "gaming-form", code: GamingFormCode }],
+  },
+  singinForm: {
+    preview: <SingInFormDemo />,
+    code: SingInFormDemoCode,
+    othersCode: [{ fileName: "singin-form", code: SingInFormCode }],
+  },
+  flowForm: {
+    preview: <FlowFormDemo />,
+    code: FlowFormDemoCode,
+    othersCode: [{ fileName: "flow-form", code: FlowFormCode }],
   },
   // cursors
   drawCursor: {

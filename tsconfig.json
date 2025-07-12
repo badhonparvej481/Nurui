@@ -33,6 +33,6 @@
     "src/app/(docs)/docs/[slug]/page.tsx",
     "src/cli/utils/convertTsxToJsx.js",
     "src/content/docs/info-card.mdx"
-  ],
+, "src/content/docs/animated-form.mdx"  ],
   "exclude": ["node_modules"]
 }
