@@ -1,8 +1,10 @@
 "use client";
+import React from "react";
 import Nurui from "@/components/common/Nurui";
 import MenuItem from "@/components/common/MenuItem";
-import React from "react";
 import { useAppContext } from "@/context/AppContext";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 // import Authentication from "@/components/common/DropDown";
 // import GoPro from "@/components/ui/GoPro";
 import { navigation } from "@/registry/ComponentNavigation";
@@ -14,34 +16,55 @@ const ComponentsLeftSidebar = () => {
 
   return (
     <div className="fixed top-0 left-0 hidden xl:block">
-      <div
-        className={`bg-[var(--purple-color)] border-r border-[var(--primary-color-1)] border-dashed min-h-screen flex flex-col justify-between pt-3 pb-6 ${
-          sideBar ? "w-72" : "w-16 items-center"
-        }`}
-      >
-        <div className="space-y-5">
-          {sideBar ? (
-            <div className="flex items-center justify-center gap-1">
-              <Nurui />
-              <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem]">
-                Basic
-              </p>
-            </div>
-          ) : (
-            <LinkWithProgress href="/">
-              <NuruiLogo />
-            </LinkWithProgress>
-          )}
-          {/* login and pro */}
-          {/* <div className="space-y-2.5 w-[87%] mx-auto">
+      <SimpleBar className="max-h-screen">
+        <div
+          className={`bg-[var(--purple-color)] border-r border-[var(--primary-color-1)] border-dashed min-h-screen flex flex-col justify-between pt-3 pb-6 space-y-5 ${
+            sideBar ? "w-72" : "w-16 items-center"
+          }`}
+        >
+          <div className="space-y-5">
+            {sideBar ? (
+              <div className="flex items-center justify-center gap-1">
+                <Nurui />
+                <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem]">
+                  Basic
+                </p>
+              </div>
+            ) : (
+              <LinkWithProgress href="/">
+                <NuruiLogo />
+              </LinkWithProgress>
+            )}
+            {/* login and pro */}
+            {/* <div className="space-y-2.5 w-[87%] mx-auto">
             <GoPro sideBar={sideBar} />
             <Authentication sideBar={sideBar} />
           </div> */}
 
+            <div className="text-sm px-2 space-y-1">
+              {navigation
+                ?.slice(0, navigation?.length - 1)
+                .map((nav, index) => (
+                  <MenuItem
+                    href={nav?.href}
+                    key={nav?.title + index}
+                    icon={nav.icon}
+                    title={nav.title}
+                    submenu={nav?.submenu}
+                    parentHover={false}
+                    subMenuHover={true}
+                  />
+                ))}
+            </div>
+          </div>
+
           <div className="text-sm px-2 space-y-1">
-            {navigation?.slice(0, navigation?.length - 1).map((nav, index) => (
+            <p className="text-[var(--black-color-4)] pl-2.5 uppercase">
+              {sideBar && "others"}
+            </p>
+            {navigation?.slice(navigation?.length - 1).map((nav, index) => (
               <MenuItem
-                href={nav?.href}
+                href={nav.href}
                 key={nav?.title + index}
                 icon={nav.icon}
                 title={nav.title}
@@ -52,24 +75,7 @@ const ComponentsLeftSidebar = () => {
             ))}
           </div>
         </div>
-
-        <div className="text-sm px-2 space-y-1">
-          <p className="text-[var(--black-color-4)] pl-2.5 uppercase">
-            {sideBar && "others"}
-          </p>
-          {navigation?.slice(navigation?.length - 1).map((nav, index) => (
-            <MenuItem
-              href={nav.href}
-              key={nav?.title + index}
-              icon={nav.icon}
-              title={nav.title}
-              submenu={nav?.submenu}
-              parentHover={false}
-              subMenuHover={true}
-            />
-          ))}
-        </div>
-      </div>
+      </SimpleBar>
     </div>
   );
 };

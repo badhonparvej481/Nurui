@@ -154,20 +154,9 @@ export default function AllComponentSection() {
             normalWords: "Your Stack",
             firstHighLightColor: "text-[var(--secondary-color)]",
           }}
-          description="From TypeScript to Tailwind, discover a powerful collection of tools designed to supercharge your development workflow."
+          description="From TypeScript to JavaScript, discover a powerful collection of tools designed to supercharge your development workflow."
           sectionGap="pb-3 md:pb-7"
         />
-        {/* <ShinyInput
-          className="max-w-72 md:max-w-96 mx-auto"
-          icon={
-            <IoIosSearch className="absolute right-3.5 top-1/2 -translate-y-1/2 text-2xl text-[var(--placeholder-color)]" />
-          }
-          placeholder="Search by social media platform"
-          name="social-media"
-          type="text"
-          borderHoverAnimation="1px solid var(--secondary-color)"
-          focus="focus:border-[var(--secondary-color)]"
-        /> */}
       </div>
       <Gravity gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {
