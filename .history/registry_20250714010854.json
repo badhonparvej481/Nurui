@@ -406,23 +406,6 @@
         }
       ]
     },
-    {
-      "name": "feature-card",
-      "type": "registry:component",
-      "devDependencies": [],
-      "dependencies": ["lucide-react"],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "./src/components/nurui/feature-card-demo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "./src/components/nurui/animated-gradient-border.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
 
     {
       "name": "contact-form",

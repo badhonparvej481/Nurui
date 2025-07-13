@@ -51,10 +51,10 @@ const Footer = () => {
               About
             </a>
             <a
-              href="https://nurui.vercel.app/playground"
+              href="https://nurui.vercel.app/contact-us"
               className="cursor-pointer"
             >
-              Playground
+              Contact
             </a>
           </nav>
 

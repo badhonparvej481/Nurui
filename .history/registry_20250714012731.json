@@ -410,15 +410,15 @@
       "name": "feature-card",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["lucide-react"],
+      "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/feature-card-demo.tsx",
+          "path": "./src/components/nurui/spotlight-card-demo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "./src/components/nurui/animated-gradient-border.tsx",
+          "path": "./src/components/nurui/spotlight-card.tsx",
           "type": "registry:component"
         }
       ]
