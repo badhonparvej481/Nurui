@@ -4,7 +4,7 @@ Thanks for your interest in contributing to Nurui. We're happy to have you here.
 
 This document will guide you through the process of setting up the project locally, contributing components, and following our commit conventions.
 
-Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull request to see if someone else is working on something similar.
+Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
 If you need any help, feel free to reach out to [afsar](https://www.linkedin.com/in/md-afsar-mahmud).
 
@@ -44,13 +44,14 @@ yarn install
 ```
 
 ### Run the Project
+
 ```bash
-pnpm dev
+yarn dev
 ```
 
-# Folder Structure
+## Folder Structure
 
-```
+```bash
 NURUI/
 ├── .github/
 ├── .next/
@@ -117,7 +118,7 @@ NURUI/
 └── yarn.lock
 ```
 
-# How to Add a New Component to Nurui
+## How to Add a New Component to Nurui
 
 Follow these 4 simple steps to add a new UI component to the library.
 
@@ -148,6 +149,7 @@ shiny-button-demo.tsx    # Demo preview component
 Open `src/registry/componentRegistry.ts` and add the following:
 
 Import the files:
+
 ```bash
 import ShinyButton from "@/components/nurui/shiny-button";
 import ShinyButtonCode from "@/components/nurui/shiny-button.tsx?raw";
@@ -167,9 +169,11 @@ shinyButton: {
 ```
 
 ### Step 4: Create .mdx File for Docs
+
 Create a new file in src/content/:`shiny-button.mdx`
 
 Use the following structure:
+
 ```bash
 ---
 title: "Shiny Button"
@@ -220,7 +224,6 @@ description: "A glowing button component with customizable animations."
 🔚 Done!
 Your component should now appear in the sidebar, render in the preview, and have complete documentation in MDX.
 
-
 ## Commit Convention
 
 Before you create a Pull Request, please check whether your commits comply with
@@ -249,7 +252,7 @@ the following categories:
   e.g. `feat(components): add new prop to the avatar component`
 
 If you are interested in the detailed specification you can visit
-https://www.conventionalcommits.org/ or check out the
+<https://www.conventionalcommits.org/> or check out the
 [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
 ## Ask for Help
