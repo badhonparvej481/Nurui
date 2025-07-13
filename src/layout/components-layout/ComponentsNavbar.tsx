@@ -12,27 +12,23 @@ const ComponentsNavbar = () => {
   const { sideBar, setSideBar } = useAppContext();
   return (
     <div
-      className={`fixed top-0 z-50 xl:right-0 ${
+      className={`fixed top-0 xl:right-0 z-[9999] ${
         sideBar
           ? "w-full xl:w-[calc(100%-18rem)]"
-          : "'w-full xl:w-[calc(100vw-5rem)] "
+          : "w-full xl:w-[calc(100vw-5rem)]"
       }`}
     >
       <nav className="w-full h-16 py-2 px-5 flex items-center justify-between border-b border-[var(--primary-color-1)] border-dashed bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-md lg:overflow-hidden">
         <>
           {sideBar ? (
             <GoSidebarExpand
-              className="text-2xl cursor-pointer  hidden xl:block"
-              onClick={() => {
-                setSideBar(false);
-              }}
+              className="text-2xl cursor-pointer hidden xl:block"
+              onClick={() => setSideBar(false)}
             />
           ) : (
             <GoSidebarCollapse
-              className="text-2xl cursor-pointer  hidden xl:block"
-              onClick={() => {
-                setSideBar(true);
-              }}
+              className="text-2xl cursor-pointer hidden xl:block"
+              onClick={() => setSideBar(true)}
             />
           )}
         </>
@@ -45,19 +41,15 @@ const ComponentsNavbar = () => {
           /> */}
           <RoundedButton
             href="https://discord.gg/XzAh8V3S"
-            icon={
-              <FaDiscord className="text-2xl text-[var(--primary-color)]" />
-            }
+            icon={<FaDiscord className="text-[var(--primary-color)]" />}
           />
           <RoundedButton
             href="https://github.com/Mdafsarx/Nurui"
-            icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
+            icon={<FaGithub className="text-[var(--primary-color)]" />}
           />
           <RoundedButton
             href="https://x.com/md_afsar_mahmud"
-            icon={
-              <FaXTwitter className="text-2xl text-[var(--primary-color)]" />
-            }
+            icon={<FaXTwitter className="text-[var(--primary-color)]" />}
           />
           {/* <ThemeSwitcher /> */}
         </div>
