@@ -69,6 +69,8 @@ export const navigation = [
       { name: "playing", href: `${baseUrl}/playing-card` },
       { name: "info", href: `${baseUrl}/info-card` },
       { name: "wave", href: `${baseUrl}/wave-card` },
+      { name: "dynamic", href: `${baseUrl}/dynamic-card` },
+      { name: "spotlight", href: `${baseUrl}/spotlight-card` },
     ],
   },
   // forms

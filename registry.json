@@ -368,6 +368,44 @@
         }
       ]
     },
+    {
+      "name": "dynamic-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["tw-animate-css"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/dynamic-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/dynamic-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/dynamic-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "spotlight-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/spotlight-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/spotlight-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "contact-form",

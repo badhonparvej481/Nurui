@@ -101,6 +101,12 @@ import SingInFormCode from "@/components/nurui/singin-form.tsx?raw";
 import { FlowFormDemo } from "@/components/nurui/flow-form-demo";
 import FlowFormDemoCode from "@/components/nurui/flow-form-demo.tsx?raw";
 import FlowFormCode from "@/components/nurui/flow-form.tsx?raw";
+import { DynamicCardDemo } from "@/components/nurui/dynamic-card-demo";
+import DynamicCardDemoCode from "@/components/nurui/dynamic-card-demo.tsx?raw";
+import DynamicCardCode from "@/components/nurui/dynamic-card.tsx?raw";
+import { SpotLightCardDemo } from "@/components/nurui/spotlight-card-demo";
+import SpotLightCardDemoCode from "@/components/nurui/spotlight-card-demo.tsx?raw";
+import SpotLightCardCode from "@/components/nurui/spotlight-card.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -226,6 +232,16 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <WaveCardDemo />,
     code: WaveCardDemoCode,
     othersCode: [{ fileName: "wave-card", code: WaveCardCode }],
+  },
+  dynamicCard: {
+    preview: <DynamicCardDemo />,
+    code: DynamicCardDemoCode,
+    othersCode: [{ fileName: "dynamic-card", code: DynamicCardCode }],
+  },
+  spotlightCard: {
+    preview: <SpotLightCardDemo />,
+    code: SpotLightCardDemoCode,
+    othersCode: [{ fileName: "spotlight-card", code: SpotLightCardCode }],
   },
   // forms
   contactForm: {
