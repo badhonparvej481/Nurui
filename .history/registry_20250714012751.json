@@ -410,7 +410,23 @@
       "name": "feature-card",
       "type": "registry:component",
       "devDependencies": [],
-      "dependencies": ["lucide-react"],
+      "dependencies": ["{
+      "name": "spotlight-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/spotlight-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/spotlight-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },"],
       "registryDependencies": [],
       "files": [
         {

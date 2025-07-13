@@ -249,12 +249,7 @@ export const Index: Record<string, ComponentEntry> = {
   featureCard: {
     preview: <FeatureCardDemo />,
     code: FeatureCardDemoCode,
-    othersCode: [
-      {
-        fileName: "animation-gradient-border",
-        code: AnimatedGradientBorderCode,
-      },
-    ],
+    othersCode: [{ fileName: "animation-gradient-border", code: AnimatedGradientBorderCode }],
   },
   // forms
   contactForm: {

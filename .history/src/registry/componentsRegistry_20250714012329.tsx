@@ -107,9 +107,6 @@ import DynamicCardCode from "@/components/nurui/dynamic-card.tsx?raw";
 import { SpotLightCardDemo } from "@/components/nurui/spotlight-card-demo";
 import SpotLightCardDemoCode from "@/components/nurui/spotlight-card-demo.tsx?raw";
 import SpotLightCardCode from "@/components/nurui/spotlight-card.tsx?raw";
-import { FeatureCardDemo } from "@/components/nurui/feature-card-demo";
-import FeatureCardDemoCode from "@/components/nurui/feature-card-demo.tsx?raw";
-import AnimatedGradientBorderCode from "@/components/nurui/animated-gradient-border.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -246,15 +243,10 @@ export const Index: Record<string, ComponentEntry> = {
     code: SpotLightCardDemoCode,
     othersCode: [{ fileName: "spotlight-card", code: SpotLightCardCode }],
   },
-  featureCard: {
-    preview: <FeatureCardDemo />,
-    code: FeatureCardDemoCode,
-    othersCode: [
-      {
-        fileName: "animation-gradient-border",
-        code: AnimatedGradientBorderCode,
-      },
-    ],
+  spotlightCard: {
+    preview: <SpotLightCardDemo />,
+    code: SpotLightCardDemoCode,
+    othersCode: [{ fileName: "spotlight-card", code: SpotLightCardCode }],
   },
   // forms
   contactForm: {
