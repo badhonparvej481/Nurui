@@ -443,7 +443,7 @@
       ]
     },
     {
-      "name": "digital-hero",
+      "name": "-hero",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": [],
