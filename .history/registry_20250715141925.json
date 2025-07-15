@@ -1,0 +1,691 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "nurui",
+  "homepage": "https://nurui.vercel.app",
+  "items": [
+    {
+      "name": "neobrutalism-faq",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/neobrutalism-faq-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/neobrutalism-faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "premium-testimonial",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "lucide-react",
+        "framer-motion",
+        ""
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/premium-testimonial-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/premium-testimonial.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "animated-pricing",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/animated-pricing-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/modern-pricing-page.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shader-canvas.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/multi-type-ripple-buttons.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "creative-pricing",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "lucide-react",
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/creative-pricing-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/creative-pricing.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "grid-feature",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react", "motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/grid-feature-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/grid-feature.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "project-showcase",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "framer-motion", ""],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/project-showcase-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/project-showcase.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/halomot-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "story",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "class-variance-authority",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-dialog",
+        "lucide-react",
+        "@radix-ui/react-avatar"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/story-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/story-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/avatar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "following-eye",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/following-eye-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/following-eye.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "magnet-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "motion", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/magnet-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/magnet-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "gradient-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/gradient-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/gradient-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/gradient-button.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "border-animation-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["react-icons", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/border-animation-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/border-animation-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hover-shadow-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["react-icons", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/hover-shadow-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/hover-shadow-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "text-fall-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["gsap", "@gsap/react", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/text-fall-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/text-fall-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "future-button",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/future-button-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/future-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/future-frame.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "playing-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["three", "@react-three/fiber", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/playing-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/playing-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/playing-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "info-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/info-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/info-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/info-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "wave-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["tw-animate-css"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/wave-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/wave-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/wave-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["tw-animate-css"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/dynamic-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/dynamic-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/styles/dynamic-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "spotlight-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/spotlight-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/spotlight-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "feature-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/feature-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/animated-gradient-border.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "contact-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["framer-motion", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/contact-form-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/contact-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/background-shine-button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shiny-input.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/shiny-text-area.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "gaming-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/gaming-form-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/gaming-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "singin-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "lucide-react",
+        "framer-motion",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/singin-form-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/singin-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "flow-form",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "@react-three/fiber",
+        "framer-motion",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/flow-form-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/flow-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    
+
+    {
+      "name": "draw-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["gsap"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/draw-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/draw-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hacker-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/hacker-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/hacker-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "terminal-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/terminal-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/terminal-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "code-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/code-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/code-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "money-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/money-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/money-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "electric-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/electric-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/electric-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "ghost-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/ghost-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/ghost-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tech-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/tech-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/tech-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "fire-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/fire-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/fire-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "matrix-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/matrix-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/matrix-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
