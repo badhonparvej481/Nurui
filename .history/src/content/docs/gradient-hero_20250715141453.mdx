@@ -1,0 +1,75 @@
+---
+title: "gradient-hero"
+description: "A stylish gradient-hero component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="gradientHero" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli
+  dependencies={[
+    {
+      label: "npm",
+      command: "npm i framer-motion lucide-react",
+    },
+    {
+      label: "pnpm",
+      command: "pnpm add framer-motion lucide-react",
+    },
+    {
+      label: "bun",
+      command: "bun add framer-motion lucide-react",
+    },
+    {
+      label: "yarn",
+      command: "yarn add framer-motion lucide-react",
+    },
+  ]}
+/>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/gradient-hero.tsx`
+
+<CodeBlock componentName="gradientHero" fileName="gradient-grid-hero" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+`components/nurui/gradient-hero.tsx`
+
+<CodeBlock componentName="gradientHero" fileName="gradient-grid-hero" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop            | Type     | Default    | Description                                               |
+| --------------- | -------- | ---------- | --------------------------------------------------------- |
+| `normalTitle`   | `string` | `Required` | Regular part of the title, usually styled in plain text.  |
+| `colorfulTitle` | `string` | `Required` | Highlighted part of the title, usually styled with color. |
+| `description`   | `string` | `Required` | Description text shown below the title.                   |
+| `buttonText`    | `string` | `Required` | Text displayed inside the action button.                  |
