@@ -2,6 +2,8 @@ import AnimateInput from "./AnimateInput";
 
 const NewsLetterSection = () => {
 
+  
+
   return (
     <section className="sm:container">
       <div className=" bg-gradient-to-r from-[var(--glass-color)] via-[var(--glass-color)] to-[var(--primary-color-2)] py-6 md:py-10 lg:py-20 px-2.5 md:px-20 sm:rounded-xl flex flex-col items-center xl:items-start justify-center text-left gap-3.5">
