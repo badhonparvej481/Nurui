@@ -116,6 +116,6 @@ export const navigation = [
   {
     icon: <TfiHelpAlt />,
     title: "Help",
-    href: `${baseUrl}/help`,
+    href: ``${baseUrl}/draw-cursor``,
   },
 ];
