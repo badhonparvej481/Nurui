@@ -1,5 +1,3 @@
-import StickyScrollSection from "@/components/pages/blog/StickyScrollSection";
-
 export const metadata = {
   title: "Playground",
   description:
@@ -18,11 +16,7 @@ const page = () => {
   const working = true;
   if (working)
     return <div>Playground page is under development. Coming soon!</div>;
-  return (
-    <main className="section-gap">
-      <StickyScrollSection />
-    </main>
-  );
+  return <div></div>;
 };
 
 export default page;
