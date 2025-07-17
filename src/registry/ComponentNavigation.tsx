@@ -93,6 +93,7 @@ export const navigation = [
       { name: "gradient", href: `${baseUrl}/gradient-hero` },
       { name: "waves", href: `${baseUrl}/waves-hero` },
       { name: "digital", href: `${baseUrl}/digital-hero` },
+      { name: "research", href: `${baseUrl}/research-hero` },
     ],
   },
   // cursors
