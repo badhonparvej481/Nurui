@@ -119,6 +119,12 @@ import WavesHeroCode from "@/components/nurui/waves-hero.tsx?raw";
 import DigitalHeroDemo from "@/components/nurui/digital-hero-demo";
 import DigitalHeroDemoCode from "@/components/nurui/digital-hero-demo.tsx?raw";
 import DigitalHeroCode from "@/components/nurui/digital-hero.tsx?raw";
+import ResearchHeroDemo from "@/components/nurui/research-hero-demo";
+import ResearchHeroDemoCode from "@/components/nurui/research-hero-demo.tsx?raw";
+import ResearchHeroCode from "@/components/nurui/research-hero.tsx?raw";
+import SparklesCoreCode from "@/components/nurui/sparkles.tsx?raw";
+import FloatingPaperCode from "@/components/nurui/floating-paper.tsx?raw";
+import RoboAnimationCode from "@/components/nurui/robo-animation.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -311,8 +317,17 @@ export const Index: Record<string, ComponentEntry> = {
   digitalHero: {
     preview: <DigitalHeroDemo />,
     code: DigitalHeroDemoCode,
+    othersCode: [{ fileName: "digital-hero", code: DigitalHeroCode }],
+  },
+  researchHero: {
+    preview: <ResearchHeroDemo />,
+    code: ResearchHeroDemoCode,
     othersCode: [
-      { fileName: "digital-hero", code: DigitalHeroCode },
+      { fileName: "sparkles-core", code: SparklesCoreCode },
+      { fileName: "research-hero", code: ResearchHeroCode },
+      { fileName: "floating-paper", code: FloatingPaperCode },
+      { fileName: "robo-animation", code: RoboAnimationCode },
+      { fileName: "button", code: ButtonCode },
     ],
   },
   // cursors

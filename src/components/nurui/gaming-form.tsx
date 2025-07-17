@@ -159,7 +159,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
           </span>
           <span className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
         </h2>
-        <p className="text-white/80 flex flex-col items-center space-y-1">
+        <div className="text-white/80 flex flex-col items-center space-y-1">
           <span className="relative group cursor-default">
             <span className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
             <span className="relative inline-block animate-pulse">
@@ -174,7 +174,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
             <span className="animate-bounce">🎮</span>
             <span className="animate-pulse">🏆</span>
           </div>
-        </p>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -260,7 +260,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
         </div>
       </div>
 
-      <p className="mt-8 text-center text-sm text-white/60">
+      <div className="mt-8 text-center text-sm text-white/60">
         Don&#39;t have an account?{" "}
         <a
           href="#"
@@ -268,7 +268,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
         >
           Create Account
         </a>
-      </p>
+      </div>
     </div>
   );
 };

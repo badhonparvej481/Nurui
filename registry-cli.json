@@ -459,6 +459,40 @@
         }
       ]
     },
+    {
+      "name": "research-hero",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "framer-motion",
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/research-hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/sparkles.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/floating-paper.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/robo-animation.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "draw-cursor",
