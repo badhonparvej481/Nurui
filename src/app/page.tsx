@@ -1,4 +1,3 @@
-// import NewsLetterSection from "@/components/common/NewsLetterSection";
 import AllComponentSection from "@/components/pages/Home/AllComponentSection";
 import ComponentDemosSection from "@/components/pages/Home/ComponentDemosSection";
 import FaqSection from "@/components/pages/Home/FaqSection";
@@ -16,7 +15,6 @@ const Home = () => {
       <ComponentDemosSection />
       <TestimonialSection />
       <FaqSection />
-      {/* <NewsLetterSection /> */}
     </main>
   );
 };

@@ -9,7 +9,7 @@ import ThemeProvider from "../provider/ThemeProvider";
 import NProgressProvider from "@/components/common/NProgressProvider";
 import Navbar from "@/layout/Navbar";
 import Footer from "@/layout/Footer";
-import MainContent from "./MainContent";
+import MainContent from "../components/common/MainContent";
 import { AppProvider } from "@/context/AppContext";
 import SplashCursor from "@/components/ui/SplashCursor";
 
