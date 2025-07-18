@@ -632,6 +632,65 @@
         }
       ]
     },
+    {
+      "name": "spotlight-hero",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/spotlight-card-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/spotlight-hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tech-hero",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "framer-motion",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/tech-hero-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/tech-hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/particle-background.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "draw-cursor",
@@ -799,6 +858,23 @@
         },
         {
           "path": "./src/components/nurui/matrix-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "retro-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/retro-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/retro-cursor.tsx",
           "type": "registry:component"
         }
       ]

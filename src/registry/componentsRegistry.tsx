@@ -125,6 +125,16 @@ import ResearchHeroCode from "@/components/nurui/research-hero.tsx?raw";
 import SparklesCoreCode from "@/components/nurui/sparkles.tsx?raw";
 import FloatingPaperCode from "@/components/nurui/floating-paper.tsx?raw";
 import RoboAnimationCode from "@/components/nurui/robo-animation.tsx?raw";
+import SpotlightHeroDemo from "@/components/nurui/spotlight-hero-demo";
+import SpotlightHeroDemoCode from "@/components/nurui/spotlight-hero-demo.tsx?raw";
+import SpotlightHeroCode from "@/components/nurui/spotlight-hero.tsx?raw";
+import TechHeroDemo from "@/components/nurui/tech-hero-demo";
+import TechHeroDemoCode from "@/components/nurui/tech-hero-demo.tsx?raw";
+import TechHeroCode from "@/components/nurui/tech-hero.tsx?raw";
+import ParticleBackgroundCode from "@/components/nurui/particle-background.tsx?raw";
+import RetroCursorDemo from "@/components/nurui/retro-cursor-demo";
+import RetroCursorDemoCode from "@/components/nurui/retro-cursor-demo.tsx?raw";
+import RetroCursorCode from "@/components/nurui/retro-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -330,6 +340,23 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "button", code: ButtonCode },
     ],
   },
+  spotlightHero: {
+    preview: <SpotlightHeroDemo />,
+    code: SpotlightHeroDemoCode,
+    othersCode: [
+      { fileName: "spotlight-hero", code: SpotlightHeroCode },
+      { fileName: "button", code: ButtonCode },
+    ],
+  },
+  techHero: {
+    preview: <TechHeroDemo />,
+    code: TechHeroDemoCode,
+    othersCode: [
+      { fileName: "tech-hero", code: TechHeroCode },
+      { fileName: "particle-background", code: ParticleBackgroundCode },
+      { fileName: "button", code: ButtonCode },
+    ],
+  },
   // cursors
   drawCursor: {
     preview: <DrawCursorDemo />,
@@ -355,6 +382,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <CodeCursorDemo />,
     code: CodeCursorDemoCode,
     othersCode: [{ fileName: "code-cursor", code: CodeCursorCode }],
+  },
+  retroCursor: {
+    preview: <RetroCursorDemo />,
+    code: RetroCursorDemoCode,
+    othersCode: [{ fileName: "retro-cursor", code: RetroCursorCode }],
   },
   moneyCursor: {
     preview: <MoneyCursorDemo />,

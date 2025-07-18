@@ -113,7 +113,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="text-[--copy-right-color]">
-            Created by Md Afsar Mahmud © 2025. All rights reserved.
+            Created by Md Afsar Mahmud © {new Date().getFullYear()}. All rights reserved.
           </p>
         </div>
       </div>

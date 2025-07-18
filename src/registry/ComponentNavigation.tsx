@@ -5,6 +5,7 @@ import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { RxComponent2, RxSection } from "react-icons/rx";
 import { PiCursorClickDuotone } from "react-icons/pi";
+import { SiApacherocketmq } from "react-icons/si";
 
 const baseUrl = "/docs";
 
@@ -48,6 +49,11 @@ export const navigation = [
       { name: "following eye", href: `${baseUrl}/following-eye` },
     ],
   },
+  // {
+  //   icon: <FaWpforms />,
+  //   title: "Backgrounds",
+  //   submenu: [{ name: "gradient", href: `${baseUrl}/gradient-hero` }],
+  // },
   // buttons
   {
     icon: <TbHandClick />,
@@ -87,15 +93,23 @@ export const navigation = [
   },
   // hero sections
   {
-    icon: <FaWpforms />,
+    icon: <SiApacherocketmq />,
     title: "Hero",
     submenu: [
+      { name: "tech", href: `${baseUrl}/tech-hero` },
       { name: "gradient", href: `${baseUrl}/gradient-hero` },
       { name: "waves", href: `${baseUrl}/waves-hero` },
       { name: "digital", href: `${baseUrl}/digital-hero` },
       { name: "research", href: `${baseUrl}/research-hero` },
+      { name: "spotlight", href: `${baseUrl}/spotlight-hero` },
     ],
   },
+  // {
+  //   icon: <FaWpforms />,
+  //   title: "Modals",
+  //   submenu: [{ name: "gradient", href: `${baseUrl}/gradient-hero` }],
+  // },
+
   // cursors
   {
     icon: <PiCursorClickDuotone />,
@@ -105,6 +119,7 @@ export const navigation = [
       { name: "matrix", href: `${baseUrl}/matrix-cursor` },
       { name: "hacker", href: `${baseUrl}/hacker-cursor` },
       { name: "terminal", href: `${baseUrl}/terminal-cursor` },
+      { name: "retro", href: `${baseUrl}/retro-cursor` },
       { name: "code", href: `${baseUrl}/code-cursor` },
       { name: "money", href: `${baseUrl}/money-cursor` },
       { name: "electric", href: `${baseUrl}/electric-cursor` },
