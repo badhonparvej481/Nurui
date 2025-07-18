@@ -125,6 +125,13 @@ import ResearchHeroCode from "@/components/nurui/research-hero.tsx?raw";
 import SparklesCoreCode from "@/components/nurui/sparkles.tsx?raw";
 import FloatingPaperCode from "@/components/nurui/floating-paper.tsx?raw";
 import RoboAnimationCode from "@/components/nurui/robo-animation.tsx?raw";
+import SpotlightHeroDemo from "@/components/nurui/spotlight-hero-demo";
+import SpotlightHeroDemoCode from "@/components/nurui/spotlight-hero-demo.tsx?raw";
+import SpotlightHeroCode from "@/components/nurui/spotlight-hero.tsx?raw";
+import TechHeroDemo from "@/components/nurui/tech-hero-demo";
+import TechHeroDemoCode from "@/components/nurui/tech-hero-demo.tsx?raw";
+import TechHeroCode from "@/components/nurui/tech-hero.tsx?raw";
+import ParticleBackgroundCode from "@/components/nurui/particle-background.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -327,6 +334,23 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "research-hero", code: ResearchHeroCode },
       { fileName: "floating-paper", code: FloatingPaperCode },
       { fileName: "robo-animation", code: RoboAnimationCode },
+      { fileName: "button", code: ButtonCode },
+    ],
+  },
+  spotlightHero: {
+    preview: <SpotlightHeroDemo />,
+    code: SpotlightHeroDemoCode,
+    othersCode: [
+      { fileName: "spotlight-hero", code: SpotlightHeroCode },
+      { fileName: "button", code: ButtonCode },
+    ],
+  },
+  techHero: {
+    preview: <TechHeroDemo />,
+    code: TechHeroDemoCode,
+    othersCode: [
+      { fileName: "tech-hero", code: TechHeroCode },
+      { fileName: "particle-background", code: ParticleBackgroundCode },
       { fileName: "button", code: ButtonCode },
     ],
   },
