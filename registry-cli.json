@@ -670,6 +670,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "retro-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["framer-motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/retro-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

@@ -119,6 +119,7 @@ export const navigation = [
       { name: "matrix", href: `${baseUrl}/matrix-cursor` },
       { name: "hacker", href: `${baseUrl}/hacker-cursor` },
       { name: "terminal", href: `${baseUrl}/terminal-cursor` },
+      { name: "retro", href: `${baseUrl}/retro-cursor` },
       { name: "code", href: `${baseUrl}/code-cursor` },
       { name: "money", href: `${baseUrl}/money-cursor` },
       { name: "electric", href: `${baseUrl}/electric-cursor` },

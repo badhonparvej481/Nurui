@@ -132,6 +132,9 @@ import TechHeroDemo from "@/components/nurui/tech-hero-demo";
 import TechHeroDemoCode from "@/components/nurui/tech-hero-demo.tsx?raw";
 import TechHeroCode from "@/components/nurui/tech-hero.tsx?raw";
 import ParticleBackgroundCode from "@/components/nurui/particle-background.tsx?raw";
+import RetroCursorDemo from "@/components/nurui/retro-cursor-demo";
+import RetroCursorDemoCode from "@/components/nurui/retro-cursor-demo.tsx?raw";
+import RetroCursorCode from "@/components/nurui/retro-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -379,6 +382,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <CodeCursorDemo />,
     code: CodeCursorDemoCode,
     othersCode: [{ fileName: "code-cursor", code: CodeCursorCode }],
+  },
+  retroCursor: {
+    preview: <RetroCursorDemo />,
+    code: RetroCursorDemoCode,
+    othersCode: [{ fileName: "retro-cursor", code: RetroCursorCode }],
   },
   moneyCursor: {
     preview: <MoneyCursorDemo />,
