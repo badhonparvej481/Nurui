@@ -1,5 +1,6 @@
 "use client";
 import RoundedButton from "@/components/common/RoundedButton";
+import GithubStar from "@/components/nurui/github-button";
 // import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 import { useAppContext } from "@/context/AppContext";
@@ -39,6 +40,7 @@ const ComponentsNavbar = () => {
               <IoIosSearch className="text-xl text-[var(--primary-color)]" />
             }
           /> */}
+          <GithubStar />
           <RoundedButton
             href="https://discord.gg/XzAh8V3S"
             icon={<FaDiscord className="text-[var(--primary-color)]" />}
