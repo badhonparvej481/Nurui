@@ -108,7 +108,7 @@ const HeroSection = () => {
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
                   Trusted by{" "}
-                  <span className="text-[var(--text-primary-color)]">10+</span>{" "}
+                  <span className="text-[var(--text-primary-color)]">50+</span>{" "}
                   developers
                 </p>
               </div>
@@ -123,7 +123,7 @@ const HeroSection = () => {
               showBorder={false}
               className="text-3xl font-bold"
             >
-              Used by 2+ Companies
+              Used by 10+ Companies
             </GradientText>
           </div>
         </div>

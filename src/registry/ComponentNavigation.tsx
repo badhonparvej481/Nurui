@@ -78,6 +78,7 @@ export const navigation = [
       { name: "dynamic", href: `${baseUrl}/dynamic-card` },
       { name: "spotlight", href: `${baseUrl}/spotlight-card` },
       { name: "feature", href: `${baseUrl}/feature-card` },
+      { name: "shiny", href: `${baseUrl}/shiny-card` },
     ],
   },
   // forms
