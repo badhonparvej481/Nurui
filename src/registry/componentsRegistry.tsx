@@ -135,6 +135,9 @@ import ParticleBackgroundCode from "@/components/nurui/particle-background.tsx?r
 import RetroCursorDemo from "@/components/nurui/retro-cursor-demo";
 import RetroCursorDemoCode from "@/components/nurui/retro-cursor-demo.tsx?raw";
 import RetroCursorCode from "@/components/nurui/retro-cursor.tsx?raw";
+import ShinyCardDemo from "@/components/nurui/shiny-card-demo";
+import ShinyCardDemoCode from "@/components/nurui/shiny-card-demo.tsx?raw";
+import ShinyCardCode from "@/components/nurui/shiny-card.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -278,6 +281,16 @@ export const Index: Record<string, ComponentEntry> = {
       {
         fileName: "animation-gradient-border",
         code: AnimatedGradientBorderCode,
+      },
+    ],
+  },
+  shinyCard: {
+    preview: <ShinyCardDemo />,
+    code: ShinyCardDemoCode,
+    othersCode: [
+      {
+        fileName: "shiny-card",
+        code: ShinyCardCode,
       },
     ],
   },
