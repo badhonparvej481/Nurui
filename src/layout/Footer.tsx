@@ -28,7 +28,6 @@ const Footer = () => {
               Beautifully crafted, accessible components built with Tailwind CSS
               perfect for modern developers and creative teams.
             </p>
-            
           </div>
 
           <nav className="space-y-4 max-w-80 flex flex-col">
@@ -113,7 +112,15 @@ const Footer = () => {
             ))}
           </div>
           <p className="text-[--copy-right-color]">
-            Created by Md Afsar Mahmud © {new Date().getFullYear()}. All rights reserved.
+            Created by{" "}
+            <a
+              href="https://github.com/afsar-dev"
+              target="_blank"
+              className="text-[var(--primary-color)] border-b border-[var(--primary-color)] font-semibold"
+            >
+              Md Afsar Mahmud
+            </a>{" "}
+            © {new Date().getFullYear()}. All rights reserved.
           </p>
         </div>
       </div>
