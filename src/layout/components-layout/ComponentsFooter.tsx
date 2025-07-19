@@ -2,7 +2,7 @@ import React from "react";
 
 const ComponentsFooter = () => {
   return (
-    <footer className="relative py-6 md:py-0 mt-auto hidden">
+    <footer className="relative py-6 md:py-0 mt-auto">
       <div
         className="absolute top-0 h-px w-full "
         style={{
@@ -11,26 +11,17 @@ const ComponentsFooter = () => {
         }}
       ></div>
       <div className="container flex flex-col items-center justify-center gap-4 md:h-16 md:flex-row">
-        <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-          Built by{" "}
-          <a
-            href={"/"}
-            target="_blank"
-            rel="noreferrer"
-            className="mr-3 font-medium text-[var(--primary-color)] underline underline-offset-4"
-          >
-            afsar
-          </a>
-          <span className="mr-2">&</span> The source code is available on{" "}
-          <a
-            href={"/"}
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium text-[var(--primary-color)] underline underline-offset-4"
-          >
-            GitHub.
-          </a>
-        </p>
+        <p className="text-[--copy-right-color] text-xs lg:text-sm">
+            Created by{" "}
+            <a
+              href="https://github.com/afsar-dev"
+              target="_blank"
+              className="text-[var(--primary-color)] border-b border-[var(--primary-color)] font-semibold"
+            >
+              Md Afsar Mahmud
+            </a>{" "}
+            © {new Date().getFullYear()}. All rights reserved.
+          </p>
       </div>
     </footer>
   );
