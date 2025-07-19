@@ -6,11 +6,12 @@ const Nurui = ({ textSize }: ClassType) => {
   return (
     <LinkWithProgress
       href="/"
-      className={`text-[var(--primary-color)] uppercase font-bold font-creepste ${
+      className={`text-[var(--primary-color)] uppercase font-black ${
         textSize || "text-3xl"
-      } flex items-center`}
+      } flex items-center gap-0.5`}
     >
-      <NuruiLogo />NurUI
+      <NuruiLogo />
+      <span>Nurui</span>
     </LinkWithProgress>
   );
 };
