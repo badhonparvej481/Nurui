@@ -42,12 +42,12 @@ export async function generateMetadata({
     description: frontmatter.description,
     keywords: frontmatter.keywords ?? [],
     creator: "Md Afsar Mahmud",
-    applicationName: "Nurui",
+    applicationName: "Nur UI",
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
       url: `https://nurui.vercel.app/docs/${slug}`,
-      siteName: "Nurui",
+      siteName: "Nur UI",
       locale: "en_US",
       type: "article",
       images: [
@@ -55,7 +55,7 @@ export async function generateMetadata({
           url: "https://nurui.vercel.app/og-image.png",
           width: 1200,
           height: 630,
-          alt: "NURUI OG Image",
+          alt: "NUR-UI OG Image",
         },
       ],
     },

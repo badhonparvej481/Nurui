@@ -138,6 +138,12 @@ import RetroCursorCode from "@/components/nurui/retro-cursor.tsx?raw";
 import ShinyCardDemo from "@/components/nurui/shiny-card-demo";
 import ShinyCardDemoCode from "@/components/nurui/shiny-card-demo.tsx?raw";
 import ShinyCardCode from "@/components/nurui/shiny-card.tsx?raw";
+import MarqueeTestimonialDemo from "@/components/nurui/marquee-testimonial-demo";
+import MarqueeTestimonialDemoCode from "@/components/nurui/marquee-testimonial-demo.tsx?raw";
+import MarqueeCode from "@/components/nurui/marque.tsx?raw";
+import TestimonialCardCode from "@/components/nurui/testimonial-card.tsx?raw";
+import RatingStarsCode from "@/components/nurui/rating-star.tsx?raw";
+import RatingIconCode from "@/components/nurui/rating-icon.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -179,6 +185,16 @@ export const Index: Record<string, ComponentEntry> = {
     othersCode: [
       { fileName: "creative-pricing", code: CreativePricingCode },
       { fileName: "button", code: ButtonCode },
+    ],
+  },
+  marqueeTestimonial: {
+    preview: <MarqueeTestimonialDemo />,
+    code: MarqueeTestimonialDemoCode,
+    othersCode: [
+      { fileName: "marquee", code: MarqueeCode },
+      { fileName: "testimonial-card", code: TestimonialCardCode },
+      { fileName: "rating-star", code: RatingStarsCode },
+      { fileName: "rating-icon", code: RatingIconCode },
     ],
   },
   gridFeature: {

@@ -1,4 +1,4 @@
-import RatingIcon from "../icons/RatingIcon";
+import RatingIcon from "@/components/nurui/rating-icon";
 
 const RatingStars = ({
   count = 5,

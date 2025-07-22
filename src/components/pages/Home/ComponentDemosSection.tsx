@@ -3,7 +3,6 @@ import SectionIntro from "@/components/common/SectionIntro";
 import ButtonsMarquee from "./ButtonsMarquee";
 import BentoDemo from "@/components/ui/bento-grid/BentoGrid";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/animated-beam-multiple-outputs/AnimatedBeamMultipleOutputs";
-import { Marquee } from "@/components/ui/marquee/Marquee";
 import { AnimatedListDemo } from "@/components/ui/animated-list/AnimatedList";
 import { AnimatedCircularProgressBarDemo } from "@/components/ui/progress-bar/AnimatedCircularProgressBarDemo";
 import { TerminalDemo } from "@/components/ui/terminal/TerminalDemo";
@@ -25,6 +24,7 @@ import { GrMysql } from "react-icons/gr";
 import { FeatureBlockAnimatedCard } from "@/components/ui/feature-block-animated-card/FeatureBlockAnimatedCard";
 import HyperspeedDemo from "@/components/ui/hyperspeed/HyperspeedDemo";
 import { VortexDemo } from "@/components/ui/vortex-background/VortexDemo";
+import { Marquee } from "@/components/nurui/marque";
 
 const ComponentDemosSection = () => {
   return (
