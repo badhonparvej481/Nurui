@@ -11,7 +11,6 @@ import {
   TabsTrigger,
 } from "@/components/common/Tabs";
 import Link from "next/link";
-import { AiButton } from "@/components/nurui/ai-button";
 
 export function getMDXComponents(
   components: MDXComponents = {},
@@ -39,14 +38,14 @@ export function getMDXComponents(
     ),
 
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-      <div className="flex items-center justify-between pt-10 pb-2 border-b border-[var(--primary-color-3)]">
-        <h2
-          id="props"
-          className={cn("text-xl font-semibold ", className)}
-          {...props}
-        />
-        <AiButton />
-      </div>
+      <h2
+        id="props"
+        className={cn(
+          "text-xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
+          className,
+        )}
+        {...props}
+      />
     ),
 
     h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
