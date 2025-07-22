@@ -1,5 +1,5 @@
+import { Marquee } from "@/components/nurui/marque";
 import { cn } from "@/lib/utils";
-import { Marquee } from "./Marquee";
 import Image from "next/image";
 
 const reviews = [

@@ -4,7 +4,6 @@ import { Nunito } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import "../styles/main.scss";
-
 import ThemeProvider from "../provider/ThemeProvider";
 import NProgressProvider from "@/components/common/NProgressProvider";
 import Navbar from "@/layout/Navbar";
@@ -24,12 +23,12 @@ const nunito = Nunito({
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
     title: {
-      default: "Nurui",
-      template: "%s | Nurui",
+      default: "Nur UI",
+      template: "%s | Nur UI",
     },
     description:
       "React and Next.js based UI library with CLI scaffolding, TS-to-JS conversion, and v0 live previews.",
-    applicationName: "Nurui",
+    applicationName: "Nur UI",
     creator: "Md Afsar Mahmud",
     authors: [
       {
@@ -50,7 +49,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       "tailwind css animation components",
     ],
     openGraph: {
-      title: "Nurui",
+      title: "Nur UI",
       description:
         "React and Next.js based UI library with CLI scaffolding, TS-to-JS conversion, and v0 live previews.",
       url: "https://nurui.vercel.app",
@@ -62,7 +61,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
           url: "https://nurui.vercel.app/og-image.png",
           width: 1200,
           height: 630,
-          alt: "NURUI OG Image",
+          alt: "NUR-UI OG Image",
         },
       ],
     },

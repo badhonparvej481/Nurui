@@ -1,10 +1,10 @@
-import { Marquee } from "@/components/ui/marquee/Marquee";
-import TestimonialCard from "../../ui/testimonial/TestimonialCard";
+import { Marquee } from "@/components/nurui/marque";
+import TestimonialCard from "@/components/nurui/testimonial-card";
 
-export default function TestimonialSection() {
+export default function MarqueeTestimonialDemo() {
   return (
     <section
-      className="relative flex flex-col lg:flex-row gap-6 overflow-hidden
+      className="m-6 relative flex flex-col lg:flex-row gap-6 overflow-hidden
     border-y md:border border-[var(--primary-color)] md:rounded-2xl md:px-5 xl:px-6 2xl:px-10 md:mx-6 "
     >
       {/* title */}
@@ -28,7 +28,7 @@ export default function TestimonialSection() {
         {[
           { data: data?.slice(0, 10), reverse: true },
           { data: data?.slice(10, 20), reverse: false },
-          { data: data?.slice(20, data?.length), reverse: true },
+          // { data: data?.slice(20, data?.length), reverse: true },
         ].map((item, idx) => (
           <Marquee
             key={idx}
@@ -50,7 +50,7 @@ export default function TestimonialSection() {
         ))}
         {[
           { data: data?.slice(0, 10), reverse: true },
-          { data: data?.slice(10, 20), reverse: false },
+          // { data: data?.slice(10, 20), reverse: false },
         ].map((item, idx) => (
           <Marquee
             key={idx}

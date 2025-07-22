@@ -44,6 +44,35 @@
       ]
     },
     {
+      "name": "marquee-testimonial",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "react-icons"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/marquee-testimonial-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/marque.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/testimonial-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/rating-star.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/rating-icon.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "animated-pricing",
       "type": "registry:component",
       "devDependencies": [],

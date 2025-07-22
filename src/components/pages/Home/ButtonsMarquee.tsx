@@ -9,7 +9,6 @@ import ShinyAnimationButton from "@/components/nurui/ShinyButton";
 import StatusButton from "@/components/nurui/StatusButton";
 import SwipeButton from "@/components/nurui/SwipeButton";
 import WorkButton from "@/components/nurui/WorkButton";
-import { Marquee } from "@/components/ui/marquee/Marquee";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import BorderMagicButton from "@/components/nurui/BorderMagicButton";
@@ -21,6 +20,7 @@ import LinkWithProgress from "@/components/common/LinkWithProgress";
 import OutLineAnimationButton from "@/components/nurui/outline-animation-button";
 import BorderAnimationButton from "@/components/nurui/border-animation-button";
 import HoverShadowButton from "@/components/nurui/hover-shadow-button";
+import { Marquee } from "@/components/nurui/marque";
 
 const ButtonsMarquee = () => {
   return (

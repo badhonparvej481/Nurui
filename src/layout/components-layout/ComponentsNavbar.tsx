@@ -1,16 +1,26 @@
 "use client";
 import RoundedButton from "@/components/common/RoundedButton";
-import GithubStar from "@/components/nurui/github-button";
-// import ThemeSwitcher from "@/components/common/ThemeSwitcher";
 import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 import { useAppContext } from "@/context/AppContext";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
-// import { IoIosSearch } from "react-icons/io";
 
 const ComponentsNavbar = () => {
   const { sideBar, setSideBar } = useAppContext();
+  const [stars, setStars] = useState(0);
+
+  useEffect(() => {
+    async function fetchStars() {
+      const response = await fetch(
+        "https://api.github.com/repos/afsar-dev/Nurui",
+      );
+      const data = await response.json();
+      setStars(data.stargazers_count);
+    }
+
+    fetchStars();
+  }, []);
   return (
     <div
       className={`fixed top-0 xl:right-0 z-[9999] ${
@@ -40,14 +50,14 @@ const ComponentsNavbar = () => {
               <IoIosSearch className="text-xl text-[var(--primary-color)]" />
             }
           /> */}
-          <GithubStar />
           <RoundedButton
             href="https://discord.gg/XzAh8V3S"
             icon={<FaDiscord className="text-[var(--primary-color)]" />}
           />
           <RoundedButton
-            href="https://github.com/Mdafsarx/Nurui"
-            icon={<FaGithub className="text-[var(--primary-color)]" />}
+            href="https://github.com/afsar-dev/Nurui"
+            icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
+            iconInfo={stars || 0}
           />
           <RoundedButton
             href="https://x.com/md_afsar_mahmud"
