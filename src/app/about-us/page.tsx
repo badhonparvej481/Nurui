@@ -1,5 +1,6 @@
 import NewsLetterSection from "@/components/common/NewsLetterSection";
 import AboutUsHeroSection from "@/components/pages/about-us/AboutUsHeroSection";
+import FaqSection from "@/components/pages/about-us/FaqSection";
 import ImageTabsSection from "@/components/pages/about-us/ImageTabsSection";
 import StackingCardsSection from "@/components/pages/about-us/StackingCardsSection";
 import StatesCountupSection from "@/components/pages/about-us/StatesCountupSection";
@@ -19,6 +20,7 @@ const page = () => {
       <StatesCountupSection />
       <WorldMapAnimationSection />
       <StackingCardsSection />
+      <FaqSection />
       <NewsLetterSection />
     </main>
   );

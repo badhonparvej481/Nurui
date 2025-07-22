@@ -15,7 +15,6 @@ import ReactIcon from "../../icons/ReactIcon";
 import { AnimatedTooltip } from "../../common/AnimatedTooltip";
 import CollMode from "../../ui/cool-mode/CollMode";
 import { GrOptimize } from "react-icons/gr";
-import RatingStars from "@/components/common/RatingStars";
 import GsapIcon from "../../icons/GsapIcon";
 import ThreeJsIcon from "../../icons/ThreeJsIcon";
 import AnimeJsIcon from "../../icons/AnimeJsIcon";
@@ -23,6 +22,7 @@ import MotionIcon from "../../icons/MotionIcon";
 import ReactSpringIcon from "../../icons/ReactSpringIcon";
 import ZDogIcon from "../../icons/ZDogIcon";
 import GradientText from "@/components/nurui/GradientText";
+import RatingStars from "@/components/nurui/rating-star";
 
 const HeroSection = () => {
   return (
