@@ -27,7 +27,7 @@ const ComponentsLeftSidebar = () => {
               <div className="flex items-center justify-center gap-1">
                 <Nurui />
                 <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem]">
-                  Basic
+                  Beta
                 </p>
               </div>
             ) : (

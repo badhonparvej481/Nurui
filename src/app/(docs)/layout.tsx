@@ -1,4 +1,4 @@
-import ComponentsLayout from "@/layout/components-layout/ComponentsLayout";
+import ComponentsLayout from "@/components/layout/components-layout/ComponentsLayout";
 import React from "react";
 
 const layout = ({ children }: { children: React.ReactNode }) => {

@@ -6,11 +6,11 @@ import "./globals.css";
 import "../styles/main.scss";
 import ThemeProvider from "../provider/ThemeProvider";
 import NProgressProvider from "@/components/common/NProgressProvider";
-import Navbar from "@/layout/Navbar";
-import Footer from "@/layout/Footer";
 import MainContent from "../components/common/MainContent";
 import { AppProvider } from "@/context/AppContext";
 import SplashCursor from "@/components/ui/SplashCursor";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const nunito = Nunito({
   variable: "--font-nunito",
