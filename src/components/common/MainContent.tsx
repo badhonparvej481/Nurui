@@ -1,7 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
 import React from "react";
-
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   const pathName = usePathname();
   return (

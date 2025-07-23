@@ -116,7 +116,7 @@ const HeroSection = () => {
           </div>
 
           {/* used by */}
-          <div className="pt-36 hidden md:flex items-center gap-2">
+          <div className="pt-24 hidden md:flex items-center gap-2">
             <GradientText
               colors={["#3ca2fa", "#80eeb4", "#3ca2fa", "#80eeb4", "#3ca2fa"]}
               animationSpeed={3}

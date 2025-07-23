@@ -23,7 +23,7 @@ const ComponentsNavbar = () => {
   }, []);
   return (
     <div
-      className={`fixed top-0 xl:right-0 z-[9999] ${
+      className={`fixed top-0 xl:right-0 z-[100] ${
         sideBar
           ? "w-full xl:w-[calc(100%-18rem)]"
           : "w-full xl:w-[calc(100vw-5rem)]"
