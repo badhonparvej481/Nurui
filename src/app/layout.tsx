@@ -11,6 +11,7 @@ import { AppProvider } from "@/context/AppContext";
 import SplashCursor from "@/components/ui/SplashCursor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Banner from "@/components/ui/Banner";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -92,6 +93,7 @@ export default function RootLayout({
             <Toaster />
             <NProgressProvider />
             <SplashCursor />
+            <Banner />
             <Navbar />
             <MainContent>{children}</MainContent>
             <Footer />
