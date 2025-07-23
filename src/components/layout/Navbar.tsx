@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center gap-1">
           <Nurui textSize="text-2xl lg:text-3xl" />
           <p className="bg-[var(--primary-color-2)] text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem] hidden lg:block">
-            Basic
+            Beta
           </p>
         </div>
         <div

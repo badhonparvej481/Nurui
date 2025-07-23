@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { IChildren } from "@/types/types";
-import ComponentsRightSidebar from "@/layout/components-layout/ComponentsRightSidebar";
+import ComponentsRightSidebar from "@/components/layout/components-layout/ComponentsRightSidebar";
 import { useAppContext } from "@/context/AppContext";
-import ComponentsFooter from "@/layout/components-layout/ComponentsFooter";
+import ComponentsFooter from "@/components/layout/components-layout/ComponentsFooter";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
