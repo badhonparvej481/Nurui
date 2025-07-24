@@ -27,6 +27,12 @@ export const generateMetadata = async (): Promise<Metadata> => {
       default: "Nur UI",
       template: "%s | Nur UI",
     },
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", type: "image/x-icon" },
+      ],
+    },
     description:
       "React and Next.js based UI library with CLI scaffolding, TS-to-JS conversion, and v0 live previews.",
     applicationName: "Nur UI",

@@ -8,7 +8,7 @@
 
 <p align="center">Nurui is a modern React and Next.js based UI component library that streamlines front-end development. It offers CLI scaffolding, automatic TypeScript to JavaScript conversion, and live component previews for a faster, more customizable workflow.</p>
 
-<img src="nurui.gif" alt="UI component library" width="100%" />
+<img src="og-image.png" alt="UI component library" width="100%" />
 
 ## Documentation
 

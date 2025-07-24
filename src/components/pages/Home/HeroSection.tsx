@@ -21,8 +21,8 @@ import AnimeJsIcon from "../../icons/AnimeJsIcon";
 import MotionIcon from "../../icons/MotionIcon";
 import ReactSpringIcon from "../../icons/ReactSpringIcon";
 import ZDogIcon from "../../icons/ZDogIcon";
-import GradientText from "@/components/nurui/GradientText";
 import RatingStars from "@/components/nurui/rating-star";
+import UserByCompanies from "@/components/common/UserByCompanies";
 
 const HeroSection = () => {
   return (
@@ -116,16 +116,7 @@ const HeroSection = () => {
           </div>
 
           {/* used by */}
-          <div className="pt-24 hidden md:flex items-center gap-2">
-            <GradientText
-              colors={["#3ca2fa", "#80eeb4", "#3ca2fa", "#80eeb4", "#3ca2fa"]}
-              animationSpeed={3}
-              showBorder={false}
-              className="text-3xl font-bold"
-            >
-              Used by 10+ Companies
-            </GradientText>
-          </div>
+          <UserByCompanies />
         </div>
         {/* right side icons */}
         <div className="hidden 2xl:flex gap-x-4 h-96 w-60 icon-animation mr-8">
