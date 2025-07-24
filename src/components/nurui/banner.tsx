@@ -96,7 +96,10 @@ export function Banner({
           aria-label="Close Banner"
           onClick={() => {
             setOpen(false);
-            if (globalKey) localStorage.setItem(globalKey, "true");
+            if (globalKey) {
+              localStorage.setItem(globalKey, "true");
+              window.dispatchEvent(new Event("banner-status-changed"));
+            }
           }}
           className={cn(
             buttonVariants({
