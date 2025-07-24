@@ -6,8 +6,8 @@ import RoundedButton from "@/components/common/RoundedButton";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
-import { FaXTwitter } from "react-icons/fa6";
 import { useEffect, useState } from "react";
+import ThemeSwitcher from "../common/ThemeSwitcher";
 
 const Navbar = () => {
   const [stars, setStars] = useState(0);
@@ -28,7 +28,7 @@ const Navbar = () => {
   if (pathName.includes("docs")) return null;
 
   return (
-    <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-white/20 ">
+    <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-[var(--black-color)] dark:border-white/20 ">
       <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-20">
         <div className="flex items-center justify-center gap-1">
           <Nurui textSize="text-2xl lg:text-3xl" />
@@ -59,23 +59,18 @@ const Navbar = () => {
           <RoundedButton
             href="https://discord.gg/XzAh8V3S"
             icon={
-              <FaDiscord className="text-2xl text-[var(--primary-color)]" />
+              <FaDiscord className="text-2xl text-[var(--white-color)] dark:text-[var(--primary-color)]" />
             }
           />
           <RoundedButton
             href="https://github.com/afsar-dev/Nurui"
-            icon={<FaGithub className="text-2xl text-[var(--primary-color)]" />}
+            icon={
+              <FaGithub className="text-2xl text-[var(--white-color)] dark:text-[var(--primary-color)] " />
+            }
             iconInfo={stars || 0}
           />
 
-          <RoundedButton
-            href="https://x.com/md_afsar_mahmud"
-            icon={
-              <FaXTwitter className="text-2xl text-[var(--primary-color)]" />
-            }
-          />
-
-          {/* <ThemeSwitcher /> */}
+          <ThemeSwitcher />
         </div>
         <VaulDrawer />
       </nav>

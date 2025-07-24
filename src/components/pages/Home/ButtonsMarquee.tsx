@@ -24,16 +24,15 @@ import { Marquee } from "@/components/nurui/marque";
 
 const ButtonsMarquee = () => {
   return (
-    <div className="border-y border-[var(--secondary-color)]">
-      <LinkWithProgress
-        href="/docs/gradient-button"
-        className="flex items-center justify-between bg-[var(--glass-color-2)] py-3.5 px-7"
-      >
+    <div className="border-y border-dashed border-[var(--secondary-color)]">
+      <div className="flex items-center justify-between bg-[var(--glass-color)] border-b border-[var(--secondary-color)] border-dashed py-3.5 px-7">
         <p className="font-semibold">Buttons</p>
-        <button className="flex items-center gap-2 hover:text-[var(--primary-color)] hover:underline">
-          View <FaArrowRight />
-        </button>
-      </LinkWithProgress>
+        <LinkWithProgress href="/docs/gradient-button">
+          <button className="flex items-center gap-2 hover:text-[var(--primary-color)] hover:underline">
+            View <FaArrowRight />
+          </button>
+        </LinkWithProgress>
+      </div>
 
       <div className="py-4 space-y-2">
         <Marquee
