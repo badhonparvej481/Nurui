@@ -40,7 +40,7 @@ const RadioTabs: React.FC<IProps> = ({ data }) => {
               onChange={handleTabChange}
               defaultChecked={tab?.id === data[0]?.id}
             />
-            <span className="tracking-widest capitalize peer-checked:bg-[var(--primary-color-3)] peer-checked:border peer-checked:border-b-0 border-[var(--primary-color)] peer-checked:text-[var(--primary-color)] text-[var(--white-color)] font-semibold rounded-t-lg p-2 transition duration-150 ease-in-out">
+            <span className="tracking-widest capitalize peer-checked:bg-[var(--primary-color)]  dark:peer-checked:bg-[var(--primary-color-3)] peer-checked:border peer-checked:border-b-0 border-[var(--primary-color)] peer-checked:text-[var(--white-color)]  dark:peer-checked:text-[var(--primary-color)] text-[var(--black-color)] dark:text-[var(--white-color)] font-semibold rounded-t-lg p-2 transition duration-150 ease-in-out">
               {tab?.title}
             </span>
           </label>

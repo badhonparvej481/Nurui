@@ -7,8 +7,8 @@ export function WorldMapAnimationSection() {
     <section>
       <SectionIntro
         sectionName="Global Connectivity"
-        sectionNameColor="text-[var(--secondary-color)]"
-        sectionNameStyle="bg-[var(--secondary-color-3)] inline-block px-2 py-1"
+        sectionNameColor="text-black dark:text-[var(--secondary-color)] font-semibold"
+        sectionNameStyle="bg-[var(--secondary-color)] dark:bg-[var(--secondary-color-3)] inline-block px-2 py-1"
         title={{
           normalWords: "Connecting Innovation",
           highLiteWords: "Across the Globe",

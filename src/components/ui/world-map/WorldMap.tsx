@@ -25,7 +25,7 @@ export function WorldMap({
 
   const svgMap = map.getSVG({
     radius: 0.22,
-    color: resolvedTheme === "dark" ? "#80EEB4" : "#FA4398",
+    color: resolvedTheme === "dark" ? "#80EEB4" : "#3ca2fa",
     shape: "circle",
   });
 
@@ -37,7 +37,7 @@ export function WorldMap({
 
   const createCurvedPath = (
     start: { x: number; y: number },
-    end: { x: number; y: number }
+    end: { x: number; y: number },
   ) => {
     const midX = (start.x + end.x) / 2;
     const midY = Math.min(start.y, end.y) - 50;
@@ -46,7 +46,7 @@ export function WorldMap({
 
   return (
     <div
-      className="xl:container bg-[var(--glass-color)] border-2 border-[var(--border-color)] rounded-2xl  relative 
+      className="xl:container shadow-xl dark:shadow-none bg-white dark:bg-[var(--glass-color)] border-2 border-[var(--border-color)] rounded-2xl  relative 
     mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto"
     >
       <Image

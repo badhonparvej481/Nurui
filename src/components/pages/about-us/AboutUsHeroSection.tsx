@@ -43,7 +43,7 @@ const AboutUsHeroSection = () => {
           <span className="text-[var(--primary-color)]"> come to be?</span>
         </h1>
 
-        <p className="xl:text-xl text-white/70 max-w-2xl mx-auto mb-6">
+        <p className="xl:text-xl text-[var(--opacity-text-color)] dark:text-white/70 max-w-2xl mx-auto mb-6">
           Nurui was born from the vision of simplifying UI development for
           modern web applications. Our goal is to empower developers with
           high-quality, reusable components that speed up workflow, reduce

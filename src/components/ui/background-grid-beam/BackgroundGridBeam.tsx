@@ -7,7 +7,7 @@ interface IProps {
 
 const BackgroundGridBeam: React.FC<IProps> = ({ children }) => {
   return (
-    <div className="bg-grid-white/[0.05]">
+    <div className="bg-grid-black/[0.10] dark:bg-grid-white/[0.05]">
       <GridBeam>{children}</GridBeam>
     </div>
   );

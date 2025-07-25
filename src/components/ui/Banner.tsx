@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Banner as UIBanner } from "@/components/nurui/banner";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Banner = () => {
@@ -22,18 +21,25 @@ const Banner = () => {
         "transparent",
       ]}
     >
-      <Link
+      {/* <Link
         href="/docs/gradient-hero"
         className="text-white font-semibold hidden md:block"
       >
         🚀 Added 20+ modern animated UI components to enhance your projects.
-      </Link>{" "}
-      <Link
+      </Link> */}
+      <div className="text-white font-semibold hidden md:block">
+        🚀 This project is still evolving some features and pages are
+        incomplete. Updates are coming soon!
+      </div>{" "}
+      {/* <Link
         href="/docs/gradient-hero"
         className="text-white font-semibold block md:hidden"
       >
         🚀 20+ modern animated components.
-      </Link>
+      </Link> */}
+      <div className="text-white font-semibold block md:hidden">
+        🚀 Project evolving more features soon!
+      </div>
     </UIBanner>
   );
 };

@@ -63,7 +63,7 @@ export function TabList({
       className={`rounded-xl overflow-hidden p-4 cursor-pointer transition-all border 
          ${
            activeTab === value
-             ? "bg-[var(--primary-color-4)] border-[var(--primary-color)]"
+             ? "bg-[var(--primary-color-3)] dark:bg-[var(--primary-color-4)] border-[var(--primary-color)]"
              : "hover:bg-[var(--primary-color-4)] hover:border-[var(--primary-color)] border-[var(--border-color)]"
          }`}
       onClick={() => setActiveTab(value)}
