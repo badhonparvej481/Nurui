@@ -17,7 +17,7 @@ export type SnippetProps = ComponentProps<typeof Tabs>;
 export const Snippet = ({ className, ...props }: SnippetProps) => (
   <Tabs
     className={cn(
-      "group overflow-hidden rounded-xl border border-[var(--primary-color-3)]",
+      "group overflow-hidden rounded-xl border border-[var(--primary-color)] dark:border-[var(--primary-color-3)]",
       className,
     )}
     {...props}
@@ -29,7 +29,7 @@ export type SnippetHeaderProps = HTMLAttributes<HTMLDivElement>;
 export const SnippetHeader = ({ className, ...props }: SnippetHeaderProps) => (
   <div
     className={cn(
-      "flex flex-row items-center justify-between border-b border-[var(--primary-color-3)] p-1",
+      "flex flex-row items-center justify-between border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)] p-1",
       className,
     )}
     {...props}
@@ -81,13 +81,7 @@ export const SnippetCopyButton = ({
   const icon = isCopied ? <CheckIcon size={14} /> : <CopyIcon size={14} />;
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={copyToClipboard}
-      className="opacity-0 transition-opacity group-hover:opacity-100"
-      {...props}
-    >
+    <Button variant="ghost" size="icon" onClick={copyToClipboard} {...props}>
       {children ?? icon}
     </Button>
   );
@@ -115,7 +109,7 @@ export const SnippetTabsContent = ({
 }: SnippetTabsContentProps) => (
   <TabsContent
     asChild
-    className={cn("mt-0 p-4 text-sm bg-[var(--primary-color-5)]", className)}
+    className={cn("mt-0 p-4 text-sm bg-[var(--primary-color-4)] dark:bg-[var(--primary-color-5)]", className)}
     {...props}
   >
     <pre>{children}</pre>

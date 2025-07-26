@@ -19,7 +19,7 @@ export function getMDXComponents(
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h1
         className={cn(
-          "text-3xl font-semibold pb-2 border-b border-[var(--primary-color-3)] text-[var(--primary-color)]",
+          "text-3xl font-semibold pb-2 border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)] text-[var(--primary-color)]",
           className,
         )}
         {...props}
@@ -200,12 +200,18 @@ export function getMDXComponents(
     ),
 
     Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
-      <h3 className={cn("font-heading tracking-tight", className)} {...props} />
+      <h3
+        className={cn(
+          "font-heading tracking-tight text-black dark:text-white",
+          className,
+        )}
+        {...props}
+      />
     ),
 
     Steps: ({ ...props }) => (
       <div
-        className="[&>h3]:step steps ml-4 border-l border-white/20 pl-8 [counter-reset:step] -mt-7 space-y-4"
+        className="[&>h3]:step steps ml-4 border-l border-black dark:border-white/20 pl-8 [counter-reset:step] -mt-7 space-y-4"
         {...props}
       />
     ),

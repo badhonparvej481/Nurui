@@ -60,7 +60,7 @@ const Cli: React.FC<IDependencies> = ({ dependencies }) => {
               value={command.label}
               className={
                 command.label === value
-                  ? "!bg-[var(--primary-color-4)] rounded-lg"
+                  ? "!bg-[var(--primary-color)] dark:!bg-[var(--primary-color-4)] rounded-lg"
                   : ""
               }
             >

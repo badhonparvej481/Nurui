@@ -21,12 +21,16 @@ const ThreeJsIcon = ({
       width={reSize ? "80px" : "75px"}
       height={reSize ? "80px" : "75px"}
       viewBox="0 0 226.77 226.77"
-      className={cn(isAnimation && "social-icon-animation", className)}
+      className={cn(
+        isAnimation && "social-icon-animation",
+        "text-black dark:text-white", // 👈 sets stroke color
+        className,
+      )}
     >
       <g
         transform="translate(8.964 4.2527)"
         fillRule="evenodd"
-        stroke="#fff"
+        stroke="currentColor"
         strokeLinecap="butt"
         strokeLinejoin="round"
         strokeWidth={4}

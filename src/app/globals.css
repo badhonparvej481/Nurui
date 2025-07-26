@@ -171,6 +171,14 @@
     background-color: var(--glass-color-3);
     content: counter(step);
   }
+
+  .light .step:before {
+    @apply absolute inline-flex h-6 w-6 p-0.5 items-center justify-center rounded-full text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-45px];
+    background-color: var(--white-color);
+    border: 1px solid black;
+    content: counter(step);
+  }
 }
 
 .simplebar-scrollbar:before {

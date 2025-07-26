@@ -42,18 +42,18 @@ export default function StackingCardsSection() {
               className="h-96 xl:h-[700px]"
             >
               <div
-                className="h-96 xl:h-[600px] aspect-video w-full  mx-auto relative rounded-2xl bg-gradient-to-t from-white/5 via-white/5 to-[var(--secondary-color-4)] border 
+                className="h-96 xl:h-[600px] aspect-video w-full  shadow-xl dark:shadow-none mx-auto relative rounded-2xl bg-gradient-to-t from-white dark:from-white/5 via-white dark:via-white/5 to-white dark:to-[var(--secondary-color-4)] border 
               border-[white]/20 backdrop-blur-2xl flex items-center justify-between text-center xl:text-left"
               >
                 <div className="xl:w-1/2 space-y-4 lg:space-y-5 px-6 xl:px-16">
-                  <h2 className="text-3xl xl:text-5xl font-semibold bg-[var(--secondary-color-2)] w-fit py-2 px-3 rounded">
+                  <h2 className="text-3xl xl:text-5xl font-semibold bg-[var(--secondary-color-1)] dak:bg-[var(--secondary-color-2)] w-fit py-2 px-3 rounded">
                     {title}
                   </h2>
                   <p className="text-xl text-balance xl:text-pretty">
                     {description}
                   </p>
                 </div>
-                <div className=" bg-[var(--secondary-color-4)] h-full flex items-center justify-center rounded-r-2xl">
+                <div className="bg-[var(--secondary-color-1)] dark:bg-[var(--secondary-color-4)] h-full flex items-center justify-center rounded-r-2xl">
                   <Lottie
                     animationData={icon}
                     loop={true}

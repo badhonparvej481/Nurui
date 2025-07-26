@@ -38,7 +38,7 @@ const AnimateInput: FC<IProps> = ({
         <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#3CA2FA_20deg,transparent_120deg)]" />
         <form
           onSubmit={handleSubmit}
-          className="relative z-20 flex w-full rounded-[0.60rem] bg-[var(--background-color)] p-2"
+          className="relative z-20 flex w-full rounded-[0.60rem] bg-white dark:bg-[var(--background-color)] p-2"
         >
           <input
             onFocus={() => setPlaceholder(onFocusTitle)}
@@ -49,7 +49,7 @@ const AnimateInput: FC<IProps> = ({
             placeholder={placeholder}
             required
           />
-          <button className="relative z-40 block rounded-lg border border-[var(--border-color)] bg-[var(--glass-color)] px-4 sm:px-8 py-3 text-center text-sm transition duration-200 hover:bg-[var(--glass-color-2)]">
+          <button className="relative z-40 block rounded-lg border border-[var(--border-color)] bg-[var(--glass-color)] px-4 sm:px-8 py-3 text-center text-sm transition duration-200 hover:bg-[var(--glass-color-2)] hover:text-white">
             {buttonTitle}
           </button>
         </form>

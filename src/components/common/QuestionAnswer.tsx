@@ -17,7 +17,7 @@ const QuestionAnswer: FC<PropsType> = ({
   setOpenKey,
 }) => {
   return (
-    <div className="bg-[var(--primary-color-4)] rounded-xl ">
+    <div className="bg-[var(--primary-color-2)] dark:bg-[var(--primary-color-4)] rounded-xl ">
       <div
         className="flex items-center justify-between gap-1 pl-2 lg:pl-6 pr-4 py-6 border border-[var(--primary-color)] rounded-xl cursor-pointer"
         onClick={() => setOpenKey()}
