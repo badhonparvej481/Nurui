@@ -37,7 +37,7 @@ const MenuItem: React.FC<IProps> = ({
   }, [singleSubmenu?.href, pathName]);
 
   const iconWrapperClasses =
-    "text-sm text-[var(--primary-color)] bg-[var(--primary-color-3)] p-1.5 rounded";
+    "text-sm text-white dark:text-[var(--primary-color)] bg-[var(--primary-color)] dark:bg-[var(--primary-color-3)] p-1.5 rounded";
 
   const withSubmenu = (
     <div
@@ -81,7 +81,7 @@ const MenuItem: React.FC<IProps> = ({
           "text-[var(--primary-color)]"
         } ${
           parentHover ? "hover:bg-[var(--primary-color-2)]" : ""
-        } text-[var(--black-color-4)]  hover:text-[var(--primary-color)] rounded py-2 px-2.5`}
+        } dark:text-[var(--black-color-4)]  hover:text-[var(--primary-color)] rounded py-2 px-2.5`}
       >
         {submenu ? withSubmenu : withOutSubmenu}
       </div>
@@ -93,11 +93,13 @@ const MenuItem: React.FC<IProps> = ({
               <LinkWithProgress
                 key={sub.name + index}
                 href={sub.href}
-                className={`text-[var(--black-color-4)] hover:text-[var(--primary-color)] capitalize rounded py-1 px-2.5 ${
-                  subMenuHover ? "hover:bg-[var(--primary-color-4)]" : ""
+                className={`text-black dark:text-[var(--black-color-4)] hover:text-white hover:dark:text-[var(--primary-color)] capitalize rounded py-1 px-2.5 ${
+                  subMenuHover
+                    ? "hover:bg-[var(--primary-color)] hover:dark:bg-[var(--primary-color-4)]"
+                    : ""
                 } ${
                   navigationActive(sub?.href, pathName) &&
-                  "bg-[var(--primary-color-4)] text-[var(--primary-color)]"
+                  "bg-[var(--primary-color)] dark:bg-[var(--primary-color-4)] text-white dark:text-[var(--primary-color)]"
                 }`}
               >
                 {sub.name}

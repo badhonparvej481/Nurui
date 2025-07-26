@@ -5,8 +5,6 @@ import MenuItem from "@/components/common/MenuItem";
 import { useAppContext } from "@/context/AppContext";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
-// import Authentication from "@/components/common/DropDown";
-// import GoPro from "@/components/ui/GoPro";
 import { navigation } from "@/registry/ComponentNavigation";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
 import NuruiLogo from "@/components/common/NuruiLogo";
@@ -18,7 +16,7 @@ const ComponentsLeftSidebar = () => {
     <div className="fixed top-0 left-0 hidden xl:block">
       <SimpleBar className="max-h-screen">
         <div
-          className={`bg-[var(--purple-color)] border-r border-[var(--primary-color-1)] border-dashed min-h-screen flex flex-col justify-between pt-3 pb-6 space-y-5 ${
+          className={`bg-[#F4F4F5] dark:bg-[var(--purple-color)] border-r border-[var(--primary-color)] dark:border-[var(--primary-color-1)] border-dashed min-h-screen flex flex-col justify-between pt-3 pb-6 space-y-5 ${
             sideBar ? "w-72" : "w-16 items-center"
           }`}
         >
@@ -35,12 +33,6 @@ const ComponentsLeftSidebar = () => {
                 <NuruiLogo />
               </LinkWithProgress>
             )}
-            {/* login and pro */}
-            {/* <div className="space-y-2.5 w-[87%] mx-auto">
-            <GoPro sideBar={sideBar} />
-            <Authentication sideBar={sideBar} />
-          </div> */}
-
             <div className="text-sm px-2 space-y-1">
               {navigation
                 ?.slice(0, navigation?.length - 1)
@@ -59,7 +51,7 @@ const ComponentsLeftSidebar = () => {
           </div>
 
           <div className="text-sm px-2 space-y-1">
-            <p className="text-[var(--black-color-4)] pl-2.5 uppercase">
+            <p className="text-black dark:text-[var(--black-color-4)] pl-2.5 uppercase">
               {sideBar && "others"}
             </p>
             {navigation?.slice(navigation?.length - 1).map((nav, index) => (

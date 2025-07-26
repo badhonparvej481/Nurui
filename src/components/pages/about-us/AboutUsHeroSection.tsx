@@ -29,7 +29,7 @@ const FeatureItem = ({ text }: { text: string }) => (
 
 const AboutUsHeroSection = () => {
   return (
-    <section className="bg-[var(--glass-color)] lg:border border-[var(--border-color)] px-5 xl:px-0 pt-7 xl:pt-14 lg:mx-10 xl:mx-20 lg:mt-6 xl:mt-10 lg:rounded-2xl">
+    <section className="bg-white dark:bg-[var(--glass-color)] lg:border border-[var(--border-color)] px-5 xl:px-0 pt-7 xl:pt-14 lg:mx-10 xl:mx-20 lg:mt-6 xl:mt-10 lg:rounded-2xl">
       <div className="max-w-4xl mx-auto text-center xl:mb-16 pb-7 xl:pb-0">
         <h3 className="text-[var(--primary-color)] text-xl font-medium">
           About us
