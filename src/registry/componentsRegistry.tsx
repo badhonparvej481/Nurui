@@ -150,6 +150,9 @@ import BannerCode from "@/components/nurui/banner.tsx?raw";
 import VideoModalDemo from "@/components/nurui/video-modal-demo";
 import VideoModalDemoCode from "@/components/nurui/video-modal-demo.tsx?raw";
 import VideoModalCode from "@/components/nurui/video-modal.tsx?raw";
+import SplashCursorDemo from "@/components/nurui/splash-cursor-demo";
+import SplashCursorDemoCode from "@/components/nurui/splash-cursor-demo.tsx?raw";
+import SplashCursorCode from "@/components/nurui/splash-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -354,9 +357,7 @@ export const Index: Record<string, ComponentEntry> = {
   videoModal: {
     preview: <VideoModalDemo />,
     code: VideoModalDemoCode,
-    othersCode: [
-      { fileName: "video-modal", code: VideoModalCode },
-    ],
+    othersCode: [{ fileName: "video-modal", code: VideoModalCode }],
   },
   // hero
   gradientHero: {
@@ -423,6 +424,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <HackerCursorDemo />,
     code: HackerCursorDemoCode,
     othersCode: [{ fileName: "hacker-cursor", code: HackerCursorCode }],
+  },
+  splashCursor: {
+    preview: <SplashCursorDemo />,
+    code: SplashCursorDemoCode,
+    othersCode: [{ fileName: "splash-cursor", code: SplashCursorCode }],
   },
   terminalCursor: {
     preview: <TerminalCursorDemo />,

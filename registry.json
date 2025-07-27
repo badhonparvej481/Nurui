@@ -835,6 +835,23 @@
       ]
     },
     {
+      "name": "splash-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/splash-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/splash-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "code-cursor",
       "type": "registry:component",
       "devDependencies": [],

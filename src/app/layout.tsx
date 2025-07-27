@@ -8,10 +8,10 @@ import ThemeProvider from "../provider/ThemeProvider";
 import NProgressProvider from "@/components/common/NProgressProvider";
 import MainContent from "../components/common/MainContent";
 import { AppProvider } from "@/context/AppContext";
-import SplashCursor from "@/components/ui/SplashCursor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Banner from "@/components/ui/Banner";
+import SplashCursor from "@/components/ui/splash-cursor";
 
 const nunito = Nunito({
   variable: "--font-nunito",

@@ -125,6 +125,7 @@ export const navigation = [
     submenu: [
       { name: "draw", href: `${baseUrl}/draw-cursor` },
       { name: "matrix", href: `${baseUrl}/matrix-cursor` },
+      { name: "splash", href: `${baseUrl}/splash-cursor` },
       { name: "hacker", href: `${baseUrl}/hacker-cursor` },
       { name: "terminal", href: `${baseUrl}/terminal-cursor` },
       { name: "retro", href: `${baseUrl}/retro-cursor` },
