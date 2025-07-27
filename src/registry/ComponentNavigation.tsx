@@ -1,6 +1,6 @@
 import { TfiHelpAlt } from "react-icons/tfi";
 import { TbCards, TbHandClick } from "react-icons/tb";
-import { GrInstallOption } from "react-icons/gr";
+import { GrDrawer, GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { RxComponent2, RxSection } from "react-icons/rx";
@@ -46,8 +46,9 @@ export const navigation = [
     title: "Components",
     submenu: [
       { name: "Project showcase", href: `${baseUrl}/project-showcase` },
-      { name: "Story", href: `${baseUrl}/story` },
       { name: "following eye", href: `${baseUrl}/following-eye` },
+      { name: "banner", href: `${baseUrl}/banner` },
+      { name: "Story", href: `${baseUrl}/story` },
     ],
   },
   // {
@@ -93,6 +94,11 @@ export const navigation = [
       { name: "flow", href: `${baseUrl}/flow-form` },
     ],
   },
+  {
+    icon: <GrDrawer />,
+    title: "Modals",
+    submenu: [{ name: "video", href: `${baseUrl}/video-modal` }],
+  },
   // hero sections
   {
     icon: <SiApacherocketmq />,
@@ -119,6 +125,7 @@ export const navigation = [
     submenu: [
       { name: "draw", href: `${baseUrl}/draw-cursor` },
       { name: "matrix", href: `${baseUrl}/matrix-cursor` },
+      { name: "splash", href: `${baseUrl}/splash-cursor` },
       { name: "hacker", href: `${baseUrl}/hacker-cursor` },
       { name: "terminal", href: `${baseUrl}/terminal-cursor` },
       { name: "retro", href: `${baseUrl}/retro-cursor` },

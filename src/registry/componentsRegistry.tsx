@@ -144,6 +144,15 @@ import MarqueeCode from "@/components/nurui/marque.tsx?raw";
 import TestimonialCardCode from "@/components/nurui/testimonial-card.tsx?raw";
 import RatingStarsCode from "@/components/nurui/rating-star.tsx?raw";
 import RatingIconCode from "@/components/nurui/rating-icon.tsx?raw";
+import BannerDemo from "@/components/nurui/banner-demo";
+import BannerDemoCode from "@/components/nurui/banner-demo.tsx?raw";
+import BannerCode from "@/components/nurui/banner.tsx?raw";
+import VideoModalDemo from "@/components/nurui/video-modal-demo";
+import VideoModalDemoCode from "@/components/nurui/video-modal-demo.tsx?raw";
+import VideoModalCode from "@/components/nurui/video-modal.tsx?raw";
+import SplashCursorDemo from "@/components/nurui/splash-cursor-demo";
+import SplashCursorDemoCode from "@/components/nurui/splash-cursor-demo.tsx?raw";
+import SplashCursorCode from "@/components/nurui/splash-cursor.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -211,6 +220,19 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "halomot-button", code: HalomotButtonCode },
     ],
   },
+  followingEye: {
+    preview: <FollowingEyeDemo />,
+    code: FollowingEyeDemoCode,
+    othersCode: [{ fileName: "following-eye", code: FollowingEyeCode }],
+  },
+  banner: {
+    preview: <BannerDemo />,
+    code: BannerDemoCode,
+    othersCode: [
+      { fileName: "banner", code: BannerCode },
+      { fileName: "button", code: ButtonCode },
+    ],
+  },
   story: {
     preview: <StoryDemo />,
     code: StoryDemoCode,
@@ -219,11 +241,6 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "story-button", code: StoryButtonCode },
       { fileName: "story-dialog", code: StoryDialogCode },
     ],
-  },
-  followingEye: {
-    preview: <FollowingEyeDemo />,
-    code: FollowingEyeDemoCode,
-    othersCode: [{ fileName: "following-eye", code: FollowingEyeCode }],
   },
 
   // buttons
@@ -336,6 +353,12 @@ export const Index: Record<string, ComponentEntry> = {
     code: FlowFormDemoCode,
     othersCode: [{ fileName: "flow-form", code: FlowFormCode }],
   },
+  // modals
+  videoModal: {
+    preview: <VideoModalDemo />,
+    code: VideoModalDemoCode,
+    othersCode: [{ fileName: "video-modal", code: VideoModalCode }],
+  },
   // hero
   gradientHero: {
     preview: <GradientHeroDemo />,
@@ -401,6 +424,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <HackerCursorDemo />,
     code: HackerCursorDemoCode,
     othersCode: [{ fileName: "hacker-cursor", code: HackerCursorCode }],
+  },
+  splashCursor: {
+    preview: <SplashCursorDemo />,
+    code: SplashCursorDemoCode,
+    othersCode: [{ fileName: "splash-cursor", code: SplashCursorCode }],
   },
   terminalCursor: {
     preview: <TerminalCursorDemo />,

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Play, XIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import ImageComponent from "./Image";
+import Image from "next/image";
 
 type AnimationStyle =
   | "from-bottom"
@@ -67,7 +67,7 @@ const animationVariants = {
   },
 };
 
-export function HeroVideoDialog({
+export function VideoModal({
   animationStyle = "from-center",
   videoSrc,
   thumbnailSrc,
@@ -83,10 +83,13 @@ export function HeroVideoDialog({
         className="group relative cursor-pointer"
         onClick={() => setIsVideoOpen(true)}
       >
-        <ImageComponent
+        <Image
           src={thumbnailSrc}
           alt={thumbnailAlt}
           className="w-full h-full rounded-2xl border-2 border-[var(--primary-color)] shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
+          height={0}
+          width={0}
+          unoptimized
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="flex size-28 items-center justify-center rounded-full bg-[var(--primary-color-2)] backdrop-blur-md">
@@ -112,7 +115,7 @@ export function HeroVideoDialog({
             animate={{ opacity: 1 }}
             onClick={() => setIsVideoOpen(false)}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 backdrop-blur-md"
+            className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 backdrop-blur-md"
           >
             <motion.div
               {...selectedAnimation}

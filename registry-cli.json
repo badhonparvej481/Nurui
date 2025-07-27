@@ -158,6 +158,23 @@
       ]
     },
     {
+      "name": "banner",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "following-eye",
       "type": "registry:component",
       "devDependencies": [],
@@ -445,6 +462,20 @@
     },
 
     {
+      "name": "video-modal",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["motion", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/video-modal.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
       "name": "gradient-hero",
       "type": "registry:component",
       "devDependencies": [],
@@ -622,6 +653,19 @@
       "files": [
         {
           "path": "./src/components/nurui/terminal-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "splash-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/splash-cursor.tsx",
           "type": "registry:component"
         }
       ]
