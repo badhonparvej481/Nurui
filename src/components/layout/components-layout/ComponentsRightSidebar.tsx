@@ -81,14 +81,14 @@ const ComponentsRightSidebar = () => {
 
   return (
     <div className="fixed top-16 right-0 hidden xl:block">
-      <div className="w-72 min-h-screen border-l border-[var(--primary-color-1)] border-dashed p-4 space-y-3">
+      <div className="w-72 min-h-screen border-l border-[var(--primary-color)] dark:border-[var(--primary-color-1)] border-dashed p-4 space-y-3">
         <div className="flex flex-col gap-y-2">
           <h3 className="font-semibold pb-1">On this page</h3>
           {navigation?.onThisPage?.map((nav) => (
             <a
               key={nav?.label}
               href={nav?.href}
-              className={`${activeSection === nav?.label ? "text-white" : "text-[var(--opacity-text-color)]"}  cursor-pointer`}
+              className={`${activeSection === nav?.label ? "text-black dark:text-white" : "text-[var(--opacity-text-color)]"}  cursor-pointer`}
             >
               {nav?.label}
             </a>

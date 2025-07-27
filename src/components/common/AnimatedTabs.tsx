@@ -21,19 +21,27 @@ export default function AnimatedTabs({ tabs }: IProps) {
             className={`${
               activeTab === tab.id
                 ? ""
-                : "hover:bg-[var(--primary-color-4)] border border-[var(--primary-color-3)] rounded-xl"
+                : "hover:dark:bg-[var(--primary-color-4)] border border-[var(--primary-color)] dark:border-[var(--primary-color-3)] rounded-xl"
             } relative px-3 py-1.5 font-semibold flex items-center gap-x-1 text-[var(--primary-color)]`}
           >
             {activeTab === tab.id && (
               <motion.span
                 layoutId={`bubble-${uniqueId}`}
-                className="absolute inset-0 z-10 bg-[var(--primary-color-4)] border border-[var(--primary-color-3)] mix-blend-difference"
+                className="absolute inset-0 z-10 bg-[var(--primary-color)]  dark:bg-[var(--primary-color-4)] border border-[var(--primary-color-3)]"
                 style={{ borderRadius: 12 }}
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />
             )}
-            {tab?.icon}
-            {tab?.label}
+            <span
+              className={`relative z-20 ${activeTab === tab.id ? "text-white dark:text-[var(--primary-color)]" : "text-[var(--primary-color)]"}`}
+            >
+              {tab.icon}
+            </span>
+            <span
+              className={`relative z-20 ${activeTab === tab.id ? "text-white dark:text-[var(--primary-color)]" : "text-[var(--primary-color)]"}`}
+            >
+              {tab.label}
+            </span>
           </button>
         ))}
       </div>

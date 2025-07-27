@@ -30,7 +30,7 @@ export function getMDXComponents(
       <h2
         id="installation"
         className={cn(
-          "text-2xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
+          "text-2xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)]",
           className,
         )}
         {...props}
@@ -41,7 +41,7 @@ export function getMDXComponents(
       <h2
         id="props"
         className={cn(
-          "text-xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color-3)]",
+          "text-xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)]",
           className,
         )}
         {...props}
@@ -86,7 +86,7 @@ export function getMDXComponents(
       className,
       ...props
     }: React.HTMLAttributes<HTMLTableElement>) => (
-      <div className="my-6 w-full overflow-y-auto rounded-lg border  border-[var(--primary-color-3)]">
+      <div className="my-6 w-full overflow-y-auto rounded-lg border border-[var(--primary-color)]  dark:border-[var(--primary-color-3)]">
         <table
           className={cn("my-0 w-full overflow-hidden", className)}
           {...props}
@@ -100,7 +100,7 @@ export function getMDXComponents(
     }: React.HTMLAttributes<HTMLTableSectionElement>) => (
       <thead
         className={cn(
-          "border-b border-[var(--primary-color-3)] bg-[var(--primary-color-5)]",
+          "border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)] bg-[var(--primary-color-3)] dark:bg-[var(--primary-color-5)]",
           className,
         )}
         {...props}
@@ -113,7 +113,7 @@ export function getMDXComponents(
     }: React.HTMLAttributes<HTMLTableRowElement>) => (
       <tr
         className={cn(
-          "border-b border-[var(--primary-color-3)] last:border-b-0",
+          "border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)] last:border-b-0",
           className,
         )}
         {...props}
@@ -126,7 +126,7 @@ export function getMDXComponents(
     }: React.HTMLAttributes<HTMLTableCellElement>) => (
       <th
         className={cn(
-          "text-balance border-r border-[var(--primary-color-3)] px-6 py-3 text-left font-mono text-sm font-semibold tracking-tight last:border-r-0",
+          "text-balance border-r border-[var(--primary-color)] dark:border-[var(--primary-color-3)] px-6 py-3 text-left font-mono text-sm font-semibold tracking-tight last:border-r-0",
           className,
         )}
         {...props}
@@ -139,7 +139,7 @@ export function getMDXComponents(
     }: React.HTMLAttributes<HTMLTableCellElement>) => (
       <td
         className={cn(
-          "border-r border-[var(--primary-color-3)] px-6 py-3 text-sm last:border-r-0 [&[align=center]]:text-center [&[align=right]]:text-right",
+          "border-r border-[var(--primary-color)] dark:border-[var(--primary-color-3)] px-6 py-3 text-sm last:border-r-0 [&[align=center]]:text-center [&[align=right]]:text-right",
           className,
         )}
         {...props}
@@ -162,7 +162,7 @@ export function getMDXComponents(
     }: React.ComponentProps<typeof TabsList>) => (
       <TabsList
         className={cn(
-          "w-full justify-start rounded-none border-b border-[var(--primary-color-3)] bg-transparent p-0",
+          "w-full justify-start rounded-none border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)] bg-transparent p-0",
           className,
         )}
         {...props}
@@ -175,7 +175,7 @@ export function getMDXComponents(
     }: React.ComponentProps<typeof TabsTrigger>) => (
       <TabsTrigger
         className={cn(
-          "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-white data-[state=active]:text-foreground data-[state=active]:shadow-none",
+          "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-black dark:data-[state=active]:border-b-white data-[state=active]:text-foreground data-[state=active]:shadow-none",
           className,
         )}
         {...props}
@@ -219,7 +219,7 @@ export function getMDXComponents(
     code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
       <code
         className={cn(
-          "relative rounded bg-white/10 px-[0.3rem] py-[0.2rem] font-mono text-sm",
+          "relative rounded shadow-md dark:shadow-none border dark:border-none bg-white dark:bg-white/10 px-[0.3rem] py-[0.2rem] font-mono text-sm",
           className,
         )}
         {...props}
