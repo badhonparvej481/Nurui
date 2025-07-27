@@ -15,7 +15,7 @@ export default function OpenInV0Button({ className }: IV0Button) {
     <Button
       aria-label="Open in v0"
       className={cn(
-        "z-50 gap-1 rounded-lg shadow-none font-semibold px-2 text-xs border dark:bg-white dark:text-black  dark:hover:text-white dark:hover:bg-black dark:border-white transition-colors duration-200 not-prose",
+        "z-50 gap-1 rounded-lg shadow-none font-semibold px-2 text-xs border bg-black dark:bg-white text-white dark:text-black  hover:text-black dark:hover:text-white hover:bg-white dark:hover:bg-black hover:border-black dark:border-white transition-colors duration-200 not-prose",
         className,
       )}
       asChild
