@@ -158,6 +158,23 @@
       ]
     },
     {
+      "name": "banner",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "class-variance-authority",
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "following-eye",
       "type": "registry:component",
       "devDependencies": [],
@@ -439,6 +456,20 @@
       "files": [
         {
           "path": "./src/components/nurui/flow-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "video-modal",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["motion", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/video-modal.tsx",
           "type": "registry:component"
         }
       ]

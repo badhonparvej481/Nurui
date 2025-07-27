@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <main className="section-gap">
       <HeroSection />
-      {/* <HeroVideoDialogSection /> */}
       <AllComponentSection />
       <ComponentDemosSection />
     </main>

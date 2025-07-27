@@ -1,5 +1,4 @@
 "use client";
-
 import { type HTMLAttributes, useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
@@ -9,6 +8,7 @@ type BannerVariant = "rainbow" | "normal";
 
 export function Banner({
   id,
+  xColor,
   variant = "normal",
   changeLayout = true,
   height = "3rem",
@@ -24,6 +24,8 @@ export function Banner({
    * @defaultValue 3rem
    */
   height?: string;
+
+  xColor?: string;
 
   /**
    * @defaultValue 'normal'
@@ -110,7 +112,7 @@ export function Banner({
             }),
           )}
         >
-          <X color="#3ca2fa" />
+          <X color={xColor} />
         </button>
       ) : null}
     </div>

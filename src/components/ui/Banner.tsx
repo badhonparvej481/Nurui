@@ -35,6 +35,7 @@ const Banner = () => {
       id="ui-banner"
       className="shadow-lg shadow-[#3ca2fa]/5 relative bg-white dark:bg-transparent"
       variant="rainbow"
+      xColor="#3ca2fa"
       rainbowColors={rainbowColors}
     >
       {/* <Link
