@@ -21,7 +21,7 @@ export default function AllComponentSection() {
       icon: (
         <ZDogIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -30,7 +30,7 @@ export default function AllComponentSection() {
       icon: (
         <SassIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -39,7 +39,7 @@ export default function AllComponentSection() {
       icon: (
         <CssIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -48,7 +48,7 @@ export default function AllComponentSection() {
       icon: (
         <TailwindIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -57,7 +57,7 @@ export default function AllComponentSection() {
       icon: (
         <HtmlIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -66,7 +66,7 @@ export default function AllComponentSection() {
       icon: (
         <JavaScriptIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -75,7 +75,7 @@ export default function AllComponentSection() {
       icon: (
         <ThreeJsIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -84,7 +84,7 @@ export default function AllComponentSection() {
       icon: (
         <ReactIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -93,7 +93,7 @@ export default function AllComponentSection() {
       icon: (
         <NextJsIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -102,7 +102,7 @@ export default function AllComponentSection() {
       icon: (
         <TypescriptIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -111,7 +111,7 @@ export default function AllComponentSection() {
       icon: (
         <MotionIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -120,7 +120,7 @@ export default function AllComponentSection() {
       icon: (
         <AnimeJsIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -129,7 +129,7 @@ export default function AllComponentSection() {
       icon: (
         <GsapIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -138,7 +138,7 @@ export default function AllComponentSection() {
       icon: (
         <ReactSpringIcon
           isAnimation={false}
-          className="rounded-full size-12 md:size-16 lg:size-auto"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -146,8 +146,8 @@ export default function AllComponentSection() {
   ];
 
   return (
-    <section className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-6 relative ">
-      <div>
+    <section className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[40vh] md:h-[45vh] lg:h-[50vh]  flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-2 md:pt-3 xl:pt-4 relative overflow-hidden">
+      <div className="relative z-50">
         <SectionIntro
           title={{
             highLiteWords: "Everything You Need In",
@@ -158,7 +158,7 @@ export default function AllComponentSection() {
           sectionGap="pb-3 md:pb-7"
         />
       </div>
-      <Gravity gravity={{ x: 0, y: 1 }}>
+      <Gravity resetOnResize={true} gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {
           const Icon = IconData.icon;
           const randomX = Math.random() * 60 + 20;
@@ -167,11 +167,15 @@ export default function AllComponentSection() {
           return (
             <MatterBody
               key={index}
-              matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
+              matterBodyOptions={{
+                friction: 0.5,
+                restitution: 0.2,
+                density: 0.001,
+              }}
               x={`${randomX}%`}
               y={`${randomY}%`}
             >
-              <div>{Icon}</div>
+              <div className="select-none">{Icon}</div>
             </MatterBody>
           );
         })}
