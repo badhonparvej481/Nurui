@@ -3,14 +3,7 @@ import { Banner } from "@/components/nurui/banner";
 
 const BannerDemo = () => {
   return (
-    <div className="space-y-10 p-10 w-full">
-      <Banner
-        id="banner-id"
-        className="shadow-lg bg-white dark:bg-transparent"
-        variant="rainbow"
-      >
-        🚀 Added 20+ modern animated UI components to enhance your projects.
-      </Banner>
+    <div className="p-10 w-full">
       <Banner
         variant="rainbow"
         className="shadow-lg bg-white dark:bg-transparent"

@@ -5,11 +5,16 @@ import { usePathname } from "next/navigation";
 
 interface IV0Button {
   className: string;
+  v0ComponentName?: string;
 }
 
-export default function OpenInV0Button({ className }: IV0Button) {
+export default function OpenInV0Button({
+  className,
+  v0ComponentName,
+}: IV0Button) {
   const pathName = usePathname();
-  const componentName = pathName.split("/")[pathName.split("/").length - 1];
+  let componentName = pathName.split("/")[pathName.split("/").length - 1];
+  componentName = v0ComponentName ? v0ComponentName : componentName;
   const url = `https://nurui.vercel.app/r/${componentName}.json`;
   return (
     <Button

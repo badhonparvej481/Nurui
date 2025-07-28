@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "banner",
+  "name": "banner-close",
   "type": "registry:component",
   "dependencies": [
     "clsx",
@@ -13,8 +13,8 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "./src/components/nurui/banner-demo.tsx",
-      "content": "import React from \"react\";\nimport { Banner } from \"@/components/nurui/banner\";\n\nconst BannerDemo = () => {\n  return (\n    <div className=\"p-10 w-full\">\n      <Banner\n        variant=\"rainbow\"\n        className=\"shadow-lg bg-white dark:bg-transparent\"\n        rainbowColors={[\n          \"rgba(231,77,255,0.77)\",\n          \"rgba(231,77,255,0.77)\",\n          \"transparent\",\n          \"rgba(231,77,255,0.77)\",\n          \"transparent\",\n          \"rgba(231,77,255,0.77)\",\n          \"transparent\",\n        ]}\n      >\n        🚀 Project evolving more features soon!\n      </Banner>\n    </div>\n  );\n};\n\nexport default BannerDemo;\n",
+      "path": "./src/components/nurui/banner-close-demo.tsx",
+      "content": "import React from \"react\";\nimport { Banner } from \"@/components/nurui/banner\";\n\nconst BannerCloseDemo = () => {\n  return (\n    <div className=\"p-10 w-full\">\n      <Banner\n        id=\"banner-id\"\n        className=\"shadow-lg bg-white dark:bg-transparent\"\n        variant=\"rainbow\"\n      >\n        🚀 Added 20+ modern animated UI components to enhance your projects.\n      </Banner>\n    </div>\n  );\n};\n\nexport default BannerCloseDemo;\n",
       "type": "registry:component"
     },
     {

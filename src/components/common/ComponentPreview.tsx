@@ -9,9 +9,17 @@ import { Index } from "@/registry/componentsRegistry";
 
 interface ComponentPreviewProps {
   componentName: keyof typeof Index;
+  introName?: boolean;
+  exampleName?: string;
+  v0ComponentName?: string;
 }
 
-const ComponentPreview = ({ componentName }: ComponentPreviewProps) => {
+const ComponentPreview = ({
+  componentName,
+  introName = true,
+  exampleName,
+  v0ComponentName,
+}: ComponentPreviewProps) => {
   const DemoComponent = Index[componentName]?.preview;
   const sourceCode = Index[componentName]?.code ?? "";
 
@@ -28,7 +36,7 @@ const ComponentPreview = ({ componentName }: ComponentPreviewProps) => {
       id: "Preview",
       icon: <IoEyeOutline />,
       label: "Preview",
-      content: <Preview component={DemoComponent} />,
+      content: <Preview component={DemoComponent} v0ComponentName={v0ComponentName}/>,
     },
     {
       id: "Code",
@@ -39,7 +47,15 @@ const ComponentPreview = ({ componentName }: ComponentPreviewProps) => {
   ];
   return (
     <div>
-      <ComponentPreviewIntro />
+      {introName ? (
+        <ComponentPreviewIntro />
+      ) : (
+        exampleName && (
+          <h3 className="text-2xl font-bold pb-3 pt-4 capitalize">
+            {exampleName}
+          </h3>
+        )
+      )}
       <AnimatedTabs tabs={tabs} />
     </div>
   );
