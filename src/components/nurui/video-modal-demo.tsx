@@ -6,14 +6,14 @@ const VideoModalDemo = () => {
       <VideoModal
         className="block dark:hidden"
         animationStyle="from-center"
-        videoSrc="https://youtu.be/p83vl3zE-AU?si=-Afc8pyygGaiqAta&t=3"
+        videoSrc="https://www.youtube.com/embed/p83vl3zE-AU?si=dWQsgqrI4apbeo1L"
         thumbnailSrc="/og-image.png"
         thumbnailAlt="Hero Video"
       />
       <VideoModal
         className="hidden dark:block"
         animationStyle="from-center"
-        videoSrc="https://youtu.be/p83vl3zE-AU?si=-Afc8pyygGaiqAta&t=3"
+        videoSrc="https://www.youtube.com/embed/p83vl3zE-AU?si=dWQsgqrI4apbeo1L"
         thumbnailSrc="/og-image.png"
         thumbnailAlt="Hero Video"
       />

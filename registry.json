@@ -224,6 +224,29 @@
       ]
     },
     {
+      "name": "banner-close",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge",
+        "class-variance-authority",
+        "@radix-ui/react-slot",
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/banner-close-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "following-eye",
       "type": "registry:component",
       "devDependencies": [],

@@ -153,6 +153,8 @@ import VideoModalCode from "@/components/nurui/video-modal.tsx?raw";
 import SplashCursorDemo from "@/components/nurui/splash-cursor-demo";
 import SplashCursorDemoCode from "@/components/nurui/splash-cursor-demo.tsx?raw";
 import SplashCursorCode from "@/components/nurui/splash-cursor.tsx?raw";
+import BannerCloseDemo from "@/components/nurui/banner-close-demo";
+import BannerCloseDemoCode from "@/components/nurui/banner-close-demo.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -232,6 +234,10 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "banner", code: BannerCode },
       { fileName: "button", code: ButtonCode },
     ],
+  },
+  bannerCloseExample: {
+    preview: <BannerCloseDemo />,
+    code: BannerCloseDemoCode,
   },
   story: {
     preview: <StoryDemo />,
