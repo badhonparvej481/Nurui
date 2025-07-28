@@ -46,7 +46,7 @@ const ComponentsNavbar = () => {
           )}
         </>
         <VaulDrawer />
-        <div className="flex items-center md:gap-5">
+        <div className="flex items-center md:gap-3.5">
           <RoundedButton
             href="https://discord.gg/XzAh8V3S"
             icon={

@@ -55,7 +55,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden xl:flex items-center gap-5">
+        <div className="hidden xl:flex items-center gap-3.5">
           <RoundedButton
             href="https://discord.gg/XzAh8V3S"
             icon={
