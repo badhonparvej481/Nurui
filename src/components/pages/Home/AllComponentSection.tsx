@@ -21,7 +21,7 @@ export default function AllComponentSection() {
       icon: (
         <ZDogIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -30,7 +30,7 @@ export default function AllComponentSection() {
       icon: (
         <SassIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -39,7 +39,7 @@ export default function AllComponentSection() {
       icon: (
         <CssIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -48,7 +48,7 @@ export default function AllComponentSection() {
       icon: (
         <TailwindIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -57,7 +57,7 @@ export default function AllComponentSection() {
       icon: (
         <HtmlIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -66,7 +66,7 @@ export default function AllComponentSection() {
       icon: (
         <JavaScriptIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -75,7 +75,7 @@ export default function AllComponentSection() {
       icon: (
         <ThreeJsIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -84,7 +84,7 @@ export default function AllComponentSection() {
       icon: (
         <ReactIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -93,7 +93,7 @@ export default function AllComponentSection() {
       icon: (
         <NextJsIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -102,7 +102,7 @@ export default function AllComponentSection() {
       icon: (
         <TypescriptIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -111,7 +111,7 @@ export default function AllComponentSection() {
       icon: (
         <MotionIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -120,7 +120,7 @@ export default function AllComponentSection() {
       icon: (
         <AnimeJsIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -129,7 +129,7 @@ export default function AllComponentSection() {
       icon: (
         <GsapIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -138,7 +138,7 @@ export default function AllComponentSection() {
       icon: (
         <ReactSpringIcon
           isAnimation={false}
-          className="rounded-full size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18"
+          className="rounded-full size-14 md:size-18 lg:size-20"
           reSize={true}
         />
       ),
@@ -146,8 +146,8 @@ export default function AllComponentSection() {
   ];
 
   return (
-    <section className="max-w-5xl mx-4 sm:mx-6 md:mx-8 lg:mx-12 xl:mx-auto h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] flex flex-col justify-between rounded-xl sm:rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-4 sm:pt-5 md:pt-6 relative overflow-hidden">
-      <div className="px-4 sm:px-6 md:px-8">
+    <section className="max-w-5xl mx-2 md:mx-4 lg:mx-6 xl:mx-auto h-[40vh] md:h-[45vh] lg:h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-4 md:pt-5 relative overflow-hidden">
+      <div>
         <SectionIntro
           title={{
             highLiteWords: "Everything You Need In",
