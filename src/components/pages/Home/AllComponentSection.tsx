@@ -146,8 +146,8 @@ export default function AllComponentSection() {
   ];
 
   return (
-    <section className="max-w-5xl mx-2 md:mx-4 lg:mx-6 xl:mx-auto h-[40vh] md:h-[45vh] lg:h-[50vh] flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-4 md:pt-5 relative overflow-hidden">
-      <div>
+    <section className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[40vh] md:h-[45vh] lg:h-[50vh]  flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-2 md:pt-3 xl:pt-4 relative overflow-hidden">
+      <div className="relative z-50">
         <SectionIntro
           title={{
             highLiteWords: "Everything You Need In",
@@ -155,37 +155,31 @@ export default function AllComponentSection() {
             firstHighLightColor: "text-[var(--secondary-color)]",
           }}
           description="From TypeScript to JavaScript, discover a powerful collection of tools designed to supercharge your development workflow."
-          sectionGap="pb-2 sm:pb-3 md:pb-5 lg:pb-7"
+          sectionGap="pb-3 md:pb-7"
         />
       </div>
-      <div className="relative flex-1 overflow-hidden px-2 sm:px-4 md:px-6">
-        <Gravity 
-          gravity={{ x: 0, y: 1 }} 
-          className="w-full h-full"
-          resetOnResize={true}
-        >
-          {icons.map((IconData, index) => {
-            const Icon = IconData.icon;
-            const randomX = Math.random() * 70 + 15;
-            const randomY = Math.random() * 15 + 5;
+      <Gravity resetOnResize={true} gravity={{ x: 0, y: 1 }}>
+        {icons.map((IconData, index) => {
+          const Icon = IconData.icon;
+          const randomX = Math.random() * 60 + 20;
+          const randomY = Math.random() * 20 + 5;
 
-            return (
-              <MatterBody
-                key={index}
-                matterBodyOptions={{ 
-                  friction: 0.5, 
-                  restitution: 0.2,
-                  density: 0.001
-                }}
-                x={`${randomX}%`}
-                y={`${randomY}%`}
-              >
-                <div className="select-none">{Icon}</div>
-              </MatterBody>
-            );
-          })}
-        </Gravity>
-      </div>
+          return (
+            <MatterBody
+              key={index}
+              matterBodyOptions={{
+                friction: 0.5,
+                restitution: 0.2,
+                density: 0.001,
+              }}
+              x={`${randomX}%`}
+              y={`${randomY}%`}
+            >
+              <div className="select-none">{Icon}</div>
+            </MatterBody>
+          );
+        })}
+      </Gravity>
     </section>
   );
 }
