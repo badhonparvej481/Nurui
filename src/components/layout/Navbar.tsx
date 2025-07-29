@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   const pathName = usePathname();
-  if (pathName.includes("docs")) return null;
+  if (pathName.includes("docs") || pathName.includes("preview")) return null;
 
   return (
     <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-[var(--black-color)] dark:border-white/20 ">

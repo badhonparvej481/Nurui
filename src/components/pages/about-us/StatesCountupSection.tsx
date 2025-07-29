@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import StatesCountup from "@/components/common/StatesCountup";
-import { Index } from "@/registry/componentsRegistry";
+import { Index } from "@/registry/components-registry";
 import { useInView } from "react-intersection-observer";
 
 type GitHubData = {

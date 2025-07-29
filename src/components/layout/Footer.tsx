@@ -9,13 +9,7 @@ import LinkWithProgress from "@/components/common/LinkWithProgress";
 
 const Footer = () => {
   const pathName = usePathname();
-
-  if (
-    pathName.includes("sing-in") ||
-    pathName.includes("sing-up") ||
-    pathName.includes("docs")
-  )
-    return null;
+  if (pathName.includes("docs") || pathName.includes("preview")) return null;
 
   return (
     <div className="bg-[var(--white-color)] dark:bg-transparent border-t border-[var(--border-color)] w-full text-[var(--text-primary-color)] mt-auto rounded-tl-[50px] lg:rounded-tl-[80px] xl:rounded-tl-[110px] rocket-animation">

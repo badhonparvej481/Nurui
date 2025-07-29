@@ -5,7 +5,7 @@ import MenuItem from "@/components/common/MenuItem";
 import { useAppContext } from "@/context/AppContext";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
-import { navigation } from "@/registry/ComponentNavigation";
+import { navigation } from "@/registry/component-navigation";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
 import NuruiLogo from "@/components/common/NuruiLogo";
 
