@@ -5,7 +5,7 @@ import { FaCode } from "react-icons/fa";
 import Preview from "./Preview";
 import ComponentPreviewIntro from "./ComponentPreviewIntro";
 import { CodeBlock } from "../ui/code-block/CodeBlock";
-import { Index } from "@/registry/componentsRegistry";
+import { Index } from "@/registry/components-registry";
 
 interface ComponentPreviewProps {
   componentName: keyof typeof Index;
@@ -36,7 +36,9 @@ const ComponentPreview = ({
       id: "Preview",
       icon: <IoEyeOutline />,
       label: "Preview",
-      content: <Preview component={DemoComponent} v0ComponentName={v0ComponentName}/>,
+      content: (
+        <Preview component={DemoComponent} v0ComponentName={v0ComponentName} />
+      ),
     },
     {
       id: "Code",

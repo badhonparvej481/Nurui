@@ -416,7 +416,7 @@ export const Index: Record<string, ComponentEntry> = {
     ],
   },
   // cursors
-  drawCursor: {
+  "draw-cursor": {
     preview: <DrawCursorDemo />,
     code: DrawCursorDemoCode,
     othersCode: [{ fileName: "draw-cursor", code: DrawCursorCode }],

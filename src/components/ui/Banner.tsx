@@ -8,8 +8,8 @@ const Banner = () => {
   const pathName = usePathname();
   const { theme } = useTheme();
 
-  if (pathName.includes("docs")) return null;
-
+  if (pathName.includes("docs") || pathName.includes("preview")) return null;
+  
   const rainbowColors =
     theme === "light"
       ? [

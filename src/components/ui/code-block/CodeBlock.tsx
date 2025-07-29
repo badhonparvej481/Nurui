@@ -8,7 +8,7 @@ import { FaCheck } from "react-icons/fa6";
 import { ChevronDown } from "lucide-react";
 import { FaJsSquare } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import { Index } from "@/registry/componentsRegistry";
+import { Index } from "@/registry/components-registry";
 import { convertTsxToJsx } from "@/utils/convertTsxToJsx";
 import { useTheme } from "next-themes";
 

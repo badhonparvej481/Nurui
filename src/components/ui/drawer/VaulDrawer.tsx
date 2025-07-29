@@ -6,7 +6,7 @@ import MenuItem from "@/components/common/MenuItem";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { GrInstallOption } from "react-icons/gr";
 import { TbHandClick } from "react-icons/tb";
-import { navigation as componentNavigation } from "@/registry/ComponentNavigation";
+import { navigation as componentNavigation } from "@/registry/component-navigation";
 import { SlDocs } from "react-icons/sl";
 
 export default function VaulDrawer() {
