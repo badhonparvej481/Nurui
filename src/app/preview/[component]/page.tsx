@@ -8,7 +8,7 @@ interface PreviewPageProps {
 }
 
 export const metadata = {
-  title: "Standalone Component",
+  title: "Preview Component",
   description:
     "Preview and test individual UI components from the Nur UI library.",
 };

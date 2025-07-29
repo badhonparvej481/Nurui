@@ -303,52 +303,52 @@
       ]
     },
     {
-      "name": "border-animation-button",
+      "name": "border-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["react-icons", "clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/border-animation-button-demo.tsx",
+          "path": "./src/components/nurui/border-button-demo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "./src/components/nurui/border-animation-button.tsx",
+          "path": "./src/components/nurui/border-button.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "hover-shadow-button",
+      "name": "shadow-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["react-icons", "clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/hover-shadow-button-demo.tsx",
+          "path": "./src/components/nurui/shadow-button-demo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "./src/components/nurui/hover-shadow-button.tsx",
+          "path": "./src/components/nurui/shadow-button.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "text-fall-button",
+      "name": "text-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["gsap", "@gsap/react", "clsx", "tailwind-merge"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/text-fall-button-demo.tsx",
+          "path": "./src/components/nurui/text-button-demo.tsx",
           "type": "registry:component"
         },
         {
-          "path": "./src/components/nurui/text-fall-button.tsx",
+          "path": "./src/components/nurui/text-button.tsx",
           "type": "registry:component"
         }
       ]

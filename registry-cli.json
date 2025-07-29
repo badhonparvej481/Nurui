@@ -219,40 +219,40 @@
       ]
     },
     {
-      "name": "border-animation-button",
+      "name": "border-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["react-icons"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/border-animation-button.tsx",
+          "path": "./src/components/nurui/border-button.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "hover-shadow-button",
+      "name": "shadow-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["react-icons"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/hover-shadow-button.tsx",
+          "path": "./src/components/nurui/shadow-button.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "text-fall-button",
+      "name": "text-button",
       "type": "registry:component",
       "devDependencies": [],
       "dependencies": ["gsap", "@gsap/react"],
       "registryDependencies": [],
       "files": [
         {
-          "path": "./src/components/nurui/text-fall-button.tsx",
+          "path": "./src/components/nurui/text-button.tsx",
           "type": "registry:component"
         }
       ]

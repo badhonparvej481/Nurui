@@ -18,8 +18,8 @@ import StarWarsButton from "@/components/nurui/StarWarsButton";
 import GradientButton from "@/components/nurui/gradient-button";
 import LinkWithProgress from "@/components/common/LinkWithProgress";
 import OutLineAnimationButton from "@/components/nurui/outline-animation-button";
-import BorderAnimationButton from "@/components/nurui/border-animation-button";
-import HoverShadowButton from "@/components/nurui/hover-shadow-button";
+import BorderAnimationButton from "@/components/nurui/border-button";
+import HoverShadowButton from "@/components/nurui/shadow-button";
 import { Marquee } from "@/components/nurui/marque";
 
 const ButtonsMarquee = () => {

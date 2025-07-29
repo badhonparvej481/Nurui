@@ -63,9 +63,9 @@ export const navigation = [
     submenu: [
       { name: "Magnet", href: `${baseUrl}/magnet-button` },
       { name: "Gradient", href: `${baseUrl}/gradient-button` },
-      { name: "Border Animation", href: `${baseUrl}/border-animation-button` },
-      { name: "Hover Shadow", href: `${baseUrl}/hover-shadow-button` },
-      { name: "Text Fall", href: `${baseUrl}/text-fall-button` },
+      { name: "Border", href: `${baseUrl}/border-button` },
+      { name: "Shadow", href: `${baseUrl}/shadow-button` },
+      { name: "Text", href: `${baseUrl}/text-button` },
       { name: "future", href: `${baseUrl}/future-button` },
     ],
   },

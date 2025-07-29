@@ -12,6 +12,7 @@ interface ComponentPreviewProps {
   introName?: boolean;
   exampleName?: string;
   v0ComponentName?: string;
+  previewComponentName?: string;
 }
 
 const ComponentPreview = ({
@@ -19,6 +20,7 @@ const ComponentPreview = ({
   introName = true,
   exampleName,
   v0ComponentName,
+  previewComponentName,
 }: ComponentPreviewProps) => {
   const DemoComponent = Index[componentName]?.preview;
   const sourceCode = Index[componentName]?.code ?? "";
@@ -37,7 +39,11 @@ const ComponentPreview = ({
       icon: <IoEyeOutline />,
       label: "Preview",
       content: (
-        <Preview component={DemoComponent} v0ComponentName={v0ComponentName} />
+        <Preview
+          component={DemoComponent}
+          v0ComponentName={v0ComponentName}
+          previewComponentName={previewComponentName}
+        />
       ),
     },
     {
