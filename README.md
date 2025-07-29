@@ -21,10 +21,13 @@ Visit https://nurui.vercel.app/docs/installation to view the documentation.
 git clone https://github.com/afsar-dev/Nurui.git
 cd Nurui
 
-# 2. Install dependencies
+# 2. Create a .env file in the root directory and add:
+NODE_ENV=development
+
+# 3. Install dependencies
 yarn install
 
-# the development server
+# 4. Start the development server
 yarn dev
 
 # The application will be available at http://localhost:3000

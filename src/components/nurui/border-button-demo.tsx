@@ -1,10 +1,10 @@
 import React from "react";
-import HoverShadowButton from "@/components/nurui/hover-shadow-button";
+import BorderAnimationButton from "@/components/nurui/border-button";
 
 const BorderAnimationButtonDemo = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <HoverShadowButton text="Subscribe" />
+      <BorderAnimationButton text="Contact me" />
     </div>
   );
 };
