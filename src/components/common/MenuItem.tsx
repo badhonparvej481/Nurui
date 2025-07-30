@@ -49,7 +49,14 @@ const MenuItem: React.FC<IProps> = ({
     >
       <div className="flex items-center gap-3.5">
         <span className={iconWrapperClasses}>{icon}</span>
-        <p className="font-semibold">{title}</p>
+        <p
+          className={`font-semibold ${
+            (activeNavigation || activeSubMenuHeading) &&
+            "text-[var(--primary-color)]"
+          }`}
+        >
+          {title}
+        </p>
       </div>
       {isSubMenuOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
     </div>
@@ -61,7 +68,14 @@ const MenuItem: React.FC<IProps> = ({
       className="flex items-center gap-3.5 cursor-pointer"
     >
       <span className={iconWrapperClasses}>{icon}</span>
-      <span className="font-semibold">{title}</span>
+      <span
+        className={`font-semibold ${
+          (activeNavigation || activeSubMenuHeading) &&
+          "text-[var(--primary-color)]"
+        }`}
+      >
+        {title}
+      </span>
     </LinkWithProgress>
   );
 
@@ -77,9 +91,6 @@ const MenuItem: React.FC<IProps> = ({
     <div key={title + href}>
       <div
         className={`${
-          (activeNavigation || activeSubMenuHeading) &&
-          "text-[var(--primary-color)]"
-        } ${
           parentHover ? "hover:bg-[var(--primary-color-2)]" : ""
         } dark:text-[var(--black-color-4)]  hover:text-[var(--primary-color)] rounded py-2 px-2.5`}
       >

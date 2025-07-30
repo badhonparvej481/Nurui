@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/nurui/avatar";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 import {
   Story,
@@ -82,7 +83,9 @@ const StoryDemo = () => {
             </Avatar>
           </DialogTrigger>
           <DialogContent className="aspect-[12/16] w-auto h-[90vh] overflow-hidden p-0">
-            <DialogTitle className="sr-only">Story</DialogTitle>
+            <VisuallyHidden>
+              <DialogTitle>Story</DialogTitle>
+            </VisuallyHidden>
 
             <Story
               className="relative size-full "
@@ -156,7 +159,9 @@ const StoryDemo = () => {
             </Avatar>
           </DialogTrigger>
           <DialogContent className="aspect-[12/16] w-auto h-[90vh] overflow-hidden p-0 rounded-md">
-            <DialogTitle className="sr-only">Story</DialogTitle>
+            <VisuallyHidden>
+              <DialogTitle>Story</DialogTitle>
+            </VisuallyHidden>
 
             <Story
               className="relative size-full "
@@ -229,7 +234,9 @@ const StoryDemo = () => {
             </Avatar>
           </DialogTrigger>
           <DialogContent className="aspect-[12/16] w-auto h-[90vh] overflow-hidden p-0 rounded-md">
-            <DialogTitle className="sr-only">Story</DialogTitle>
+            <VisuallyHidden>
+              <DialogTitle>Story</DialogTitle>
+            </VisuallyHidden>
 
             <Story
               className="relative size-full "

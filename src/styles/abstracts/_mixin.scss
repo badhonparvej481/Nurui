@@ -1,7 +1,0 @@
-@mixin rounded-button($bg-color: var(--primary-color), $text-color: var(--black-color)) {
-    background-color: $bg-color;
-    color: $text-color;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 6px;
-}
