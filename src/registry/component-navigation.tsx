@@ -37,7 +37,6 @@ export const navigation = [
       { name: "marquee testimonial", href: `${baseUrl}/marquee-testimonial` },
       { name: "animated pricing", href: `${baseUrl}/animated-pricing` },
       { name: "creative pricing", href: `${baseUrl}/creative-pricing` },
-      { name: "grid feature", href: `${baseUrl}/grid-feature` },
     ],
   },
   // components
@@ -79,7 +78,6 @@ export const navigation = [
       { name: "wave", href: `${baseUrl}/wave-card` },
       { name: "dynamic", href: `${baseUrl}/dynamic-card` },
       { name: "spotlight", href: `${baseUrl}/spotlight-card` },
-      { name: "feature", href: `${baseUrl}/feature-card` },
       { name: "shiny", href: `${baseUrl}/shiny-card` },
     ],
   },
