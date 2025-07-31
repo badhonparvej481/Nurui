@@ -1,6 +1,9 @@
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
+import OpenInV0Button from "@/components/common/OpenInV0Button";
+import FullScreenPreview from "@/components/common/FullScreenPreview";
+import CLICommandButton from "@/components/common/CLICommandButton";
 
 interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
@@ -49,12 +52,19 @@ const BentoCard = ({
     )}
     {...props}
   >
+    <div className="z-50">
+      <CLICommandButton className="absolute right-36 top-2" />
+      <FullScreenPreview className="absolute right-[101px] top-2" />
+      <OpenInV0Button className="absolute right-2 top-2" />
+    </div>
     <div>{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
       <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {name}
       </h3>
-      <p className="max-w-lg text-[var(--opacity-text-color)] dark:text-neutral-400">{description}</p>
+      <p className="max-w-lg text-[var(--opacity-text-color)] dark:text-neutral-400">
+        {description}
+      </p>
     </div>
 
     <div

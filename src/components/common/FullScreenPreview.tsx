@@ -17,7 +17,7 @@ const FullScreenPreview = ({
   const url = `${siteLink}/preview/${componentName}`;
   return (
     <Button
-      aria-label="Open in v0"
+      aria-label="Full Screen Preview"
       asChild
       className={cn(
         "z-50 text-[var(--primary-colo)] bg-[var(--primary-color)] rounded-lg shadow-none px-2.5",
@@ -28,12 +28,12 @@ const FullScreenPreview = ({
         href={url}
         target="_blank"
         rel="noreferrer"
-        className={cn("group transition-all duration-200")}
+        className={cn("group/fullscreen transition-all duration-200")}
       >
         <Fullscreen
           className={cn(
             "h-4 w-4",
-            "transition-transform duration-200 group-hover:rotate-45",
+            "transition-transform duration-200 group-hover/fullscreen:rotate-45",
           )}
         />
       </a>

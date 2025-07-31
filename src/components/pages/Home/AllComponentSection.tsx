@@ -147,17 +147,15 @@ export default function AllComponentSection() {
 
   return (
     <section className="max-w-5xl mx-[1.1rem] md:mx-[1.3rem] lg:mx-[1.5rem] xl:mx-auto h-[40vh] md:h-[45vh] lg:h-[50vh]  flex flex-col justify-between rounded-2xl border border-[var(--secondary-color)] bg-[var(--secondary-color-4)] pt-2 md:pt-3 xl:pt-4 relative overflow-hidden">
-      <div className="relative z-50">
-        <SectionIntro
-          title={{
-            highLiteWords: "Everything You Need In",
-            normalWords: "Your Stack",
-            firstHighLightColor: "text-[var(--secondary-color)]",
-          }}
-          description="From TypeScript to JavaScript, discover a powerful collection of tools designed to supercharge your development workflow."
-          sectionGap="pb-3 md:pb-7"
-        />
-      </div>
+      <SectionIntro
+        title={{
+          highLiteWords: "Everything You Need In",
+          normalWords: "Your Stack",
+          firstHighLightColor: "text-[var(--secondary-color)]",
+        }}
+        description="From TypeScript to JavaScript, discover a powerful collection of tools designed to supercharge your development workflow."
+        sectionGap="pb-3 md:pb-7"
+      />
       <Gravity resetOnResize={true} gravity={{ x: 0, y: 1 }}>
         {icons.map((IconData, index) => {
           const Icon = IconData.icon;

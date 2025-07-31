@@ -2,29 +2,17 @@ import React from "react";
 import SectionIntro from "@/components/common/SectionIntro";
 import ButtonsMarquee from "./ButtonsMarquee";
 import BentoDemo from "@/components/ui/bento-grid/BentoGrid";
-import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/animated-beam-multiple-outputs/AnimatedBeamMultipleOutputs";
 import { AnimatedListDemo } from "@/components/ui/animated-list/AnimatedList";
 import { AnimatedCircularProgressBarDemo } from "@/components/ui/progress-bar/AnimatedCircularProgressBarDemo";
 import { TerminalDemo } from "@/components/ui/terminal/TerminalDemo";
 import { cn } from "@/lib/utils";
-import { IconCloudDemo } from "@/components/ui/icon-cloud/IconCloudDemo";
-import OrbitingItems3D from "@/components/ui/orbiting-Items-3D/OrbitingItems3d";
-import {
-  FaAngular,
-  FaCss3,
-  FaHtml5,
-  FaJs,
-  FaNodeJs,
-  FaPython,
-  FaReact,
-  FaSass,
-  FaVuejs,
-} from "react-icons/fa6";
-import { GrMysql } from "react-icons/gr";
 import { FeatureBlockAnimatedCard } from "@/components/ui/feature-block-animated-card/FeatureBlockAnimatedCard";
 import HyperspeedDemo from "@/components/ui/hyperspeed/HyperspeedDemo";
 import { VortexDemo } from "@/components/ui/vortex-background/VortexDemo";
 import { Marquee } from "@/components/nurui/marque";
+import { GradientGridHero } from "@/components/nurui/gradient-grid-hero";
+import { IconCloudDemo } from "@/components/ui/icon-cloud/IconCloudDemo";
+import GlowingCard from "@/components/nurui/glowing-card";
 
 const ComponentDemosSection = () => {
   return (
@@ -74,12 +62,12 @@ const files = [
 
 const featuresDataOne = [
   {
-    name: "Animated Beam",
+    name: "Glowing Card",
     description: "An animated beam of light which travels along a path.",
     href: "#",
     className: "col-span-full xl:col-span-2",
     background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_5%,#000_100%)]" />
+      <GlowingCard className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
   },
   {
@@ -159,30 +147,14 @@ const featuresDataTwo = [
     ),
   },
   {
-    name: "Rounded 3D Animation",
+    name: "Gradient Hero",
     description: "Fluid 3D movements that elevate your digital experience.",
     href: "#",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     background: (
-      <OrbitingItems3D
-        duration={25}
-        items={[
-          <FaReact key="react" className="h-8 w-8" />,
-          <FaAngular key="angular" className="h-8 w-8" />,
-          <FaHtml5 key="html5" className="h-8 w-8" />,
-          <FaCss3 key="css3" className="h-8 w-8" />,
-          <FaSass key="sass" className="h-8 w-8" />,
-          <FaJs key="javascript" className="h-8 w-8" />,
-          <FaPython key="python" className="h-8 w-8" />,
-          <FaVuejs key="vuejs" className="h-8 w-8" />,
-          <FaNodeJs key="nodejs" className="h-8 w-8" />,
-          <GrMysql key="mysql" className="h-8 w-8" />,
-        ]}
-        radiusX={120}
-        radiusY={30}
-        tiltAngle={330}
-        className="absolute left-1/2 -translate-x-1/2 top-0"
-      />
+      <div className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
+        <GradientGridHero />
+      </div>
     ),
   },
   {
