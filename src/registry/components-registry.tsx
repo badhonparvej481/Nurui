@@ -89,9 +89,6 @@ import FutureButtonDemo from "@/components/nurui/future-button-demo";
 import FutureButtonCode from "@/components/nurui/future-button.tsx?raw";
 import FutureButtonDemoCode from "@/components/nurui/future-button-demo.tsx?raw";
 import FrameCode from "@/components/nurui/future-frame.tsx?raw";
-import GridFeatureDemo from "@/components/nurui/grid-feature-demo";
-import GridFeatureDemoCode from "@/components/nurui/grid-feature-demo.tsx?raw";
-import GridFeatureCode from "@/components/nurui/grid-feature.tsx?raw";
 import GamingFormDemo from "@/components/nurui/gaming-form-demo";
 import GamingFormDemoCode from "@/components/nurui/gaming-form-demo.tsx?raw";
 import GamingFormCode from "@/components/nurui/gaming-form.tsx?raw";
@@ -107,9 +104,6 @@ import DynamicCardCode from "@/components/nurui/dynamic-card.tsx?raw";
 import { SpotLightCardDemo } from "@/components/nurui/spotlight-card-demo";
 import SpotLightCardDemoCode from "@/components/nurui/spotlight-card-demo.tsx?raw";
 import SpotLightCardCode from "@/components/nurui/spotlight-card.tsx?raw";
-import { FeatureCardDemo } from "@/components/nurui/feature-card-demo";
-import FeatureCardDemoCode from "@/components/nurui/feature-card-demo.tsx?raw";
-import AnimatedGradientBorderCode from "@/components/nurui/animated-gradient-border.tsx?raw";
 import GradientHeroDemo from "@/components/nurui/gradient-hero";
 import GradientHeroDemoCode from "@/components/nurui/gradient-hero.tsx?raw";
 import GradientGridHeroCode from "@/components/nurui/gradient-grid-hero.tsx?raw";
@@ -208,11 +202,6 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "rating-icon", code: RatingIconCode },
     ],
   },
-  gridFeature: {
-    preview: <GridFeatureDemo />,
-    code: GridFeatureDemoCode,
-    othersCode: [{ fileName: "grid-feature", code: GridFeatureCode }],
-  },
   // components
   projectShowCase: {
     preview: <ProjectShowCaseDemo />,
@@ -310,16 +299,6 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <SpotLightCardDemo />,
     code: SpotLightCardDemoCode,
     othersCode: [{ fileName: "spotlight-card", code: SpotLightCardCode }],
-  },
-  featureCard: {
-    preview: <FeatureCardDemo />,
-    code: FeatureCardDemoCode,
-    othersCode: [
-      {
-        fileName: "animation-gradient-border",
-        code: AnimatedGradientBorderCode,
-      },
-    ],
   },
   shinyCard: {
     preview: <ShinyCardDemo />,

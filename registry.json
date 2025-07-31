@@ -124,23 +124,6 @@
         }
       ]
     },
-    {
-      "name": "grid-feature",
-      "type": "registry:component",
-      "devDependencies": [],
-      "dependencies": ["clsx", "tailwind-merge", "lucide-react", "motion"],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "./src/components/nurui/grid-feature-demo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "./src/components/nurui/grid-feature.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
 
     {
       "name": "project-showcase",
@@ -477,23 +460,6 @@
         },
         {
           "path": "./src/components/nurui/spotlight-card.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "feature-card",
-      "type": "registry:component",
-      "devDependencies": [],
-      "dependencies": ["lucide-react"],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "./src/components/nurui/feature-card-demo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "./src/components/nurui/animated-gradient-border.tsx",
           "type": "registry:component"
         }
       ]
