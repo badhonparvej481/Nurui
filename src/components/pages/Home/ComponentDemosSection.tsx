@@ -6,13 +6,13 @@ import { AnimatedListDemo } from "@/components/ui/animated-list/AnimatedList";
 import { AnimatedCircularProgressBarDemo } from "@/components/ui/progress-bar/AnimatedCircularProgressBarDemo";
 import { TerminalDemo } from "@/components/ui/terminal/TerminalDemo";
 import { cn } from "@/lib/utils";
-import { FeatureBlockAnimatedCard } from "@/components/ui/feature-block-animated-card/FeatureBlockAnimatedCard";
-import HyperspeedDemo from "@/components/ui/hyperspeed/HyperspeedDemo";
-import { VortexDemo } from "@/components/ui/vortex-background/VortexDemo";
 import { Marquee } from "@/components/nurui/marque";
 import { GradientGridHero } from "@/components/nurui/gradient-grid-hero";
-import { IconCloudDemo } from "@/components/ui/icon-cloud/IconCloudDemo";
 import GlowingCard from "@/components/nurui/glowing-card";
+import GradientBarsDemo from "@/components/nurui/bars-background";
+import GradientText from "@/components/nurui/GradientText";
+import ShinyCardDemo from "@/components/nurui/shiny-card-demo";
+import { FollowingEye } from "@/components/nurui/following-eye";
 
 const ComponentDemosSection = () => {
   return (
@@ -63,17 +63,17 @@ const files = [
 const featuresDataOne = [
   {
     name: "Glowing Card",
-    description: "An animated beam of light which travels along a path.",
-    href: "#",
+    description: "Interactive glowing UI card",
+    href: "/docs/glowing-card",
     className: "col-span-full xl:col-span-2",
     background: (
       <GlowingCard className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
   },
   {
-    name: "Marquee",
-    description: "An infinite scrolling component.",
-    href: "#",
+    name: "Marquee Testimonial",
+    description: "Smooth infinite testimonial scroll.",
+    href: "/docs/marquee-testimonial",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <Marquee
@@ -106,7 +106,7 @@ const featuresDataOne = [
   {
     name: "Animated List",
     description: "A list that animates each item in sequence with a delay.",
-    href: "#",
+    href: "/animated-list",
     cta: "Learn more",
     className: "col-span-full md:col-span-2 xl:col-span-1 xl:row-span-2",
     background: (
@@ -117,7 +117,7 @@ const featuresDataOne = [
     name: "Animated Progress",
     description: "Displays a circular gauge with a percentage value.",
     className: "col-span-full md:col-span-2 xl:col-span-1",
-    href: "#",
+    href: "/animated-progress",
     cta: "Learn more",
     background: (
       <AnimatedCircularProgressBarDemo className="left-1/2 -ml-20 top-14" />
@@ -128,7 +128,7 @@ const featuresDataOne = [
     description:
       "An implementation of the MacOS terminal. Useful for showcasing a command line interface.",
     className: "col-span-full md:col-span-2 xl:col-span-2",
-    href: "#",
+    href: "/terminal",
     cta: "Learn more",
     background: (
       <TerminalDemo className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
@@ -138,18 +138,20 @@ const featuresDataOne = [
 
 const featuresDataTwo = [
   {
-    name: "3D Icon Animation",
-    description: "An interactive 3D tag cloud component.",
-    href: "#",
+    name: "Following Eye",
+    description: "Interactive following eye cursor",
+    href: "/docs/following-eye",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
-      <IconCloudDemo className="absolute left-1/2 -translate-x-1/2 -top-8" />
+      <div className="absolute left-1/2 -translate-x-1/2 -top-8">
+        <FollowingEye className={"w-auto h-[400px]"} />
+      </div>
     ),
   },
   {
     name: "Gradient Hero",
-    description: "Fluid 3D movements that elevate your digital experience.",
-    href: "#",
+    description: "A animated gradient hero section for portfolio websites ",
+    href: "/docs/gradient-hero",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
@@ -158,32 +160,40 @@ const featuresDataTwo = [
     ),
   },
   {
-    name: "Card",
-    description: "A set of cards that can be used for different use cases.",
+    name: "Shiny Card",
+    description: "Digital animation card",
     href: "#",
     className: "col-span-full md:col-span-2 xl:col-span-1 row-span-1",
     background: (
-      <FeatureBlockAnimatedCard className="absolute left-1/2 -translate-x-1/2 -top-9 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
+      <div className="absolute left-1/2 -translate-x-1/2 -top-9 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
+        <ShinyCardDemo />
+      </div>
     ),
   },
   {
-    name: "Hyperspeed Background",
+    name: "Bars Background",
     description:
-      "Experience the rush of digital pathways with dynamic light trails. Navigate your content at the speed of thought.",
+      "Animated gradient bars background for next generation websites",
     className: "col-span-full md:col-span-2 xl:col-span-2",
-    href: "#",
+    href: "/docs/bars-background",
     cta: "Learn more",
-    background: <HyperspeedDemo />,
+    background: <GradientBarsDemo />,
   },
   {
-    name: "Vortex Background",
-    description:
-      "A wavy, swirly, vortex background ideal for CTAs and backgrounds.",
+    name: "Gradient Text",
+    description: "Animated colorful gradient text",
     className: "col-span-full xl:col-span-2",
-    href: "#",
+    href: "/docs/gradient-text",
     cta: "Learn more",
     background: (
-      <VortexDemo className="absolute left-1/2 -translate-x-1/2 -top-32 h-[600px] w-full" />
+      <GradientText
+        colors={["#3ca2fa", "#80eeb4", "#3ca2fa", "#80eeb4", "#3ca2fa"]}
+        animationSpeed={3}
+        showBorder={false}
+        className="text-6xl font-black mt-16"
+      >
+        Welcome to Nur/ui
+      </GradientText>
     ),
   },
 ];
