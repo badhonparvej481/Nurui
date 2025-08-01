@@ -45,7 +45,10 @@ export const navigation = [
     title: "Components",
     submenu: [
       { name: "Project showcase", href: `${baseUrl}/project-showcase` },
+      { name: "Animated List", href: `${baseUrl}/animated-list` },
       { name: "following eye", href: `${baseUrl}/following-eye` },
+      { name: "progress bar", href: `${baseUrl}/progress-bar` },
+      { name: "terminal", href: `${baseUrl}/terminal` },
       { name: "banner", href: `${baseUrl}/banner` },
       { name: "Story", href: `${baseUrl}/story` },
     ],
@@ -74,6 +77,7 @@ export const navigation = [
     title: "Cards",
     submenu: [
       { name: "playing", href: `${baseUrl}/playing-card` },
+      { name: "glowing", href: `${baseUrl}/glowing-card` },
       { name: "info", href: `${baseUrl}/info-card` },
       { name: "wave", href: `${baseUrl}/wave-card` },
       { name: "dynamic", href: `${baseUrl}/dynamic-card` },

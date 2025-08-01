@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import GradientText from "@/components/nurui/GradientText";
+import GradientText from "@/components/nurui/gradient-text";
 
 const UserByCompanies = () => {
   const [isBannerOpen, setIsBannerOpen] = useState<boolean | null>(null);

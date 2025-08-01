@@ -114,6 +114,40 @@
       ]
     },
     {
+      "name": "animated-list",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["motion/react", ""],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/animated-list.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/notification.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "progress-bar",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/progress-bar-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/progress-bar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "story",
       "type": "registry:component",
       "devDependencies": [],
@@ -140,6 +174,19 @@
         },
         {
           "path": "./src/components/nurui/avatar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "terminal",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["motion/react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/terminal.tsx",
           "type": "registry:component"
         }
       ]
@@ -314,6 +361,19 @@
         },
         {
           "path": "./src/components/nurui/styles/wave-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "glowing-card",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/glowing-card.tsx",
           "type": "registry:component"
         }
       ]

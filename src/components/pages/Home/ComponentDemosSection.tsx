@@ -2,17 +2,17 @@ import React from "react";
 import SectionIntro from "@/components/common/SectionIntro";
 import ButtonsMarquee from "./ButtonsMarquee";
 import BentoDemo from "@/components/ui/bento-grid/BentoGrid";
-import { AnimatedListDemo } from "@/components/ui/animated-list/AnimatedList";
-import { AnimatedCircularProgressBarDemo } from "@/components/ui/progress-bar/AnimatedCircularProgressBarDemo";
-import { TerminalDemo } from "@/components/ui/terminal/TerminalDemo";
+import { TerminalDemo } from "@/components/nurui/terminal-demo";
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/nurui/marque";
 import { GradientGridHero } from "@/components/nurui/gradient-grid-hero";
 import GlowingCard from "@/components/nurui/glowing-card";
 import GradientBarsDemo from "@/components/nurui/bars-background";
-import GradientText from "@/components/nurui/GradientText";
+import GradientText from "@/components/nurui/gradient-text";
 import ShinyCardDemo from "@/components/nurui/shiny-card-demo";
 import { FollowingEye } from "@/components/nurui/following-eye";
+import { AnimatedListDemo } from "@/components/nurui/animated-list-demo";
+import { ProgressBarDemo } from "@/components/nurui/progress-bar-demo";
 
 const ComponentDemosSection = () => {
   return (
@@ -66,6 +66,7 @@ const featuresDataOne = [
     description: "Interactive glowing UI card",
     href: "/docs/glowing-card",
     className: "col-span-full xl:col-span-2",
+    previewComponentName: "glowing-card",
     background: (
       <GlowingCard className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
@@ -74,6 +75,7 @@ const featuresDataOne = [
     name: "Marquee Testimonial",
     description: "Smooth infinite testimonial scroll.",
     href: "/docs/marquee-testimonial",
+    previewComponentName: "marquee-testimonial",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <Marquee
@@ -106,8 +108,8 @@ const featuresDataOne = [
   {
     name: "Animated List",
     description: "A list that animates each item in sequence with a delay.",
-    href: "/animated-list",
-    cta: "Learn more",
+    href: "/docs/animated-list",
+    previewComponentName: "animated-list",
     className: "col-span-full md:col-span-2 xl:col-span-1 xl:row-span-2",
     background: (
       <AnimatedListDemo className="absolute left-1/2 -translate-x-1/2 -top-20 h-[900px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
@@ -117,19 +119,17 @@ const featuresDataOne = [
     name: "Animated Progress",
     description: "Displays a circular gauge with a percentage value.",
     className: "col-span-full md:col-span-2 xl:col-span-1",
-    href: "/animated-progress",
-    cta: "Learn more",
-    background: (
-      <AnimatedCircularProgressBarDemo className="left-1/2 -ml-20 top-14" />
-    ),
+    href: "/docs/progress-bar",
+    previewComponentName: "progress-bar",
+    background: <ProgressBarDemo className="left-1/2 -ml-20 top-14" />,
   },
   {
     name: "Terminal",
     description:
       "An implementation of the MacOS terminal. Useful for showcasing a command line interface.",
     className: "col-span-full md:col-span-2 xl:col-span-2",
-    href: "/terminal",
-    cta: "Learn more",
+    href: "/docs/terminal",
+    previewComponentName: "terminal",
     background: (
       <TerminalDemo className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
@@ -141,6 +141,7 @@ const featuresDataTwo = [
     name: "Following Eye",
     description: "Interactive following eye cursor",
     href: "/docs/following-eye",
+    previewComponentName: "following-eye",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-8">
@@ -152,6 +153,7 @@ const featuresDataTwo = [
     name: "Gradient Hero",
     description: "A animated gradient hero section for portfolio websites ",
     href: "/docs/gradient-hero",
+    previewComponentName: "gradient-hero",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
@@ -162,7 +164,8 @@ const featuresDataTwo = [
   {
     name: "Shiny Card",
     description: "Digital animation card",
-    href: "#",
+    href: "/docs/shiny-card",
+    previewComponentName: "shiny-card",
     className: "col-span-full md:col-span-2 xl:col-span-1 row-span-1",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-9 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
@@ -176,7 +179,7 @@ const featuresDataTwo = [
       "Animated gradient bars background for next generation websites",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     href: "/docs/bars-background",
-    cta: "Learn more",
+    previewComponentName: "bars-background",
     background: <GradientBarsDemo />,
   },
   {
@@ -184,7 +187,7 @@ const featuresDataTwo = [
     description: "Animated colorful gradient text",
     className: "col-span-full xl:col-span-2",
     href: "/docs/gradient-text",
-    cta: "Learn more",
+    previewComponentName: "gradient-text",
     background: (
       <GradientText
         colors={["#3ca2fa", "#80eeb4", "#3ca2fa", "#80eeb4", "#3ca2fa"]}
