@@ -1,9 +1,10 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import * as React from "react";
 import { useState, useRef, useEffect } from "react";
 
-const FollowingEye: React.FC = () => {
+const FollowingEye = ({ className }: { className?: string }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const eye1Ref = useRef<HTMLDivElement>(null);
   const eye2Ref = useRef<HTMLDivElement>(null);
@@ -14,7 +15,10 @@ const FollowingEye: React.FC = () => {
 
   return (
     <div
-      className="w-screen h-screen flex justify-center items-center rounded-xl"
+      className={cn(
+        "w-screen h-screen flex justify-center items-center rounded-xl",
+        className,
+      )}
       onMouseMove={handleMouseMove}
     >
       <div className="flex">

@@ -4,6 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 import OpenInV0Button from "@/components/common/OpenInV0Button";
 import FullScreenPreview from "@/components/common/FullScreenPreview";
 import CLICommandButton from "@/components/common/CLICommandButton";
+import Link from "next/link";
 
 interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
@@ -72,10 +73,13 @@ const BentoCard = ({
         "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center px-4 py-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
       )}
     >
-      <button className="flex items-center text-sm pointer-events-auto hover:bg-[var(--glass-color-2)] p-2 rounded-xl">
+      <Link
+        href={props?.href}
+        className="flex items-center text-sm pointer-events-auto hover:bg-[var(--glass-color-2)] p-2 rounded-xl"
+      >
         <span>View</span>
         <ArrowRightIcon className="ms-2 h-4 w-4" />
-      </button>
+      </Link>
     </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>
