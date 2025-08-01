@@ -1,4 +1,8 @@
-import { AnimatedSpan, Terminal, TypingAnimation } from "./Terminal";
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from "@/components/nurui/terminal";
 
 export function TerminalDemo({ className }: { className?: string }) {
   return (

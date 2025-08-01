@@ -17,6 +17,7 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   background: ReactNode;
   description: string;
   href: string;
+  previewComponentName: string;
 }
 
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
@@ -55,7 +56,10 @@ const BentoCard = ({
   >
     <div className="z-50">
       <CLICommandButton className="absolute right-36 top-2" />
-      <FullScreenPreview className="absolute right-[101px] top-2" />
+      <FullScreenPreview
+        className="absolute right-[101px] top-2"
+        previewComponentName={props?.previewComponentName}
+      />
       <OpenInV0Button className="absolute right-2 top-2" />
     </div>
     <div>{background}</div>

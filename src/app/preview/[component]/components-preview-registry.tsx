@@ -51,11 +51,32 @@ export const componentsPreviewRegistry: Record<
       ),
     ),
   },
+  "animated-list": {
+    component: dynamic(() =>
+      import("@/components/nurui/animated-list-demo").then(
+        (mod) => mod.AnimatedListDemo,
+      ),
+    ),
+  },
   banner: {
     component: dynamic(() => import("@/components/nurui/banner-demo")),
   },
   "banner-close": {
     component: dynamic(() => import("@/components/nurui/banner-close-demo")),
+  },
+  "progress-bar": {
+    component: dynamic(() =>
+      import("@/components/nurui/progress-bar-demo").then(
+        (mod) => mod.ProgressBarDemo,
+      ),
+    ),
+  },
+  terminal: {
+    component: dynamic(() =>
+      import("@/components/nurui/terminal-demo").then(
+        (mod) => mod.TerminalDemo,
+      ),
+    ),
   },
   story: {
     component: dynamic(() =>
@@ -109,6 +130,9 @@ export const componentsPreviewRegistry: Record<
         (mod) => mod.SpotLightCardDemo,
       ),
     ),
+  },
+  "glowing-card": {
+    component: dynamic(() => import("@/components/nurui/glowing-card-demo")),
   },
   // forms
   "contact-form": {

@@ -149,6 +149,19 @@ import SplashCursorDemoCode from "@/components/nurui/splash-cursor-demo.tsx?raw"
 import SplashCursorCode from "@/components/nurui/splash-cursor.tsx?raw";
 import BannerCloseDemo from "@/components/nurui/banner-close-demo";
 import BannerCloseDemoCode from "@/components/nurui/banner-close-demo.tsx?raw";
+import GlowingCardDemo from "@/components/nurui/glowing-card-demo";
+import GlowingCardDemoCode from "@/components/nurui/glowing-card-demo.tsx?raw";
+import GlowingCardCode from "@/components/nurui/glowing-card.tsx?raw";
+import { AnimatedListDemo } from "@/components/nurui/animated-list-demo";
+import AnimatedListDemoCode from "@/components/nurui/animated-list-demo.tsx?raw";
+import AnimatedListCode from "@/components/nurui/animated-list-items.tsx?raw";
+import NotificationCode from "@/components/nurui/notification.tsx?raw";
+import { ProgressBarDemo } from "@/components/nurui/progress-bar-demo";
+import ProgressBarDemoCode from "@/components/nurui/progress-bar-demo.tsx?raw";
+import ProgressBarCode from "@/components/nurui/progress-bar.tsx?raw";
+import { TerminalDemo } from "@/components/nurui/terminal-demo";
+import TerminalDemoCode from "@/components/nurui/terminal-demo.tsx?raw";
+import TerminalCode from "@/components/nurui/terminal.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -216,6 +229,19 @@ export const Index: Record<string, ComponentEntry> = {
     code: FollowingEyeDemoCode,
     othersCode: [{ fileName: "following-eye", code: FollowingEyeCode }],
   },
+  animatedList: {
+    preview: <AnimatedListDemo />,
+    code: AnimatedListDemoCode,
+    othersCode: [
+      { fileName: "animated-list", code: AnimatedListCode },
+      { fileName: "notification", code: NotificationCode },
+    ],
+  },
+  progressBar: {
+    preview: <ProgressBarDemo />,
+    code: ProgressBarDemoCode,
+    othersCode: [{ fileName: "progress-bar", code: ProgressBarCode }],
+  },
   banner: {
     preview: <BannerDemo />,
     code: BannerDemoCode,
@@ -223,6 +249,11 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "banner", code: BannerCode },
       { fileName: "button", code: ButtonCode },
     ],
+  },
+  terminal: {
+    preview: <TerminalDemo />,
+    code: TerminalDemoCode,
+    othersCode: [{ fileName: "terminal", code: TerminalCode }],
   },
   bannerCloseExample: {
     preview: <BannerCloseDemo />,
@@ -279,6 +310,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <PlayingCardDemo />,
     code: PlayingCardDemoCode,
     othersCode: [{ fileName: "playing-card", code: PlayingCardCode }],
+  },
+  glowingCard: {
+    preview: <GlowingCardDemo />,
+    code: GlowingCardDemoCode,
+    othersCode: [{ fileName: "glowing-card", code: GlowingCardCode }],
   },
   infoCard: {
     preview: <InfoCardDemo />,

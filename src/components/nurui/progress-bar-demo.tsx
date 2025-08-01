@@ -1,12 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatedCircularProgressBar } from "./AnimatedCircularProgressBar";
+import { ProgressBar } from "@/components/nurui/progress-bar";
 
-export function AnimatedCircularProgressBarDemo({
-  className,
-}: {
-  className: string;
-}) {
+export function ProgressBarDemo({ className }: { className?: string }) {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
@@ -22,12 +18,12 @@ export function AnimatedCircularProgressBarDemo({
   }, []);
 
   return (
-    <AnimatedCircularProgressBar
+    <ProgressBar
       max={100}
       min={0}
       value={value}
       gaugePrimaryColor="#80eeb4"
-      gaugeSecondaryColor="rgba(0, 0, 0, 0.1)"
+      gaugeSecondaryColor="#80eeb44d"
       className={className}
     />
   );
