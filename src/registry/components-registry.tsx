@@ -162,6 +162,12 @@ import ProgressBarCode from "@/components/nurui/progress-bar.tsx?raw";
 import { TerminalDemo } from "@/components/nurui/terminal-demo";
 import TerminalDemoCode from "@/components/nurui/terminal-demo.tsx?raw";
 import TerminalCode from "@/components/nurui/terminal.tsx?raw";
+import BarsBackgroundDemo from "@/components/nurui/bars-background-demo";
+import BarsBackgroundDemoCode from "@/components/nurui/bars-background-demo.tsx?raw";
+import GradientBarsCode from "@/components/nurui/gradient-bars.tsx?raw";
+import GradientTextDemo from "@/components/nurui/gradient-text-demo";
+import GradientTextDemoCode from "@/components/nurui/gradient-text-demo.tsx?raw";
+import GradientTextCode from "@/components/nurui/gradient-text.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -427,6 +433,17 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "particle-background", code: ParticleBackgroundCode },
       { fileName: "button", code: ButtonCode },
     ],
+  },
+  // backgrounds
+  barsBackground: {
+    preview: <BarsBackgroundDemo />,
+    code: BarsBackgroundDemoCode,
+    othersCode: [{ fileName: "gradient-bars", code: GradientBarsCode }],
+  },
+  gradientText: {
+    preview: <GradientTextDemo />,
+    code: GradientTextDemoCode,
+    othersCode: [{ fileName: "gradient-text", code: GradientTextCode }],
   },
   // cursors
   "draw-cursor": {

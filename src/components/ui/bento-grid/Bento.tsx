@@ -18,6 +18,7 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   description: string;
   href: string;
   previewComponentName: string;
+  v0ComponentName: string;
 }
 
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
@@ -39,7 +40,8 @@ const BentoCard = ({
   className,
   background,
   description,
-  //   href,
+  previewComponentName,
+  v0ComponentName,
   ...props
 }: BentoCardProps) => (
   <div
@@ -58,9 +60,12 @@ const BentoCard = ({
       <CLICommandButton className="absolute right-36 top-2" />
       <FullScreenPreview
         className="absolute right-[101px] top-2"
-        previewComponentName={props?.previewComponentName}
+        previewComponentName={previewComponentName}
       />
-      <OpenInV0Button className="absolute right-2 top-2" />
+      <OpenInV0Button
+        className="absolute right-2 top-2"
+        v0ComponentName={v0ComponentName}
+      />
     </div>
     <div>{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
