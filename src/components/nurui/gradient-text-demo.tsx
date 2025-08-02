@@ -1,7 +1,7 @@
 import React from "react";
-import GradientText from "./gradient-text";
+import GradientText from "@/components/nurui/gradient-text";
 
-const gradientTextDemo = () => {
+const GradientTextDemo = () => {
   return (
     <div className="p-10">
       <GradientText
@@ -16,4 +16,4 @@ const gradientTextDemo = () => {
   );
 };
 
-export default gradientTextDemo;
+export default GradientTextDemo;

@@ -1,6 +1,6 @@
-import { GradientBars } from "./gradinet-bars";
+import { GradientBars } from "@/components/nurui/gradient-bars";
 
-export default function GradientBarsDemo() {
+export default function BarsBackgroundDemo() {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       <GradientBars />

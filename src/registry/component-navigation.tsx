@@ -1,11 +1,12 @@
 import { TfiHelpAlt } from "react-icons/tfi";
-import { TbCards, TbHandClick } from "react-icons/tb";
+import { TbBackground, TbCards, TbHandClick } from "react-icons/tb";
 import { GrDrawer, GrInstallOption } from "react-icons/gr";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { RxComponent2, RxSection } from "react-icons/rx";
 import { PiCursorClickDuotone } from "react-icons/pi";
 import { SiApacherocketmq } from "react-icons/si";
+import { IoTextSharp } from "react-icons/io5";
 
 const baseUrl = "/docs";
 
@@ -53,11 +54,12 @@ export const navigation = [
       { name: "Story", href: `${baseUrl}/story` },
     ],
   },
-  // {
-  //   icon: <FaWpforms />,
-  //   title: "Backgrounds",
-  //   submenu: [{ name: "gradient", href: `${baseUrl}/gradient-hero` }],
-  // },
+  // backgrounds
+  {
+    icon: <TbBackground />,
+    title: "Backgrounds",
+    submenu: [{ name: "bars", href: `${baseUrl}/bars-background` }],
+  },
   // buttons
   {
     icon: <TbHandClick />,
@@ -104,7 +106,7 @@ export const navigation = [
   // hero sections
   {
     icon: <SiApacherocketmq />,
-    title: "Hero",
+    title: "Heros",
     submenu: [
       { name: "tech", href: `${baseUrl}/tech-hero` },
       { name: "gradient", href: `${baseUrl}/gradient-hero` },
@@ -114,6 +116,13 @@ export const navigation = [
       { name: "spotlight", href: `${baseUrl}/spotlight-hero` },
     ],
   },
+
+  {
+    icon: <IoTextSharp />,
+    title: "texts",
+    submenu: [{ name: "gradient", href: `${baseUrl}/gradient-text` }],
+  },
+
   // {
   //   icon: <FaWpforms />,
   //   title: "Modals",

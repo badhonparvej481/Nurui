@@ -83,6 +83,14 @@ export const componentsPreviewRegistry: Record<
       import("@/components/nurui/story-demo").then((mod) => mod.StoryDemo),
     ),
   },
+  // background
+  "bars-background": {
+    component: dynamic(() => import("@/components/nurui/bars-background-demo")),
+  },
+  // texts
+  "gradient-text": {
+    component: dynamic(() => import("@/components/nurui/gradient-text-demo")),
+  },
   // buttons
   "magnet-button": {
     component: dynamic(() => import("@/components/nurui/magnet-button-demo")),
@@ -116,6 +124,9 @@ export const componentsPreviewRegistry: Record<
   },
   "wave-card": {
     component: dynamic(() => import("@/components/nurui/wave-card-demo")),
+  },
+  "shiny-card": {
+    component: dynamic(() => import("@/components/nurui/shiny-card-demo")),
   },
   "dynamic-card": {
     component: dynamic(() =>

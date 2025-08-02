@@ -7,6 +7,7 @@ interface IProps {
     description: string;
     href: string;
     previewComponentName: string;
+    v0ComponentName: string;
     className: string;
     background: React.JSX.Element;
   }[];

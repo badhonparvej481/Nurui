@@ -303,6 +303,24 @@
     },
 
     {
+      "name": "bars-background",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["motion/react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/bars-background-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/gradient-bars.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
       "name": "magnet-button",
       "type": "registry:component",
       "devDependencies": [],
@@ -839,6 +857,24 @@
         },
         {
           "path": "./src/components/nurui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+
+    {
+      "name": "gradient-text",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/gradient-text-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/gradient-text.tsx",
           "type": "registry:component"
         }
       ]
