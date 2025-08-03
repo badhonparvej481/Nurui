@@ -1,6 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/nurui/avatar";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-
 import {
   Story,
   StoryProgress,
@@ -14,8 +13,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogDescription,
 } from "@/components/nurui/story-dialog";
 import Image from "next/image";
+
 const FABRIZIO_STORIES = [
   {
     title: "Champions league will begin soon",
@@ -41,11 +42,11 @@ const SHADCN_STORIES = [
   {
     title: "The new calendar.tsx is here",
     caption: `
-    → Latest react-daypicker
-    → Tailwind v3 and v4
-    → Date, range & time pickers
-    → Persian, Hijri & timezone support
-    → 30+ examples to copy, paste, and build.
+      → Latest react-daypicker
+      → Tailwind v3 and v4
+      → Date, range & time pickers
+      → Persian, Hijri & timezone support
+      → 30+ examples to copy, paste, and build.
     `,
     storyImage:
       "https://pbs.twimg.com/media/GsxdzRfb0AIUBSs?format=jpg&name=large",
@@ -72,23 +73,30 @@ const StoryDemo = () => {
   return (
     <section className="p-20 w-full place-content-center">
       <div className="flex gap-4 justify-center">
+        {/* ======== FABRIZIO STORIES ======== */}
         <Dialog>
           <DialogTrigger>
             <Avatar className="size-12">
               <AvatarImage
-                src="https://scontent.forn3-5.fna.fbcdn.net/v/t39.30808-1/347110386_993663875383747_583934797072922306_n.jpg?stp=c0.124.1179.1179a_cp0_dst-jpg_s80x80_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=sznTMSftQGgQ7kNvwFnYrhK&_nc_oc=Adl88GWERQJFnS-FhRo3kmyRvwQeqel4uE97CRcHAX2hgEouXRhN98vLowFYZewYbKE&_nc_zt=24&_nc_ht=scontent.forn3-5.fna&_nc_gid=zgCgewXONoFNXl_Ycl7B9Q&oh=00_AfP29XsY8aMHX1lZasw43qaYzda8eY9esKHCjO-ZARUk5A&oe=684D1280"
+                src="https://scontent.forn3-5.fna.fbcdn.net/v/t39.30808-1/347110386_993663875383747_583934797072922306_n.jpg"
                 alt="@fabrizioRomano"
               />
               <AvatarFallback>FR</AvatarFallback>
             </Avatar>
           </DialogTrigger>
           <DialogContent className="aspect-[12/16] w-auto h-[90vh] overflow-hidden p-0">
-            <VisuallyHidden>
+            <VisuallyHidden asChild>
               <DialogTitle>Story</DialogTitle>
+            </VisuallyHidden>
+            {/* ✅ Added Description */}
+            <VisuallyHidden asChild>
+              <DialogDescription>
+                Instagram-style story viewer
+              </DialogDescription>
             </VisuallyHidden>
 
             <Story
-              className="relative size-full "
+              className="relative size-full"
               duration={5000}
               mediaLength={FABRIZIO_STORIES.length}
             >
@@ -96,12 +104,11 @@ const StoryDemo = () => {
                 <div className="relative z-10 flex items-center gap-2">
                   <Avatar className="size-10">
                     <AvatarImage
-                      src="https://scontent.forn3-5.fna.fbcdn.net/v/t39.30808-1/347110386_993663875383747_583934797072922306_n.jpg?stp=c0.124.1179.1179a_cp0_dst-jpg_s80x80_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=sznTMSftQGgQ7kNvwFnYrhK&_nc_oc=Adl88GWERQJFnS-FhRo3kmyRvwQeqel4uE97CRcHAX2hgEouXRhN98vLowFYZewYbKE&_nc_zt=24&_nc_ht=scontent.forn3-5.fna&_nc_gid=zgCgewXONoFNXl_Ycl7B9Q&oh=00_AfP29XsY8aMHX1lZasw43qaYzda8eY9esKHCjO-ZARUk5A&oe=684D1280"
+                      src="https://scontent.forn3-5.fna.fbcdn.net/v/t39.30808-1/347110386_993663875383747_583934797072922306_n.jpg"
                       alt="@fabrizioRomano"
                     />
                     <AvatarFallback>FR</AvatarFallback>
                   </Avatar>
-
                   <StoryProgress
                     className="flex-1"
                     progressWrapClass="h-1.5"
@@ -119,17 +126,15 @@ const StoryDemo = () => {
                   index={idx}
                   className="absolute inset-0 size-full"
                 >
-                  {/* Example with image */}
                   <Image
                     src={story.storyImage}
-                    className="w-full h-auto max-h-auto"
+                    className="w-full h-auto"
                     alt={story.title}
-                    layout="fill"
+                    fill
                     draggable={false}
                     unoptimized
                   />
-
-                  <div className="absolute bottom-4 left-4  z-10 space-y-1 text-white p-4">
+                  <div className="absolute bottom-4 left-4 z-10 space-y-1 text-white p-4">
                     <a
                       className="text-secondary"
                       href="https://x.com/FabrizioRomano"
@@ -148,6 +153,7 @@ const StoryDemo = () => {
           </DialogContent>
         </Dialog>
 
+        {/* ======== SHADCN STORIES ======== */}
         <Dialog>
           <DialogTrigger>
             <Avatar className="size-12">
@@ -159,12 +165,17 @@ const StoryDemo = () => {
             </Avatar>
           </DialogTrigger>
           <DialogContent className="aspect-[12/16] w-auto h-[90vh] overflow-hidden p-0 rounded-md">
-            <VisuallyHidden>
+            <VisuallyHidden asChild>
               <DialogTitle>Story</DialogTitle>
+            </VisuallyHidden>
+            <VisuallyHidden asChild>
+              <DialogDescription>
+                Instagram-style story viewer
+              </DialogDescription>
             </VisuallyHidden>
 
             <Story
-              className="relative size-full "
+              className="relative size-full"
               duration={5000}
               mediaLength={SHADCN_STORIES.length}
             >
@@ -177,7 +188,6 @@ const StoryDemo = () => {
                     />
                     <AvatarFallback>SC</AvatarFallback>
                   </Avatar>
-
                   <StoryProgress
                     className="flex-1"
                     progressWrapClass="h-1.5"
@@ -197,18 +207,14 @@ const StoryDemo = () => {
                 >
                   <Image
                     src={story.storyImage}
-                    className="w-full h-auto max-h-auto"
+                    className="w-full h-auto"
                     alt={story.title}
-                    layout="fill"
+                    fill
                     draggable={false}
                     unoptimized
                   />
-
-                  <div className="absolute bottom-4 left-4  z-10 space-y-1 text-white p-4">
-                    <a
-                      className="text-secondary"
-                      href="https://x.com/FabrizioRomano"
-                    >
+                  <div className="absolute bottom-4 left-4 z-10 space-y-1 text-white p-4">
+                    <a className="text-secondary" href="https://x.com/Shadcn">
                       @Shadcn
                     </a>
                     <h3 className="text-medium tracking-tight text-foreground-muted">
@@ -223,6 +229,7 @@ const StoryDemo = () => {
           </DialogContent>
         </Dialog>
 
+        {/* ======== NBA STORIES ======== */}
         <Dialog>
           <DialogTrigger>
             <Avatar className="size-12">
@@ -230,16 +237,21 @@ const StoryDemo = () => {
                 src="https://pbs.twimg.com/profile_images/1931904469446377472/mjaR8LDc_400x400.jpg"
                 alt="@nba"
               />
-              <AvatarFallback>SC</AvatarFallback>
+              <AvatarFallback>NB</AvatarFallback>
             </Avatar>
           </DialogTrigger>
           <DialogContent className="aspect-[12/16] w-auto h-[90vh] overflow-hidden p-0 rounded-md">
-            <VisuallyHidden>
+            <VisuallyHidden asChild>
               <DialogTitle>Story</DialogTitle>
+            </VisuallyHidden>
+            <VisuallyHidden asChild>
+              <DialogDescription>
+                Instagram-style story viewer
+              </DialogDescription>
             </VisuallyHidden>
 
             <Story
-              className="relative size-full "
+              className="relative size-full"
               duration={8000}
               mediaLength={NBA_STORIES.length}
             >
@@ -250,9 +262,8 @@ const StoryDemo = () => {
                       src="https://pbs.twimg.com/profile_images/1931904469446377472/mjaR8LDc_400x400.jpg"
                       alt="@nba"
                     />
-                    <AvatarFallback>SC</AvatarFallback>
+                    <AvatarFallback>NB</AvatarFallback>
                   </Avatar>
-
                   <StoryProgress
                     className="flex-1"
                     progressWrapClass="h-1.5"
@@ -272,18 +283,14 @@ const StoryDemo = () => {
                 >
                   <Image
                     src={story.storyImage}
-                    className="w-full h-auto max-h-auto"
+                    className="w-full h-auto"
                     alt={story.title}
-                    layout="fill"
+                    fill
                     draggable={false}
                     unoptimized
                   />
-
-                  <div className="absolute bottom-4 left-4  z-10 space-y-1 text-white p-4">
-                    <a
-                      className="text-secondary"
-                      href="https://x.com/FabrizioRomano"
-                    >
+                  <div className="absolute bottom-4 left-4 z-10 space-y-1 text-white p-4">
+                    <a className="text-secondary" href="https://x.com/nba">
                       @nba
                     </a>
                     <h3 className="text-medium tracking-tight text-foreground-muted">
