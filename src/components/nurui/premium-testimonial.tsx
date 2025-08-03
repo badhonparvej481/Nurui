@@ -1,5 +1,5 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, cubicBezier } from "framer-motion";
 import { useState, useEffect, useRef, FC } from "react";
 import { Quote, Star, ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -121,7 +121,7 @@ export const PremiumTestimonial: FC<PremiumTestimonialProps> = ({
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.23, 0.86, 0.39, 0.96],
+        ease: cubicBezier(0.23, 0.86, 0.39, 0.96),
       },
     },
   };
