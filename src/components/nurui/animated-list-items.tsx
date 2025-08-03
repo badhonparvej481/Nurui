@@ -9,15 +9,20 @@ import React, {
 } from "react";
 
 export function AnimatedListItem({ children }: { children: React.ReactNode }) {
-  const animations = {
-    initial: { scale: 0, opacity: 0 },
-    animate: { scale: 1, opacity: 1, originY: 0 },
-    exit: { scale: 0, opacity: 0 },
-    transition: { type: "spring", stiffness: 350, damping: 40 },
-  };
+  const initial = { scale: 0, opacity: 0 };
+  const animate = { scale: 1, opacity: 1, originY: 0 };
+  const exit = { scale: 0, opacity: 0 };
+  const transition = { type: "spring" as const, stiffness: 350, damping: 40 };
 
   return (
-    <motion.div {...animations} layout className="mx-auto w-full">
+    <motion.div
+      initial={initial}
+      animate={animate}
+      exit={exit}
+      transition={transition}
+      layout
+      className="mx-auto w-full"
+    >
       {children}
     </motion.div>
   );

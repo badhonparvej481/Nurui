@@ -38,7 +38,6 @@ const SettingsNav: FC = () => {
     visible: {
       clipPath: "inset(0% 0% 0% 0% round 12px)",
       transition: {
-        type: "spring",
         bounce: 0,
       },
     },
@@ -46,7 +45,6 @@ const SettingsNav: FC = () => {
       clipPath: "inset(10% 50% 90% 50% round 12px)",
       transition: {
         duration: 0.3,
-        type: "spring",
         bounce: 0,
       },
     },

@@ -68,6 +68,7 @@ const featuresDataOne = [
     className: "col-span-full xl:col-span-2",
     previewComponentName: "glowing-card",
     v0ComponentName: "glowing-card",
+    cli: "npx nurui add glowing-card",
     background: (
       <GlowingCard className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
@@ -78,6 +79,7 @@ const featuresDataOne = [
     href: "/docs/marquee-testimonial",
     previewComponentName: "marquee-testimonial",
     v0ComponentName: "marquee-testimonial",
+    cli: "npx nurui add marquee-testimonial",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <Marquee
@@ -113,6 +115,7 @@ const featuresDataOne = [
     href: "/docs/animated-list",
     previewComponentName: "animated-list",
     v0ComponentName: "animated-list",
+    cli: "npx nurui add animated-list",
     className: "col-span-full md:col-span-2 xl:col-span-1 xl:row-span-2",
     background: (
       <AnimatedListDemo className="absolute left-1/2 -translate-x-1/2 -top-20 h-[900px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
@@ -125,6 +128,7 @@ const featuresDataOne = [
     href: "/docs/progress-bar",
     previewComponentName: "progress-bar",
     v0ComponentName: "progress-bar",
+    cli: "npx nurui add animated-progress",
     background: <ProgressBarDemo className="left-1/2 -ml-20 top-14" />,
   },
   {
@@ -135,6 +139,7 @@ const featuresDataOne = [
     href: "/docs/terminal",
     previewComponentName: "terminal",
     v0ComponentName: "terminal",
+    cli: "npx nurui add terminal",
     background: (
       <TerminalDemo className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]" />
     ),
@@ -148,6 +153,7 @@ const featuresDataTwo = [
     href: "/docs/following-eye",
     previewComponentName: "following-eye",
     v0ComponentName: "following-eye",
+    cli: "npx nurui add following-eye",
     className: "col-span-full md:col-span-2 xl:col-span-1",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-8">
@@ -161,6 +167,7 @@ const featuresDataTwo = [
     href: "/docs/gradient-hero",
     previewComponentName: "gradient-hero",
     v0ComponentName: "gradient-hero",
+    cli: "npx nurui add gradient-hero",
     className: "col-span-full md:col-span-2 xl:col-span-2",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-6 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
@@ -174,6 +181,7 @@ const featuresDataTwo = [
     href: "/docs/shiny-card",
     previewComponentName: "shiny-card",
     v0ComponentName: "shiny-card",
+    cli: "npx nurui add shiny-card",
     className: "col-span-full md:col-span-2 xl:col-span-1 row-span-1",
     background: (
       <div className="absolute left-1/2 -translate-x-1/2 -top-9 h-[400px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
@@ -189,6 +197,7 @@ const featuresDataTwo = [
     href: "/docs/bars-background",
     previewComponentName: "bars-background",
     v0ComponentName: "bars-background",
+    cli: "npx nurui add bars-background",
     background: <GradientBarsDemo />,
   },
   {
@@ -198,6 +207,7 @@ const featuresDataTwo = [
     href: "/docs/gradient-text",
     previewComponentName: "gradient-text",
     v0ComponentName: "gradient-text",
+    cli: "npx nurui add gradient-text",
     background: (
       <GradientText
         colors={["#3ca2fa", "#80eeb4", "#3ca2fa", "#80eeb4", "#3ca2fa"]}

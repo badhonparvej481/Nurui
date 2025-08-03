@@ -13,9 +13,11 @@ import {
   Transition,
   type VariantLabels,
   type Target,
-  type AnimationControls,
+  animationControls,
   type TargetAndTransition,
 } from "framer-motion";
+
+type AnimationControls = ReturnType<typeof animationControls>;
 
 function cn(...classes: (string | undefined | null | boolean)[]): string {
   return classes.filter(Boolean).join(" ");
