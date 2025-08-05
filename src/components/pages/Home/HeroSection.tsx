@@ -27,7 +27,10 @@ import { getContributors } from "@/lib/github";
 
 const HeroSection = async () => {
   const contributors = await getContributors();
-  const lastFiveContributors = contributors.slice(-5);
+  const lastFiveContributors = contributors.slice(
+    contributors.length - 5,
+    contributors.length,
+  );
 
   return (
     <BackgroundGridBeam>

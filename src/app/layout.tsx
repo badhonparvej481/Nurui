@@ -91,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${nunito.variable} antialiased bg-[var(--background-color)] flex flex-col min-h-screen font-nunito`}
       >
