@@ -23,8 +23,12 @@ import ReactSpringIcon from "../../icons/ReactSpringIcon";
 import ZDogIcon from "../../icons/ZDogIcon";
 import RatingStars from "@/components/nurui/rating-star";
 import UserByCompanies from "@/components/common/UserByCompanies";
+import { getContributors } from "@/lib/github";
 
-const HeroSection = () => {
+const HeroSection = async () => {
+  const contributors = await getContributors();
+  const topFiveContributors = contributors.slice(0, 5);
+
   return (
     <BackgroundGridBeam>
       <section className="flex justify-evenly px-4 md:px-20 pt-7 md:pt-16 lg:pt-24 pb-7 md:pb-4 lg:pb-10 ">
@@ -103,7 +107,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col md:flex-row items-center pt-4 md:pt-6">
-              <AnimatedTooltip items={people} />
+              <AnimatedTooltip items={topFiveContributors} />
               <div className="flex flex-col items-center md:items-start gap-1 mt-5 md:mt-0 md:ml-5">
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
@@ -140,41 +144,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-const people = [
-  {
-    id: 1,
-    name: "Ajhar Ahmed Chowdhury",
-    designation: "Frontend Developer",
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751194657/download_gngifc.jpg",
-  },
-  {
-    id: 2,
-    name: "Naeemul Islam",
-    designation: "Full-Stack Developer",
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751194990/1744978175454_ttxfza.jpg",
-  },
-  {
-    id: 3,
-    name: "MD Yahya",
-    designation: "Frontend Designer",
-    image:
-      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1751195172/457868884_2128378500890953_2967294619988437201_n_noc8ul.jpg",
-  },
-  {
-    id: 4,
-    name: "Emily Davis",
-    designation: "Frontend Developer",
-    image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  },
-  {
-    id: 5,
-    name: "Tyler Durden",
-    designation: "Soap Developer",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-  },
-];
