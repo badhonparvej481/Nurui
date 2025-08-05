@@ -27,7 +27,7 @@ import { getContributors } from "@/lib/github";
 
 const HeroSection = async () => {
   const contributors = await getContributors();
-  const topFiveContributors = contributors.slice(0, 5);
+  const lastFiveContributors = contributors.slice(-5);
 
   return (
     <BackgroundGridBeam>
@@ -107,7 +107,7 @@ const HeroSection = async () => {
             </p>
 
             <div className="flex flex-col md:flex-row items-center pt-4 md:pt-6">
-              <AnimatedTooltip items={topFiveContributors} />
+              <AnimatedTooltip items={lastFiveContributors} />
               <div className="flex flex-col items-center md:items-start gap-1 mt-5 md:mt-0 md:ml-5">
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
