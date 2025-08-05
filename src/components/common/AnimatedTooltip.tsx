@@ -14,9 +14,8 @@ export const AnimatedTooltip = ({
 }: {
   items: {
     id: number;
-    name: string;
-    designation: string;
-    image: string;
+    login: string;
+    avatar_url: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -25,15 +24,15 @@ export const AnimatedTooltip = ({
   // rotate the tooltip
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
-    springConfig
+    springConfig,
   );
   // translate the tooltip
   const translateX = useSpring(
     useTransform(x, [-100, 100], [-50, 50]),
-    springConfig
+    springConfig,
   );
   const handleMouseMove = (
-    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>,
   ) => {
     const halfWidth = event.currentTarget.offsetWidth / 2;
     x.set(event.nativeEvent.offsetX - halfWidth);
@@ -44,7 +43,7 @@ export const AnimatedTooltip = ({
       {items.map((item, idx) => (
         <div
           className="-mr-4  relative group"
-          key={item.name + idx}
+          key={item.login + idx}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -73,9 +72,9 @@ export const AnimatedTooltip = ({
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
                 <div className="font-bold text-white relative z-30 text-base">
-                  {item.name}
+                  {item.login}
                 </div>
-                <div className="text-white text-xs">{item.designation}</div>
+                <div className="text-white text-xs">{item.login}</div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -83,8 +82,8 @@ export const AnimatedTooltip = ({
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={item.image}
-            alt={item.name}
+            src={item.avatar_url}
+            alt={item.login}
             className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
           />
         </div>
