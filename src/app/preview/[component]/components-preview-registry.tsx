@@ -87,6 +87,13 @@ export const componentsPreviewRegistry: Record<
   "bars-background": {
     component: dynamic(() => import("@/components/nurui/bars-background-demo")),
   },
+  "gradient-background": {
+    component: dynamic(() =>
+      import("@/components/nurui/gradient-background").then(
+        (mod) => mod.GradientBackground,
+      ),
+    ),
+  },
   // texts
   "gradient-text": {
     component: dynamic(() => import("@/components/nurui/gradient-text-demo")),

@@ -235,6 +235,19 @@
         }
       ]
     },
+    {
+      "name": "gradient-background",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/gradient-background.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "magnet-button",
