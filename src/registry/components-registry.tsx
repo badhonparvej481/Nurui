@@ -168,6 +168,9 @@ import GradientBarsCode from "@/components/nurui/gradient-bars.tsx?raw";
 import GradientTextDemo from "@/components/nurui/gradient-text-demo";
 import GradientTextDemoCode from "@/components/nurui/gradient-text-demo.tsx?raw";
 import GradientTextCode from "@/components/nurui/gradient-text.tsx?raw";
+import GradientBackgroundDemo from "@/components/nurui/gradient-background-demo";
+import GradientBackgroundDemoCode from "@/components/nurui/gradient-background-demo.tsx?raw";
+import GradientBackgroundCode from "@/components/nurui/gradient-background.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -440,6 +443,14 @@ export const Index: Record<string, ComponentEntry> = {
     code: BarsBackgroundDemoCode,
     othersCode: [{ fileName: "gradient-bars", code: GradientBarsCode }],
   },
+  gradientBackground: {
+    preview: <GradientBackgroundDemo />,
+    code: GradientBackgroundDemoCode,
+    othersCode: [
+      { fileName: "gradient-background", code: GradientBackgroundCode },
+    ],
+  },
+  // text
   gradientText: {
     preview: <GradientTextDemo />,
     code: GradientTextDemoCode,

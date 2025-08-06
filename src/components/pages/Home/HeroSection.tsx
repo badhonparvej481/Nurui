@@ -115,7 +115,7 @@ const HeroSection = async () => {
                 <RatingStars />
                 <p className="ml-3 text-[var(--opacity-text-color)] font-semibold">
                   Trusted by{" "}
-                  <span className="text-[var(--text-primary-color)]">50+</span>{" "}
+                  <span className="text-[var(--text-primary-color)]">500+</span>{" "}
                   developers
                 </p>
               </div>

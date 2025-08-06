@@ -319,6 +319,23 @@
         }
       ]
     },
+    {
+      "name": "gradient-background",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/gradient-background-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/gradient-background.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "magnet-button",

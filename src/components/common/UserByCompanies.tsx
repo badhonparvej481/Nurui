@@ -35,7 +35,7 @@ const UserByCompanies = () => {
         showBorder={false}
         className="text-3xl font-bold"
       >
-        Used by 10+ Companies
+        Used by 50+ Companies
       </GradientText>
     </div>
   );

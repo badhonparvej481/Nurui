@@ -58,7 +58,10 @@ export const navigation = [
   {
     icon: <TbBackground />,
     title: "Backgrounds",
-    submenu: [{ name: "bars", href: `${baseUrl}/bars-background` }],
+    submenu: [
+      { name: "bars", href: `${baseUrl}/bars-background` },
+      { name: "gradient", href: `${baseUrl}/gradient-background` },
+    ],
   },
   // buttons
   {
