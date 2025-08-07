@@ -30,7 +30,7 @@ export function getMDXComponents(
       <h2
         id="installation"
         className={cn(
-          "text-2xl font-semibold pt-10 pb-2 border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)]",
+          "text-2xl font-semibold pt-10 pb-2 mb-6 border-b border-[var(--primary-color)] dark:border-[var(--primary-color-3)]",
           className,
         )}
         {...props}

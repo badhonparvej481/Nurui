@@ -171,6 +171,15 @@ import GradientTextCode from "@/components/nurui/gradient-text.tsx?raw";
 import GradientBackgroundDemo from "@/components/nurui/gradient-background-demo";
 import GradientBackgroundDemoCode from "@/components/nurui/gradient-background-demo.tsx?raw";
 import GradientBackgroundCode from "@/components/nurui/gradient-background.tsx?raw";
+import CanvasCursorDemo from "@/components/nurui/canvas-cursor-demo";
+import CanvasCursorDemoCode from "@/components/nurui/canvas-cursor-demo.tsx?raw";
+import CanvasCursorCode from "@/components/nurui/canvas-cursor.tsx?raw";
+import JumpBackgroundDemo from "@/components/nurui/jump-background-demo";
+import JumpBackgroundDemoCode from "@/components/nurui/jump-background-demo.tsx?raw";
+import JumpsBackgroundCode from "@/components/nurui/jump-background.tsx?raw";
+import VirusBackgroundCode from "@/components/nurui/virus-background.tsx?raw";
+import VirusBackgroundDemo from "@/components/nurui/virus-background-demo";
+import VirusBackgroundDemoCode from "@/components/nurui/virus-background-demo.tsx?raw";
 
 type CodeEntry = {
   fileName: string;
@@ -450,6 +459,16 @@ export const Index: Record<string, ComponentEntry> = {
       { fileName: "gradient-background", code: GradientBackgroundCode },
     ],
   },
+  jumpBackground: {
+    preview: <JumpBackgroundDemo />,
+    code: JumpBackgroundDemoCode,
+    othersCode: [{ fileName: "jump-background", code: JumpsBackgroundCode }],
+  },
+  virusBackground: {
+    preview: <VirusBackgroundDemo />,
+    code: VirusBackgroundDemoCode,
+    othersCode: [{ fileName: "virus-background", code: VirusBackgroundCode }],
+  },
   // text
   gradientText: {
     preview: <GradientTextDemo />,
@@ -461,6 +480,11 @@ export const Index: Record<string, ComponentEntry> = {
     preview: <DrawCursorDemo />,
     code: DrawCursorDemoCode,
     othersCode: [{ fileName: "draw-cursor", code: DrawCursorCode }],
+  },
+  canvasCursor: {
+    preview: <CanvasCursorDemo />,
+    code: CanvasCursorDemoCode,
+    othersCode: [{ fileName: "canvas-cursor", code: CanvasCursorCode }],
   },
   matrixCursor: {
     preview: <MatrixCursorDemo />,

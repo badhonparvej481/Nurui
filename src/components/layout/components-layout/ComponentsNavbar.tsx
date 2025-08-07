@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 
-
 const ComponentsNavbar = () => {
   const { sideBar, setSideBar } = useAppContext();
   const [stars, setStars] = useState(0);
@@ -25,7 +24,7 @@ const ComponentsNavbar = () => {
   }, []);
   return (
     <div
-      className={`fixed top-0 xl:right-0 z-[100] ${
+      className={`fixed top-0 xl:right-0 z-50 ${
         sideBar
           ? "w-full xl:w-[calc(100%-18rem)]"
           : "w-full xl:w-[calc(100vw-5rem)]"
