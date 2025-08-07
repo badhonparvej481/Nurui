@@ -3,7 +3,7 @@ name: NurUI CI
 on:
   push:
     branches:
-      - main
+      - devops
   pull_request:
 
 jobs:
