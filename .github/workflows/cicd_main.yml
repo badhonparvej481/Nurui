@@ -3,10 +3,10 @@ name: Nur UI CI/CD Pipeline
 on:
   push:
     branches:
-      - devops
+      - main
   pull_request:
     branches:
-      - devops
+      - main
 
 jobs:
   test:
@@ -54,11 +54,11 @@ jobs:
       - name: Build the app
         run: yarn build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: nextjs-build
-          path: .next/
+    #   - name: Upload build artifacts
+    #     uses: actions/upload-artifact@v4
+    #     with:
+    #       name: nextjs-build
+    #       path: .next/
 
   deploy:
     name: 🚀 Deploy to Vercel
