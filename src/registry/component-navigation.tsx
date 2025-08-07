@@ -60,6 +60,8 @@ export const navigation = [
     title: "Backgrounds",
     submenu: [
       { name: "bars", href: `${baseUrl}/bars-background` },
+      { name: "jump", href: `${baseUrl}/jump-background` },
+      { name: "virus", href: `${baseUrl}/virus-background` },
       { name: "gradient", href: `${baseUrl}/gradient-background` },
     ],
   },
@@ -138,6 +140,7 @@ export const navigation = [
     title: "Cursors",
     submenu: [
       { name: "draw", href: `${baseUrl}/draw-cursor` },
+      { name: "canvas", href: `${baseUrl}/canvas-cursor` },
       { name: "matrix", href: `${baseUrl}/matrix-cursor` },
       { name: "splash", href: `${baseUrl}/splash-cursor` },
       { name: "hacker", href: `${baseUrl}/hacker-cursor` },

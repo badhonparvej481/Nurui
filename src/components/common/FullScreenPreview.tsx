@@ -20,7 +20,7 @@ const FullScreenPreview = ({
       aria-label="Full Screen Preview"
       asChild
       className={cn(
-        "z-50 text-[var(--primary-colo)] bg-[var(--primary-color)] rounded-lg shadow-none px-2.5",
+        "z-40 text-[var(--primary-colo)] bg-[var(--primary-color)] rounded-lg shadow-none px-2.5",
         className,
       )}
     >

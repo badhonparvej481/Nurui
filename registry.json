@@ -336,6 +336,40 @@
         }
       ]
     },
+    {
+      "name": "jump-background",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["clsx", "tailwind-merge", "motion/react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/jump-background-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/jump-background.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "virus-background",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": ["gsap"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/virus-background-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/virus-background.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
 
     {
       "name": "magnet-button",
@@ -910,6 +944,23 @@
         },
         {
           "path": "./src/components/nurui/draw-cursor.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "canvas-cursor",
+      "type": "registry:component",
+      "devDependencies": [],
+      "dependencies": [""],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "./src/components/nurui/canvas-cursor-demo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "./src/components/nurui/canvas-cursor.tsx",
           "type": "registry:component"
         }
       ]

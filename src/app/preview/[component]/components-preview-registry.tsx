@@ -94,6 +94,12 @@ export const componentsPreviewRegistry: Record<
       ),
     ),
   },
+  "jump-background": {
+    component: dynamic(() => import("@/components/nurui/jump-background-demo")),
+  },
+  "virus-background": {
+    component: dynamic(() => import("@/components/nurui/virus-background")),
+  },
   // texts
   "gradient-text": {
     component: dynamic(() => import("@/components/nurui/gradient-text-demo")),
@@ -200,6 +206,9 @@ export const componentsPreviewRegistry: Record<
         (mod) => mod.DrawCursorDemo,
       ),
     ),
+  },
+  "canvas-cursor": {
+    component: dynamic(() => import("@/components/nurui/canvas-cursor-demo")),
   },
   "matrix-cursor": {
     component: dynamic(() => import("@/components/nurui/matrix-cursor-demo")),
