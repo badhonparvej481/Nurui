@@ -28,7 +28,7 @@ import { getContributors } from "@/lib/github";
 const HeroSection = async () => {
   const contributors = await getContributors();
   const lastFiveContributors = contributors.slice(
-    contributors.length - 4,
+    contributors.length - 5,
     contributors.length,
   );
 
