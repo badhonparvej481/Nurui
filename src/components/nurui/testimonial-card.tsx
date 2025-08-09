@@ -7,6 +7,7 @@ interface IProps {
   name: string;
   review: string;
   marginTop?: string;
+  src: string;
 }
 
 export default function TestimonialCard({
@@ -14,6 +15,7 @@ export default function TestimonialCard({
   name,
   review,
   marginTop,
+  src,
 }: IProps) {
   return (
     <div
@@ -27,7 +29,7 @@ export default function TestimonialCard({
       <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 justify-between gap-3 lg:gap-0">
         <div className="flex flex-col lg:flex-row items-center gap-2.5">
           <Image
-            src="https://static.vecteezy.com/system/resources/thumbnails/002/387/693/small_2x/user-profile-icon-free-vector.jpg"
+            src={src}
             alt=""
             className="size-8 rounded-full"
             height={0}

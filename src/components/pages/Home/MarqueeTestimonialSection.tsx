@@ -1,7 +1,7 @@
 import { Marquee } from "@/components/nurui/marque";
 import TestimonialCard from "@/components/nurui/testimonial-card";
 
-export default function MarqueeTestimonialDemo() {
+export default function MarqueeTestimonialSection() {
   return (
     <section
       className="m-6 relative flex flex-col lg:flex-row gap-6 overflow-hidden
@@ -28,7 +28,7 @@ export default function MarqueeTestimonialDemo() {
         {[
           { data: data?.slice(0, 10), reverse: true },
           { data: data?.slice(10, 20), reverse: false },
-          // { data: data?.slice(20, data?.length), reverse: true },
+          { data: data?.slice(20, data?.length), reverse: true },
         ].map((item, idx) => (
           <Marquee
             key={idx}
@@ -51,7 +51,7 @@ export default function MarqueeTestimonialDemo() {
         ))}
         {[
           { data: data?.slice(0, 10), reverse: true },
-          // { data: data?.slice(10, 20), reverse: false },
+          { data: data?.slice(10, 20), reverse: false },
         ].map((item, idx) => (
           <Marquee
             key={idx}
@@ -79,35 +79,35 @@ export default function MarqueeTestimonialDemo() {
 
 const data = [
   {
-    name: "John Doe",
-    position: "Google CEO",
-    testimonial:
-      "Our partnership with this team has helped us accelerate our innovation. Their dedication and vision have transformed how we approach challenges.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-    rating: 4.8,
+    name: "OrcDev",
+    position: "Software Engineer & YouTuber",
+    testimonial: "You’re doing a great job. Keep it up!",
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1754662097/user-1_1_fzyxjd.png",
+    rating: 5,
   },
   {
-    name: "Jane Smith",
-    position: "Innovatech CTO",
-    testimonial:
-      "They have a unique ability to solve complex problems with simplicity. Their team is efficient, reliable, and always ahead of the curve.",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
-    rating: 4.6,
+    name: "Vladislav Siumbeli",
+    position: "Software Engineer at Hampr",
+    testimonial: "Looks promising",
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1754662308/user_2_1_tblfh5.jpg",
+    rating: 4.5,
   },
   {
-    name: "Mike Johnson",
-    position: "FutureLab Founder",
-    testimonial:
-      "A game-changer in every sense. Their ability to innovate and adapt to market needs has been a key factor in our company's growth.",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
-    rating: 4.9,
+    name: "Tyler",
+    position: "Software Engineer",
+    testimonial: "cool Library!.",
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1754662765/user-3_1_xcq107.jpg",
+    rating: 5,
   },
   {
-    name: "Emily Watson",
-    position: "NovaWorks Manager",
-    testimonial:
-      "Their creative solutions are unmatched, and their ability to deliver on time is truly remarkable. We couldn’t ask for a better team.",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "oniwar",
+    position: "Frontend Developer",
+    testimonial: "really cool ui thow",
+    image:
+      "https://res.cloudinary.com/dz1fy2tof/image/upload/v1754663160/user-4_1_g9hxdf.webp",
     rating: 4.7,
   },
   {
