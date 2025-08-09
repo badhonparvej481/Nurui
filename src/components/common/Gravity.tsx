@@ -175,12 +175,24 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
         const x = calculatePosition(props.x, canvasRect.width, width);
         const y = calculatePosition(props.y, canvasRect.height, height);
 
+        // Clean options to remove null chamfer and narrow type
+        const rawOptions = { ...props.matterBodyOptions };
+        if (rawOptions.chamfer === null) {
+          delete rawOptions.chamfer;
+        }
+        const cleanOptions = rawOptions as Omit<
+          typeof rawOptions,
+          "chamfer"
+        > & {
+          chamfer?: Matter.IChamfer;
+        };
+
         let body;
         if (props.bodyType === "circle") {
           const radius = Math.max(width, height) / 2;
           body = Bodies.circle(x, y, radius, {
-            ...props.matterBodyOptions,
-            angle: angle,
+            ...cleanOptions,
+            angle,
             render: {
               fillStyle: debug ? "#888888" : "#00000000",
               strokeStyle: debug ? "#333333" : "#00000000",
@@ -198,8 +210,8 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
           });
 
           body = Bodies.fromVertices(x, y, vertexSets, {
-            ...props.matterBodyOptions,
-            angle: angle,
+            ...cleanOptions,
+            angle,
             render: {
               fillStyle: debug ? "#888888" : "#00000000",
               strokeStyle: debug ? "#333333" : "#00000000",
@@ -208,8 +220,8 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
           });
         } else {
           body = Bodies.rectangle(x, y, width, height, {
-            ...props.matterBodyOptions,
-            angle: angle,
+            ...cleanOptions,
+            angle,
             render: {
               fillStyle: debug ? "#888888" : "#00000000",
               strokeStyle: debug ? "#333333" : "#00000000",
