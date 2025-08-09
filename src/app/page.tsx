@@ -1,3 +1,4 @@
+import FaqSection from "@/components/pages/about-us/FaqSection";
 import AllComponentSection from "@/components/pages/Home/AllComponentSection";
 import ComponentDemosSection from "@/components/pages/Home/ComponentDemosSection";
 import HeroSection from "@/components/pages/Home/HeroSection";
@@ -10,6 +11,7 @@ const Home = () => {
       <AllComponentSection />
       <ComponentDemosSection />
       <MarqueeTestimonialSection />
+      <FaqSection />
     </main>
   );
 };
