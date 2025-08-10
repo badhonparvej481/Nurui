@@ -1,53 +1,76 @@
 # Nurui CLI
 
-Command-line tool for [Nurui UI](https://nurui.vercel.app) to list, add, and scaffold components.
+Use the Nurui CLI to list and add components to your project.
 
 ---
 
-## Install
+## list
+
+Use the `list` command to view all available components.
 
 ```bash
-npm install -D nurui-cli       # npm
-pnpm add -D nurui-cli          # pnpm
-bun add -D nurui-cli           # bun
-yarn add -D nurui-cli          # yarn
+npx nurui list
 ```
 
-Run without install:
+Example output:
+
+```
+┌  Welcome to Nurui CLI
+│
+◇  📦 Available components:
+
+• gradient-button
+• border-button
+• shiny-card
+• spotlight-card
+• contact-form
+• video-modal
+• gradient-hero
+• spotlight-hero
+• animated-pricing
+• project-showcase
+│
+└  ✨ End of list.
+```
+
+---
+
+## add
+
+Use the `add` command to add a component to your project.
+Downloads the component and styles, creates `lib/utils`, and installs required dependencies.
 
 ```bash
-npx nurui <command>
+npx nurui add <component-name>
 ```
 
----
-
-## Commands
+Example:
 
 ```bash
-npx nurui list                          # View components
-npx nurui add gradient-button           # Add component
-npx nurui g component Alert             # Generate blank component
+npx nurui add gradient-button
 ```
 
----
-
-## Flags
-
-| Flag           | Description             |
-| -------------- | ----------------------- |
-| `--dir <path>` | Custom output directory |
-| `--js`         | Generate JavaScript     |
-| `--overwrite`  | Replace existing files  |
-| `--dry-run`    | Preview without writing |
+> Note: The `add` command **requires** a component name.
+> If you run `npx nurui add` without a name, the CLI prints usage and exits.
 
 ---
 
-## Tips
+## How it works (behind the scenes)
 
-- Commit before `--overwrite`
-- Use `--dry-run` before generating
-- Use PascalCase for component names
+When you run:
 
----
+```bash
+npx nurui add gradient-button
+```
 
-**License:** [MIT](../../LICENSE)
+1. Fetches the component registry from GitHub (`registry-cli.json`).
+2. Finds `gradient-button` in the registry.
+3. Prompts you to choose **TypeScript (.tsx)** or **JavaScript (.jsx)**.
+4. Downloads files from the repo:
+   - component files → `components/nurui/`
+   - styles (`.css`) → `components/nurui/styles/`
+
+5. Ensures `lib/utils.ts` or `lib/utils.js` exists (adds `cn` helper using `clsx` + `tailwind-merge`).
+6. If JavaScript selected, transpiles `.tsx` → `.jsx` (TypeScript + Prettier).
+7. Detects your package manager (`yarn` / `pnpm` / `bun` / `npm`) and installs any required dependencies for that component.
+8. Prints a success summary.

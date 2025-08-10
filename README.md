@@ -51,7 +51,7 @@ If you find this project useful, please consider [sponsoring me](https://github.
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-%F0%9F%92%96-pink)](https://github.com/sponsors/your-username) -->
 
-## Author
+## Maintainer
 
 **Md Afsar Mahmud**  
 Full Stack Developer  

@@ -2,7 +2,7 @@ import { Marquee } from "@/components/nurui/marque";
 import TestimonialCard from "@/components/nurui/testimonial-card";
 import { testimonialData } from "@/data/testimonial";
 
-export default function MarqueeTestimonialDemo() {
+export default function MarqueeTestimonialSection() {
   return (
     <section
       className="m-6 relative flex flex-col lg:flex-row gap-6 overflow-hidden
@@ -27,9 +27,9 @@ export default function MarqueeTestimonialDemo() {
       {/* testimonial cards */}
       <div className="flex flex-row items-center md:gap-2.5 xl:gap-8 2xl:w-[60%] mx-auto py-4 md:py-0 max-h-[calc(100vh-6rem)]">
         {[
-          { data: testimonialData?.slice(0, 10), reverse: true },
-          { data: testimonialData?.slice(10, 20), reverse: false },
-          // { data: data?.slice(20, data?.length), reverse: true },
+          { testimonialData: testimonialData?.slice(0, 10), reverse: true },
+          { testimonialData: testimonialData?.slice(10, 20), reverse: false },
+          { testimonialData: testimonialData?.slice(20, testimonialData?.length), reverse: true },
         ].map((item, idx) => (
           <Marquee
             key={idx}
@@ -38,7 +38,7 @@ export default function MarqueeTestimonialDemo() {
             reverse={item.reverse}
             className="[--duration:100s] hidden md:block"
           >
-            {item.data?.map((tes, i) => (
+            {item.testimonialData?.map((tes, i) => (
               <TestimonialCard
                 src={tes?.image}
                 key={i}
@@ -51,8 +51,8 @@ export default function MarqueeTestimonialDemo() {
           </Marquee>
         ))}
         {[
-          { data: testimonialData?.slice(0, 10), reverse: true },
-          // { data: data?.slice(10, 20), reverse: false },
+          { testimonialData: testimonialData?.slice(0, 10), reverse: true },
+          { testimonialData: testimonialData?.slice(10, 20), reverse: false },
         ].map((item, idx) => (
           <Marquee
             key={idx}
@@ -61,7 +61,7 @@ export default function MarqueeTestimonialDemo() {
             reverse={item.reverse}
             className="[--duration:100s] block md:hidden"
           >
-            {item.data?.map((tes, i) => (
+            {item.testimonialData?.map((tes, i) => (
               <TestimonialCard
                 src={tes?.image}
                 key={i}
@@ -77,3 +77,5 @@ export default function MarqueeTestimonialDemo() {
     </section>
   );
 }
+
+
