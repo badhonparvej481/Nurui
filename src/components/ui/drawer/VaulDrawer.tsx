@@ -18,7 +18,7 @@ export default function VaulDrawer() {
 
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/60" />
-        <Drawer.Content className="bg-[var(--background-color)] flex flex-col rounded-t-3xl border-t border-[var(--primary-color-1)] h-[80%] lg:h-80 fixed bottom-0 left-0 right-0 outline-none z-50 p-5">
+        <Drawer.Content className="bg-[var(--background-color)] flex flex-col rounded-t-3xl border-t border-[var(--primary-color-1)] h-[80%] lg:h-80 fixed bottom-0 left-0 right-0 outline-none z-[1000] p-5">
           <div className="overflow-y-auto">
             <div className="w-24 h-[1px] mx-auto bg-[var(--primary-color-2)]" />
             <div className="text-sm px-2 space-y-1 py-6">
