@@ -19,12 +19,30 @@ interface Particle {
 
 const icons: { name: string; src: string }[] = [
   // replace with your image path
-  { name: "JavaScript", src: "/js.png" },
-  { name: "TypeScript", src: "/ts.png" },
-  { name: "React", src: "/react.svg" },
-  { name: "Next.js", src: "/js.png" },
-  { name: "HTML", src: "/html.png" },
-  { name: "CSS", src: "/css.png" },
+  {
+    name: "JavaScript",
+    src: "https://res.cloudinary.com/dz1fy2tof/image/upload/v1755012752/js_nocitj.png",
+  },
+  {
+    name: "TypeScript",
+    src: "https://res.cloudinary.com/dz1fy2tof/image/upload/v1755012632/ts_elsqw8.png",
+  },
+  {
+    name: "React",
+    src: "https://res.cloudinary.com/dz1fy2tof/image/upload/v1755012941/react_ogt6ny.svg",
+  },
+  {
+    name: "Next.js",
+    src: "https://res.cloudinary.com/dz1fy2tof/image/upload/v1755012973/next_hrodnb.svg",
+  },
+  {
+    name: "HTML",
+    src: "https://res.cloudinary.com/dz1fy2tof/image/upload/v1755012812/html_xbcdkj.png",
+  },
+  {
+    name: "CSS",
+    src: "https://res.cloudinary.com/dz1fy2tof/image/upload/v1755012862/css_1_irojyc.png",
+  },
 ];
 
 const TechCursor = () => {
